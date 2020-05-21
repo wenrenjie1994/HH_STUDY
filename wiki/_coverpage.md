@@ -8,4 +8,4 @@
 - No statically built html files
 - Multiple themes
 
-[Get Started](#)
+[Getting Started](#Tips-Collection)
