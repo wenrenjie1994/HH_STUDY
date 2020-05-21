@@ -1,17 +1,17 @@
-Ñ§Ï°renren-fast
-ºóÌ¨µØÖ·£ºhttps://gitee.com/renrenio/renren-fast 
-Ç°¶ËµØÖ·£ºhttps://github.com/daxiongYang/renren-fast-vue 
-´úÂëÉú³ÉÆ÷£ºhttps://gitee.com/renrenio/renren-generator 
-¹Ù·½ÉçÇø£ºhttp://www.renren.io
-´íÎó½â¾ö¼ÇÂ¼£º
-1¡¢node°æ±¾²ÉÓÃµÄÊÇv12.16.3,´ËÊ±ĞèÒª°²×°pytho2.7,ÓÉÓÚ´ËÇ°°²×°ÁËpython3.7,ÔÚÅäÖÃ»·¾³±äÁ¿Ê±Î´½â¾öÁ½Õß¼æÈİ
-£¨½«python3»·¾³±äÁ¿Ìæ»»Îªpython2£¬µ«ÊÇÎ´Æğ×÷ÓÃ£¬´Ó´òÓ¡ÈÕÖ¾ÖĞµÃÖªÏÈ´ÓpathÖĞÕÒpython,Èç¹ûÎ´ÕÒµ½£¬
- Ôò´æÔÚÄ¬ÈÏÂ·¾¶C:\\Python2\python.exe£¬×îºó½«python2°²×°ÔÚ´ËÄ¬ÈÏÂ·¾¶£©
+                                                                 å­¦ä¹ renren-fast
+åå°åœ°å€ï¼šhttps://gitee.com/renrenio/renren-fast   
+å‰ç«¯åœ°å€ï¼šhttps://github.com/daxiongYang/renren-fast-vue   
+ä»£ç ç”Ÿæˆå™¨ï¼šhttps://gitee.com/renrenio/renren-generator   
+å®˜æ–¹ç¤¾åŒºï¼šhttp://www.renren.io  
+é”™è¯¯è§£å†³è®°å½•ï¼š  
+1ã€nodeç‰ˆæœ¬é‡‡ç”¨çš„æ˜¯v12.16.3,æ­¤æ—¶éœ€è¦å®‰è£…pytho2.7,ç”±äºæ­¤å‰å®‰è£…äº†python3.7,åœ¨é…ç½®ç¯å¢ƒå˜é‡æ—¶æœªè§£å†³ä¸¤è€…å…¼å®¹
+ï¼ˆå°†python3ç¯å¢ƒå˜é‡æ›¿æ¢ä¸ºpython2ï¼Œä½†æ˜¯æœªèµ·ä½œç”¨ï¼Œä»æ‰“å°æ—¥å¿—ä¸­å¾—çŸ¥å…ˆä»pathä¸­æ‰¾python,å¦‚æœæœªæ‰¾åˆ°ï¼Œ
+ åˆ™å­˜åœ¨é»˜è®¤è·¯å¾„C:\\Python2\python.exeï¼Œæœ€åå°†python2å®‰è£…åœ¨æ­¤é»˜è®¤è·¯å¾„ï¼‰
 
-2¡¢ÔËĞĞÊ±³ö´íÌáÊ¾½â¾ö°ì·¨¡°npm rebuild node-sass --force¡±£¬ÒıÆğ´íÎóÔ­ÒòÎª£ºnodeÓësass°æ±¾²îÒì£¬Í¨¹ırebuildµ«ÊÇ±¨´í£¬ÏÈuninstall,È»ºóÍ¨¹ıÈçÏÂÓï¾ä½â¾ö
+2ã€è¿è¡Œæ—¶å‡ºé”™æç¤ºè§£å†³åŠæ³•â€œnpm rebuild node-sass --forceâ€ï¼Œå¼•èµ·é”™è¯¯åŸå› ä¸ºï¼šnodeä¸sassç‰ˆæœ¬å·®å¼‚ï¼Œé€šè¿‡rebuildä½†æ˜¯æŠ¥é”™ï¼Œå…ˆuninstall,ç„¶åé€šè¿‡å¦‚ä¸‹è¯­å¥è§£å†³
 npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
 
-3¡¢Í¨¹ı´úÂëÉú³ÉÆ÷Éú³ÉµÄ´úÂëÒıÈë½ørenren-fastÏµÍ³£º
-   £¨1£©¡¢Ö´ĞĞsqlÓï¾ä£¬¼´Ìí¼Ó²Ëµ¥
-   £¨2£©¡¢½«mainÖĞµÄ´úÂëÓërenren-fastÏµÍ³ÖĞmain´úÂëºÏ²¢
-   £¨3£©¡¢½«mainÖĞµÄ.vueÎÄ¼şÒıÈëµ½renren-fast-vueÖĞ
+3ã€é€šè¿‡ä»£ç ç”Ÿæˆå™¨ç”Ÿæˆçš„ä»£ç å¼•å…¥è¿›renren-fastç³»ç»Ÿï¼š
+   ï¼ˆ1ï¼‰ã€æ‰§è¡Œsqlè¯­å¥ï¼Œå³æ·»åŠ èœå•  
+   ï¼ˆ2ï¼‰ã€å°†mainä¸­çš„ä»£ç ä¸renren-fastç³»ç»Ÿä¸­mainä»£ç åˆå¹¶
+   ï¼ˆ3ï¼‰ã€å°†mainä¸­çš„.vueæ–‡ä»¶å¼•å…¥åˆ°renren-fast-vueä¸­  
