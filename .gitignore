@@ -1,0 +1,14 @@
+#ignore this file#
+.idea
+*.iml
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.ide
+*.log
+*.ctxt
+.mtj.tmp/
+hs_err_pid*

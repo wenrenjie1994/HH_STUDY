@@ -1,0 +1,92 @@
+1、引入maven  
+        <dependency>  
+            <groupId>org.mybatis.spring.boot</groupId>  
+            <artifactId>mybatis-spring-boot-starter</artifactId>   
+            <version>2.1.2</version>  
+        </dependency>  
+
+        <dependency>  
+            <groupId>mysql</groupId>  
+            <artifactId>mysql-connector-java</artifactId>  
+            <scope>runtime</scope>  
+        </dependency>  
+	
+        <dependency>  
+            <groupId>com.alibaba</groupId>  
+            <artifactId>druid-spring-boot-starter</artifactId>  
+            <version>1.1.13</version>  
+        </dependency>  
+		
+2、配置文件中
+spring.datasource.one.type= com.alibaba.druid.pool.DruidDataSource  
+spring.datasource.one.url= jdbc:mysql:///blog?serverTimezone=UTC  
+spring.datasource.one.username= root  
+spring.datasource.one.password=1234  
+
+spring.datasource.two.type= com.alibaba.druid.pool.DruidDataSource  
+spring.datasource.two.url= jdbc:mysql:///store?serverTimezone=UTC  
+spring.datasource.two.username= root  
+spring.datasource.two.password=1234  
+
+
+3、读取配置文件生成数据源
+@Configuration  
+public class DataSourceConfig {  
+    @Bean  
+    @Primary  //默认数据源
+    @ConfigurationProperties("spring.datasource.one")  
+    DataSource dsOne(){  
+        return DruidDataSourceBuilder.create().build();  
+    }  
+
+    @Bean  
+    @ConfigurationProperties("spring.datasource.two")  
+    DataSource dsTwo(){  
+        return DruidDataSourceBuilder.create().build();  
+    }  
+} 
+
+4、分别配置每个数据源
+这里需指定xml文件的位置
+@Configuration  
+@MapperScan(value = "com.lihang.dynamicdatasource.springboot.mapper1",sqlSessionFactoryRef = "sqlSessionFactoryBean1")  
+public class MybatisConfigOne {  
+    @Autowired  
+    @Qualifier("dsOne")  
+    DataSource dsOne;  
+
+    @Bean  
+    @Primary  
+    SqlSessionFactory sqlSessionFactoryBean1() throws Exception {   
+        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();  
+        factoryBean.setDataSource(dsOne);  
+        factoryBean.setMapperLocations(  
+                new PathMatchingResourcePatternResolver()  
+                        .getResource("classpath:mapper/UserMapper.xml"));  
+        return factoryBean.getObject();  
+    }  
+}   
+
+5、添加mapper.xml
+6、测试
+@RunWith(SpringRunner.class)  
+@SpringBootTest  
+class DynamicdatasourceApplicationTests {  
+    @Autowired  
+    UserMapper userMapper;  
+
+    @Autowired  
+    AdminMapper adminMapper;  
+    @Test  
+    void testspringboot() {  
+        System.out.println(userMapper.getAllUsers().toString());  
+        System.out.println(adminMapper.getAllUsers().toString());  
+    }  
+}  
+
+
+
+注意：
+springboot整合mybatis时，注意如下几点：  
+1、启动类上加mapperScan,否则在接口mapper上加mapper注解
+2、在配置文件中指定mapp.xml文件路径，否则初始化mapper失败   
