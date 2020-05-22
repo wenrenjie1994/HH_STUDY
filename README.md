@@ -93,6 +93,7 @@
   - 同学们可在学习后把学习笔记或者demo工程、代码等提交到Github
   - Github地址：https://github.com/wenrenjie1994/HH_STUDY
 - 操作指南
+  - ⾸先发送Github账号给⽂⽼师，让他开通仓库权限。
   - 从github上clone下来HH_STUDY的项目
         git clone https://github.com/wenrenjie1994/HH_STUDY.git
   - 然后在本地新建一个branch，分支命名为自己的名字拼音+电话号码后4位（有重名现象）例如：wenrenjie8897
