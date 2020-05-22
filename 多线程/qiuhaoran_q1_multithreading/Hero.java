@@ -1,17 +1,25 @@
-/**
+package qiuhaoran_q1_multithreading; /**
  * @Author: QiuhaoRan
  * @Description:
  * @Date: Created in 20:15 2020/5/21
  * @Modified By:
  */
 //package charactor;
-import java.io.Serializable;
+
 public class Hero{
     public String name;
     public float hp;
 
     public int damage;
+    //回血
+    public void recover(){
+        hp=hp+1;
+    }
 
+    //掉血
+    public void hurt(){
+        hp=hp-1;
+    }
     public void attackHero(Hero h) {
         try {
             //为了表示攻击需要时间，每次攻击暂停1000毫秒

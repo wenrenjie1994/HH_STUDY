@@ -1,3 +1,5 @@
+package qiuhaoran_q1_multithreading;
+
 /**
  * @Author: QiuhaoRan
  * @Description:
@@ -35,7 +37,7 @@ public class TestThread {
         StartThread3(teemo, leesin, gareen, bh);
     }
     //1:不使用线程，任务只能先后进行
-    public static void NoThread(Hero teemo,Hero leesin,Hero gareen,Hero bh){
+    public static void NoThread(Hero teemo, Hero leesin, Hero gareen, Hero bh){
         //盖伦攻击提莫
         while(!teemo.isDead()){
             gareen.attackHero(teemo);
@@ -47,7 +49,7 @@ public class TestThread {
         }
     }
     //2:创建多线程-继承线程类
-    public static void StartThread1(Hero teemo,Hero leesin,Hero gareen,Hero bh){
+    public static void StartThread1(Hero teemo, Hero leesin, Hero gareen, Hero bh){
         // 启动线程办法： 实例化一个KillThread对象，并且调用其start方法
         KillThread killThread1 = new KillThread(gareen,teemo);
         killThread1.start();

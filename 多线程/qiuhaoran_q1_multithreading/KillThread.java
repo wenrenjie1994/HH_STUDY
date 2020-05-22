@@ -1,3 +1,5 @@
+package qiuhaoran_q1_multithreading;
+
 /**
  * @Author: QiuhaoRan
  * @Description:
