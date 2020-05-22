@@ -1,0 +1,163 @@
+                                                     AOP实现多数据源
+   抽象类AbstractRoutingDataSource,功能是动态切换数据源，工作原理：将所有数据源存储到targetDataSources属性中，
+通过determineCurrentLookupKey()获取当前数据源在map中的key,最后从determineTargerDataSource()中获取此数据源。
+   源码解析：
+   public abstract class AbstractRoutingDataSource extends AbstractDataSource implements InitializingBean {
+    //这两个和下面两个是一样的，只是在输入的时候是Object类型，这里afterPropertiesSet（）做判断后转成DataSource类型
+	@Nullable  
+    private Map<Object, Object> targetDataSources;   
+    @Nullable  
+    private Object defaultTargetDataSource;  
+	
+    @Nullable
+    private Map<Object, DataSource> resolvedDataSources;
+    @Nullable
+    private DataSource resolvedDefaultDataSource;
+
+    public void afterPropertiesSet() {
+        if (this.targetDataSources == null) {
+            throw new IllegalArgumentException("Property 'targetDataSources' is required");
+        } else {
+            this.resolvedDataSources = new HashMap(this.targetDataSources.size());
+            this.targetDataSources.forEach((key, value) -> {
+                Object lookupKey = this.resolveSpecifiedLookupKey(key);
+                DataSource dataSource = this.resolveSpecifiedDataSource(value);
+                this.resolvedDataSources.put(lookupKey, dataSource);
+            });
+            if (this.defaultTargetDataSource != null) {
+                this.resolvedDefaultDataSource = this.resolveSpecifiedDataSource(this.defaultTargetDataSource);
+            }
+
+        }
+    }
+	
+	
+实现：
+
+1、maven、配置文件、Mapper接口和xml文件和分包方式一样。
+2、创建DynamicDataSource类继承AbstractRoutingDataSource抽象类并实现determineCurrentLookupKey(),
+  这里创建了一个构造方法来设置默认数据源和所有的数据源。
+  
+  public class DynamicDataSource extends AbstractRoutingDataSource {
+    private static final ThreadLocal<String> CONTEXT_HOLDER = new ThreadLocal<>();
+    public DynamicDataSource(DataSource dataSource, Map<String,DataSource> targetDataSource){
+        super.setDefaultTargetDataSource(dataSource);
+        super.setTargetDataSources(new HashMap<>(targetDataSource));
+        super.afterPropertiesSet();
+    }
+    @Override
+    protected Object determineCurrentLookupKey() {
+        return getDataSource();//获取当前数据源的名称
+    }
+    /*dataSource的名称*/
+    public static String getDataSource(){
+        return CONTEXT_HOLDER.get();
+    }
+
+    public static void setDataSource(String dataSource){
+        CONTEXT_HOLDER.set(dataSource);
+    }
+
+    public static void clearDataSource(){
+            CONTEXT_HOLDER.remove();
+    }
+}
+
+3、多数据源的配置，从配置文件中读取配置信息并生成DataSource bean,并将上面的方法实例化并返回
+   @Configuration
+public class DynamicDataSourceConfig {
+    @Bean
+    @ConfigurationProperties("spring.datasource.druid.one")
+    public DataSource dataSourceOne(){
+        return DruidDataSourceBuilder.create().build();
+    }
+    @Bean
+    @ConfigurationProperties("spring.datasource.druid.two")
+    public DataSource dataSourceTwo(){
+        return DruidDataSourceBuilder.create().build();
+    }
+    //此处本应返回DataSource类型，但是DynamicDataSource间接实现了DataSource，故也可。
+	//@Primary注解，当有多个DataSource时，优先采用此DataSource
+    @Bean
+    @Primary
+    public DynamicDataSource dataSource(DataSource dataSourceOne,DataSource dataSourceTwo){
+        Map<String,DataSource> targetDataSource = new HashMap<>();
+        targetDataSource.put("one",dataSourceOne);
+        targetDataSource.put("two",dataSourceTwo);
+        return new DynamicDataSource(dataSourceOne,targetDataSource);
+    }
+}
+
+4、通过注解方式切换数据源
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MyDataSource {
+    String name() default "";
+}
+
+——————————————————————————————————————————
+@Aspect
+@Component
+public class DataSourceAspect implements Ordered {
+    protected Logger logger = LoggerFactory.getLogger(this.getClass());
+    @Pointcut("@annotation(com.lihang.dynamicdatasource2.annotation.MyDataSource)")
+    public void dataSourcePointCut(){}
+
+    @Around("dataSourcePointCut()")
+    public Object around(ProceedingJoinPoint point){
+        MethodSignature signature = (MethodSignature) point.getSignature();
+        Method method = signature.getMethod();
+        MyDataSource dataSource = method.getAnnotation(MyDataSource.class);
+        if (dataSource == null){
+            DynamicDataSource.setDataSource("one");
+        }else {
+            DynamicDataSource.setDataSource(dataSource.name());
+        }
+
+        try {
+            return point.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }finally {
+            DynamicDataSource.clearDataSource();
+        }
+        return null;
+    }
+    @Override
+    public int getOrder() {
+        return 1;
+    }
+}
+5、service层
+   @Autowired
+    UserMapper userMapper;
+
+    @Autowired
+    AdminMapper adminMapper;
+   @MyDataSource(name = "one")
+    public String getAllUser(){
+       return userMapper.getAll().toString();
+    }
+   @MyDataSource(name = "two")
+    public String getAllAdminUser(){
+        return adminMapper.getAll().toString();
+    }
+	
+	
+4（1）、不通过注解方式
+@Aspect
+@Component
+public class DataSourceAop {
+    @Before("execution(* com.mzd.multipledatasources.service..*.test01*(..))")
+    public void setDataSource2test01() {
+        System.err.println("test01业务");
+        DataSourceType.setDataBaseType(DataBaseType.TEST01);
+    }
+
+    @Before("execution(* com.mzd.multipledatasources.service..*.test02*(..))")
+    public void setDataSource2test02() {
+        System.err.println("test02业务");
+        DataSourceType.setDataBaseType(DataBaseType.TEST02);
+    }
+}
