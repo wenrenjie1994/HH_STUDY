@@ -1,0 +1,30 @@
+                                                Mybatis-Plugin
+一、简单使用（springboot项目）
+    1、引入maven依赖,包括mysql驱动、lombok、mybatis-plus、test、mybatis
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+	2、创建entity实体类，添加@Data注解
+	3、dao中建立mapper接口，并继承BaseMapper<T>
+	public interface UserMapper extends BaseMapper<User> {}
+    ****完成了以上步骤，即可实现简单的CRUD操作，使用时，注入mapper即可。
+二、主要方法
+    ****表名与实体名大小写忽略
+	****驼峰规则映射
+	****当表名与实体类名不一致时，在实体类上加注解@TableName("tableName")
+    1、 int insert(T entity);
+	    **不插入主键时，自动生成主键
+		**不插入其他元素属性时，在sql语句中不出现相应的列
+		**表主键不为"id"时，且插入语句不设置主键值，插入将不成功，可以在主键上加注解@TableId("user_id")
+		      @TableId("user_id")
+              private Long userId;
+		**其他非主键实体属性与表列名完全不一致（不遵循驼峰规则且不相同），可在实体属性上加注解@TableField("name")
+		      @TableField("name")
+              private String realName;
+	    **排除非表字段
+		  A、private transient String remark   //不让它被序列化
+		  B、private static String remark      //设置成静态变量，且添加get\set方法
+		  C、注解@TableField(exist=false)        //注解形式
+		         private String remark;

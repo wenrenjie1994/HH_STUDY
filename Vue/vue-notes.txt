@@ -1,0 +1,385 @@
+                                          vue学习笔记
+										  一、Vue基础语法
+1、引入vue.js
+2、定义一个Vue实例
+    var vue = Vue({
+	     el:"#elID",
+		 data:{
+		    name:"lihang",
+			message:"hello Vue"
+		 }
+		 method:{
+		    greet(time){
+			return `this is ${this.name} time is ${time}`
+			}
+		 }
+	})
+使用：
+<div id="vue-app">
+    <p>{{message}},{{name}}</p> 
+    <p>{{greet()}},{{haveLunch("night")}}</p>
+</div>
+3、属性绑定：v-bind、：
+页面："v-bind:" 可省略为":"
+    <p>
+        <a :href="website">baidu</a>
+    </p>
+    <p v-html="websiteTag"></p>
+    <p>
+        <input type="text" :value="name">
+    </p>
+	
+js：
+    data:{
+        name:"lihang",
+        message:"hello vue",
+        website:"https://www.baidu.com",
+        websiteTag:"<a href='https://www.taobao.com'>taobao</a>"
+    },
+	
+4、事件绑定:v-on、@
+   方式一：
+    data:{
+        age:16
+    }
+	"v-on:"可替换为"@"  -->
+    <p>
+        <button v-on:click="age++">age add one year</button>
+        <button @click="age--">age substract one year</button>
+        <p>this is my {{age}}</p>
+    </p>
+	方式二：
+	  <p>
+        <button v-on:click="add">age add one year</button> //add()其中“()”加与不加均可以
+        <button @click="substract">age substract one year</button>
+    <p>this is my {{age}}</p>
+    </p>
+	js中定义add和substract方法  -->
+	  methods:{//methods
+        add(){
+             this.age++;
+        },
+        substract(){
+            this.age--;
+        }
+    }
+双击事件：dblclick
+    <p>
+        <button v-on:dblclick="add(10)">age add ten year</button>
+        <button @dblclick="substract(10)">age substract ten year</button>
+    <p>this is my {{age}}</p>
+    </p>	
+鼠标事件：
+   <div id="canvas" v-on:mousemove="updateXY">
+          {{x}},{{y}}
+  </div>
+  js中定义方法:
+   methods:{//methods
+        updateXY(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+        }
+    }
+	
+5、事件修饰符
+    <!-- 阻止单击事件继续传播 -->
+    <a v-on:click.stop="doThis"></a>
+    
+    <!-- 提交事件不再重载页面 -->
+    <form v-on:submit.prevent="onSubmit"></form>
+    
+    <!-- 修饰符可以串联 -->
+    <a v-on:click.stop.prevent="doThat"></a>
+    
+    <!-- 只有修饰符 -->
+    <form v-on:submit.prevent></form>
+    
+    <!-- 添加事件监听器时使用事件捕获模式 -->
+    <!-- 即内部元素触发的事件先在此处理，然后才交由内部元素进行处理 -->
+    <div v-on:click.capture="doThis">...</div>
+    
+    <!-- 只当在 event.target 是当前元素自身时触发处理函数 -->
+    <!-- 即事件不是从内部元素触发的 -->
+    <div v-on:click.self="doThat">...</div>
+	使用修饰符时，顺序很重要；相应的代码会以同样的顺序产生。因此，
+	用 v-on:click.prevent.self 会阻止所有的点击，而 v-on:click.self.prevent 只会阻止对元素自身的点击。
+6、键盘事件
+  <p>
+        <input type="text" @keyup.enter="logName()">
+        <input type="text" @keydown.alt.enter="logAge()">
+    </p>	
+.enter:按下enter键触发，.alt.enter：按下alt+enter触发  ————>
+        logName(){
+            console.log("正在输入name")
+        },
+        logAge(){
+          console.log("正在输入age")
+        }
+	
+7、双向数据绑定:v-model
+   <p>
+        name:<input type="text" v-model.trim.lazy="name">{{name}}
+        age:<input type="text" v-model.number="age">{{age}}
+    </p>
+	
+8、ref,标记一个元素，然后获取，类似于document.getElementById()
+    <p>
+        name:<input type="text" ref="myname" @keyup="alName" >{{name}}
+    </p>
+	alName(){
+            this.name = this.$refs.myname.type;
+        }
+9、属性监听，可以查看一个属性值的变化，但是不建议使用，他在持续监听，会耗费性能:watch
+   watch:{
+        name(newVal,oldVal) {
+           console.log(newVal,oldVal)
+        }
+    }
+10、计算属性:computed
+  背景：
+  在使用方法时，调用一个方法时，页面中的所有方法均会执行，如下例子
+  <div id="app-vue">
+    <button v-on:click="a++">add A</button>
+    <button v-on:click="b++">add B</button>
+    <p>
+        A-->{{a}},B-->{{b}}
+    </p>
+    <p>
+        A+age-->{{addA()}},B+age-->{{addB()}}
+    </p>
+  </div>
+  js中定义方法：
+  var app = new Vue({
+    el: "#app-vue",
+    data:{
+        a:0,
+        b:0,
+        age:10
+    },
+    methods:{
+        addA(){
+            console.log("addA")
+            return this.a+this.age;
+        },
+        addB(){
+            console.log("addB")
+            return this.b+this.age;
+        }
+    },
+  })
+  此时点击后，两个方法都执行
+ 使用计算属性：注意时计算属性，不能加"()",同时计算属性一定有返回值
+    <p>
+        A+age-->{{addA}},B+age-->{{addB}}
+    </p>
+ js中：
+  computed:{
+        addA(){
+            console.log("addA")
+            return this.a+this.age;
+        },
+        addB(){
+            console.log("addB")
+            return this.b+this.age;
+        }
+    }
+计算属性可用在动态渲染样式......
+11、样式动态绑定
+    <div id="vue-app">
+        <p>样式动态渲染--属性绑定</p>
+        <button v-on:click="colortag = !colortag" v-bind:class="{mybutton:colortag}">look color</button>
+        <p>样式动态渲染--计算属性</p>
+        <button v-on:click="colortag = !colortag" >look at color</button>
+        <button v-on:click="lengthtag = !lengthtag">look at length</button>
+        <p v-bind:class="cmpClass">this is test computed</p>
+    </div>
+  js中:
+  var app_button = new Vue({
+    el: "#vue-app",
+    data:{
+        colortag:true,
+        lengthtag:true,
+    },
+    methods:{},
+    computed:{
+        cmpClass(){
+            return {
+                pcolor:this.colortag,
+                plength:this.lengthtag
+            };
+        }
+    }
+   });
+注意：mybutton:colortag，第一个是class,第二个是属性
+
+12、条件判断:v-if、v-else-if、v-else
+<div id="vue-judge">
+    <h1>条件判断 if-else</h1>
+    <button @click="error = !error">error</button>
+    <button @click="success = !success">success</button>
+    <p v-if="error">this is error</p>
+    <p v-else-if="success">this is success</p>
+    <p v-else>unknown</p>
+    <h1>条件判断 if-else</h1>
+    <p v-show="error">虽然不显示，但是dom还在</p>
+</div>
+
+js中:
+var app_judge = new Vue({
+    el:"#vue-judge",
+    data:{
+        error:false,
+        success:false
+    }
+});
+注意：v-show只是不显示，但是dom元素还在，if则整个标签不在了
+
+13、循环遍历:v-for
+   一、遍历简单数组
+    <div id="vue-for">
+        <hl>
+            <li v-for="name in myarray">
+                {{name}}
+            </li>
+            <li v-for="(name,index) in myarray">
+                {{index}}-{{name}}
+            </li>
+        </hl>
+    </div>
+	data:{
+        myarray:["小猪佩奇","海星大宝","望着无敌"]
+    }
+	二、遍历对象数组
+	    <li v-for="(user,index) in users">
+            {{index}}.{{user.name}}.{{user.age}}
+        </li>
+		
+		data:{
+        users:[
+            {name:"小猪佩奇",age:12},
+            {name:"派大星",age:23},
+            {name:"艾米莉",age:10}
+        ]
+        }
+	三、优化
+	以上两种，均会出现加了v-for的标签，使用了template则不会
+	    <template v-for="(user,index) in users">
+            {{index}}.{{user.name}}.{{user.age}}
+        </template>
+	四、遍历对象
+	    <template v-for="(user,index) in users">
+            <template v-for="(value,key) in user">
+                {{key}}--{{value}}
+            </template>
+        </template>
+		
+14、全局组件：Vue.component
+       <div id="vue-component-one">
+           <my-component/>
+       </div>
+	   js中：
+       Vue.component('my-component', {
+           template: `<div>A custom component! name:{{name}},age:{{age}}
+        <button @click="changeName">change Name</button>
+       </div>
+       `,
+           data(){
+               return{
+                   name:"派大星",
+                   age:12
+               }
+           },
+           methods:{
+               changeName(){
+                   this.name="佩奇"
+               }
+           }
+       });
+       
+       var vue_component_on = new Vue({//必须的
+           el:"#vue-component-one",
+       });
+	
+15、fetch请求（用的比较少）
+    Vue的mounted（），页面一加载就会执行的方法，
+     mounted(){
+        alert(123);
+     },	
+	 
+	 fetch请求：
+	 1、get请求：
+	     fetch("http://jsonplaceholder.typicode.com/posts").then(todos=>{
+           return todos.json();
+       }).then(todos=>{
+               this.todos = todos;
+           });
+		   
+	  2、post请求：
+	  fetch("https://jsonplaceholder.typicode.com/posts",{
+                method:"post",
+                body:JSON.stringify(this.todo),
+                headers:{
+                    "Content-type":"application/json;charset=utf-8"
+                }
+            }).then(response =>response.json())
+                .then(json=>json.unshift(this.todo));
+	  详情见：http://jsonplaceholder.typicode.com/guide.html
+	  
+16、axios请求（更方便，较常用）
+    1、cdn的方式引入
+	    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	2、get请求：
+	    axios
+             .get("http://jsonplaceholder.typicode.com/posts")
+             .then(res=>this.todos=res.data)
+	   当仅请求一条数据时，返回的就是data
+	3、post请求：
+	       axios
+                .post("http://jsonplaceholder.typicode.com/posts",this.todo)
+                .then(res=>{this.todos.unshift(res.data)});
+	详情见：http://www.axios-js.com/docs/
+	                                   
+									   
+									                        二、Vue-cli 脚手架
+1、创建项目
+   vue create vuecli-demo
+2、Vue component基本模板样式
+    <template>   <!--一个template下只能有一个根标签-->
+        <div class="users">
+        </div>
+    </template>
+    <script>
+        export default {
+            name: "users",
+            data(){
+                return {users:["迪丽热巴","杨幂","孙悟空"]}
+            },
+            methods:{
+                Greeting(){
+                    return "lihang";
+                }
+            }
+        }
+    </script>
+    <style scoped>
+    </style>
+	
+3、主模块App.vue中引入
+    <template>
+      <div id="app">
+        <Users></Users>
+      </div>
+    </template>
+    
+    <script>
+        import Users from "./components/Users"
+        export default {
+          name: 'App',
+          components: {
+            Users
+          }
+        }
+    </script>
+    
+    <style>
+    </style>

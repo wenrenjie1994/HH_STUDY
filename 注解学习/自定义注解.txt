@@ -1,0 +1,65 @@
+                                                   自定义注解
+												  
+												  
+1、元注解(定义注解的注解)：
+   (1)、@Target,指明自定义的注解所修饰的对象范围，包括packages,type(类、接口、枚举、注解、类型成员（方法、成员变量、枚举值）)、本地参数和变量。
+       取值（ElementType）:
+	   a、CONSTRUCTOR:构造器
+	   b、FIELD：域
+	   c、LOCAL_VARIABLE:局部变量
+	   d、METHOD：方法
+	   e、PACKAGE：包
+	   f、PARAMETER：参数
+	   g、TYPE：用于类、接口、enum声明
+   (2)、@Retention,定义了该Annotation保留的时间长短
+       a、SOURCE：源文件中有效、@Override
+	   b、CLASS：class文件中有效
+	   c、RUNTIME：运行时有效、@Service
+   (3)、@Documented，是被用来指定自定义注解是否能随着被定义的java文件生成到JavaDoc文档当中，为标记注解，没有值
+   (4)、@Inherited,标记注解，@Inherited注解，是指定某个自定义注解如果写在了父类的声明部分，那么子类的声明部分也能自动拥有该注解。
+                    @Inherited注解只对那些@Target被定义为ElementType.TYPE的自定义注解起作用。
+	
+	
+2、代码
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MyAnnotation {
+    public String name();//如果只有一个元素，且定义为value，在使用注解时@MyAnnotation("lihang")
+    int age() default 18;
+    int[] array();
+}
+定义注解类型元素时需要注意如下几点：
+
+   a、访问修饰符必须为public，不写默认为public；
+   b、该元素的类型只能是基本数据类型、String、Class、枚举类型、注解类型（体现了注解的嵌套效果）以及上述类型的一位数组；
+   c、该元素的名称一般定义为名词，如果注解中只有一个元素，请把名字起为value（后面使用会带来便利操作）；
+   d、()不是定义方法参数的地方，也不能在括号中定义任何参数，仅仅只是一个特殊的语法；
+   e、default代表默认值，值必须和第2点定义的类型一致；
+   f、如果没有默认值，代表后续使用注解时必须给该类型元素赋值。
+
+3、反射处理注解
+ Class clazz = Class.forName("com.lihang.annotation.service.MyService");
+        Method method = clazz.getMethod("getAll", Integer.class);
+        boolean flag = method.isAnnotationPresent(MyAnnotation.class);
+        if (flag){
+            MyAnnotation myAnnotation = method.getAnnotation(MyAnnotation.class);
+            System.out.println("反射获取age:"+myAnnotation.age());
+            System.out.println("反射获取name:"+myAnnotation.name());
+            System.out.println("反射获取array:"+myAnnotation.array());
+        }
+4、aop处理注解
+@Aspect
+@Component
+public class MyAnnotationAspect {//aop实现注解功能
+    @Pointcut("@annotation(com.lihang.annotation.myannotation.MyAnnotation)")
+    public void pointcut(){}
+
+    @Around("pointcut()")
+    public void dealAnnotation(ProceedingJoinPoint point){
+       MethodSignature methodSignature = (MethodSignature) point.getSignature();
+       Method method = methodSignature.getMethod();
+       MyAnnotation myAnnotation = method.getAnnotation(MyAnnotation.class);
+        System.out.println("name:"+myAnnotation.name());
+    }
+}
