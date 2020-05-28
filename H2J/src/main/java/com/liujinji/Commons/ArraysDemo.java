@@ -7,10 +7,10 @@ public class ArraysDemo {
     public static void main(String[] args) {
         int[] arr = new int[10];
         // 将所有元素都填充成1
-        Arrays.fill(arr,1);
+        Arrays.fill(arr, 1);
         System.out.println(Arrays.toString(arr));
 
-        Random random=new Random();
+        Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             //使用100以内的随机数赋值数组
             arr[i] = random.nextInt(101);
@@ -23,6 +23,6 @@ public class ArraysDemo {
 
         // 二分查找指定值对应的索引
         int i = Arrays.binarySearch(arr, 1);
-        System.out.println("索引为"+i);
+        System.out.println("索引为" + i);
     }
 }
