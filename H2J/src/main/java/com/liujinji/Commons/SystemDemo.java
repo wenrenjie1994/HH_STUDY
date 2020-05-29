@@ -6,6 +6,6 @@ public class SystemDemo {
         System.exit(0);//终止当前正在运行的Java虚拟机
         System.gc();//运行垃圾回收
         System.getProperties();//获取系统全部属性
-        System.getProperty("java.version");//获取系统某项属性
+        System.getProperty("java.home");//获取系统某项属性(Mac没获取到啥原因)
     }
 }
