@@ -9,7 +9,6 @@ public class GenericTest {
     public void test(){
         Generic<Integer> intOb=new Generic<Integer>(88);
         intOb.showType();
-
         Generic<String> stringOb=new Generic<String>("Hello");
         stringOb.showType();
     }

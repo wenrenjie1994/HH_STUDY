@@ -2,7 +2,7 @@ package com.liujinji.OOP.Basic;
 
 public class Hero {
     private String name;
-    private int Health;
+    private int health;
     private int level;
 
     public Hero() {
@@ -10,8 +10,13 @@ public class Hero {
 
     public Hero(String name, int health, int level) {
         this.name = name;
-        Health = health;
+        this.health = health;
         this.level = level;
+    }
+    public Hero(String name ,int health){
+        this.name=name;
+        this.health=health;
+        this.setDefaultLevel();
     }
 
     private void setDefaultLevel() {
@@ -31,11 +36,11 @@ public class Hero {
     }
 
     public int getHealth() {
-        return Health;
+        return health;
     }
 
     public void setHealth(int health) {
-        Health = health;
+        this.health = health;
     }
 
     public int getLevel() {
