@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Service Online</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+
+<body>
+<h1>定制你自己的套餐</h1>
+<form method="POST" th:object="${design}">
+
+    <span class="validationError"
+          th:if="${#fields.hasErrors('serviceItems')}"
+          th:errors="*{serviceItems}">serviceItems Error</span>
+
+    <div class="grid">
+        <div class="serviceItems-group" id="wraps">
+            <h3>Designate your wrap:</h3>
+            <div th:each="serviceItems : ${wrap}">
+                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
+                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+            </div>
+        </div>
+
+        <div class="serviceItems-group" id="proteins">
+            <h3>Pick your protein:</h3>
+            <div th:each="serviceItems : ${protein}">
+                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
+                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+            </div>
+        </div>
+
+        <div class="serviceItems-group" id="cheeses">
+            <h3>Choose your cheese:</h3>
+            <div th:each="serviceItems : ${cheese}">
+                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
+                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+            </div>
+        </div>
+
+        <div class="serviceItems-group" id="veggies">
+            <h3>Determine your veggies:</h3>
+            <div th:each="serviceItems : ${veggies}">
+                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
+                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+            </div>
+        </div>
+
+        <div class="serviceItems-group" id="sauces">
+            <h3>Select your sauce:</h3>
+            <div th:each="serviceItems : ${sauce}">
+                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
+                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3>Name your taco creation:</h3>
+        <input type="text" th:field="*{name}"/>
+        <span th:text="${#fields.hasErrors('name')}">XXX</span>
+        <span class="validationError"
+              th:if="${#fields.hasErrors('name')}"
+              th:errors="*{name}">Name Error</span>
+        <br/>
+
+        <button>Submit your taco</button>
+    </div>
+</form>
+</body>
+</html>

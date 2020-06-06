@@ -1,13 +1,13 @@
-package com.liujinji.tacocloud;
+package com.liujinji.serviceonline;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TacoCloudApplicationTests {
+class ServiceonlineApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("Context load success.");
 	}
 
 }

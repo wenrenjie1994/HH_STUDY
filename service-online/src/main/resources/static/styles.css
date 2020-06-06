@@ -1,14 +1,14 @@
-div.ingredient-group:nth-child(odd) {
+div.serviceItems-group:nth-child(odd) {
 	float: left;
 	padding-right: 20px;
 }
 
-div.ingredient-group:nth-child(even) {
+div.serviceItems-group:nth-child(even) {
     float: left;
 	padding-right: 0;
 }
 
-div.ingredient-group {
+div.serviceItems-group {
 	width: 50%;
 }
 
