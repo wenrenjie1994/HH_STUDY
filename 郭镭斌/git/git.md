@@ -8,6 +8,10 @@ git会把内容按**元数据**方式存储，类似于K-V数据库
 
 ![](images\catfile.png)
 
+可以通过这个命令查看某个分支（guoleibin6071）下的tree对象，tree对象解决了文件名存储的问题，其内包含多个文件对应的key或其他tree对象的key，
+
+![](images\tree.png)
+
 通过git cat-file -t查看指定key的类型
 
 ![](images\type.png)
