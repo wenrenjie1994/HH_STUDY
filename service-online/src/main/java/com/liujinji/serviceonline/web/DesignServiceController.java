@@ -30,9 +30,10 @@ public class DesignServiceController {
                 new ServiceItem("wan-300", "300Mbps宽带", Type.WIRED_WAN),
                 new ServiceItem("wan-500", "500Mbps宽带", Type.WIRED_WAN),
                 new ServiceItem("free-qm", "QQ音乐定向", Type.FREE_APP),
-                new ServiceItem("free-am", "Apple Music定向", Type.FREE_APP)
+                new ServiceItem("free-am", "Apple Music定向", Type.FREE_APP),
+                new ServiceItem("data-50","50GB流量",Type.DATA)
         );
-        Type[] types = Type.values();
+        Type[] types = ServiceItem.Type.values();
         for (Type type : types) {
             model.addAttribute(type.toString().toLowerCase(), filterByType(serviceItems, type));
         }

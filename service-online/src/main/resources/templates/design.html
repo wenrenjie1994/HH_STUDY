@@ -8,65 +8,60 @@
 </head>
 
 <body>
-<h1>定制你自己的套餐</h1>
+<h1>定制通信套餐</h1>
 <form method="POST" th:object="${design}">
 
-    <span class="validationError"
-          th:if="${#fields.hasErrors('serviceItems')}"
-          th:errors="*{serviceItems}">serviceItems Error</span>
 
     <div class="grid">
-        <div class="serviceItems-group" id="wraps">
-            <h3>Designate your wrap:</h3>
-            <div th:each="serviceItems : ${wrap}">
-                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
-                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+        <div class="serviceItem-group" id="data">
+            <h3>选择流量包：</h3>
+            <div th:each="ServiceItem : ${data}">
+                <input name="data" type="radio" th:value="${ServiceItem.id}"/>
+                <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
 
-        <div class="serviceItems-group" id="proteins">
-            <h3>Pick your protein:</h3>
-            <div th:each="serviceItems : ${protein}">
-                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
-                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+        <div class="serviceItem-group" id="voice">
+            <h3>选择语音包：</h3>
+            <div th:each="ServiceItem : ${voice}">
+                <input name="voice" type="radio" th:value="${ServiceItem.id}"/>
+                <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
 
-        <div class="serviceItems-group" id="cheeses">
-            <h3>Choose your cheese:</h3>
-            <div th:each="serviceItems : ${cheese}">
-                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
-                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+        <div class="serviceItem-group" id="sms">
+            <h3>选择短信包：</h3>
+            <div th:each="ServiceItem : ${sms}">
+                <input name="sms" type="radio" th:value="${ServiceItem.id}"/>
+                <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
 
-        <div class="serviceItems-group" id="veggies">
-            <h3>Determine your veggies:</h3>
-            <div th:each="serviceItems : ${veggies}">
-                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
-                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+        <div class="serviceItem-group" id="wired-wan">
+            <h3>选择宽带：</h3>
+            <div th:each="ServiceItem : ${wired_wan}">
+                <input name="wired_wan" type="radio" th:value="${ServiceItem.id}"/>
+                <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
 
-        <div class="serviceItems-group" id="sauces">
-            <h3>Select your sauce:</h3>
-            <div th:each="serviceItems : ${sauce}">
-                <input name="serviceItemss" type="checkbox" th:value="${serviceItems.id}"/>
-                <span th:text="${serviceItems.name}">serviceItems</span><br/>
+        <div class="serviceItem-group" id="free_app">
+            <h3>选择定向APP：</h3>
+            <div th:each="ServiceItem : ${free_app}">
+                <input name="free_app" type="radio" th:value="${ServiceItem.id}"/>
+                <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
     </div>
 
     <div>
-        <h3>Name your taco creation:</h3>
+        <h3>定制套餐名：</h3>
         <input type="text" th:field="*{name}"/>
         <span th:text="${#fields.hasErrors('name')}">XXX</span>
         <span class="validationError"
               th:if="${#fields.hasErrors('name')}"
               th:errors="*{name}">Name Error</span>
-        <br/>
-
-        <button>Submit your taco</button>
+        <button>提交套餐</button>
     </div>
 </form>
 </body>
