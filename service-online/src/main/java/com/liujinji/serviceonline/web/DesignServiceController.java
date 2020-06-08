@@ -7,9 +7,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,7 +43,12 @@ public class DesignServiceController {
         model.addAttribute("design",new ServicePackage());
         return "design";
     }
+@PostMapping
+public String processDesign(@Valid @ModelAttribute("design") ServicePackage design, Model model) {
+    log.info("Processing design: " + design);
 
+    return "redirect:/orders/current";
+}
     private List<ServiceItem> filterByType(List<ServiceItem> serviceItems, Type type) {
         return serviceItems.stream()
                 .filter(x -> x.getType().equals(type))

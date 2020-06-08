@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lxmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" id="ordering" action="/orders">
+    <p>完善邮寄信息：</p>
+    <fieldset>
+    <div id="addr_info">
+        <label>姓名：</label>
+        <input type="text" name="name"><br/>
+        <label>省份：</label>
+        <input type="text" name="province"><br/>
+        <label>城市：</label>
+        <input type="text" name="city"><br/>
+        <label>详细地址：</label>
+        <input type="text" name="address"><br/>
+    </div>
+    </fieldset>
+    <p>付款信息：</p>
+    <fieldset>
+        <div id="cc_info">
+            <label>信用卡号：</label>
+            <input type="text" name="ccNumber"><br/>
+            <label>有效期：</label>
+            <input type="date" name="ccExpiration"><br/>
+            <label>CVV：</label>
+            <input type="text" name="ccCVV"><br/>
+        </div>
+    </fieldset>
+    <button>提交订单</button>
+</form>
+</body>
+</html>

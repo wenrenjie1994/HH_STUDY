@@ -10,13 +10,11 @@
 <body>
 <h1>定制通信套餐</h1>
 <form method="POST" th:object="${design}">
-
-
     <div class="grid">
         <div class="serviceItem-group" id="data">
             <h3>选择流量包：</h3>
             <div th:each="ServiceItem : ${data}">
-                <input name="data" type="radio" th:value="${ServiceItem.id}"/>
+                <input name="serverItems" type="checkbox" th:value="${ServiceItem.id}"/>
                 <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
@@ -24,7 +22,7 @@
         <div class="serviceItem-group" id="voice">
             <h3>选择语音包：</h3>
             <div th:each="ServiceItem : ${voice}">
-                <input name="voice" type="radio" th:value="${ServiceItem.id}"/>
+                <input name="serverItems" type="checkbox" th:value="${ServiceItem.id}"/>
                 <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
@@ -32,23 +30,21 @@
         <div class="serviceItem-group" id="sms">
             <h3>选择短信包：</h3>
             <div th:each="ServiceItem : ${sms}">
-                <input name="sms" type="radio" th:value="${ServiceItem.id}"/>
+                <input name="serverItems" type="checkbox" th:value="${ServiceItem.id}"/>
                 <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
-
         <div class="serviceItem-group" id="wired-wan">
             <h3>选择宽带：</h3>
             <div th:each="ServiceItem : ${wired_wan}">
-                <input name="wired_wan" type="radio" th:value="${ServiceItem.id}"/>
+                <input name="serverItems" type="checkbox" th:value="${ServiceItem.id}"/>
                 <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
-
         <div class="serviceItem-group" id="free_app">
             <h3>选择定向APP：</h3>
             <div th:each="ServiceItem : ${free_app}">
-                <input name="free_app" type="radio" th:value="${ServiceItem.id}"/>
+                <input name="serverItems" type="checkbox" th:value="${ServiceItem.id}"/>
                 <span th:text="${ServiceItem.contain}">serviceItem</span><br/>
             </div>
         </div>
