@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 public class ServicePackage {
-    @NotNull
+    @NotNull(message = "套餐名不能为空")
     @Size(min = 4, message = "套餐名需大于4字符")
     private String name;
     @Size(min = 1, message = "至少选择一项内容")

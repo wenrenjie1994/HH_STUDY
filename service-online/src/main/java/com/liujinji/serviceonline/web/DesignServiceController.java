@@ -6,6 +6,7 @@ import com.liujinji.serviceonline.ServicePackage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,21 +35,26 @@ public class DesignServiceController {
                 new ServiceItem("wan-500", "500Mbps宽带", Type.WIRED_WAN),
                 new ServiceItem("free-qm", "QQ音乐定向", Type.FREE_APP),
                 new ServiceItem("free-am", "Apple Music定向", Type.FREE_APP),
-                new ServiceItem("data-50","50GB流量",Type.DATA)
+                new ServiceItem("data-50", "50GB流量", Type.DATA)
         );
         Type[] types = ServiceItem.Type.values();
         for (Type type : types) {
             model.addAttribute(type.toString().toLowerCase(), filterByType(serviceItems, type));
         }
-        model.addAttribute("design",new ServicePackage());
+        model.addAttribute("design", new ServicePackage());
         return "design";
     }
-@PostMapping
-public String processDesign(@Valid @ModelAttribute("design") ServicePackage design, Model model) {
-    log.info("Processing design: " + design);
 
-    return "redirect:/orders/current";
-}
+    @PostMapping
+    public String processDesign(@Valid @ModelAttribute("design") ServicePackage design, Model model, Errors errors) {
+        if(errors.hasErrors()){
+            log.warn("校验不通过");
+            return "/design";
+        }
+        log.info("Processing design: " + design);
+        return "redirect:/orders";
+    }
+
     private List<ServiceItem> filterByType(List<ServiceItem> serviceItems, Type type) {
         return serviceItems.stream()
                 .filter(x -> x.getType().equals(type))
