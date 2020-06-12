@@ -1,6 +1,7 @@
 package multi_process;
 
 /**
+ * 线程创建的几种方式
  * @author: chenlei
  * @date: 14:27 2020/6/11
  **/
