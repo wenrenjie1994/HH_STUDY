@@ -5,9 +5,12 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
 @Data
 public class Order {
+    private Long id;
+    private Date placedAt;
     @NotBlank(message = "姓名不能为空！")
     private String name;
 
@@ -26,6 +29,6 @@ public class Order {
     @NotBlank(message = "有效日期不能为空！")
     private String ccExpiration;
 
-    @Digits(integer = 3,fraction = 0,message = "请输入3位CVV")
+    @Digits(integer = 3, fraction = 0, message = "请输入3位CVV")
     private String ccCVV;
 }

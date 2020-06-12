@@ -35,6 +35,19 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+<!--		START-JDBC依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+<!--		END-JDBC依赖-->
+<!--		START-H2数据库-->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+<!--		END-H2数据库-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

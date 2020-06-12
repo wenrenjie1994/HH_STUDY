@@ -53,10 +53,9 @@
     <div>
         <h3>定制套餐名：</h3>
         <input type="text" th:field="*{name}"/>
-        <span th:text="${#fields.hasErrors('name')}">XXX</span>
         <span class="validationError"
               th:if="${#fields.hasErrors('name')}"
-              th:errors="*{name}">Name Error</span>
+              th:errors="*{name}"></span>
         <button>提交套餐</button>
     </div>
 </form>
