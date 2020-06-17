@@ -19,6 +19,7 @@ public class DepTest {
 
         /**
          * version:2.0
+         * 注入的方式实现依赖倒置
          * @author Mr.Longyx
          * @date 2020/6/17 12:53
          *

@@ -3,6 +3,7 @@ package com.spdb.study.design.principle.openclose;
 import java.math.BigDecimal;
 
 /**
+ * 开发封闭原则：一个软件实体如类、模块和函数 对扩展开放 修改封闭
  * @author Mr.Longyx
  * @date 2020年06月16日 22:57
  */
