@@ -10,6 +10,11 @@ import java.util.List;
  */
 public class Employee {
     public void checkNumberOfCourses(){
+        /**
+         * 员工需要统计课程数量
+         * @author Mr.Longyx
+         * @date 2020/6/17 16:10
+         */
         List<Course> courses = new ArrayList<>();
         for (int i=0; i<200; i++){
             courses.add(new Course());
