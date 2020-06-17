@@ -26,7 +26,6 @@ public class Method {
      * @author Mr.Longyx
      * @date 2020/6/17 14:45
      */
-
     public void updateUserName(String userName){
 
     }
