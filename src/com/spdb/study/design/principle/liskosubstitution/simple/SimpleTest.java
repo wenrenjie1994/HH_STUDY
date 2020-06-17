@@ -27,7 +27,7 @@ public class SimpleTest {
          */
 
         /**
-         * 正方形的情形(破坏了李氏替换原则)
+         * 正方形的情形(破坏了里氏替换原则)
          * @author Mr.Longyx
          * @date 2020/6/17 21:18
          */
