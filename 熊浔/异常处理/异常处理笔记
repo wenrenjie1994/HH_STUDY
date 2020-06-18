@@ -7,3 +7,9 @@ OutOfMemoryError 内存不足
 ClassCastException 类型转换异常
 ArithmeticException 除数为零
 NullPointerException 空指针异常
+
+异常处理：（try catch finally throws）
+1.try catch finally
+    a.将可能抛出异常的代码放在try里，如果出现异常try里的代码会立即终止，程序流程运行到catch块中;
+    b.catch块中处理捕获的异常
+    c.无论是否出现异常，finally中的代码都会被执行
