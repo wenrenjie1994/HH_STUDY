@@ -6,7 +6,7 @@ package com.spdb.study.design.principle.responsibility.simple;
  * @author Mr.Longyx
  * @date 2020年06月17日 14:16
  */
-public class Course {
+public class  Course {
     /**
      * 需要抽离职责的方法
      * @author Mr.Longyx

@@ -12,7 +12,6 @@ public class TeamLeader {
          * @author Mr.Longyx
          * @date 2020/6/17 16:08
          * @param employee
-         *
          * List<Course> courses = new ArrayList<> ();
          * for (int i=0; i<200; i++){
          *     courses.add(new Course());

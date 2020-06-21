@@ -31,6 +31,7 @@ public class SimpleTest {
          * @author Mr.Longyx
          * @date 2020/6/17 21:18
          */
+
         Square square = new Square();
         square.setSideLength(20L);
         resize(square);

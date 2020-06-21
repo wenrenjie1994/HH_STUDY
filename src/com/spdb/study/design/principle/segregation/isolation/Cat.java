@@ -7,7 +7,7 @@ package com.spdb.study.design.principle.segregation.isolation;
 public class Cat implements IEatAnimation,IPlayAnimation{
     @Override
     public void eat() {
-
+        
     }
 
     @Override
