@@ -7,6 +7,6 @@ package com.spdb.study.design.pattern.factory.factorymethod.animal;
 public class Pig implements CollectAnimal {
     @Override
     public void collect() {
-        System.out.println("市场采购猪");
+        System.out.println("市场采购小猪");
     }
 }
