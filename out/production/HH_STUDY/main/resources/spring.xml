@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="baseMethod"  class="com.spdb.study.reflect.BaseMethod"></bean>
+    <bean id="date" class="java.util.Date"></bean>
+    <bean id="testCase" class="com.spdb.study.reflect.TestCase"></bean>
+</beans>
