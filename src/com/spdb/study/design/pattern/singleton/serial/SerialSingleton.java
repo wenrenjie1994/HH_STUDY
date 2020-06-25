@@ -1,16 +1,13 @@
 package com.spdb.study.design.pattern.singleton.serial;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 /**
  * 序列化单例(饿汉式)
  * @author Mr.Longyx
  * @date 2020年06月23日 14:08
  */
-public class SerialSingleton {
+public class SerialSingleton implements Serializable {
     private static final SerialSingleton INSTANCE = new SerialSingleton();
     /**
      * 构造方法私有化
@@ -31,7 +28,7 @@ public class SerialSingleton {
     /**
      * 重写readResolve方法：不过是覆盖了序列化和反序列化的对象
      * 结果还是创建了两次，只是发生在JVM层面，相对会比较安全
-     * 之前反序列化的对像会被GC回收
+     * 之前反序列化的对象会被GC回收
      * @author Mr.Longyx
      * @date 2020/6/23 14:44
      * @return java.lang.Object
