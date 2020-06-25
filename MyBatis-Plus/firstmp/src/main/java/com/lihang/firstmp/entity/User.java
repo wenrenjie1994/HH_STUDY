@@ -1,5 +1,6 @@
 package com.lihang.firstmp.entity;
 
+import com.baomidou.mybatisplus.annotation.SqlCondition;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -14,11 +15,11 @@ import java.time.LocalDateTime;
  * Date: 2020/5/25
  */
 @Data
-@TableName("mp_user")
+/*@TableName("mp_user")*/
 public class User {
     //主键
-    @TableId("user_id")
-    private Long userId;
+   /* @TableId("user_id")*/
+    private Long id;
     //姓名
    /* @TableField("name")
     private String realName;*/
@@ -32,6 +33,6 @@ public class User {
     //创建时间
     private LocalDateTime createTime;
     //评论
-    @TableField(exist = false)
-    private String remark;
+ /*   @TableField(exist = false)
+    private String remark;*/
 }

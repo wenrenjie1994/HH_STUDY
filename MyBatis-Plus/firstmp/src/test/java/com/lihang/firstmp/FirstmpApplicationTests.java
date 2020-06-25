@@ -17,14 +17,7 @@ import java.util.List;
 class FirstmpApplicationTests {
     @Autowired
    private UserMapper userMapper;
-    @Test
-    public void select() {
-        List<User> users = userMapper.selectList(null);
-       // Assert.assertEquals(4,users.size());
-        for (User user:users){
-            System.out.println(user.toString());
-        }
-    }
+
 
     @Test
     public void insertOne(){
@@ -41,7 +34,7 @@ class FirstmpApplicationTests {
     @Test
     public void update(){
         User user = new User();
-        user.setUserId(1088248166370832179L);
+        user.setId(1088248166370832179L);
         user.setCreateTime(LocalDateTime.now());
         int rows = userMapper.updateById(user);
         System.out.println("影响行数："+rows);

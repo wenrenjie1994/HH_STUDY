@@ -10,5 +10,8 @@ logging:
     com.lihang.firstmp.dao: trace
   pattern:
     console: '%p%m%n'
+mybatis-plus:
+  mapper-locations: com/lihang/firstmp/mapper/*
 
-#»’÷æ
+
+#???
