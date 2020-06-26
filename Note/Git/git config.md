@@ -61,18 +61,19 @@
 
 #### 普通代理
 
-- `git config --global https.proxy http://127.0.0.1:1080`
-- `git config --global https.proxy https://127.0.0.1:1080`
+- `git config --global https.proxy "http://127.0.0.1:1080"`
+- `git config --global https.proxy "https://127.0.0.1:1080"`
 
 #### SOCKS5 代理
 
-- `git config --global http.proxy socks5://127.0.0.1:1080`
-- `git config --global https.proxy socks5://127.0.0.1:1080`
+- `git config --global http.proxy "socks5://127.0.0.1:1080`"
+- `git config --global https.proxy "socks5://127.0.0.1:1080`"
+- 
 
 #### 针对 GitHub 的 SOCKS5 代理
 
-- `git config --global http.https://github.com.proxy socks5://127.0.0.1:1080`
-- `git config --global https.https://github.com.proxy socks5://127.0.0.1:1080`
+- `git config --global http.https://github.com.proxy "socks5://127.0.0.1:1080"`
+- `git config --global https.https://github.com.proxy "socks5://127.0.0.1:1080`"
 
 #### 取消代理
 

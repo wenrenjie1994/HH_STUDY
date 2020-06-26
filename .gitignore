@@ -1,13 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
+/IDEA_Study/.idea
+/IDEA_Study/out
 .gitignore
-.idea/.gitignore
-.idea/codeStyles/
-.idea/description.html
-.idea/encodings.xml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/project-template.xml
-.idea/vcs.xml
-HH_STUDY.iml
-src/
+*.class
+*.iml
+out
