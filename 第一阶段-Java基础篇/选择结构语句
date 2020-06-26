@@ -1,1 +1,47 @@
 
+一、 流程控制
+
+二、 顺序结构
+
+三、 选择结构
+1. 单if语句
+if(关系表达式){
+  语句体；
+}
+2. if-else语句
+if（关系表达式）{
+  语句体1；
+}else{
+  语句体2；
+}
+3. 扩展if-else语句
+if（判断条件1）{
+  执行语句1；
+}else if（判断条件2）{
+  执行语句2；
+}
+……
+}else if（判断条件n）{
+  执行语句n；
+}else{
+  执行语句n+1；
+}
+4. switch语句
+switch（表达式）{
+  case 常量值1：
+　　语句体1；
+　　break；
+  case 常量值2：
+　　语句体2；
+　　break；
+　　……
+  default:
+　　语句体n+1；
+　　break；
+}
+4.1 switch后面的小括号有数据类型限制，只能是下列：
+基本数据类型：int/char/byte/short
+引用数据类型：String字符串/enum枚举
+4.2 case前后顺序可以颠倒，break语句可以省略
+4.3 匹配一个case后向下执行，直到遇到break或整体结束为止
+
