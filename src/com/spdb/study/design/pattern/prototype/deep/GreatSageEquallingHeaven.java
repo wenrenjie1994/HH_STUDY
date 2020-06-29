@@ -12,6 +12,7 @@ import java.util.Date;
  * @date 2020年06月25日 23:33
  */
 public class GreatSageEquallingHeaven extends Monkey implements Cloneable, Serializable {
+    private static final long serialVersionUID = 2905680991415113742L;
     public GoldenCudgel goldenCudgel;
     /**
      * 对象初始化
