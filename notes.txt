@@ -1,0 +1,10 @@
+快捷键：
+ctrl+Y 删除光标所在行
+ctrl+D 复制光标所在行
+ctrl+shift+上下箭头 将光标所在行向上下移动
+ctrl+ / 注释
+ctrl+shift+/  /**/注释
+ctrl+alt+L 格式化代码
+
+psvm+enter public static void main（String[] args）方法
+sout System.out.println 
