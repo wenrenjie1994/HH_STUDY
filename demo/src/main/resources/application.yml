@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.88.88.88/isp?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=UTC&useSSL=false
+    username: root
+    password: mango
+  autoconfigure:
+    exclude:  org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+server:
+  port: 8081
