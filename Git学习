@@ -1,0 +1,19 @@
+1、创建分支 git branch (分支名)
+2、提交 git commit;
+3、切换分支 git checkout (分支名字)；
+4、合并分支 git merge (非工作分支的名字)；
+5、合并分支 git rebase (非工作分支的名字)；
+6、HEAD HEAD总是指向当前分支上最近一次提交记录，大多数修改提交树的Git命令都是从改变HEAD的指向开始的；
+7、查看提交记录的哈希值 Git log
+8、相对应用：
+·使用^向上移动1个提交记录  git checkout master^
+·使用~<num>向上移动num个提交记录  git checkout HEAD~4
+9、强制修改分支位置  git branch -f master HEAD~3
+上面的命令会将master分支强制指向HEAD的第3级父提交。
+10、撤销变更：
+·git reset  通过把分支记录回退几个提交记录来实现撤销改动。你可以将这想象成“改写历史”。
+git reset 向上移动分支，原来指向的提交记录就跟从来没有提交过一样。
+例如：git reset HEAD~1
+·虽然在你的本地分支中使用 git reset 很方便，但是这种“改写历史”的方法对大家一起使用的远程分支是无效的,
+为了撤销更改并分享给别人，我们需要使用 git revert。revert 之后就可以把你的更改推送到远程仓库与别人分享。
+例如：git revert HEAD
