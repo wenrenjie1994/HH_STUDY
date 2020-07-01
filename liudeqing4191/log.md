@@ -4,9 +4,12 @@
    - git branch [name]
    - git checkout name
    - git checkout -b newBranchName
+   
 2. 学习大表哥的lowb内存hr系统
 
+3. 学习陈艺文大佬给的git学习网站：https://learngitbranching.js.org/?demo=&locale=zh_CN
 
+   交互式学习 挺好玩的
 
 ###### 2020/6/29
 
