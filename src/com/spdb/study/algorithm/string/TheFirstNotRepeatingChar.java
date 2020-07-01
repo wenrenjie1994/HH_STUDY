@@ -37,6 +37,7 @@ public class TheFirstNotRepeatingChar {
                 return index;
             }
         }
+
         /**
          * 未找到返回-1
          * @author Mr.Longyx
