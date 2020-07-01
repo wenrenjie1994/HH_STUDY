@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS `hr`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `name` VARCHAR(100) NOT NULL,
+   `phone` VARCHAR(11) NOT NULL,
+   `addr` VARCHAR(100) NOT NULL,
+   `username` VARCHAR(100) NOT NULL,
+   `password` VARCHAR(256) NOT NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO hr ( name, phone, addr, username, password )
+                       VALUES
+                       ( "孙", "11111111111", "地球", "sun", "sjj123" );
+INSERT INTO hr ( name, phone, addr, username, password )
+                       VALUES
+                       ( "进", "11111111111", "地球", "jin", "sjj123" );
+INSERT INTO hr ( name, phone, addr, username, password )
+                       VALUES
+                       ( "杰", "11111111111", "地球", "jie", "sjj123" );
