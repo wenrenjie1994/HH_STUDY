@@ -1,4 +1,4 @@
-package bean;
+package
 
 import java.util.ArrayList;
 
