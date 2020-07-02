@@ -1,10 +1,9 @@
 package main.sys;
 
-import main.db.AbstractResumeDB;
-import main.db.MemoryResumeDB;
+import main.mapper.AbstractResumeMapper;
+import main.mapper.MemoryResumeMapper;
 import main.entity.AbstractResume;
 import main.entity.Resume;
-import main.entity.ResumeList;
 import main.sys.interfaces.HRApplication;
 
 import java.util.Scanner;
@@ -16,7 +15,7 @@ import java.util.Scanner;
  */
 public abstract class AbstractHRApplication implements HRApplication {
   Scanner scanner = new Scanner(System.in);
-  AbstractResumeDB db = new MemoryResumeDB();
+  AbstractResumeMapper resumeMapper = new MemoryResumeMapper();
   private boolean exitFlag = false;
 
   public void run(){
@@ -84,7 +83,7 @@ public abstract class AbstractHRApplication implements HRApplication {
     resume.setId(id);
     resume.setSchool(school);
 
-    if(db.saveResume(resume)){
+    if(resumeMapper.saveResume(resume)){
       System.out.println("success====保存成功");
     }else{
       System.out.println("error====保存失败，可能数据已经存在了～");
@@ -108,7 +107,7 @@ public abstract class AbstractHRApplication implements HRApplication {
     Resume resume = new Resume();
     resume.setId(id);
 
-    AbstractResume newResume =  db.getResume(resume);
+    AbstractResume newResume =  resumeMapper.getResume(resume);
     if(newResume == null){
       System.out.println("====没查到");
     }else{
@@ -118,11 +117,11 @@ public abstract class AbstractHRApplication implements HRApplication {
 
   @Override
   public void listResume() {
-    if(db.listResume().size() == 0){
+    if(resumeMapper.listResume().size() == 0){
       System.out.println("error====还没有数据");
     }
     System.out.println("====姓名====身份证号====学校====应聘流程");
-    for(AbstractResume resume : db.listResume()){
+    for(AbstractResume resume : resumeMapper.listResume()){
       System.out.println(resume.toString());
     }
   }

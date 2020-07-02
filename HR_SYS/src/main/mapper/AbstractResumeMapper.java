@@ -1,34 +1,32 @@
 package main.mapper;
 
-import main.entity.Resume;
-import main.entity.ResumeList;
 import main.mapper.interfaces.ResumeMapper;
+import main.entity.AbstractResume;
+import main.entity.ResumeList;
 
 /**
  * @author: hqweay
- * @description: TODO
- * Created on 7/2/20 11:39 AM
+ * @description: 对数据操作进行抽象，可以从内存、可以从文本
+ * Created on 7/2/20 12:01 PM
  */
-@Deprecated
 public class AbstractResumeMapper implements ResumeMapper {
-  private ResumeList listResume;
   @Override
-  public boolean saveResume(Resume resume) {
+  public boolean saveResume(AbstractResume resume) {
     return false;
   }
 
   @Override
-  public boolean removeResume(Resume resume) {
+  public boolean removeResume(AbstractResume resume) {
     return false;
   }
 
   @Override
-  public boolean updateResume(Resume resume) {
+  public boolean updateResume(AbstractResume resume) {
     return false;
   }
 
   @Override
-  public Resume getResume(Resume resume) {
+  public AbstractResume getResume(AbstractResume resume) {
     return null;
   }
 

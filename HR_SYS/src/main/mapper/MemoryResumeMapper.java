@@ -1,8 +1,6 @@
-package main.db;
+package main.mapper;
 
-import main.db.AbstractResumeDB;
 import main.entity.AbstractResume;
-import main.entity.Resume;
 import main.entity.ResumeList;
 import main.utils.Valid;
 
@@ -11,14 +9,14 @@ import main.utils.Valid;
  * @description: 基于内存对数据进行操作
  * Created on 7/2/20 12:02 PM
  */
-public class MemoryResumeDB extends AbstractResumeDB {
+public class MemoryResumeMapper extends AbstractResumeMapper {
   private ResumeList resumeList = new ResumeList();
 
-  public MemoryResumeDB(ResumeList resumeList) {
+  public MemoryResumeMapper(ResumeList resumeList) {
     this.resumeList = resumeList;
   }
 
-  public MemoryResumeDB() {
+  public MemoryResumeMapper() {
   }
 
   public ResumeList getResumeList() {

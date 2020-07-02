@@ -1,18 +1,17 @@
 package main.mapper.interfaces;
 
-import main.entity.Resume;
+import main.entity.AbstractResume;
 import main.entity.ResumeList;
 
 /**
  * @author: hqweay
- * @description: TODO
- * Created on 7/2/20 11:45 AM
+ * @description: 数据操作方法的定义
+ * Created on 7/2/20 12:00 PM
  */
-@Deprecated
 public interface ResumeMapper {
-  boolean saveResume(Resume resume);
-  boolean removeResume(Resume resume);
-  boolean updateResume(Resume resume);
-  Resume getResume(Resume resume);
+  boolean saveResume(AbstractResume resume);
+  boolean removeResume(AbstractResume resume);
+  boolean updateResume(AbstractResume resume);
+  AbstractResume getResume(AbstractResume resume);
   ResumeList listResume();
 }
