@@ -10,4 +10,5 @@
 .idea/project-template.xml
 .idea/vcs.xml
 HH_STUDY.iml
-src/
+out/
+demo/*
