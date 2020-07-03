@@ -21,7 +21,7 @@ public class AbstractResumeMapper implements ResumeMapper {
   }
 
   @Override
-  public boolean updateResume(AbstractResume resume) {
+  public boolean updateResume(AbstractResume oldResume, AbstractResume newResume) {
     return false;
   }
 

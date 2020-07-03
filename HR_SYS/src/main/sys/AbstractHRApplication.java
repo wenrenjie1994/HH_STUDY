@@ -97,7 +97,39 @@ public abstract class AbstractHRApplication implements HRApplication {
 
   @Override
   public void updateResume() {
+    System.out.println("====输入需要修改的简历的身份证号");
+    String id = scanner.nextLine();
+    Resume resume = new Resume();
+    resume.setId(id);
 
+    AbstractResume oldResume =  resumeMapper.getResume(resume);
+    if(oldResume == null){
+      System.out.println("====没有该用户的简历");
+      return;
+    }
+
+    System.out.println("====输入姓名，留空则不变。");
+    String newName = scanner.nextLine();
+    newName = newName.equals("")?oldResume.getName():newName;
+
+    System.out.println("====输入身份证号，留空则不变。");
+    String newId = scanner.nextLine();
+    newId = newId.equals("")?oldResume.getId():newId;
+
+    System.out.println("====输如学校名，留空则不变。");
+    String newSchool = scanner.nextLine();
+    newSchool = newSchool.equals("")?oldResume.getSchool():newSchool;
+
+    Resume newResume = new Resume();
+    newResume.setName(newName);
+    newResume.setId(newId);
+    newResume.setSchool(newSchool);
+
+    if(resumeMapper.updateResume(oldResume, newResume)){
+      System.out.println("====修改成功");
+    }else{
+      System.out.println("====修改失败");
+    }
   }
 
   @Override

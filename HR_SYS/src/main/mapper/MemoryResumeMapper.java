@@ -50,16 +50,21 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public boolean updateResume(AbstractResume resume) {
+  public boolean updateResume(AbstractResume oldResume, AbstractResume newResume) {
   //  前置判断
-    Valid.ValidResumeAllFields(resume);
+    String oldId = oldResume.getId();
+    Valid.ValidResumeAllFields(newResume);
+    if(oldId == null || oldId.equals("")){
+      return false;
+    }
+
     for(int i = 0; i < resumeList.size(); i++){
-      if(resumeList.get(i).getId().equals(resume.getId())){
+      if(resumeList.get(i).getId().equals(oldId)){
         if(isDeleted(resumeList.get(i).getDeleteStatus())){
           // 已经删除了，不能更新。
           return false;
         }else{
-          resumeList.set(i, resume);
+          resumeList.set(i, newResume);
           return true;
         }
       }

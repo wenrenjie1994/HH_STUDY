@@ -11,7 +11,7 @@ import main.entity.ResumeList;
 public interface ResumeMapper {
   boolean saveResume(AbstractResume resume);
   boolean removeResume(AbstractResume resume);
-  boolean updateResume(AbstractResume resume);
+  boolean updateResume(AbstractResume oldResume, AbstractResume newResume);
   AbstractResume getResume(AbstractResume resume);
   ResumeList listResume();
 }
