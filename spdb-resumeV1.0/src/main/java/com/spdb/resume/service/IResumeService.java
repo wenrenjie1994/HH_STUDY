@@ -45,4 +45,11 @@ public interface IResumeService {
      *@param id
      **/
     ServerResponse<Resume> selectResume(String id, ArrayList<Resume> resumeArrayList);
+
+    /**
+     *@Author: A wei
+     *@Description
+     *@return
+     *@param
+     **/
 }

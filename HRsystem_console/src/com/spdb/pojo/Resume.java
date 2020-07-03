@@ -47,6 +47,38 @@ public class Resume {
         return id;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     public String getSchool() {
         return school;
     }
@@ -80,5 +112,9 @@ public class Resume {
         this.phone = phone;
         this.email = email;
         this.status = status;
+    }
+
+    public Resume(){
+
     }
 }

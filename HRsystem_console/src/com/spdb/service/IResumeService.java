@@ -3,6 +3,7 @@ package com.spdb.service;
 import com.spdb.common.ServerResponse;
 import com.spdb.pojo.Resume;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -42,4 +43,11 @@ public interface IResumeService {
      *@param id
      **/
     ServerResponse<Resume> selectResume(String id, ArrayList<Resume> resumeArrayList);
+    /**
+     *@Author: A wei
+     *@Description 写入txt文件
+     *@return {@link ServerResponse<String>}
+     *@param resumeArrayList
+     **/
+    ServerResponse<String> saveResumeList(String path,ArrayList<Resume> resumeArrayList);
 }

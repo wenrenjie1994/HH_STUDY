@@ -6,9 +6,9 @@ import com.spdb.pojo.Resume;
 import com.spdb.service.IResumeService;
 import com.spdb.util.IResumeCheck;
 
+import java.io.*;
 import java.util.ArrayList;
-
-import static com.sun.xml.internal.ws.api.message.Packet.State.ServerResponse;
+import java.util.Scanner;
 
 
 /**
@@ -85,7 +85,13 @@ public class IResumeServiceImpl implements IResumeService {
 
     @Override
     public ServerResponse<Resume> selectResume(String id,ArrayList<Resume> resumeArrayList) {
+        //1、查询id是否为空
+        if (id.isEmpty()){
+            return ServerResponse.createByErrorMessage("id为空！请输入正确证件号码");
+        }
+        //2、查询简历
         Resume resume =selectResumeById(id,resumeArrayList);
+        //3、判断简历状态
         if (resume == null){
             return ServerResponse.createByErrorMessage("查询失败，简历不存在！");
         }else{
@@ -93,11 +99,28 @@ public class IResumeServiceImpl implements IResumeService {
         }
     }
 
+    @Override
+    public ServerResponse<String> saveResumeList(String path,ArrayList<Resume> resumeArrayList) {
+        //2、简历库是否有简历
+        if (resumeArrayList.size() == 0){
+            return ServerResponse.createByErrorMessage("当前简历库无简历信息！");
+        }
+        //3、写简历到我们的txt文档
+        try{
+            writeResumeList(path,resumeArrayList);
+            return ServerResponse.createBySuccess();
+        }catch (IOException e){
+            e.printStackTrace();
+            return ServerResponse.createByErrorMessage("IO异常");
+        }
+
+    }
+
     /**
      *@Author: A wei
      *@Description 查询简历是否在人才库
      *@return boolean
-     *@param
+     *@param checkResume,resumeList,iResumeCheck
      **/
     private static boolean checkResume(Resume checkResume,ArrayList<Resume> resumeList, IResumeCheck iResumeCheck){
 
@@ -122,5 +145,144 @@ public class IResumeServiceImpl implements IResumeService {
         }
         return null;
     }
+
+    /**
+     *@Author: A wei
+     *@Description 获取用户输入简历信息，生成简历对象
+     *@return
+     *@param
+     **/
+    public static Resume getResumeInformation(int status){
+        if(status == 1){
+            System.out.println("-------welcome to create resume-------");
+            System.out.println("please type your: name、id、school、major、sex、phone、email");
+        }else if(status == 3){
+            System.out.println("-------welcome to update resume-------");
+            System.out.println("please type your name、id、school、major、sex、phone、email");
+        }
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        String id = scanner.nextLine();
+        String school = scanner.nextLine();
+        String major = scanner.nextLine();
+        String sexStr = scanner.nextLine();
+        int sex = "男".equals(sexStr)? 0:1;
+        String phone = scanner.nextLine();
+        String email = scanner.nextLine();
+
+        scanner.close();
+
+        Resume result = new Resume(name,id,school,major,sex,phone,email, ResumeStatusCode.NOTAPPLY.getCode());
+
+        return result;
+    }
+    /**
+     *@Author: A wei
+     *@Description 根据id获取用户简历
+     *@return
+     *@param
+     **/
+    public static ServerResponse getUserResumeById(int status,ArrayList<Resume> resumeArrayList){
+        switch (status){
+            case 2:{
+                System.out.println("-------welcome to delete resume-------");
+                System.out.println("please type your: id");
+                Scanner scanner = new Scanner(System.in);
+                String id = scanner.nextLine();
+                scanner.close();
+                return ServerResponse.createBySuccess(selectResumeById(id,resumeArrayList));
+            }
+            case 4:{
+                System.out.println("-------welcome to inquire resume-------");
+                System.out.println("please type your: id");
+                Scanner scanner = new Scanner(System.in);
+                String id = scanner.nextLine();
+                scanner.close();
+                return ServerResponse.createBySuccess(id);
+            }
+        }
+
+        return null;
+    }
+    /**
+     *@Author: A wei
+     *@Description 打印简历信息
+     *@return
+     *@param
+     **/
+    public static void printResume(Resume result){
+        System.out.println("name:"+result.getName()+"\n" +
+                "id:" + result.getId()+"\n"+
+                "school:" + result.getSchool()+"\n"+
+                "major:" + result.getMajor() + "\n"+
+                "sex:" + (result.getSex() == 0?"男":"女") + "\n"+
+                "phone:" + result.getPhone() + "\n"+
+                "email:" + result.getEmail() + "\n");
+    }
+
+    /**
+     *@Author: A wei
+     *@Description 写入文件流
+     *@return boolean
+     *@param
+     **/
+    public static boolean writeResumeList(String path,ArrayList<Resume> resumeArrayList) throws IOException{
+        //将文件操作转换为缓冲流操作
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path));
+
+        for (Resume item : resumeArrayList){
+            bufferedWriter.write(item.getName()+" " +
+                                     item.getId()+" "+
+                                     item.getSchool()+" "+
+                                     item.getMajor() + " "+
+                                     (item.getSex() == 0?"男":"女") + " "+
+                                     item.getPhone() + " "+
+                                     item.getEmail() + "\n");
+        }
+
+        bufferedWriter.close();
+        return true;
+    }
+
+    /**
+     *@Author: A wei
+     *@Description 从文件中读取数据
+     *@return ArrayList<Resume>
+     *@param
+     **/
+    public static ArrayList<Resume> loadResumes(String path){
+        //1、测试路径
+        if (path.isEmpty()){
+            System.out.println("路径名不对,请输入正确路径名！");
+            return null;
+        }
+        //2、读取文件
+        File file = new File(path);
+        BufferedReader bufferedReader = null;
+        ArrayList<Resume> resumeArrayList = new ArrayList<>();
+        Resume resume = null;
+        try{
+            //3、读入缓存
+            bufferedReader = new BufferedReader(new FileReader(file));
+            String str;
+            //4、数据操作，装载成简历对象
+            while((str = bufferedReader.readLine()) != null){
+                String[] arrayStr = str.split(" ");
+                resume = new Resume(arrayStr[0],
+                                    arrayStr[1],
+                                    arrayStr[2],
+                                    arrayStr[3],
+                                    arrayStr[4].equals("男")?0:1,
+                                    arrayStr[5],
+                                    arrayStr[6],
+                                    ResumeStatusCode.NOTAPPLY.getCode());
+                resumeArrayList.add(resume);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return resumeArrayList;
+    }
+
 }
 
