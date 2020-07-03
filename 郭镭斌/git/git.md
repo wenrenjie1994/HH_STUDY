@@ -59,3 +59,38 @@ git remote add origin <远程仓库地址>添加远程仓库地址（名称一�
 git push --set-upstream origin XXX 与远程origin的XXX分支建立联系
 
 git diff  XX1 master 查看xx1与master分支的差别
+
+### git基本使用
+
+- 创建项目
+
+- 初始化git仓库
+
+- 提交文件
+
+- 远程关联
+
+- push至远程仓库
+
+
+**远程仓库管理**
+
+```shell
+# 列出已经存在的远程仓库
+$ git remote
+# 列出远程仓库的详细信息，在别名后面列出URL地址
+$ git remote -v
+#添加远程仓库地址
+$ git remote add origin http:xxx.xxx
+#删除指定名称的远程仓库origin
+$ git remote remove origin 
+
+#把本地仓库的提交推送到远程仓库
+#上传新分支至远程
+$ git push --set-upstream origin master 
+$ git push -u origin master
+
+#将本地分支与远程建立关联
+$ git branch --track --set-upstream-to=origin/test test
+```
+
