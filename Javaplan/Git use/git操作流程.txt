@@ -1,0 +1,21 @@
+1 去mysgit官网下载软件
+2 修改配置
+git config --global user.name
+git config --global user.email
+如：
+git config --global user.name "mayonghai"                
+git config --global user.email "******@163.com"
+3 克隆远程项目 git clone
+如： git clone http://XXX.XXX/sq-group/XXX.git
+克隆完成之后，可以看见项目名称，进去项目之后，可以看见一些git相关文件
+4 查看远程分支
+git branch -r
+5 建立本地对应分支
+git checkout --track 或者 git checkout -b
+如：
+git checkout --track  origin/dev-mayonghai2481 ，
+git  checkout -b dev-zhengqi  origin/dev-mayonghai2481
+6 建立分支后，默认会进到新建的分支里，如果想进去其他分支，可以通过
+git checkout 加分支名切换
+如:
+git checkout mayonghai2481
