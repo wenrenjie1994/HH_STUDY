@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b671485a-edd7-42cb-9b4e-60112030fb42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS/HR_SYS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS/src/bean/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS/src/bean/Resume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS/src/sys/HRS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EnumSingleton.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS/src/bean/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS/src/bean/BookList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS/src/bean/Resume.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS/src/bean/ResumeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS/src/sys/HRS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SerialSingleton.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java笔记/java第一章/java第一章.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk8.chm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/asm-8.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/cglib-3.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/commons-lang3-3.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/dom4j-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/META-INF/HH_STUDY.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/dynamic/MaxPow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/greedy/MaxPow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/math/MaxPow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/queue/CQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/queue/CQueue2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/tree/BuildTreeCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/algorithm/tree/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/mvc/DispatcherServlet$Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/mvc/DispatcherServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/mvc/controllers/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/mvc/controllers/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/mvc/controllers/SystemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/simple/Boss.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/simple/DelegateTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/simple/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/simple/EmployeeA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/simple/EmployeeB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/delegate/simple/Leader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/AbstractFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/ICourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/INote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/IScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/JavaCourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/JavaNote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/JavaScore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/course/PythonCourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/Apple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/Banana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/CollectFruit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/FruitFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/FruitFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/Grape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthApple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthBanana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthFruitFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthGrape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/AnimalFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/AnimalFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/CollectAnimal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/DogFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/Fish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/FishFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/Pig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/animal/PigFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/course/FactoryMethodTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/course/ICourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/course/JavaCourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/factorymethod/course/PythonCourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/course/CourseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/course/ICourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/course/JavaCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/course/PythonCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/course/SimpleFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/fruit/Apple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/fruit/Banana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/fruit/FruitFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/fruit/FruitFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/factory/simplefactory/fruit/IFruit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/deep/DeepCloneTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/deep/GoldenCudgel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/deep/GreatSageEquallingHeaven.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/deep/Monkey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/shallow/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/shallow/ConcretePrototypeA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/shallow/ProtoTypeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/prototype/shallow/Prototype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/OrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/OrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/db/DynamicDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/proxy/DbRouteProxyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/proxy/OrderServiceDynamicProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dbroute/proxy/OrderServiceStaticProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/cglibproxy/CglibMatchMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/cglibproxy/CglibProxyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/cglibproxy/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/jdkproxy/Girl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/jdkproxy/JDKMatchMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/jdkproxy/JDKProxyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/$Proxy0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/$Proxy0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbClassLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbInvocationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbMatchMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbProxyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/staticproxy/Mother.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/staticproxy/MotherProxyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/staticproxy/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/proxy/staticproxy/Son.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/hungry/HungrySingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/hungry/HungryStaticSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/lazy/LazyDoubleCheckSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/lazy/LazyInnerClassSingleton$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/lazy/LazyInnerClassSingleton$LazyHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/lazy/LazyInnerClassSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/lazy/LazySingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/register/ContainerSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/register/ContainerSingletonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/register/EnumSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/register/EnumSingletonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/serial/SerialSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/threadlocal/ThreadLocalSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/singleton/threadlocal/ThreadLocalSingletonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/MsgResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/AliPay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/JDPay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/PayMent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/PayStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/PayStrategyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/UnionPay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/pay/payport/WeChatPay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/CashBackStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/CouponStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/GroupByStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/PromotionActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/PromotionActivityTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/PromotionKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/PromotionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/PromotionStrategyFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/strategy/promotion/RawPriceStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/course/BigDataCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/course/JavaCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/course/NetWorkCourseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/course/NetworkCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/course/PythonCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/jdbc/JdbcTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/jdbc/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/jdbc/MemberDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/jdbc/RowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/pattern/template/jdbc/dao/MemberDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/compositereuse/CRPTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/compositereuse/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/compositereuse/MySQLConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/compositereuse/OracleConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/compositereuse/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/demeter/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/demeter/CoursesTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/demeter/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/demeter/TeamLeader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/dependencyinversion/AICourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/dependencyinversion/DepTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/dependencyinversion/ICourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/dependencyinversion/JavaCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/dependencyinversion/Longyx.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/dependencyinversion/PythonCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/abstracted/NormalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/abstracted/QuadRangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/abstracted/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/abstracted/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/methodparam/Base.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/methodparam/Child.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/methodparam/MethodParamTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/methodreturn/Base.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/methodreturn/Child.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/methodreturn/MethodReturnTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/simple/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/simple/SimpleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/liskosubstitution/simple/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/openclose/IProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/openclose/OpenCloseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/openclose/ShoeDisCountProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/openclose/ShoeProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/interfaced/CourseImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/interfaced/ICourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/interfaced/ICourseInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/interfaced/ICourseManage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/method/Method.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/simple/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/simple/LiveCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/responsibility/simple/ReplayCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/Bird.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/IEatAnimation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/IFlyAnimation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/IPlayAnimation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/isolation/ISwimAnimation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/simple/Bird.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/design/principle/segregation/simple/IAnimal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/BaseMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/ExecuteTestAnnotationMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/ReflectFirstCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/ReflectSecondCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/Reflection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/TestCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/dom4j/TestApplicationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/reflect/dom4j/XmlApplicationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/com/spdb/study/thread/ExecutorThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/main/resources/spring-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/HH_STUDY/main/webapp/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/dynamic/MaxPow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/greedy/MaxPow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/math/MaxPow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/queue/CQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/queue/CQueue2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/tree/BuildTreeCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/algorithm/tree/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/mvc/DispatcherServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/mvc/controllers/MemberController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/mvc/controllers/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/mvc/controllers/SystemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/simple/Boss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/simple/DelegateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/simple/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/simple/EmployeeA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/simple/EmployeeB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/delegate/simple/Leader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/AbstractFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/ICourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/INote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/IScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/JavaCourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/JavaNote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/JavaScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/course/PythonCourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/Banana.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/CollectFruit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/FruitFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/FruitFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/Grape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthApple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthBanana.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthFruitFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/abstractfactory/fruit/SouthGrape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/AnimalFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/AnimalFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/CollectAnimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/DogFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/Fish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/FishFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/Pig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/animal/PigFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/course/FactoryMethodTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/course/ICourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/course/JavaCourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/factorymethod/course/PythonCourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/course/CourseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/course/ICourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/course/JavaCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/course/PythonCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/course/SimpleFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/fruit/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/fruit/Banana.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/fruit/FruitFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/fruit/FruitFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/factory/simplefactory/fruit/IFruit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/deep/DeepCloneTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/deep/GoldenCudgel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/deep/GreatSageEquallingHeaven.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/deep/Monkey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/shallow/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/shallow/ConcretePrototypeA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/shallow/ProtoTypeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/prototype/shallow/Prototype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/OrderDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/db/DynamicDataSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/proxy/DbRouteProxyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/proxy/OrderServiceDynamicProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dbroute/proxy/OrderServiceStaticProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/cglibproxy/CglibMatchMaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/cglibproxy/CglibProxyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/cglibproxy/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/jdkproxy/Girl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/jdkproxy/JDKMatchMaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/jdkproxy/JDKProxyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/$Proxy0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbClassLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbInvocationHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbMatchMaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/SpdbProxyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/staticproxy/Mother.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/staticproxy/MotherProxyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/staticproxy/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/proxy/staticproxy/Son.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/hungry/HungrySingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/hungry/HungryStaticSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/lazy/LazyDoubleCheckSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/lazy/LazyInnerClassSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/lazy/LazySingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/register/ContainerSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/register/ContainerSingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/register/EnumSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/register/EnumSingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/serial/SerialSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/threadlocal/ThreadLocalSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/singleton/threadlocal/ThreadLocalSingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/MsgResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/AliPay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/JDPay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/PayStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/PayStrategyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/UnionPay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/pay/payport/WeChatPay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/CashBackStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/CouponStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/GroupByStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/PromotionActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/PromotionActivityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/PromotionKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/PromotionStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/PromotionStrategyFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/strategy/promotion/RawPriceStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/course/BigDataCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/course/JavaCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/course/NetWorkCourseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/course/NetworkCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/course/PythonCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/jdbc/JdbcTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/jdbc/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/jdbc/MemberDaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/jdbc/RowMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/pattern/template/jdbc/dao/MemberDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/compositereuse/CRPTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/compositereuse/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/compositereuse/MySQLConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/compositereuse/OracleConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/compositereuse/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/demeter/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/demeter/CoursesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/demeter/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/demeter/TeamLeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/dependencyinversion/AICourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/dependencyinversion/DepTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/dependencyinversion/ICourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/dependencyinversion/JavaCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/dependencyinversion/Longyx.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/dependencyinversion/PythonCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/abstracted/NormalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/abstracted/QuadRangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/abstracted/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/abstracted/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/methodparam/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/methodparam/Child.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/methodparam/MethodParamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/methodreturn/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/methodreturn/Child.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/methodreturn/MethodReturnTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/simple/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/simple/SimpleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/liskosubstitution/simple/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/openclose/IProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/openclose/OpenCloseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/openclose/ShoeDisCountProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/openclose/ShoeProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/interfaced/CourseImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/interfaced/ICourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/interfaced/ICourseInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/interfaced/ICourseManage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/method/Method.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/simple/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/simple/LiveCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/responsibility/simple/ReplayCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/Bird.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/IEatAnimation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/IFlyAnimation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/IPlayAnimation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/isolation/ISwimAnimation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/simple/Bird.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/design/principle/segregation/simple/IAnimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/BaseMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/ExecuteTestAnnotationMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/ReflectFirstCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/ReflectSecondCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/Reflection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/TestCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/dom4j/TestApplicationContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/reflect/dom4j/XmlApplicationContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/com/spdb/study/thread/ExecutorThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/resources/spring-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main/webapp/web.xml" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HR_SYS/src/sys/HRS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="126" column="7" lean-forward="true" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR_SYS/src/bean/Book.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#345#346#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HR_SYS/src/bean/Resume.java" />
+        <option value="$PROJECT_DIR$/HR_SYS/src/bean/Book.java" />
+        <option value="$PROJECT_DIR$/HR_SYS/src/sys/HRS.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593745736055" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="HRS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sys.HRS" />
+      <module name="HR_SYS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HRS" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b671485a-edd7-42cb-9b4e-60112030fb42" name="Default Changelist" comment="" />
+      <created>1593740394515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593740394515</updated>
+      <workItem from="1593740398525" duration="5214000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5214000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16471216" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.14607948" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32975295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HR_SYS/src/bean/Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="26" column="29" selection-end-line="71" />
+          <folding>
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS/src/bean/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS/src/sys/HRS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="126" column="7" lean-forward="true" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
