@@ -52,4 +52,5 @@ public interface IResumeService {
      *@return
      *@param
      **/
+    ServerResponse<Resume> saveResumeList(ArrayList<Resume> resumeArrayList);
 }

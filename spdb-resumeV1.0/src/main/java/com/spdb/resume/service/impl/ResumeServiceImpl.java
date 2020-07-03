@@ -104,6 +104,11 @@ public class ResumeServiceImpl implements IResumeService {
         return ServerResponse.createBySuccess(resume);
     }
 
+    @Override
+    public ServerResponse<Resume> saveResumeList(ArrayList<Resume> resumeArrayList) {
+        return null;
+    }
+
     /**
      *@Author: A wei
      *@Description 查询简历是否再人才库
