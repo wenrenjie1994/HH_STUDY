@@ -18,8 +18,10 @@ import java.util.ArrayList;
  */
 public class ResumeServiceImpl implements IResumeService {
 
+
+
     @Override
-    public ServerResponse<Resume> createResume(String name, String id, String school,String major, int sex, String phone, String email) {
+    public ServerResponse<Resume> createResume(String name, String id, String school,String major, int sex, String phone, String email,ArrayList<Resume> resumeArrayList) {
 
         //1、判断是否参数有null值 后续可以考虑采用lombok的@NotNULL进行参数校验
         if (name.isEmpty()) return ServerResponse.createByErrorMessage("姓名为空！请输入您的姓名");
@@ -36,8 +38,6 @@ public class ResumeServiceImpl implements IResumeService {
         Resume resume = new Resume(name,id,school,major,sex,phone,email, ResumeStatusCode.NOTAPPLY.getCode());
 
         //3、查询id、电话、邮箱是否已注册。是：返回错误，否继续下一步。
-
-        ArrayList<Resume> resumeArrayList = new ResumeApplication().getResumes();
 
         if (checkResume(resume,resumeArrayList,
                 (Resume resume1,Resume resume2)-> resume1.getId().equals(resume2.getId()))){
@@ -58,9 +58,7 @@ public class ResumeServiceImpl implements IResumeService {
     }
 
     @Override
-    public ServerResponse<String> deleteResume(Resume resume) {
-
-        ArrayList<Resume> resumeArrayList = new ResumeApplication().getResumes();
+    public ServerResponse<String> deleteResume(Resume resume,ArrayList<Resume> resumeArrayList) {
 
         //1、根据id查询是否有该简历
         if (!checkResume(resume,resumeArrayList,
@@ -79,13 +77,31 @@ public class ResumeServiceImpl implements IResumeService {
     }
 
     @Override
-    public ServerResponse<String> updateResume(Resume resume) {
-        return null;
+    public ServerResponse<String> updateResume(Resume resume,ArrayList<Resume> resumeArrayList) {
+
+        //1、删除简历
+        if (!deleteResume(resume,resumeArrayList).isSuccess()){
+            return ServerResponse.createByErrorMessage("当前简历不存在，或正在审核流程中，暂无法更新");
+        }
+        //2、更新简历
+        resumeArrayList.add(resume);
+        return ServerResponse.createBySuccess();
     }
 
     @Override
-    public ServerResponse<Resume> selectResume(String id) {
-        return null;
+    public ServerResponse<Resume> selectResume(String id,ArrayList<Resume> resumeArrayList) {
+        //1、判断id输入是否正确
+        if (id.isEmpty()){
+            return ServerResponse.createByErrorMessage("id为空！");
+        }
+        //2、查询Resume
+        Resume resume = selectResumeById(id,resumeArrayList);
+
+        if(resume == null){
+            return ServerResponse.createByErrorMessage("当前简历不存在！");
+        }
+
+        return ServerResponse.createBySuccess(resume);
     }
 
     /**
@@ -105,7 +121,7 @@ public class ResumeServiceImpl implements IResumeService {
     }
     /**
      *@Author: A wei
-     *@Description 根据id查询简历
+     *@Description 根据id查询简历是否存在
      *@return boolean
      *@param
      **/
@@ -117,4 +133,22 @@ public class ResumeServiceImpl implements IResumeService {
         }
         return false;
     }
+
+    /**
+     *@Author: A wei
+     *@Description 根据id查简历
+     *@return {@link Resume}
+     *@param id
+     **/
+
+    private static Resume selectResumeById(String id,ArrayList<Resume> resumeArrayList){
+        for (Resume item : resumeArrayList){
+            if (item.getId().equals(id)){
+                return item;
+            }
+        }
+        return null;
+    }
+
+
 }

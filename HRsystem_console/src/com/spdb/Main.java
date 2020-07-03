@@ -4,9 +4,7 @@ import com.spdb.common.ResumeStatusCode;
 import com.spdb.common.ServerResponse;
 import com.spdb.pojo.Resume;
 import com.spdb.service.impl.IResumeServiceImpl;
-import com.spdb.util.IResumeCheck;
 
-import java.rmi.ServerError;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -60,7 +58,7 @@ public class Main {
 
 
         //3、根据输入选项进行业务操作
-        new Main().doSomething2Resume();
+        doSomething2Resume();
 
         scanner.close();
 

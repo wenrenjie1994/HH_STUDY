@@ -2,6 +2,10 @@ package com.spdb.resume.service;
 
 import com.spdb.resume.common.ServerResponse;
 import com.spdb.resume.pojo.Resume;
+import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
  * @Author: A wei
@@ -18,7 +22,7 @@ public interface IResumeService {
      *@return {@link ServerResponse<Resume>}
      *@param name,id,school,major,sex,phone,email
      **/
-    ServerResponse<Resume> createResume(String name,String id,String school,String major,int sex,String phone,String email);
+    ServerResponse<Resume> createResume(String name, String id, String school, String major, int sex, String phone, String email, ArrayList<Resume> resumeArrayList);
 
     /**
      *@Author: A wei
@@ -26,19 +30,19 @@ public interface IResumeService {
      *@return {@link ServerResponse<String>}
      *@param resume
      **/
-    ServerResponse<String> deleteResume(Resume resume);
+    ServerResponse<String> deleteResume(Resume resume, ArrayList<Resume> resumeArrayList);
     /**
      *@Author: A wei
      *@Description 修改简历
      *@return {@link ServerResponse<Resume>}
-     *@param  resume
+     *@param  resume resumeArrayList
      **/
-    ServerResponse<String> updateResume(Resume resume);
+    ServerResponse<String> updateResume(Resume resume,ArrayList<Resume> resumeArrayList);
     /**
      *@Author: A wei
      *@Description 查询简历
      *@return {@link ServerResponse<Resume>}
      *@param id
      **/
-    ServerResponse<Resume> selectResume(String id);
+    ServerResponse<Resume> selectResume(String id, ArrayList<Resume> resumeArrayList);
 }

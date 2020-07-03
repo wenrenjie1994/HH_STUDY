@@ -16,30 +16,30 @@ public interface IResumeService {
     /**
      *@Author: A wei
      *@Description 新建简历
-     *@return {@link ServerResponse<Resume>}
+     *@return {@link ServerResponse < Resume >}
      *@param
      **/
-    ServerResponse<Resume> createResume(Resume resume,ArrayList<Resume> resumeArrayList);
+    ServerResponse<Resume> createResume(Resume resume, ArrayList<Resume> resumeArrayList);
 
     /**
      *@Author: A wei
      *@Description 删除简历
-     *@return {@link ServerResponse<String>}
+     *@return {@link ServerResponse <String>}
      *@param resume
      **/
-    ServerResponse<String> deleteResume(Resume resume,ArrayList<Resume> resumeArrayList);
+    ServerResponse<String> deleteResume(Resume resume, ArrayList<Resume> resumeArrayList);
     /**
      *@Author: A wei
      *@Description 修改简历
-     *@return {@link ServerResponse<Resume>}
+     *@return {@link ServerResponse < Resume >}
      *@param  resume
      **/
-    ServerResponse<String> updateResume(Resume resume,ArrayList<Resume> resumeArrayList);
+    ServerResponse<String> updateResume(Resume resume, ArrayList<Resume> resumeArrayList);
     /**
      *@Author: A wei
      *@Description 查询简历
-     *@return {@link ServerResponse<Resume>}
+     *@return {@link ServerResponse < Resume >}
      *@param id
      **/
-    ServerResponse<Resume> selectResume(String id,ArrayList<Resume> resumeArrayList);
+    ServerResponse<Resume> selectResume(String id, ArrayList<Resume> resumeArrayList);
 }

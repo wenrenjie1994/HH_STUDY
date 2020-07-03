@@ -10,24 +10,11 @@ import java.util.ArrayList;
 public class ResumeApplication {
 
 
-    private ArrayList<Resume> resumes;
-
-    public  void setResumes(ArrayList<Resume> resumes) {
-        this.resumes = resumes;
-    }
-
-    public  ArrayList<Resume> getResumes() {
-        return resumes;
-    }
+    private ArrayList<Resume> resumeArrayList;
 
     public static void main(String[] args) {
 
         SpringApplication.run(ResumeApplication.class, args);
-
-
-
-
-
     }
 
 }

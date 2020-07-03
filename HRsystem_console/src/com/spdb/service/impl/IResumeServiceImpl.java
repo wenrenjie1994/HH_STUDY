@@ -5,7 +5,10 @@ import com.spdb.common.ServerResponse;
 import com.spdb.pojo.Resume;
 import com.spdb.service.IResumeService;
 import com.spdb.util.IResumeCheck;
+
 import java.util.ArrayList;
+
+import static com.sun.xml.internal.ws.api.message.Packet.State.ServerResponse;
 
 
 /**
