@@ -15,6 +15,7 @@ public class HumanResourceService {
     public void addStudent(Student student){
         listLock.lock();
         studentList.add(student);
+        System.out.println("添加成功");
         listLock.unlock();
     }
     public void deleteStudent(String studentName){
@@ -33,8 +34,8 @@ public class HumanResourceService {
     public void queryStudent(String studentName){
         for (Student student : studentList){
             if(student.getName().equals(studentName)){
-                System.out.println(student.toString());
-                listLock.unlock();
+                System.out.println("学生姓名：" + student.getName());
+                System.out.println("学生编号：" + student.getId());
                 return;
             }
         }

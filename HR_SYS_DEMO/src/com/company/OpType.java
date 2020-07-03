@@ -1,12 +1,12 @@
 package com.company;
 
 public enum OpType {
-    ADD(1), REMOVE(2), QUERY(3), DELETE(4), EXIT(5);
-    private int value;
-    OpType(int i) {
-        this.value = i;
+    ADD('1'), DELETE('2'), QUERY('3'), MODIFY('4'), EXIT('5'), HELP('?');
+    private char value;
+    OpType(char ch) {
+        this.value = ch;
     }
-    public int getValue(){
+    public char getValue(){
         return value;
     }
 }
