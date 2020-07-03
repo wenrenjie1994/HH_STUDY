@@ -1,7 +1,7 @@
 package main.mapper.interfaces;
 
 import main.entity.AbstractResume;
-import main.entity.ResumeList;
+import main.utils.Result;
 
 /**
  * @author: hqweay
@@ -9,9 +9,13 @@ import main.entity.ResumeList;
  * Created on 7/2/20 12:00 PM
  */
 public interface ResumeMapper {
-  boolean saveResume(AbstractResume resume);
-  boolean removeResume(AbstractResume resume);
-  boolean updateResume(AbstractResume oldResume, AbstractResume newResume);
-  AbstractResume getResume(AbstractResume resume);
-  ResumeList listResume();
+  Result saveResume(AbstractResume resume);
+
+  Result removeResume(AbstractResume resume);
+
+  Result updateResume(AbstractResume oldResume, AbstractResume newResume);
+
+  Result getResume(AbstractResume resume);
+
+  Result listResume();
 }

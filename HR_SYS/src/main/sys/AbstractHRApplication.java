@@ -1,10 +1,12 @@
 package main.sys;
 
-import main.mapper.AbstractResumeMapper;
-import main.mapper.MemoryResumeMapper;
 import main.entity.AbstractResume;
 import main.entity.Resume;
+import main.entity.ResumeList;
+import main.mapper.AbstractResumeMapper;
+import main.mapper.MemoryResumeMapper;
 import main.sys.interfaces.HRApplication;
+import main.utils.Result;
 
 import java.util.Scanner;
 
@@ -18,19 +20,18 @@ public abstract class AbstractHRApplication implements HRApplication {
   AbstractResumeMapper resumeMapper = new MemoryResumeMapper();
   private boolean exitFlag = false;
 
-  public void run(){
-    while(true){
+  public void run() {
+    while (true) {
       welcome();
       userOperate();
-      if(exitFlag == true){
+      if (exitFlag == true) {
         System.out.println("====退出");
         break;
       }
     }
   }
 
-
-  void welcome(){
+  void welcome() {
     System.out.println("===============HR 管理系统================");
     System.out.println("1. 简历列表");
     System.out.println("2. 查询简历");
@@ -39,11 +40,12 @@ public abstract class AbstractHRApplication implements HRApplication {
     System.out.println("5. 删除简历");
     System.out.println("===============HR 管理系统================");
   }
-  void userOperate(){
+
+  void userOperate() {
     int choice = scanner.nextInt();
     // 接受 nextInt 后的换行符
     scanner.nextLine();
-    switch (choice){
+    switch (choice) {
       case 1:
         listResume();
         break;
@@ -83,10 +85,12 @@ public abstract class AbstractHRApplication implements HRApplication {
     resume.setId(id);
     resume.setSchool(school);
 
-    if(resumeMapper.saveResume(resume)){
-      System.out.println("success====保存成功");
-    }else{
-      System.out.println("error====保存失败，可能数据已经存在了～");
+    if (resumeMapper.saveResume(resume).getResultCode().getCode() == 200) {
+      System.out.println("success====添加成功");
+    } else if (resumeMapper.saveResume(resume).getResultCode().getCode() == 501) {
+      System.out.println("error====添加失败，确保每项信息都不为空～");
+    } else if (resumeMapper.saveResume(resume).getResultCode().getCode() == 502) {
+      System.out.println("error====数据已经存在");
     }
   }
 
@@ -96,13 +100,15 @@ public abstract class AbstractHRApplication implements HRApplication {
     String id = scanner.nextLine();
     Resume resume = new Resume();
     resume.setId(id);
-    AbstractResume oldResume =  resumeMapper.getResume(resume);
-    if(oldResume == null){
+    Result result = resumeMapper.getResume(resume);
+    // if (result.getResultCode().getCode() == 503) {
+    //   System.out.println("warn:====没有该用户的简历");
+    //   return;
+    // }
+    if (resumeMapper.removeResume((Resume) result.getData()).getResultCode().getCode() == 200) {
+      System.out.println("info:====删除 " + ((Resume) result.getData()).getName() + " " + ((Resume) result.getData()).getId() + " 成功！");
+    } else {
       System.out.println("warn:====没有该用户的简历");
-      return;
-    }
-    if(resumeMapper.removeResume(oldResume)){
-      System.out.println("info:====删除 " + oldResume.getName() + " "+ oldResume.getId() + " 成功！" );
     }
   }
 
@@ -113,33 +119,37 @@ public abstract class AbstractHRApplication implements HRApplication {
     Resume resume = new Resume();
     resume.setId(id);
 
-    AbstractResume oldResume =  resumeMapper.getResume(resume);
-    if(oldResume == null){
+    Result result = resumeMapper.getResume(resume);
+    Resume oldResume = (Resume) result.getData();
+    if (oldResume == null) {
       System.out.println("====没有该用户的简历");
       return;
     }
 
     System.out.println("====输入姓名，留空则不变。");
     String newName = scanner.nextLine();
-    newName = newName.equals("")?oldResume.getName():newName;
+    newName = newName.equals("") ? oldResume.getName() : newName;
 
     System.out.println("====输入身份证号，留空则不变。");
     String newId = scanner.nextLine();
-    newId = newId.equals("")?oldResume.getId():newId;
+    newId = newId.equals("") ? oldResume.getId() : newId;
 
     System.out.println("====输如学校名，留空则不变。");
     String newSchool = scanner.nextLine();
-    newSchool = newSchool.equals("")?oldResume.getSchool():newSchool;
+    newSchool = newSchool.equals("") ? oldResume.getSchool() : newSchool;
 
     Resume newResume = new Resume();
     newResume.setName(newName);
     newResume.setId(newId);
     newResume.setSchool(newSchool);
 
-    if(resumeMapper.updateResume(oldResume, newResume)){
+    Integer code = resumeMapper.updateResume(oldResume, newResume).getResultCode().getCode();
+    if (code == 200) {
       System.out.println("====修改成功");
-    }else{
-      System.out.println("====修改失败");
+    } else if (code == 502) {
+      System.out.println("====修改后的数据与已有数据重复");
+    } else if (code == 503) {
+      System.out.println("====没找到该用户");
     }
   }
 
@@ -150,22 +160,31 @@ public abstract class AbstractHRApplication implements HRApplication {
     Resume resume = new Resume();
     resume.setId(id);
 
-    AbstractResume newResume =  resumeMapper.getResume(resume);
-    if(newResume == null){
+    Result result = resumeMapper.getResume(resume);
+    Integer code = result.getResultCode().getCode();
+    Resume newResume = (Resume) result.getData();
+
+    if (code == 503) {
       System.out.println("====没查到");
-    }else{
+    } else {
       System.out.println(newResume.toString());
     }
   }
 
   @Override
   public void listResume() {
-    if(resumeMapper.listResume().size() == 0){
+    if (resumeMapper.listResume().getResultCode().getCode() == 503) {
       System.out.println("error====还没有数据");
     }
     System.out.println("====姓名====身份证号====学校====应聘流程");
-    for(AbstractResume resume : resumeMapper.listResume()){
+    for (AbstractResume resume : (ResumeList) resumeMapper.listResume().getData()) {
       System.out.println(resume.toString());
+    }
+  }
+
+  private void resultCheck(Result result) {
+    if (result.getResultCode().getCode() == 200) {
+      System.out.println("成功");
     }
   }
 }

@@ -4,7 +4,7 @@ import main.enums.ProcessEnum;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 简历信息
  * Created on 7/2/20 10:53 AM
  */
 public abstract class AbstractResume {

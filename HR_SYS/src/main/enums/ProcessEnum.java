@@ -2,7 +2,7 @@ package main.enums;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 应聘流程
  * Created on 7/2/20 11:01 AM
  */
 public enum ProcessEnum {

@@ -13,5 +13,6 @@ public class HRApplication extends AbstractHRApplication {
 
   public HRApplication() {
     //  配置？
+  //  这里可以放是否持久化等的配置
   }
 }

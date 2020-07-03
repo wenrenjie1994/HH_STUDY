@@ -2,6 +2,7 @@ package main.mapper;
 
 import main.entity.AbstractResume;
 import main.entity.ResumeList;
+import main.utils.Result;
 import main.utils.Valid;
 
 /**
@@ -28,87 +29,107 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public boolean saveResume(AbstractResume resume) {
-   // 前置判断，写个工具类吧。
-    Valid.ValidResumeAllFields(resume);
-    if(hasResume(resume)){
-      return false;
+  /*
+   * error: 参数、重复、其它
+   * */
+  public Result saveResume(AbstractResume resume) {
+    // 前置判断，写个工具类吧。
+    if (!Valid.ValidResumeAllFields(resume)) {
+      return Result.errorParamValidResult();
     }
-    return resumeList.add(resume);
+    if (hasResume(resume)) {
+      return Result.errorIsExistResult();
+    }
+    if (resumeList.add(resume)) {
+      return Result.successResult();
+    } else {
+      return Result.errorResult();
+    }
+
   }
 
   @Override
-  public boolean removeResume(AbstractResume resume) {
-    for(int i = 0; i < resumeList.size(); i++){
-      if(resumeList.get(i).getId().equals(resume.getId())){
+  public Result removeResume(AbstractResume resume) {
+    for (int i = 0; i < resumeList.size(); i++) {
+      if (resumeList.get(i).getId().equals(resume.getId())) {
         // 逻辑删除
         resumeList.get(i).setDeleteStatus(0);
-        return true;
+        return Result.successResult();
       }
     }
-    return false;
+    return Result.errorNotFoundResult();
   }
 
   @Override
-  public boolean updateResume(AbstractResume oldResume, AbstractResume newResume) {
-  //  前置判断
+  public Result updateResume(AbstractResume oldResume, AbstractResume newResume) {
+    //  前置判断
     String oldId = oldResume.getId();
-    Valid.ValidResumeAllFields(newResume);
-    if(oldId == null || oldId.equals("")){
-      return false;
+
+    if (!Valid.ValidResumeAllFields(newResume) || oldId == null || oldId.equals("")) {
+      return Result.errorParamValidResult();
     }
 
-    for(int i = 0; i < resumeList.size(); i++){
-      if(resumeList.get(i).getId().equals(oldId)){
-        if(isDeleted(resumeList.get(i).getDeleteStatus())){
+    for (AbstractResume res : resumeList) {
+      if (res.getId().equals(newResume.getId())) {
+        return Result.errorIsExistResult();
+      }
+    }
+
+    for (int i = 0; i < resumeList.size(); i++) {
+      if (resumeList.get(i).getId().equals(oldId)) {
+        if (isDeleted(resumeList.get(i).getDeleteStatus())) {
           // 已经删除了，不能更新。
-          return false;
-        }else{
+          return Result.errorNotFoundResult();
+        } else {
           resumeList.set(i, newResume);
-          return true;
+          Result.successResult();
         }
       }
     }
     //没找到
-    return false;
+    return Result.errorNotFoundResult();
   }
 
   @Override
-  public AbstractResume getResume(AbstractResume resume) {
-    if(resume.getId() == null || resume.getId().trim().equals("")){
+  public Result getResume(AbstractResume resume) {
+    if (resume.getId() == null || resume.getId().trim().equals("")) {
       return null;
     }
-    for(AbstractResume res:resumeList){
-      if(res.getId().equals(resume.getId())){
-        if(isDeleted(res.getDeleteStatus())){
+    for (AbstractResume res : resumeList) {
+      if (res.getId().equals(resume.getId())) {
+        if (isDeleted(res.getDeleteStatus())) {
           //删除了
-          return null;
-        }else{
-          return res;
+          Result.errorNotFoundResult();
+        } else {
+          return Result.successResult(res);
         }
       }
     }
     //没找到
-    return null;
+    return Result.errorNotFoundResult();
   }
 
   @Override
-  public ResumeList listResume() {
+  public Result listResume() {
     ResumeList newList = new ResumeList();
-    for(AbstractResume resume : resumeList){
-      if(!isDeleted(resume.getDeleteStatus())){
+    for (AbstractResume resume : resumeList) {
+      if (!isDeleted(resume.getDeleteStatus())) {
         newList.add((resume));
       }
     }
-    return newList;
+    if (newList.size() == 0) {
+      return Result.errorNotFoundResult();
+    }
+    return Result.successResult(newList);
   }
 
-  private boolean isDeleted(int deleteStatus){
+  private boolean isDeleted(int deleteStatus) {
     return deleteStatus == 0 ? true : false;
   }
-  private boolean hasResume(AbstractResume resume){
-    for(AbstractResume res : resumeList){
-      if(res.getId().equals(resume.getId())){
+
+  private boolean hasResume(AbstractResume resume) {
+    for (AbstractResume res : resumeList) {
+      if (res.getId().equals(resume.getId())) {
         return true;
       }
     }

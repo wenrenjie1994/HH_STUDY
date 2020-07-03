@@ -1,8 +1,8 @@
 package main.mapper;
 
-import main.mapper.interfaces.ResumeMapper;
 import main.entity.AbstractResume;
-import main.entity.ResumeList;
+import main.mapper.interfaces.ResumeMapper;
+import main.utils.Result;
 
 /**
  * @author: hqweay
@@ -11,27 +11,27 @@ import main.entity.ResumeList;
  */
 public class AbstractResumeMapper implements ResumeMapper {
   @Override
-  public boolean saveResume(AbstractResume resume) {
-    return false;
+  public Result saveResume(AbstractResume resume) {
+    return Result.errorResult();
   }
 
   @Override
-  public boolean removeResume(AbstractResume resume) {
-    return false;
+  public Result removeResume(AbstractResume resume) {
+    return Result.errorResult();
   }
 
   @Override
-  public boolean updateResume(AbstractResume oldResume, AbstractResume newResume) {
-    return false;
+  public Result updateResume(AbstractResume oldResume, AbstractResume newResume) {
+    return Result.errorResult();
   }
 
   @Override
-  public AbstractResume getResume(AbstractResume resume) {
-    return null;
+  public Result getResume(AbstractResume resume) {
+    return Result.errorResult();
   }
 
   @Override
-  public ResumeList listResume() {
-    return null;
+  public Result listResume() {
+    return Result.errorResult();
   }
 }
