@@ -19,3 +19,9 @@ git  checkout -b dev-zhengqi  origin/dev-mayonghai2481
 git checkout 加分支名切换
 如:
 git checkout mayonghai2481
+7 添加文件夹及其下所有文件
+git add 文件名/
+8 提交文件到本地仓库
+git commit -m "文件描述"
+9 上传到远程仓库
+git push --set-upstream origin mayonghai2481
