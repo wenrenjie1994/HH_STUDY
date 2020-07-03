@@ -175,6 +175,7 @@ public abstract class AbstractHRApplication implements HRApplication {
   public void listResume() {
     if (resumeMapper.listResume().getResultCode().getCode() == 503) {
       System.out.println("error====还没有数据");
+      return;
     }
     System.out.println("====姓名====身份证号====学校====应聘流程");
     for (AbstractResume resume : (ResumeList) resumeMapper.listResume().getData()) {

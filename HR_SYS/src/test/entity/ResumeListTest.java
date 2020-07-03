@@ -13,12 +13,12 @@ import main.enums.ProcessEnum;
 public class ResumeListTest {
   public static void main(String[] args) {
     ResumeList list = new ResumeList();
-    list.add(new Resume("ss","ff","ss", ProcessEnum.PASS_APPLICATION, 0));
+    list.add(new Resume("ss", "ff", "ss", ProcessEnum.PASS_APPLICATION, false));
 
-    for(AbstractResume resume : list){
+    for (AbstractResume resume : list) {
       System.out.println(resume.getProcess());
     }
-    AbstractResume resume = new Resume("sss","ff","ss", ProcessEnum.PASS_APPLICATION, 0);
+    AbstractResume resume = new Resume("sss", "ff", "ss", ProcessEnum.PASS_APPLICATION, false);
     System.out.println(list.add(resume));
 
     // for(AbstractResume res : list){
@@ -26,7 +26,7 @@ public class ResumeListTest {
     //   list.remove(res);
     // }
     System.out.println("还有吗");
-    for(AbstractResume res : list){
+    for (AbstractResume res : list) {
       System.out.println(resume.getSchool());
       // list.remove(res);
     }

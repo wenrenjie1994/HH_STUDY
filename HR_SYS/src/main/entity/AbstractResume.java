@@ -24,17 +24,17 @@ public abstract class AbstractResume {
    * 5：已签约
    * 6：已入职
    *
-  **/
+   **/
   private ProcessEnum process = ProcessEnum.PASS_APPLICATION;
   /**
-   *逻辑删除
-   * 0 不展示
+   * 逻辑删除
+   * 0 删除了-不展示
    * 1 展示
    * 默认为 1
    */
-  private int deleteStatus = 1;
+  private boolean deleteStatus = false;
 
-  public AbstractResume(String name, String id, String school, ProcessEnum process, int deleteStatus) {
+  public AbstractResume(String name, String id, String school, ProcessEnum process, boolean deleteStatus) {
     this.name = name;
     this.id = id;
     this.school = school;
@@ -77,11 +77,11 @@ public abstract class AbstractResume {
     this.process = process;
   }
 
-  public int getDeleteStatus() {
+  public boolean getDeleteStatus() {
     return deleteStatus;
   }
 
-  public void setDeleteStatus(int deleteStatus) {
+  public void setDeleteStatus(boolean deleteStatus) {
     this.deleteStatus = deleteStatus;
   }
 

@@ -38,7 +38,13 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
       return Result.errorParamValidResult();
     }
     if (hasResume(resume)) {
-      return Result.errorIsExistResult();
+      AbstractResume oldResume = getResumeById(resume.getId());
+      // 如果已经逻辑删除，那就实际删除了再添加吧。
+      if (oldResume.getDeleteStatus()) {
+        removeResumeById(resume.getId());
+      } else {
+        return Result.errorIsExistResult();
+      }
     }
     if (resumeList.add(resume)) {
       return Result.successResult();
@@ -53,7 +59,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
     for (int i = 0; i < resumeList.size(); i++) {
       if (resumeList.get(i).getId().equals(resume.getId())) {
         // 逻辑删除
-        resumeList.get(i).setDeleteStatus(0);
+        resumeList.get(i).setDeleteStatus(true);
         return Result.successResult();
       }
     }
@@ -62,27 +68,47 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
 
   @Override
   public Result updateResume(AbstractResume oldResume, AbstractResume newResume) {
-    //  前置判断
+    // oldId 用于修改时查找匹配
     String oldId = oldResume.getId();
-
+    //  前置判断
     if (!Valid.ValidResumeAllFields(newResume) || oldId == null || oldId.equals("")) {
       return Result.errorParamValidResult();
     }
 
-    for (AbstractResume res : resumeList) {
-      if (res.getId().equals(newResume.getId())) {
-        return Result.errorIsExistResult();
+
+    // 判断 newResume 是否重复
+    // for (AbstractResume res : resumeList) {
+    //   if (res.getId().equals(newResume.getId())) {
+    //     if (res.getDeleteStatus()) {
+    //       // resumeList.remove(res);
+    //       // 已经逻辑删除了
+    //       break;
+    //     } else {
+    //       return Result.errorIsExistResult();
+    //     }
+    //   }
+    // }
+
+    // 判断 newResume 是否重复
+    for (int i = 0; i < resumeList.size(); i++) {
+      if (resumeList.get(i).getId().equals(newResume.getId())) {
+        if (resumeList.get(i).getDeleteStatus()) {
+          resumeList.remove(i);
+          break;
+        } else {
+          return Result.errorIsExistResult();
+        }
       }
     }
 
     for (int i = 0; i < resumeList.size(); i++) {
       if (resumeList.get(i).getId().equals(oldId)) {
-        if (isDeleted(resumeList.get(i).getDeleteStatus())) {
+        if (resumeList.get(i).getDeleteStatus()) {
           // 已经删除了，不能更新。
           return Result.errorNotFoundResult();
         } else {
           resumeList.set(i, newResume);
-          Result.successResult();
+          return Result.successResult();
         }
       }
     }
@@ -97,7 +123,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
     }
     for (AbstractResume res : resumeList) {
       if (res.getId().equals(resume.getId())) {
-        if (isDeleted(res.getDeleteStatus())) {
+        if (res.getDeleteStatus()) {
           //删除了
           Result.errorNotFoundResult();
         } else {
@@ -113,7 +139,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
   public Result listResume() {
     ResumeList newList = new ResumeList();
     for (AbstractResume resume : resumeList) {
-      if (!isDeleted(resume.getDeleteStatus())) {
+      if (!resume.getDeleteStatus()) {
         newList.add((resume));
       }
     }
@@ -123,9 +149,9 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
     return Result.successResult(newList);
   }
 
-  private boolean isDeleted(int deleteStatus) {
-    return deleteStatus == 0 ? true : false;
-  }
+  // private boolean isDeleted(int deleteStatus) {
+  //   return deleteStatus == 0 ? true : false;
+  // }
 
   private boolean hasResume(AbstractResume resume) {
     for (AbstractResume res : resumeList) {
@@ -134,5 +160,23 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
       }
     }
     return false;
+  }
+
+  private void removeResumeById(String id) {
+    for (int i = 0; i < resumeList.size(); i++) {
+      if (resumeList.get(i).getId().equals(id)) {
+        resumeList.remove(i);
+      }
+    }
+  }
+
+  private AbstractResume getResumeById(String id) {
+    for (AbstractResume res : resumeList) {
+      if (res.getId().equals(id)) {
+        return res;
+      }
+    }
+    //没找到
+    return null;
   }
 }
