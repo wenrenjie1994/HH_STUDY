@@ -1,210 +1,124 @@
 package sys;
 
-import java.util.ArrayList;
+import bean.Resume;
+import bean.ResumeList;
+
+import java.util.Iterator;
 import java.util.Scanner;
-import bean.Book;
-import bean.BookList;
 
 public class HRS {
 
-	private int MAXSIZE=100;
-	//ÔÚÊı×é³õÊ¼»¯µÄÊ±ºò£¬ÏŞÖÆÁËÊı×éµÄ´óĞ¡£¬ÓĞÃ»ÓĞ±ğµÄ·½Ê½¸üºÃÄØ£¿
-	private Book[] bookList=new Book[MAXSIZE];
+    ResumeList resumeList = new ResumeList();
 
-	ArrayList<Book> bookArrayList=new ArrayList<>();
-	BookList books=new BookList();
+    //æ·»åŠ ç®€å†
+    public void addResume() {
 
-//	int[]  shuzu=new int[1];
-//	int[] shuzu1={1,2,3};
-//	int[] shuzu3=new  int[]{1,2,3};
+        System.out.println("æ¬¢è¿è¿›å…¥æ·»åŠ ç®€å†ç•Œé¢");
+        System.out.println("è¯·ä¾æ¬¡è¾“å…¥ç®€å†éœ€è¦æ·»åŠ çš„å§“åï¼Œèº«ä»½è¯ï¼Œå­¦æ ¡");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        String idcard = scanner.nextLine();
+        String school = scanner.nextLine();
 
-	private int bookCount=0;//¶¼ÊÇÊı×é´øÀ´µÄ·³ÄÕ£¿»¹µÃ·ÀÖ¹Ô½½ç£»
-	//»ñÈ¡±ê×¼ÊäÈëÁ÷
-	private Scanner input=new Scanner(System.in);
+        Resume newResume = new Resume(name,idcard,school);
+
+        resumeList.add(newResume);
+        System.out.println("æ·»åŠ æˆåŠŸ");
+    }
+    //åˆ é™¤ç®€å†
+    public void deleteResume() {
+
+        System.out.println("æ¬¢è¿è¿›å…¥åˆ é™¤ç®€å†ç•Œé¢");
+        System.out.println("è¯·è¾“å…¥éœ€è¦åˆ é™¤ç®€å†çš„èº«ä»½è¯");
+        Scanner scanner=new Scanner(System.in);
+        String id = scanner.nextLine();
+        Iterator it = resumeList.iterator();
+        boolean flag = true;
+        while (it.hasNext()){
+
+            Resume resume = (Resume) it.next();
+
+            if (id.equals(resume.getId())){
+                flag = false;
+                resumeList.remove(resume);
+                System.out.println("åˆ é™¤æˆåŠŸ");
+                break;
+            }
+        }
+        if (flag == true){
+            System.out.println("æ²¡æœ‰è¯¥åº”è˜è€…");
+        }
+
+    }
+    //ä¿®æ”¹ç®€å†
+    public void updateResume() {
+        System.out.println("æ¬¢è¿è¿›å…¥ä¿®æ”¹ç®€å†ç•Œé¢");
+        System.out.println("è¯·è¾“å…¥éœ€è¦ä¿®æ”¹ç®€å†çš„èº«ä»½è¯");
+        Scanner scanner=new Scanner(System.in);
+        String id = scanner.nextLine();
+        Iterator it = resumeList.iterator();
+        boolean flag = true;
+        while (it.hasNext()){
+
+            Resume resume = (Resume) it.next();
+
+            if (id.equals(resume.getId())){
+                flag = false;
+                System.out.println("è¯·è¾“å…¥éœ€è¦ä¿®æ”¹ç®€å†çš„å§“åã€èº«ä»½è¯ã€å­¦æ ¡");
+                resume.setName(scanner.nextLine());
+                resume.setId(scanner.nextLine());
+                resume.setSchool(scanner.nextLine());
+                System.out.println("ä¿®æ”¹æˆåŠŸ");
+                break;
+            }
+        }
+        if (flag == true){
+            System.out.println("æ²¡æœ‰è¯¥åº”è˜è€…");
+        }
+    }
+    //æŸ¥è¯¢ç®€å†
+    public void selectResume() {
+        System.out.println("æ¬¢è¿è¿›å…¥æŸ¥è¯¢ç®€å†ç•Œé¢");
+        System.out.println("è¯·è¾“å…¥éœ€è¦æŸ¥è¯¢ç®€å†çš„èº«ä»½è¯");
+        Scanner scanner=new Scanner(System.in);
+        String id = scanner.nextLine();
+        Iterator it = resumeList.iterator();
+        boolean flag = true;
+        while (it.hasNext()){
+
+            Resume resume = (Resume) it.next();
+
+            if (id.equals(resume.getId())){
+                flag = false;
+                System.out.println("æŸ¥è¯¢ç»“æœ---/n"+" å§“åï¼š"+resume.getName()+" èº«ä»½è¯ï¼š"+resume.getId()
+                        +" å­¦æ ¡ï¼š"+resume.getSchool());
+                break;
+            }
+        }
+        if (flag == true){
+            System.out.println("æ²¡æœ‰è¯¥åº”è˜è€…");
+        }
+    }
 
 
 
-	HRS(){
-
-		while(true)
-		{
-
-			System.out.println("-----»¶Ó­½øÈë´ó±í¹øµÄÍ¼Êé¹ÜÀíÏµÍ³-----");
-			System.out.println("Ìí¼ÓÍ¼ÊéÇë°´----1");
-			System.out.println("É¾³ıÍ¼ÊéÇë°´----2");
-			System.out.println("ĞŞ¸ÄÍ¼ÊéÇë°´----3");
-			System.out.println("²éÑ¯Í¼ÊéÇë°´----4");
-			System.out.println("ÍË³öÇë°´--------5");
 
 
-			int choice=input.nextInt();
-			//³ıÁËÓÃif »¹ÄÜÓÃÊ²Ã´·½Ê½¿ÉÒÔÊµÏÖÂß¼­ÅĞ¶Ï£¿
-			if(choice==1)
-			{
-				addBook();
-			}
-			else if(choice==2)
-			{
-				deleteBook();
-			}
-			else if(choice==3)
-			{
-				updateBook();
-			}
-			else if(choice==4)
-			{
-				searchBook();
-			}
-			else if(choice==5)
-			{
-				break;
-			}else {
-				System.out.println("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë");
-			}
-		}
-		input.close();//Á÷°¡ Á¬½Ó°¡ ÕâĞ©¶«Î÷ ÓÃÍê¼ÇµÃ¹Ø£»ÒªÃ´¼ÇµÃ»¹£¨ÄÇÃ´Ê²Ã´µØ·½ÊÇĞèÒª»¹µÄ£¬Ê²Ã´µØ·½ÊÇ¹ØµÄ£©£»
-		System.out.println("ÄúÒÑ¾­ÍË³öÍ¼Êé¹ÜÀíÏµÍ³");
-	}
+    //æ‰€æœ‰ç®€å†
+    public void showResume() {
+        System.out.println("æ¬¢è¿è¿›å…¥æŸ¥è¯¢æ‰€æœ‰ç®€å†ç•Œé¢");
 
-	//Ìí¼ÓÍ¼Êé
-	void addBook()
-	{
-		System.out.println("»¶Ó­½øÈëÌí¼ÓÍ¼Êé½çÃæ");
-		if(bookCount<MAXSIZE)//ÅĞ¶ÏÍ¼Êé¹ÜÀíÏµÍ³ÊÇ·ñÎ´Âú
-		{
-			Scanner input=new Scanner(System.in);
-			System.out.println("ÇëÒÀ´ÎÊäÈëĞèÒªÌí¼ÓµÄÍ¼ÊéÃû£¬×÷Õß£¬¼Û¸ñ");
-			String bookName=input.nextLine();
-			String bookAuthor=input.nextLine();
-			float bookPrice=input.nextFloat();
 
-			//get/SET
-			Book book=new Book(bookName,bookAuthor,bookPrice);
 
-			//Èç¹ûÕâ¸öÊ±ºòÒÑ¾­ÓĞ79±¾ÊéÁË£¬ÄÇÃ´µÚ79±¾ÊéµÄÎ»ÖÃÊÇ¼¸
-			bookList[bookCount]=book;
-			bookCount++;
-			System.out.println("ÄúÒÑ¾­³É¹¦Ìí¼ÓÍ¼Êé");
-			showBook();
-		}
-		else{
-			System.out.println("Í¼Êé¹ÜÀíÏµÍ³ÒÑÂú£¬ÎŞ·¨Ìí¼ÓÍ¼Êé");
-		}
-	}
+        Iterator it = resumeList.iterator();
+        System.out.println("----------æŸ¥è¯¢ç»“æœ---------");
+        while (it.hasNext()){
 
-	//É¾³ıÍ¼Êé
-	void deleteBook()
-	{
-		@SuppressWarnings("resource")
-		Scanner input=new Scanner(System.in);
-		System.out.println("»¶Ó­½øÈëÉ¾³ıÍ¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒªÉ¾³ıµÄÍ¼ÊéÃû");
-		bookList.
-		String bookName=input.nextLine();
-		if(bookCount!=0)//Í¼Êé¹ÜÀíÏµÍ³²»Îª¿Õ
-		{
-			for(int i=0;i<bookCount;i++)
-			{
-				if(bookList[i].bookName.equals(bookName))
-				{
-					for(int j=i;j<bookCount-1;j++)
-					{
-						bookList[j]=bookList[j+1];
-					}
-					System.out.println("ÄúÒÑ¾­³É¹¦É¾³ıÍ¼Êé");
-					bookCount--;
-					break;
-				}
-				else if(i==bookCount-1) {
-					System.out.println("Ã»ÓĞÕÒµ½¸ÃÊé¼®");
-				}
-			}
-			showBook();
-		}
-		else{
-			System.out.println("Í¼ÊéÏµÍ³Îª¿Õ£¬Ã»ÓĞÕÒµ½¸ÃÊé¼®");
-		}
-//		input.close();
-	}
+            Resume resume = (Resume) it.next();
+            System.out.println(" å§“åï¼š"+resume.getName()+" èº«ä»½è¯ï¼š"+resume.getId()
+                        +" å­¦æ ¡ï¼š"+resume.getSchool());
 
-	//ĞŞ¸ÄÍ¼Êé
-	void updateBook()
-	{
-		Scanner input=new Scanner(System.in);
-		System.out.println("»¶Ó­½øÈëĞŞ¸ÄÍ¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒªĞŞ¸ÄµÄÍ¼ÊéÃû");
-		String bookName=input.nextLine();
-		if(bookCount!=0)//Í¼Êé¹ÜÀíÏµÍ³²»Îª¿Õ
-		{
-			for(int i=0;i<bookCount;i++)
-			{
-				if(bookList[i].bookName.equals(bookName))
-				{
-					System.out.println("ÇëÒÀ´ÎÊäÈëĞÂµÄÊéÃû£¬×÷Õß£¬¼Û¸ñ");
-					String newbookName=input.nextLine();
-					String newbookAuthor=input.nextLine();
-					float newbookPrice=input.nextFloat();
-					Book book=new Book(newbookName,newbookAuthor,newbookPrice);
-					bookList[i]=book;
-					System.out.println("ÄúÒÑ¾­ĞŞ¸Ä³É¹¦");
-					showBook();
-				}
-				else if(i==bookCount-1||bookCount==0) {
-					System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
-				}
-			}
-		}
-		else{
-			System.out.println("ÏµÍ³Îª¿Õ£¬Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
-		}
-//		input.close();
-	}
-
-	//²éÑ¯Í¼Êé
-	void searchBook()
-	{
-		@SuppressWarnings("resource")
-		Scanner input=new Scanner(System.in);
-		System.out.println("»¶Ó­½øÈë²éÑ¯Í¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒª²éÑ¯µÄÍ¼ÊéÃû");
-		String bookName=input.nextLine();
-		for(int i=0;i<bookCount;i++)
-		{
-			if(bookList[i].bookName.equals(bookName))
-			{
-				System.out.println("<<"+bookList[i].bookName+">>"+"\n"+
-									"×÷Õß"+":"+bookList[i].bookAuthor+"\n"
-									+"¼Û¸ñ"+":"+bookList[i].bookPrice+"\n"
-									+"Î»ÓÚµÚ"+(i+1)+"Î»ÖÃ");
-				break;
-			}
-			else if(i==bookCount-1) {
-				System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®£¬ÇëÖØĞÂÊäÈë");
-			}
-		}
-//		input.close();
-	}
-
-	//Í¼Êé±éÀú
-	void showBook()
-	{
-		@SuppressWarnings("resource")
-		Scanner input=new Scanner(System.in);
-		System.out.println("ÊÇ·ñĞèÒª´òÓ¡ËùÓĞÍ¼Êé£¬ÊÇÇëÊäÈëY£¬²»ÓÃ´òÓ¡ÔòÊäÈëÈÎÒâ");
-		String XUANZE=input.nextLine();
-		String Y="Y";
-		if(XUANZE.equals(Y))
-		{
-			System.out.println("±¾Í¼Êé¹ÜÀíÏµÍ³¹²ÓĞ"+bookCount+"±¾Êé");
-			for(int i=0;i<bookCount;i++) {
-				System.out.println("µÚ"+(i+1)+"±¾"+"----"+"<<"+bookList[i].bookName+">>");
-			}
-		}
-//		input.close();
-	}
-	
-	public static void main(String[] args)
-	{
-		new HRS();
-	}
+        }
+        System.out.println("-------------------");
+    }
 }

@@ -33,10 +33,10 @@ public class Resume {
     private int process;
 
     /**
-    *逻辑删除
+     *逻辑删除
      * 0 : bu zhanshi
      * 1  展示
-    */
+     */
     private int deleteStatus;
 
     public String getName() {
@@ -79,10 +79,11 @@ public class Resume {
         this.deleteStatus = deleteStatus;
     }
 
-    public Resume(String name, String id) {
+    public Resume(String name, String id,String school) {
         this.name = name;
         this.id = id;
+        this.school = school;
         this.process=0;
-        this.deleteStatus=0;
+        this.deleteStatus=1;
     }
 }
