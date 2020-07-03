@@ -111,7 +111,7 @@ public abstract class AbstractHRApplication implements HRApplication {
     if(newResume == null){
       System.out.println("====没查到");
     }else{
-      System.out.println(resume.toString());
+      System.out.println(newResume.toString());
     }
   }
 
