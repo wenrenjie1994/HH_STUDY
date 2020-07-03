@@ -92,7 +92,18 @@ public abstract class AbstractHRApplication implements HRApplication {
 
   @Override
   public void removeResume() {
-
+    System.out.println("====输入需要删除的简历的身份证号");
+    String id = scanner.nextLine();
+    Resume resume = new Resume();
+    resume.setId(id);
+    AbstractResume oldResume =  resumeMapper.getResume(resume);
+    if(oldResume == null){
+      System.out.println("warn:====没有该用户的简历");
+      return;
+    }
+    if(resumeMapper.removeResume(oldResume)){
+      System.out.println("info:====删除 " + oldResume.getName() + " "+ oldResume.getId() + " 成功！" );
+    }
   }
 
   @Override
