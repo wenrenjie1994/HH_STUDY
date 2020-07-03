@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.StudentDao">
+
+    <resultMap type="com.example.demo.model.student" id="student">
+        <id property="studentId" column="STUDENT_ID"/>
+        <result property="studentName" column="STUDENT_NAME"/>
+        <result property="studentTel" column="STUDENT_TEL"/>
+        <result property="studentNumber" column="STUDENT_NUMBER"/>
+        <result property="studentAddress" column="STUDENT_ADDRESS"/>
+        <result property="studentBirth" column="STUDENT_BIRTH"/>
+        <result property="studentEmail" column="STUDENT_EMAIL"/>
+		<result property="studentSchool" column="STUDENT_SCHOOL"/>
+    </resultMap>
+
+	<select id="selectLimt" resultMap="student" parameterType="java.util.HashMap">
+        select *
+        from student
+        LIMIT #{page}, #{limit}
+    </select>
+
+    <select id="selectAll" resultMap="student">
+		select
+			STUDENT_ID,
+			STUDENT_NAME,
+			STUDENT_TEL,
+			STUDENT_NUMBER,
+			STUDENT_ADDRESS,
+			STUDENT_BIRTH,
+			STUDENT_EMAIL,
+			STUDENT_SCHOOL
+		from
+			student
+	</select>
+
+    <select id="selectByID" resultMap="student">
+		select
+			STUDENT_ID,
+			STUDENT_NAME,
+			STUDENT_TEL,
+			STUDENT_NUMBER,
+			STUDENT_ADDRESS,
+			STUDENT_BIRTH,
+			STUDENT_EMAIL,
+			STUDENT_SCHOOL
+		from
+			student
+		where
+			STUDENT_ID = #{studentId}
+	</select>
+
+    <select id="selectByName" resultMap="student">
+		select
+			STUDENT_ID,
+			STUDENT_NAME,
+			STUDENT_TEL,
+			STUDENT_NUMBER,
+			STUDENT_ADDRESS,
+			STUDENT_BIRTH,
+			STUDENT_EMAIL,
+			STUDENT_SCHOOL
+		from
+			student
+		where
+			STUDENT_NAME = #{studentName}
+	</select>
+
+    <insert id="insert">
+		insert into student(STUDENT_NAME,STUDENT_TEL,STUDENT_NUMBER,
+		STUDENT_ADDRESS,STUDENT_BIRTH,STUDENT_EMAIL,STUDENT_SCHOOL)
+		values(#{studentName},#{studentTel},#{studentNumber},#{studentAddress},#{studentBirth},#{studentEmail},#{studentSchool})
+	</insert>
+
+    <update id="update">
+		update
+			student
+		set
+			STUDENT_NAME = #{studentName},
+			STUDENT_TEL = #{studentTel},
+			STUDENT_NUMBER = #{studentNumber},
+			STUDENT_ADDRESS = #{studentAddress},
+			STUDENT_BIRTH = #{studentBirth},
+			STUDENT_EMAIL = #{studentEmail},
+			STUDENT_SCHOOL = #{studentSchool}
+		where
+			STUDENT_ID = #{studentId}
+	</update>
+
+    <delete id="deleteByID">
+		delete from student
+		where STUDENT_ID = #{studentId}
+	</delete>
+</mapper>

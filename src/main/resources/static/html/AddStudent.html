@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/layui.css"  media="all">
+</head>
+<body>
+
+<form class="layui-form layui-form-pane" action="">
+
+    <div class="layui-form-item">
+
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-inline">
+            <input  type="text" name="studentName" lay-verify="required" placeholder="请输入学生姓名" autocomplete="off" class="layui-input">
+        </div>
+
+        <label class="layui-form-label">联系电话</label>
+        <div class="layui-input-inline">
+            <input  type="text" name="studentTel" lay-verify="required" placeholder="请输入学生电话" autocomplete="off" class="layui-input">
+        </div>
+
+        <label class="layui-form-label">地址</label>
+        <div class="layui-input-inline">
+            <input  type="text" name="studentAddress" lay-verify="required" placeholder="请输入地址" autocomplete="off" class="layui-input">
+        </div>
+
+        <div class="layui-inline">
+            <label class="layui-form-label">出生日期</label>
+            <div class="layui-input-block">
+                <input type="text" name="studentBirth" class="layui-input" id="birth" autocomplete="off"
+                               placeholder="请选择出生日期">
+            </div>
+        </div>
+
+        <label class="layui-form-label">邮箱</label>
+        <div class="layui-input-inline">
+            <input  type="text" name="studentEmail" lay-verify="required" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+        </div>
+
+        <label class="layui-form-label">身份证号码</label>
+        <div class="layui-input-inline">
+            <input  type="text" name="studentNumber" lay-verify="required" placeholder="请输入身份证号码" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">毕业学校</label>
+        <div class="layui-input-block">
+                    <textarea name="studentSchool" placeholder="请输入毕业学校" class="layui-textarea"></textarea>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+<script src="../layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['form', 'layedit','laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,$ = layui.jquery
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#birth'
+             ,type: 'datetime'
+        });
+        //监听指定开关
+        form.on('switch(switchTest)', function(data){
+            layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
+                offset: '6px'
+            });
+            layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(field){
+            layer.alert(JSON.stringify(field.field), {
+                title: '最终的提交信息'
+            })
+            var data = field.field;
+            console.log(data)
+            $.ajax({
+                url: '/addStudent',
+                type: "post",
+                dataType:'json',
+                data: {
+                    studentName:data.studentName,
+                    studentTel:data.studentTel,
+                    studentBirth:data.studentBirth,
+                    studentAddress:data.studentAddress,
+                    studentNumber:data.studentNumber,
+                    studentEmail:data.studentEmail,
+                    studentSchool:data.studentSchool
+                },
+                success: function (mag) {
+                    console.log(mag);
+                    if (mag.code > 0) {
+                        layer.closeAll('loading');
+                        layer.load(2);
+                        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                        parent.layer.close(index); //再执行关闭
+                        layer.msg("添加成功!", {icon: 6});
+                        setTimeout(function () {
+                            window.parent.location.reload();//修改后刷新父页面
+                        }, 100);
+                    } else{
+                        layer.msg("添加失败!", {icon: 7})
+                    }
+                }
+            });
+            return false;
+        });
+
+        //表单取值
+        layui.$('#LAY-component-form-getval').on('click', function(){
+            var data = form.val('example');
+            alert(JSON.stringify(data));
+        });
+
+    });
+</script>

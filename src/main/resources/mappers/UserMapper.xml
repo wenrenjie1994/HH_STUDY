@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.WmsUserDao">
+    <resultMap id="WmsUserResultMap" type="com.example.demo.model.User">
+        <id column="USER_ID" property="id" jdbcType="INTEGER"></id>
+        <result column="USER_NAME" property="name" jdbcType="VARCHAR"></result>
+        <result column="USER_PASSWORD" property="password" jdbcType="VARCHAR"></result>
+    </resultMap>
+    <select id="findAll" resultMap="WmsUserResultMap">
+        select * from wms_user
+    </select>
+
+    <select id="selectByUserID" resultMap="WmsUserResultMap">
+        select * from wms_user
+        <where>
+            USER_ID = #{userID}
+        </where>
+    </select>
+
+    <select id="selectByName" resultMap="WmsUserResultMap">
+        select * from wms_user
+        <where>
+            USER_NAME = #{userName}
+        </where>
+    </select>
+
+    <update id="update">
+        update wms_user set USER_NAME = #{name}, USER_PASSWORD = #{password} where USER_ID = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from wms_user
+        <where>
+            USER_ID = #{id}
+        </where>
+    </delete>
+
+    <insert id="insert">
+        insert into wms_user
+        values
+        (null,#{name},#{password})
+    </insert>
+
+    <select id="selectByNameAndPassword" resultMap="WmsUserResultMap">
+        select * from wms_user
+        <where>
+            USER_NAME = #{userName}
+            and
+            USER_PASSWORD = #{password}
+        </where>
+    </select>
+</mapper>

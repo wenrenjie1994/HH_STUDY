@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/login/login.css">
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/layui.css"  media="all">
+    <title>登录</title>
+</head>
+
+<body background="../images/face/login.jpg">
+<div class="header">
+    <div class="header-top">
+        <h1 style="font-family:verdana;color: white;text-align:center">登录</h1>
+    </div>
+    <form id="selectUser">
+        <div class="header-panel" style="font-family:verdana;color: white;text-align:center">
+            <div>姓名：<input type="text" name="name" id="name"></div>
+            <div>密码：<input type="password" name="password" id="password"></div>
+        </div>
+        <div id="error-panel" style="color:red;display: none;text-align: center">
+            <span style="font-size: 2px">账号或者密码错误请重新登录</span>
+        </div>
+        <div class="header-panel-submit">
+
+            <div class="header-panel-submit1"> <button id="select" type = "button" onclick="selectByNameAndPassword()"
+                                                       style="width:50px; height:25px; ">登录</button></div>
+            <div class="header-panel-submit2" style="margin-left: 60px"><button id="reset" type="reset" value="chongzhi" onclick="ab()"
+                                                      style="width:50px; height:25px; ">重置</button></div>
+        </div>
+    </form>
+    <script src="layui.js" charset="utf-8"></script>
+    <script src="jquery-1.8.2.js" charset="utf-8"></script>
+    <script>
+        function selectByNameAndPassword() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            $.ajax({
+                url:"loginCheck",
+                type:"post",
+                data: JSON.stringify({
+                    userName : name,
+                    userPassword : password
+                }),
+                datatype:"text",
+                processData:false,
+                contentType:"application/json",
+                success:function (message) {
+                    if(message.code == 1){
+                        setCookie('userName',message.userName);
+                        window.location.href="main";
+                    } else {
+                        document.getElementById("error-panel").style.display="";
+                    }
+                },
+                error:function (data){
+                    alert("传值失败");
+                }
+            })
+        }
+        function re(){
+            layui.use(['form', 'layedit'], function(){
+                var layer = layui.layer;
+                layer.open({
+                    type: 2 //此处以iframe举例
+                    ,title: '添加信息'
+                    ,area: ['450px', '400px']
+                    ,shade: 0
+                    ,maxmin: true
+                    ,offset: [
+                        250,600
+                    ]
+                    ,content: 'html/register.html'
+                    ,zIndex: layer.zIndex //重点1
+                    ,success: function(layero){
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            });
+        }
+        function setCookie(name,value)
+        {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days*24*60*60*1000);
+            document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+        }
+        function ab() {
+            document.getElementById("error-panel").style.display="none"
+        }
+
+
+    </script>
+</div>
+
+</body>
+</html>

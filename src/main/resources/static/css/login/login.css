@@ -1,0 +1,23 @@
+.header{
+    outline-color: #fffcee;
+    outline-style: double;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+.header-top{
+    padding-top: 30px;
+}
+.header-panel-submit{
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 30px;
+    width: 100px;
+}
+.header-panel-submit1{
+
+}
+
+

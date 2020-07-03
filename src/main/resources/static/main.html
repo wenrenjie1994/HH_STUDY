@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>hr信息管理系统</title>
+    <link rel="stylesheet" href="../css/layui.css">
+    <script src="../layui.js"></script>
+</head>
+
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">hr信息管理系统</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img" style="z-index: 999">
+                    <span id="s"></span>
+                </a>
+                <script>
+                    var userName=getCookie('userName')
+                    document.getElementById("s").innerHTML=getCookie('userName')
+                    function getCookie(name)
+                    {
+                        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                        if(arr=document.cookie.match(reg))
+                            return unescape(arr[2]);
+                        else
+                            return null;
+                    }
+
+
+                    function userInfo(){
+                        layui.use([  'layer','form'], function(){
+                            var layer = layui.layer
+                            var $ = layui.jquery
+                            var form = layui.form
+                            $.ajax({
+                                url: '/selectRepositoryAdminByName',
+                                dataType: 'json',
+                                method: 'post',
+                                data: {userName: userName},
+                                success: function (res) {
+                                    layer.open({
+                                        type: 1
+                                        ,title: '详情'
+                                        ,area: ['450px', '400px']
+                                        ,offset: [
+                                            250,800
+                                        ]
+                                        ,content: $("#details")
+                                    });
+
+                                    form.val("detailTest", { //formTest 即 class="layui-form" 所在元素属性 lay-filter="" 对应的值
+                                        id:res[0].id,
+                                        name:res[0].name,
+                                        address:res[0].address,
+                                        birth:res[0].birth,
+                                        sex:res[0].sex,
+                                        tel:res[0].tel,
+                                    });
+                                }
+                            });
+                        })
+                    }
+                    function updatePassword(){
+                        layui.use([  'layer','form'], function(){
+                            var layer = layui.layer
+                            var $ = layui.jquery
+                            var form = layui.form
+                            layer.open({
+                                type: 2 //此处以iframe举例
+                                ,title: '密码修改'
+                                ,area: ['450px', '400px']
+                                ,shade: 0
+                                ,maxmin: true
+                                ,offset: [
+                                    250,600
+                                ]
+                                ,content: 'html/updatePassword.html'
+                                ,zIndex: layer.zIndex //重点1
+                                ,success: function(layero){
+                                    layer.setTop(layero); //重点2
+                                }
+                            });
+                        })
+                    }
+
+                </script>
+                <dl class="layui-nav-child">
+                    <dd style="margin-left: 10px"><button class="layui-btn layui-btn-sm" lay-event="user" onclick="userInfo()">个人信息详情</button></dd>
+                    <dd style="margin-left: 10px"><button class="layui-btn layui-btn-sm" lay-event="password" onclick="updatePassword()">密码修改设置</button></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="login.html">退出</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域 -->
+            <ul class="layui-nav layui-nav-tree">
+                <li class="layui-nav-item  ">
+                    <a lay-id="12" href="javascript:;">信息管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" class="site-demo-active" data-id="14" data-type="tabAdd"
+                               data-url="RepositoryAdmin" data-title="学生信息管理" >学生信息管理</a></dd>
+                    </dl>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body" >
+        <div class="layui-tab" lay-filter="addtab" lay-allowclose="true">
+            <ul class="layui-tab-title">
+            </ul>
+            <div class="layui-tab-content" style="height: 100px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+
+<script type="text/javascript">
+    var params = {ext:"p9hp"};  //参数，注意参数名要注意和后台方法参数名要一致
+    layui.use('element', function () {
+        var $ = layui.jquery;
+        $(function(){
+            $("#btnOk").click(function(){
+                $.ajax({
+                    type:"POST",  //请求方式
+                    url:"AjaxDemo.aspx/GetImg",  //请求路径：页面/方法名字
+                    data: params,     //参数
+                    dataType:"text",
+                    contentType:"application/json; charset=utf-8",
+                    beforeSend:function(XMLHttpRequest){
+                        $("#tips").text("开始调用后头方法获取图片路径,请等待");
+                        $("#imgFood").attr("src","image/loading.gif");
+                    },
+                    success:function(msg){  //成功
+                        $("#imgFood").attr("src",eval("("+msg+")").d);
+                        $("#tips").text("调用方法结束");
+                    },
+                    error:function(obj, msg, e){   //异常
+                        alert("OH,NO");
+                    }
+                });
+            });
+        });
+    })
+</script>
+<script>
+    var innerHeight =  window.innerHeight;
+    //JavaScript代码区域
+    layui.use('element', function () {
+
+        var $ = layui.jquery;
+        var element = layui.element;
+        //var height = $(window).height();
+        var active = {
+            //在这里给active绑定几项事件，后面可通过active调用这些事件
+            tabAdd: function (url, id, name) {
+                //新增一个Tab项 传入三个参数，分别对应其标题，tab页面的地址，还有一个规定的id，是标签中data-id的属性值
+                //关于tabAdd的方法所传入的参数可看layui的开发文档中基础方法部分
+                element.tabAdd('addtab', {
+                    title: name,
+
+                    content: '<iframe data-frameid="' + id + '" scrolling="auto" frameborder="0" src="html/' + url + '.html" style="width:100%; height=1000px;margin-top:10px"></iframe>',
+                    id: id //规定好的id
+                })
+                console.log("url: " + url)
+                FrameWH();  //计算ifram层的大小
+            },
+            tabChange: function (id) {
+                //切换到指定Tab项
+                element.tabChange('addtab', id); //根据传入的id传入到指定的tab项
+            }
+        };
+        $('.site-demo-active').on('click', function () {
+            var dataid = $(this);
+
+            //这时会判断右侧.layui-tab-title属性下的有lay-id属性的li的数目，即已经打开的tab项数目
+            if ($(".layui-tab-title li[lay-id]").length <= 0) {
+                //如果比零小，则直接打开新的tab项
+                active.tabAdd(dataid.attr("data-url"), dataid.attr("data-id"), dataid.attr("data-title"));
+            } else {
+                //否则判断该tab项是否以及存在
+
+                var isData = false; //初始化一个标志，为false说明未打开该tab项 为true则说明已有
+                $.each($(".layui-tab-title li[lay-id]"), function () {
+                    //如果点击左侧菜单栏所传入的id 在右侧tab项中的lay-id属性可以找到，则说明该tab项已经打开
+                    if ($(this).attr("lay-id") == dataid.attr("data-id")) {
+                        isData = true;
+                    }
+                })
+                if (isData == false) {
+                    //标志为false 新增一个tab项
+                    active.tabAdd(dataid.attr("data-url"), dataid.attr("data-id"), dataid.attr("data-title"));
+                }
+            }
+            //最后不管是否新增tab，最后都转到要打开的选项页面上
+            active.tabChange(dataid.attr("data-id"));
+        });
+
+
+
+        function FrameWH() {
+            var h = innerHeight - 41 - 10 - 60 - 10 - 44 - 10;
+            console.log("height : " + h)
+            $("iframe").css("height", h + "px");
+        }
+        $(window).resize(function () {
+            FrameWH();
+        })
+
+    })
+</script>
+
+<div class="layui-row" id="details" style="display:none;">
+    <div class="layui-col-md10">
+        <form class="layui-form layui-from-pane" action="" style="margin-top:20px" lay-filter="detailTest">
+            <div class="layui-form-item">
+                <label class="layui-form-label">详情页面</label>
+            </div>
+            <input type="text" name="id" required lay-verify="required" autocomplete="off" class="layui-input"
+                   style="display: none">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">管理员姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" autocomplete="off"
+                           placeholder="请输入仓库地址" class="layui-input" onfocus=this.blur()>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系电话</label>
+                <div class="layui-input-block">
+                    <input type="text" name="tel" required lay-verify="required" autocomplete="off"
+                           placeholder="请输入仓库面积" class="layui-input" onfocus=this.blur()>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                    <label class="layui-form-label">出生日期</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" name="birth" required lay-verify="required" autocomplete="off" placeholder="yyyy-MM-dd" onfocus=this.blur()>
+                    </div>
+
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">地址</label>
+                <div class="layui-input-block">
+                    <input type="text" name="address" required lay-verify="required" autocomplete="off"
+                           placeholder="请输入服务方式" class="layui-input" onfocus=this.blur()>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                    <input type="text" name="sex" required lay-verify="required" autocomplete="off"
+                           placeholder="请输入服务方式" class="layui-input" onfocus=this.blur()>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
