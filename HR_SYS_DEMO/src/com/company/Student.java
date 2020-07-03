@@ -7,10 +7,10 @@ public class Student {
         this.name = stdName;
         this.id = stdId;
     }
-    public String getId(){
-        return this.id;
-    }
+    public String getId(){ return this.id; }
     public String getName(){
         return this.name;
     }
+    public void setName(String stdName){this.name = stdName;}
+    public void setId(String stdId){this.id = stdId;}
 }

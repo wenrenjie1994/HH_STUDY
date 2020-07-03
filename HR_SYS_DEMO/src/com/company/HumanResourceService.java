@@ -6,9 +6,11 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class HumanResourceService {
-    private static List<Student> studentList = new ArrayList<Student>();
+    private List<Student> studentList = new ArrayList<Student>();
+
     private static HumanResourceService humanResource = new HumanResourceService();
-    private static Lock listLock = new ReentrantLock();
+    private Lock listLock = new ReentrantLock();
+    private HumanResourceService(){}
     public static HumanResourceService getInstance(){
         return humanResource;
     }
@@ -39,6 +41,20 @@ public class HumanResourceService {
                 return;
             }
         }
+        System.out.println("系统中查无此人");
+    }
+    public void modifyStudent(String oldStudentName, String newStudentName, String newStudentId){
+        listLock.lock();
+        for (Student student : studentList){
+            if(student.getName().equals(oldStudentName)){
+                student.setName(newStudentName);
+                student.setId(newStudentId);
+                System.out.println("修改成功");
+                listLock.unlock();
+                return;
+            }
+        }
+        listLock.unlock();
         System.out.println("系统中查无此人");
     }
 }
