@@ -1,7 +1,22 @@
+###### 2020/7/3
+想用LinkedList实现存储，但是不会写ResumeList类，先用arrylist完成功能吧
+
 ###### 2020/7/1
 
-实践大表哥的lowb内存hr系统
-
+1. 实践大表哥的lowb内存hr系统
+    - 修改注释
+    - 将process（招聘进度）改为枚举类型(但是失败了，，java的枚举是一种class，实现起来有点麻烦，还没学会，还是先用int吧)
+2. 学习设置live template（https://www.jetbrains.com/help/idea/template-variables.html）
+    - 新建模板组或者模板
+    - $name$设置变量名
+    - 然后为其绑定函数
+3. 学习java枚举类型（https://blog.csdn.net/qq_35385687/article/details/90147104）
+    - ```
+      enum-modifiers enum enumname:enum-base
+          {
+              enum-body,
+          }
+      ```
 ###### 2020/6/30
 
 1. 学习git分支（官方book第三章）
