@@ -2,7 +2,7 @@ package main.service.interfaces;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 定义 Resume 在 Service 的操作
  * Created on 7/4/20 11:48 AM
  */
 public interface ResumeService {

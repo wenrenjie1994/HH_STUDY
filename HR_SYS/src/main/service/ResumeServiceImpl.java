@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 实现 Resume 在 Service 的操作
  * Created on 7/4/20 11:49 AM
  */
 public class ResumeServiceImpl implements ResumeService {

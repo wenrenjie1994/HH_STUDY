@@ -2,7 +2,7 @@ package main.enums;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 统一返回数据，定义状态码
  * Created on 7/3/20 12:07 PM
  */
 public enum ResultCode {

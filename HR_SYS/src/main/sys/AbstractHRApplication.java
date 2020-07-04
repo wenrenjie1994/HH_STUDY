@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 对启动类的功能进行实现
  * Created on 7/2/20 1:13 PM
  */
 public abstract class AbstractHRApplication implements HRApplication {
@@ -49,7 +49,8 @@ public abstract class AbstractHRApplication implements HRApplication {
     applicationDestory();
   }
 
-  void welcome() {
+  @Override
+  public void welcome() {
     System.out.println("===============HR 管理系统================");
     System.out.println("1. 简历列表");
     System.out.println("2. 查询简历");
@@ -60,7 +61,8 @@ public abstract class AbstractHRApplication implements HRApplication {
     System.out.println("===============HR 管理系统================");
   }
 
-  void userOperate() {
+  @Override
+  public void userOperate() {
     int choice = scanner.nextInt();
     // 接受 nextInt 后的换行符
     scanner.nextLine();
