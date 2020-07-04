@@ -1,8 +1,8 @@
 package main.mapper;
 
+import main.dto.Result;
 import main.entity.AbstractResume;
 import main.mapper.interfaces.ResumeMapper;
-import main.utils.Result;
 
 /**
  * @author: hqweay

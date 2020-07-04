@@ -1,7 +1,7 @@
 package main.mapper.interfaces;
 
+import main.dto.Result;
 import main.entity.AbstractResume;
-import main.utils.Result;
 
 /**
  * @author: hqweay

@@ -1,7 +1,8 @@
-package main.entity;
+package main.dto;
+
+import main.entity.AbstractResume;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * @author: hqweay

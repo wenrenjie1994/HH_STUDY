@@ -1,4 +1,4 @@
-package main.utils;
+package main.dto;
 
 import main.enums.ResultCode;
 

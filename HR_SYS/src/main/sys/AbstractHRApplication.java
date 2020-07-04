@@ -1,12 +1,12 @@
 package main.sys;
 
+import main.dto.Result;
+import main.dto.ResumeList;
 import main.entity.AbstractResume;
 import main.entity.Resume;
-import main.entity.ResumeList;
 import main.mapper.AbstractResumeMapper;
 import main.mapper.MemoryResumeMapper;
 import main.sys.interfaces.HRApplication;
-import main.utils.Result;
 
 import java.util.Scanner;
 

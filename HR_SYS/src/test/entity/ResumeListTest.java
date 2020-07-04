@@ -1,8 +1,8 @@
 package test.entity;
 
+import main.dto.ResumeList;
 import main.entity.AbstractResume;
 import main.entity.Resume;
-import main.entity.ResumeList;
 import main.enums.ProcessEnum;
 
 /**
