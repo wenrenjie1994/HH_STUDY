@@ -2,7 +2,6 @@ package com.spdb.lowbhrsys.controller;
 
 import com.spdb.lowbhrsys.bean.ResumeBean;
 import com.spdb.lowbhrsys.service.IResumeService;
-import com.spdb.lowbhrsys.service.impl.ResumeFileServiceImpl;
 import com.spdb.lowbhrsys.service.impl.ResumeMemoryServiceImpl;
 import com.spdb.lowbhrsys.utils.ResponseData;
 
@@ -15,8 +14,8 @@ import java.util.Scanner;
  * @description: 模仿controller调用业务层
  **/
 public class ResumeRunController {
-    private static IResumeService resumeService=new ResumeMemoryServiceImpl(); //基于内存
-//    private static IResumeService resumeService=new ResumeFileServiceImpl(); //基于文件
+    private static IResumeService resumeService=new ResumeMemoryServiceImpl();
+
     public static void addResume(){
         System.out.println("欢迎进入添加简历界面！");
         System.out.println("请依次输入姓名、身份证、性别、学校、邮件、手机号，以回车分割！");
