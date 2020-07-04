@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("hRService")
+@Service
 public class HRServiceImpl implements HRService {
     @Autowired
     private HRDao hrDao;

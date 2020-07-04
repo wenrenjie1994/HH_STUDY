@@ -1,6 +1,5 @@
 package com.jinjie.sun.dao;
 
-import com.jinjie.sun.dao.HRDao;
 import com.jinjie.sun.pojo.HR;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

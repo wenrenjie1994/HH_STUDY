@@ -1,6 +1,8 @@
 package com.jinjie.sun.controller;
 
 import com.jinjie.sun.pojo.HR;
+import com.jinjie.sun.response.Response;
+import com.jinjie.sun.response.ResponseBuilder;
 import com.jinjie.sun.service.HRService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,26 +24,46 @@ public class HRController {
 
     @PostMapping("/add")
     @ApiOperation("添加HR")
-    public int add(HR hr) {
-        return this.hrService.add(hr);
+    public Response add(HR hr) {
+        try {
+            int result = this.hrService.add(hr);
+            return ResponseBuilder.buildSuccessResponse(result);
+        } catch (Exception e) {
+            return ResponseBuilder.buildFailResponse(null, e.getMessage());
+        }
     }
 
     @PostMapping("/update")
     @ApiOperation("修改HR信息")
-    public int update(HR hr) {
-        return this.hrService.update(hr);
+    public Response update(HR hr) {
+        try {
+            int result = this.hrService.update(hr);
+            return ResponseBuilder.buildSuccessResponse(result);
+        } catch (Exception e) {
+            return ResponseBuilder.buildFailResponse(null, e.getMessage());
+        }
     }
 
     @GetMapping("/delete")
     @ApiOperation("删除HR")
-    public int delete(Long id) {
-        return this.hrService.delete(id);
+    public Response delete(Long id) {
+        try {
+            int result = this.hrService.delete(id);
+            return ResponseBuilder.buildSuccessResponse(result);
+        } catch (Exception e) {
+            return ResponseBuilder.buildFailResponse(null, e.getMessage());
+        }
     }
 
     @GetMapping("/get")
     @ApiOperation("获取某一个HR")
-    public HR findHR(Long id) {
-        return this.hrService.findHR(id);
+    public Response findHR(Long id) {
+        try {
+            HR result = this.hrService.findHR(id);
+            return ResponseBuilder.buildSuccessResponse(result);
+        } catch (Exception e) {
+            return ResponseBuilder.buildFailResponse(null, e.getMessage());
+        }
     }
 
     /**
@@ -49,7 +71,12 @@ public class HRController {
      */
     @GetMapping("/list")
     @ApiOperation("获取HR列表")
-    public List<HR> findHRList() {
-        return this.hrService.findHRList();
+    public Response findHRList() {
+        try {
+            List<HR> result = this.hrService.findHRList();
+            return ResponseBuilder.buildSuccessResponse(result);
+        } catch (Exception e) {
+            return ResponseBuilder.buildFailResponse(null, e.getMessage());
+        }
     }
 }
