@@ -1,0 +1,22 @@
+-- ----------------------------
+--  Table structure for `spdb_recruitment_user`
+-- ----------------------------
+DROP TABLE IF EXISTS `spdb_hrSystem_resume`;
+CREATE TABLE `spdb_hrSystem_resume` (
+
+                                         `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id索引',
+                                         `name` varchar(50) NOT NULL COMMENT '用户真实姓名',
+                                         `id_card_number` varchar(50) NOT NULL COMMENT '用户身份证号码',
+                                         `school` varchar(50) NOT NULL COMMENT '学校',
+                                         `major` varchar(50) NOT NULL COMMENT '专业',
+                                         `sex` int(2) NOT NULL COMMENT '性别',
+                                         `email` varchar(50) NOT NULL COMMENT '用户邮箱',
+                                         `phone` varchar(20) NOT NULL COMMENT '用户手机',
+                                         `status` int(2) NOT NULL COMMENT '用户简历状态' DEFAULT 0,
+                                         `create_time` datetime NOT NULL COMMENT '创建时间',
+                                         `update_time` datetime NOT NULL COMMENT '最后一次更新时间',
+                                          PRIMARY KEY (`id`),
+                                          UNIQUE KEY `id_unique`(`id`) USING BTREE,
+                                          UNIQUE KEY `phone_unique`(`phone`) USING BTREE ,
+                                          UNIQUE KEY `email_unique`(`email`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
