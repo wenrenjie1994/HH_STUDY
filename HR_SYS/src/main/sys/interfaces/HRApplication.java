@@ -6,13 +6,11 @@ package main.sys.interfaces;
  * Created on 7/2/20 1:12 PM
  */
 public interface HRApplication {
-  void saveResume();
+  void applicationInit();
 
-  void removeResume();
+  void applicationDestory();
 
-  void updateResume();
+  void run();
 
-  void getResume();
 
-  void listResume();
 }

@@ -1,10 +1,7 @@
 package main.sys;
 
-import main.dto.Result;
-import main.dto.ResumeList;
-import main.entity.AbstractResume;
-import main.entity.Resume;
 import main.mapper.MemoryResumeMapper;
+import main.service.ResumeServiceImpl;
 import main.sys.interfaces.HRApplication;
 import main.utils.LocalPersistence;
 
@@ -18,28 +15,34 @@ import java.util.Scanner;
 public abstract class AbstractHRApplication implements HRApplication {
   Scanner scanner = new Scanner(System.in);
   LocalPersistence localPersistence = new LocalPersistence();
-  MemoryResumeMapper resumeMapper;
   private boolean exitFlag = false;
+  ResumeServiceImpl resumeService;
 
   // 初始化应用
-  private void applicationInit() {
-    // 从本地读取数据
-    resumeMapper = new MemoryResumeMapper(localPersistence.getFromLocal());
+  @Override
+  public void applicationInit() {
+    // 初始化 Service，从本地读取数据
+    resumeService = new ResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
+    resumeService.setScanner(this.scanner);
   }
 
   // 退出应用
-  private void applicationDestory() {
+  @Override
+  public void applicationDestory() {
     // 保存至本地
-    localPersistence.saveToLocal(resumeMapper.getResumeList());
+    localPersistence.saveToLocal(resumeService.getResumeMapper().getResumeList());
+    // 关闭输入
+    scanner.close();
   }
 
+  @Override
   public void run() {
     applicationInit();
     while (true) {
       welcome();
       userOperate();
       if (exitFlag == true) {
-        System.out.println("====退出");
+        System.out.println("info:=====退出咯～");
         break;
       }
     }
@@ -63,148 +66,26 @@ public abstract class AbstractHRApplication implements HRApplication {
     scanner.nextLine();
     switch (choice) {
       case 1:
-        listResume();
+        resumeService.listResume();
         break;
       case 2:
-        getResume();
+        resumeService.getResume();
         break;
       case 3:
-        saveResume();
+        resumeService.saveResume();
         break;
       case 4:
-        updateResume();
+        resumeService.updateResume();
         break;
       case 5:
-        removeResume();
+        resumeService.removeResume();
         break;
       case 0:
-        System.out.println("info:=====退出咯～");
-        scanner.close();
         exitFlag = true;
         break;
       default:
         System.out.println("warn:====请输入菜单对应的相应数字～");
         break;
-    }
-  }
-
-  @Override
-  public void saveResume() {
-    System.out.println("====输入姓名");
-    String name = scanner.nextLine();
-
-    System.out.println("====输入身份证号");
-    String id = scanner.nextLine();
-
-    System.out.println("====输如学校名");
-    String school = scanner.nextLine();
-
-    Resume resume = new Resume();
-    resume.setName(name);
-    resume.setId(id);
-    resume.setSchool(school);
-
-    if (resumeMapper.saveResume(resume).getResultCode().getCode() == 200) {
-      System.out.println("success====添加成功");
-    } else if (resumeMapper.saveResume(resume).getResultCode().getCode() == 501) {
-      System.out.println("error====添加失败，确保每项信息都不为空～");
-    } else if (resumeMapper.saveResume(resume).getResultCode().getCode() == 502) {
-      System.out.println("error====数据已经存在");
-    }
-  }
-
-  @Override
-  public void removeResume() {
-    System.out.println("====输入需要删除的简历的身份证号");
-    String id = scanner.nextLine();
-    Resume resume = new Resume();
-    resume.setId(id);
-    Result result = resumeMapper.getResume(resume);
-    // if (result.getResultCode().getCode() == 503) {
-    //   System.out.println("warn:====没有该用户的简历");
-    //   return;
-    // }
-    if (resumeMapper.removeResume((Resume) result.getData()).getResultCode().getCode() == 200) {
-      System.out.println("info:====删除 " + ((Resume) result.getData()).getName() + " " + ((Resume) result.getData()).getId() + " 成功！");
-    } else {
-      System.out.println("warn:====没有该用户的简历");
-    }
-  }
-
-  @Override
-  public void updateResume() {
-    System.out.println("====输入需要修改的简历的身份证号");
-    String id = scanner.nextLine();
-    Resume resume = new Resume();
-    resume.setId(id);
-
-    Result result = resumeMapper.getResume(resume);
-    Resume oldResume = (Resume) result.getData();
-    if (oldResume == null) {
-      System.out.println("====没有该用户的简历");
-      return;
-    }
-
-    System.out.println("====输入姓名，留空则不变。");
-    String newName = scanner.nextLine();
-    newName = newName.equals("") ? oldResume.getName() : newName;
-
-    System.out.println("====输入身份证号，留空则不变。");
-    String newId = scanner.nextLine();
-    newId = newId.equals("") ? oldResume.getId() : newId;
-
-    System.out.println("====输如学校名，留空则不变。");
-    String newSchool = scanner.nextLine();
-    newSchool = newSchool.equals("") ? oldResume.getSchool() : newSchool;
-
-    Resume newResume = new Resume();
-    newResume.setName(newName);
-    newResume.setId(newId);
-    newResume.setSchool(newSchool);
-
-    Integer code = resumeMapper.updateResume(oldResume, newResume).getResultCode().getCode();
-    if (code == 200) {
-      System.out.println("====修改成功");
-    } else if (code == 502) {
-      System.out.println("====修改后的数据与已有数据重复");
-    } else if (code == 503) {
-      System.out.println("====没找到该用户");
-    }
-  }
-
-  @Override
-  public void getResume() {
-    System.out.println("====输入身份证号");
-    String id = scanner.nextLine();
-    Resume resume = new Resume();
-    resume.setId(id);
-
-    Result result = resumeMapper.getResume(resume);
-    Integer code = result.getResultCode().getCode();
-    Resume newResume = (Resume) result.getData();
-
-    if (code == 503) {
-      System.out.println("====没查到");
-    } else {
-      System.out.println(newResume.toString());
-    }
-  }
-
-  @Override
-  public void listResume() {
-    if (resumeMapper.listResume().getResultCode().getCode() == 503) {
-      System.out.println("error====还没有数据");
-      return;
-    }
-    System.out.println("====姓名====身份证号====学校====应聘流程");
-    for (AbstractResume resume : (ResumeList) resumeMapper.listResume().getData()) {
-      System.out.println(resume.toString());
-    }
-  }
-
-  private void resultCheck(Result result) {
-    if (result.getResultCode().getCode() == 200) {
-      System.out.println("成功");
     }
   }
 }
