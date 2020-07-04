@@ -1,8 +1,6 @@
 package com.spdb.lowbhrsys.controller;
 
-import com.spdb.lowbhrsys.bean.ResumeBean;
-import com.spdb.lowbhrsys.service.IResumeService;
-import com.spdb.lowbhrsys.service.impl.ResumeMemoryServiceImpl;
+import com.spdb.lowbhrsys.utils.ResumeFileDataOperate;
 import com.spdb.lowbhrsys.utils.ResumeMemory;
 
 import java.util.Scanner;
@@ -16,6 +14,10 @@ import java.util.Scanner;
 public class ResumeRunMain {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
+        //基于文件保存数据需要以下两行
+        ResumeFileDataOperate r=new ResumeFileDataOperate();
+        r.downloadData(ResumeMemory.list);
+
         while(true){
             System.out.println("-----欢迎进入李伯伯的low逼hr系统-----");
             System.out.println("添加简历请按----1");
@@ -47,6 +49,8 @@ public class ResumeRunMain {
                     System.out.println("输入错误，请重新输入");
             }
             if (choice==6){
+                //基于文件保存数据需要该行，将内存中的数据进行文件持久化
+                r.saveData(ResumeMemory.list);
                 break;
             }
 
