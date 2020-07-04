@@ -93,4 +93,8 @@ public abstract class AbstractResume {
     //         + "应聘流程: " + this.process.toString() + "\n";
     return this.name + "  " + this.id + "  " + this.school + "  " + this.process.toString();
   }
+
+  public String toSaveString() {
+    return this.name + "," + this.id + "," + this.school + "," + this.process.getProcess();
+  }
 }

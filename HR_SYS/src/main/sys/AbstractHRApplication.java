@@ -4,9 +4,9 @@ import main.dto.Result;
 import main.dto.ResumeList;
 import main.entity.AbstractResume;
 import main.entity.Resume;
-import main.mapper.AbstractResumeMapper;
 import main.mapper.MemoryResumeMapper;
 import main.sys.interfaces.HRApplication;
+import main.utils.LocalPersistence;
 
 import java.util.Scanner;
 
@@ -17,10 +17,24 @@ import java.util.Scanner;
  */
 public abstract class AbstractHRApplication implements HRApplication {
   Scanner scanner = new Scanner(System.in);
-  AbstractResumeMapper resumeMapper = new MemoryResumeMapper();
+  LocalPersistence localPersistence = new LocalPersistence();
+  MemoryResumeMapper resumeMapper;
   private boolean exitFlag = false;
 
+  // 初始化应用
+  private void applicationInit() {
+    // 从本地读取数据
+    resumeMapper = new MemoryResumeMapper(localPersistence.getFromLocal());
+  }
+
+  // 退出应用
+  private void applicationDestory() {
+    // 保存至本地
+    localPersistence.saveToLocal(resumeMapper.getResumeList());
+  }
+
   public void run() {
+    applicationInit();
     while (true) {
       welcome();
       userOperate();
@@ -29,6 +43,7 @@ public abstract class AbstractHRApplication implements HRApplication {
         break;
       }
     }
+    applicationDestory();
   }
 
   void welcome() {

@@ -7,13 +7,15 @@ package main.enums;
  */
 public enum ProcessEnum {
 
+  PASS_APPLICATION(0),
+  PASS_RESUME(1),
+  PASS_WRITTEN_TEST(2),
+  PASS_PHYSICAL_TEST(3),
+  PASS_BACKGROUND_CHECK(4),
+  SIGNED(5),
+  EMPLOYED(6);
 
-
-  PASS_APPLICATION(0),PASS_RESUME(1),PASS_WRITTEN_TEST(2),PASS_PHYSICAL_TEST(3),PASS_BACKGROUND_CHECK(4),
-  SIGNED(5),EMPLOYED(6);
-
-
-   /**
+  /**
    * 可以用 int，仅仅表示状态时，编译器会优化 short 与 int
    * 0：已申请
    * 1：简历通过
@@ -22,7 +24,7 @@ public enum ProcessEnum {
    * 4：背调通过
    * 5：已签约
    * 6：已入职
-   * */
+   */
   @SuppressWarnings("AlibabaEnumConstantsMustHaveComment")
   private int process;
 
@@ -42,7 +44,7 @@ public enum ProcessEnum {
   @Override
   public String toString() {
     String str;
-    switch (process){
+    switch (process) {
       case 0:
         str = "已申请";
         break;

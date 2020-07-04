@@ -34,4 +34,5 @@ public class AbstractResumeMapper implements ResumeMapper {
   public Result listResume() {
     return Result.errorResult();
   }
+  
 }
