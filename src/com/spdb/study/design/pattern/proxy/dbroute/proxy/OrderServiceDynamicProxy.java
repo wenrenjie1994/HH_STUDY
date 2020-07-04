@@ -16,14 +16,14 @@ import java.util.Date;
  * @author Mr.Longyx
  * @date 2020年06月26日 21:05
  */
-public class OrderServiceDynamicProxy implements InvocationHandler {
+public class OrderServiceDynamicProxy implements SpdbInvocationHandler {
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
     Object proxyObj;
 
     public Object getInstance(Object proxyObj){
         this.proxyObj = proxyObj;
         Class<?> clazz = proxyObj.getClass();
-        return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(),this);
+        return SpdbProxy.newProxyInstance(new SpdbClassLoader(), clazz.getInterfaces(),this);
     }
 
     @Override

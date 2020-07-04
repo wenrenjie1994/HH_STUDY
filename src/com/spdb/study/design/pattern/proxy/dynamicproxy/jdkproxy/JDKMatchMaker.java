@@ -22,6 +22,7 @@ public class JDKMatchMaker implements InvocationHandler {
     public Object getInstance(Person person){
         this.person = person;
         Class<?> clazz = person.getClass();
+
         return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
     }
 

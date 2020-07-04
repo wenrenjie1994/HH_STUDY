@@ -30,7 +30,6 @@ public class DynamicDataSource {
     }
 
     /**
-     * DB2019 DB2020
      * @author Mr.Longyx
      * @date 2020/6/26 20:59
      * @param source

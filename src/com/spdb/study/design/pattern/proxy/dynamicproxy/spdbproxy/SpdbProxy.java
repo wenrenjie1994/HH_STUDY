@@ -33,6 +33,8 @@ public class SpdbProxy {
              * @return java.lang.Object
              */
             String src = generateSrc(interfaces);
+            System.out.println(src);
+
             /**
              * 将Java文件输出到磁盘
              * @author Mr.Longyx
@@ -71,13 +73,22 @@ public class SpdbProxy {
              * @param h
              * @return java.lang.Object
              */
-            JavaCompiler.CompilationTask task = compiler.getTask(null, manager, null,null,null,null);
+            JavaCompiler.CompilationTask task = compiler.getTask(null, manager, null,null,null,iterable);
             task.call();
             manager.close();
 
             Class proxyClass = loader.findClass("$Proxy0");
             Constructor c = proxyClass.getConstructor(SpdbInvocationHandler.class);
 
+            /**
+             * 返回字节码重组以后的新代理对象
+             * @author Mr.Longyx
+             * @date 2020/6/26 23:42
+             * @param loader
+             * @param interfaces
+             * @param h
+             * @return java.lang.Object
+             */
             return c.newInstance(h);
         }catch (Exception e){
             e.printStackTrace();
@@ -91,12 +102,10 @@ public class SpdbProxy {
         sb.append("import com.spdb.study.design.pattern.proxy.staticproxy.Person;"+line);
         sb.append("import java.lang.reflect.*;"+line);
         sb.append("public class $Proxy0 implements "+interfaces[0].getName()+"{"+line);
-
-        sb.append("SpdbInvocationHandler h;"+line);
-        sb.append("public $Proxy0(SpdbInvocationHandler h) {" + line);
-            sb.append("this.h = h;"+line);
-        sb.append("}" + line);
-
+            sb.append("SpdbInvocationHandler h;"+line);
+            sb.append("public $Proxy0(SpdbInvocationHandler h) {" + line);
+                sb.append("this.h = h;"+line);
+            sb.append("}" + line);
 
         /**
          * 结合反射根据接口生成方法
@@ -127,23 +136,24 @@ public class SpdbProxy {
             }
 
             sb.append("@Override"+line);
-            sb.append("public "+m.getReturnType().getName()+ " "+m.getName()+"() {"+line);
+            sb.append("public "+m.getReturnType().getName()+ " "+m.getName()+"("+paramNames.toString() +") {"+line);
             sb.append("try {"+line);
-                sb.append("Method m = "+interfaces[0].getName() + ".class.getMethod(\""+m.getName()+"\",new Class[]{"+paramClasses.toString()+"});"+line);
-                sb.append("this.h.invoke(this,m,null);"+line);
-                sb.append("}catch(Throwable e) {"+line);
-                sb.append("e.printStackTrace();"+line);
+                    sb.append("Method m = "+interfaces[0].getName() + ".class.getMethod(\""+m.getName()+"\",new Class[]{" + paramClasses.toString()+"});"+line);
+                    sb.append((hasReturnValue(m.getReturnType()) ? "return " : "")+ getCaseCode("this.h.invoke(this,m,new Object[]{" + paramValues + "})", m.getReturnType()) + ";" + line);
+                sb.append("}catch(Error _ex) {"+ line);
+                sb.append("}catch(Throwable e) {" + line);
+                sb.append("throw new UndeclaredThrowableException(e);" + line);
+                sb.append("}");
                 sb.append(getReturnEmptyCode(m.getReturnType()));
-                sb.append("}"+line);
             sb.append("}");
         }
-        sb.append("}");
+        sb.append("}" + line);
 
         return sb.toString();
     }
 
-    private static boolean hasReturn(Class<?> returnType) {
-        return returnType != Void.class;
+    private static boolean hasReturnValue(Class<?> clazz) {
+        return clazz != void.class;
     }
 
     private static Map<Class,Class> mappings = new HashMap<>();
@@ -153,8 +163,8 @@ public class SpdbProxy {
 
     private static String getReturnEmptyCode(Class<?> returnClass){
         if (mappings.containsKey(returnClass)){
-            return "return 0";
-        }else if (returnClass == Void.class){
+            return "return 0;";
+        }else if (returnClass == void.class){
             return "";
         }else{
             return "return null;";
@@ -163,7 +173,7 @@ public class SpdbProxy {
 
     private static String getCaseCode(String code,Class<?> returnClass){
         if (mappings.containsKey(returnClass)){
-            return "((" + mappings.get(returnClass).getName() + ")"+code + ")." + returnClass.getSimpleName();
+            return "((" + mappings.get(returnClass).getName() + ")"+code + ")." + returnClass.getSimpleName() + "Value()";
         }
         return code;
     }

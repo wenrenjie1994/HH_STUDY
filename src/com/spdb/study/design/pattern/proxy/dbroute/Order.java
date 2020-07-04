@@ -8,6 +8,8 @@ import java.io.Serializable;
  * @date 2020年06月26日 20:42
  */
 public class Order implements Serializable {
+    private static final long serialVersionUID = -3781317108767809412L;
+
     private Object orderInfo;
     /**
      * 根据订单创建时间进行按年分库
