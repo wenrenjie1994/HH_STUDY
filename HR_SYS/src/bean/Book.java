@@ -14,5 +14,8 @@ public class Book
 		this.bookAuthor=bookAuthor;
 		this.bookPrice=bookPrice;
 	}
-	
+
+	public static void main(String[] args) {
+		System.out.println("hello");
+	}
 }
