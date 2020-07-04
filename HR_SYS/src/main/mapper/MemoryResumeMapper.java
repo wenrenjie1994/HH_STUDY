@@ -3,7 +3,7 @@ package main.mapper;
 import main.dto.Result;
 import main.dto.ResumeList;
 import main.entity.AbstractResume;
-import main.utils.Valid;
+import main.utils.Validator;
 
 /**
  * @author: hqweay
@@ -34,7 +34,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
    * */
   public Result saveResume(AbstractResume resume) {
     // 前置判断，写个工具类吧。
-    if (!Valid.ValidResumeAllFields(resume)) {
+    if (!Validator.ValidResumeAllFields(resume)) {
       return Result.errorParamValidResult();
     }
     if (hasResume(resume)) {
@@ -71,7 +71,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
     // oldId 用于修改时查找匹配
     String oldId = oldResume.getId();
     //  前置判断
-    if (!Valid.ValidResumeAllFields(newResume) || oldId == null || oldId.equals("")) {
+    if (!Validator.ValidResumeAllFields(newResume) || oldId == null || oldId.equals("")) {
       return Result.errorParamValidResult();
     }
 

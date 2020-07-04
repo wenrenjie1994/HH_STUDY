@@ -38,6 +38,7 @@ public abstract class AbstractHRApplication implements HRApplication {
     System.out.println("3. 添加简历");
     System.out.println("4. 修改简历");
     System.out.println("5. 删除简历");
+    System.out.println("0. 退出");
     System.out.println("===============HR 管理系统================");
   }
 
@@ -61,10 +62,13 @@ public abstract class AbstractHRApplication implements HRApplication {
       case 5:
         removeResume();
         break;
-      default:
-        System.out.println("输入错误");
+      case 0:
+        System.out.println("info:=====退出咯～");
         scanner.close();
         exitFlag = true;
+        break;
+      default:
+        System.out.println("warn:====请输入菜单对应的相应数字～");
         break;
     }
   }
