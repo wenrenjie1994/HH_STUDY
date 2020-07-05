@@ -251,11 +251,11 @@ public class QueryRule implements Serializable {
     }
 
 
-    public List<Rule> getrules() {
+    public List<Rule> getRules() {
         return this.rules;
     }
 
-    public List<QueryRule> getQueryrules() {
+    public List<QueryRule> getQueryRules() {
         return this.queryRules;
     }
 

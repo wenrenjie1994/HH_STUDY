@@ -100,7 +100,7 @@ public class SqlBuilder {
         properties = new ArrayList<>();
         values = new ArrayList<>();
         orders = new ArrayList<> ();
-        for (QueryRule.Rule rule : queryRule.getrules()) {
+        for (QueryRule.Rule rule : queryRule.getRules()) {
             switch (rule.getType()){
                 case QueryRule.BETWEEN:
                     processBetween(rule);
