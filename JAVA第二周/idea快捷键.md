@@ -1,0 +1,10 @@
+# 快捷键
+- Alt+Enter自动导入包<br>
+- Ctrl+Y删除光标所在行<br>
+- Ctrl+D复制光标所在行并插入到下一行<br>
+- Alt+Enter自动导入包<br>
+- Ctrl+Alt+L格式化代码，对齐<br>
+- Ctrl+/单行注释<br>
+- Ctrl+Shift+/多行注释<br>
+- Alt+Ins自动生成代码<br>
+- Altl+Shift+鼠标上下，上下移动代码<br>
