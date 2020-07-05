@@ -1,5 +1,6 @@
 package com.spdb.resume.pojo;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Resume {
@@ -21,9 +22,9 @@ public class Resume {
 
     private Integer status;
 
-    private Date createTime;
+    private Timestamp createTime;
 
-    private Date updateTime;
+    private Timestamp updateTime;
 
 
     public Integer getId() {
@@ -102,7 +103,7 @@ public class Resume {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 
@@ -110,11 +111,11 @@ public class Resume {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(Timestamp updateTime) {
         this.updateTime = updateTime;
     }
 
-    public Resume(Integer id, String name, String idCardNumber, String school, String major, Integer sex, String email, String phone, Integer status, Date createTime, Date updateTime) {
+    public Resume(Integer id, String name, String idCardNumber, String school, String major, Integer sex, String email, String phone, Integer status, Timestamp createTime, Timestamp updateTime) {
         this.id = id;
         this.name = name;
         this.idCardNumber = idCardNumber;

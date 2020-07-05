@@ -12,4 +12,5 @@ public class Const {
     public static final String ID_CARD_NUMBER = "ID_CARD_NUMBER";
     public static final String EMAIL = "EMAIL";
     public static final String PHONE = "PHONE";
+    public static final String ID = "ID";
 }

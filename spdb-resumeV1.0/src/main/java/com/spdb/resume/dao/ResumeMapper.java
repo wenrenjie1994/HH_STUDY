@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
  *@return
  *@param
  **/
+@Mapper
 public interface ResumeMapper {
 
     int deleteByPrimaryKey(Integer id);
@@ -29,4 +30,7 @@ public interface ResumeMapper {
     int checkResumePhone(String phone);
 
     int checkResumeEmail(String email);
+
+    int checkResumeID(Integer id);
+
 }

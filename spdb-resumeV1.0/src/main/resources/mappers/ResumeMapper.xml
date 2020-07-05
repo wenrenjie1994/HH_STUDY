@@ -10,11 +10,12 @@
     <result column="sex" jdbcType="INTEGER" property="sex" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="status" jdbcType="INTEGER" property="status"/>
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, id_card_number, school, major, sex, email, phone, create_time, update_time
+    id, name, id_card_number, school, major, sex, email, phone,status,create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -29,11 +30,11 @@
   <insert id="insert" parameterType="com.spdb.resume.pojo.Resume">
     insert into spdb_hrsystem_resume (id, name, id_card_number, 
       school, major, sex, 
-      email, phone, create_time, 
+      email, phone,status, create_time,
       update_time)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{idCardNumber,jdbcType=VARCHAR}, 
       #{school,jdbcType=VARCHAR}, #{major,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
-      #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, now(),
+      #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},#{status,jdbcType=INTEGER}, now(),
       now())
   </insert>
   <insert id="insertSelective" parameterType="com.spdb.resume.pojo.Resume">
@@ -63,11 +64,14 @@
       <if test="phone != null">
         phone,
       </if>
+      <if test="status != null">
+          status,
+      </if>
       <if test="createTime != null">
         create_time,
       </if>
       <if test="updateTime != null">
-        update_time,
+        now(),
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -94,6 +98,9 @@
       </if>
       <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
@@ -127,6 +134,9 @@
       <if test="phone != null">
         phone = #{phone,jdbcType=VARCHAR},
       </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
@@ -136,7 +146,6 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-
   <update id="updateByPrimaryKey" parameterType="com.spdb.resume.pojo.Resume">
     update spdb_hrsystem_resume
     set name = #{name,jdbcType=VARCHAR},
@@ -146,6 +155,7 @@
       sex = #{sex,jdbcType=INTEGER},
       email = #{email,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = now()
     where id = #{id,jdbcType=INTEGER}
@@ -166,5 +176,9 @@
     where email = #{email}
   </select>
 
+  <select id="checkResumeID" resultType="int" parameterType="int">
+    select count(1) from spdb_hrsystem_resume
+    where  id= #{id}
+  </select>
 
 </mapper>

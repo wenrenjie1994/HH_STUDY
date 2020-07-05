@@ -41,11 +41,11 @@ public interface IResumeService {
      *@return {@link ServerResponse<Resume>}
      *@param id
      **/
-    ServerResponse<Resume> inquireResume(String id);
+    ServerResponse<Resume> inquireResume(Integer id);
 
     /**
      *@Author: A wei
-     *@Description
+     *@Description 此方法可以用于批量读写，批量操作时采用缓存数据库存储批量简历，一定时间后批量写入mysql数据库中
      *@return
      *@param
      **/
