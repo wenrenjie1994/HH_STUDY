@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hr_system_txt/hr_system_txt.iml" filepath="$PROJECT_DIR$/hr_system_txt/hr_system_txt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hr_system_txt/linked/linked.iml" filepath="$PROJECT_DIR$/hr_system_txt/linked/linked.iml" />
+    </modules>
+  </component>
+</project>
