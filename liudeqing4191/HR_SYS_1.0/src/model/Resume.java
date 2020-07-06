@@ -1,63 +1,43 @@
-package bean;
-
+package model;
 
 /**
-*@program : HR_SYS\src\bean\Resume.java
-*@description : ç®€å†
-* @author : liudeqing4191ï¼Œå¤§è¡¨å“¥
-* @date : 2020/7/1 11:01
-*/
-
-
+ * @author liudeqing4191
+ * @date 2020/07/06
+ * @project HR_SYS_1.0
+ **/
 public class Resume {
-
     /**
-     *å§“å
+     *ĞÕÃû
      */
     private String name;
 
     /**
-     *èº«ä»½è¯å·
+     *Éí·İÖ¤ºÅ
      */
     private String id;
 
     /**
-     *å­¦æ ¡
+     *Ñ§Ğ£
      */
     private String school;
 
     /**
      *
-     * * 0ï¼šå·²ç”³è¯·
-     * 1ï¼šç®€å†é€šè¿‡
-     * 2ï¼šç¬”è¯•é€šè¿‡
-     * 3ï¼šä½“æ£€é€šè¿‡
-     * 4ï¼šèƒŒè°ƒé€šè¿‡
-     * 5ï¼šå·²ç­¾çº¦
-     * 6ï¼šå·²å…¥èŒ
+     * * 0£ºÒÑÉêÇë
+     * 1£º¼òÀúÍ¨¹ı
+     * 2£º±ÊÊÔÍ¨¹ı
+     * 3£ºÌå¼ìÍ¨¹ı
+     * 4£º±³µ÷Í¨¹ı
+     * 5£ºÒÑÇ©Ô¼
+     * 6£ºÒÑÈëÖ°
      */
     private int process;
 
-//    /**
-//     *
-//     * APPLYï¼šå·²ç”³è¯·
-//     * RPASSï¼šç®€å†é€šè¿‡
-//     * EPASSï¼šç¬”è¯•é€šè¿‡
-//     * HPASSï¼šä½“æ£€é€šè¿‡
-//     * BPASSï¼šèƒŒè°ƒé€šè¿‡
-//     * SIGNï¼šå·²ç­¾çº¦
-//     * WORKï¼šå·²å…¥èŒ
-//     */
-//    private enum Process
-//    {
-//        APPLY,RPASS,EPASS,HPASS,BPASS,SIGN,WORK ;
-//    }
-//    private Process process;
     /**
-    *é€»è¾‘åˆ é™¤
+     *Âß¼­É¾³ı
      * 0 : bu zhanshi
-     * 1  å±•ç¤º
-    */
+     * 1  Õ¹Ê¾
+     */
     private int deleteStatus;
 
     public String getName() {
@@ -89,8 +69,8 @@ public class Resume {
     }
 
     public void setProcess(int process) {
-    this.process = process;
-}
+        this.process = process;
+    }
 
     public int getDeleteStatus() {
         return deleteStatus;
