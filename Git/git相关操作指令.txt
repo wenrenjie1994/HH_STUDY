@@ -1,0 +1,16 @@
+【1】删除GitHub仓库的中某个文件夹：（本地项目中的文件夹不收操作影响,删除的只是远程仓库中的）
+        $ git rm -r --cached Photo\ albums =>删除Photo albums文件夹(这里的文件夹名有空格命令行需要用"\ "来拼接）
+        $ git commit -m '删除Photo albums文件夹'  =>提交+添加操作说明
+        $ git push (-u) origin master =>将本次更改更新到GitHub项目上去
+【2】从本地向远程仓库提交代码：
+        $ git add 文件(夹) 名
+        $ git commit -m '注释'
+        $ git push origin master/分支名
+【3】git clone失败的分析和解决：Git限制了推送数据的大小导致的错误
+       方法1：重新设置全局的通信缓存大小，增加git缓冲区大小
+                  $ git config --global http.postBuffer 524288000
+                  $ git config --list
+       方法2：浅层克隆，深度设置为1
+                  $ git clone http://github.com/target.git --depth 1  # target.git 为目标地址
+                  $ cd target  #先进入库路径下
+                  $ git fetch --unshallow # 获取完整库
