@@ -69,6 +69,7 @@ public class TestHRS {
                     input.close();//流啊 连接啊 这些东西 用完记得关；要么记得还（那么什么地方是需要还的，什么地方是关的）；
                     System.out.println("您已经退出简历信息管理系统");
                     return;
+
                 default:
                     System.out.println("输入错误，请重新输入");
                     break;
