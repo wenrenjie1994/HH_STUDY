@@ -68,4 +68,15 @@ public class Resume {
     public void setDeleteStatus(int deleteStatus) {
         this.deleteStatus = deleteStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Resume{" +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", school='" + school + '\'' +
+                ", process=" + process +
+                ", deleteStatus=" + deleteStatus +
+                '}';
+    }
 }
