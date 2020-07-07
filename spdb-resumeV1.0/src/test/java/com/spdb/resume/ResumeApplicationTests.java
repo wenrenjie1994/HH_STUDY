@@ -8,16 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.annotation.Rollback;
-
-
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Rollback(false) //关闭数据回滚
 @ComponentScan(basePackages = "com.spdb.resume.service")
 @SpringBootTest
-//@MybatisTest //默认使用内存数据库
-//@AutoConfigureTestDatabase(replace = NONE) //取消默认
 class ResumeApplicationTests {
 
     @Autowired
