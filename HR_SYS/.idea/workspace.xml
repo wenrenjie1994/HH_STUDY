@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a77d6bb-28b1-4e9a-850d-51606028803f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/hr系统.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sys/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lowbhrsys/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HrTjx/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HrTjx/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HrTjx/src/student/student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/BookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/Resume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/ResumeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/ResumeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sys/HRS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/HRS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lowbhrsys/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lowbhrsys/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lowbhrsys/out/production/lowbhrsys/loadandsaveData/DataOperate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lowbhrsys/out/production/lowbhrsys/loadandsaveData/DataOperate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lowbhrsys/out/production/lowbhrsys/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lowbhrsys/out/production/lowbhrsys/service/BookService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +197,10 @@
       <screen x="-721" y="-1417" width="2560" height="1417" />
     </state>
     <state x="372" y="-1043" key="#com.intellij.ide.util.MemberChooser/0.23.1280.727/-721.-1417.2560.1417@-721.-1417.2560.1417" timestamp="1593512871894" />
+    <state x="410" y="63" key="FileChooserDialogImpl" timestamp="1594126714844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="410" y="63" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1594126714844" />
     <state width="656" height="245" key="GridCell.Tab.0.bottom" timestamp="1594126210263">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -241,6 +255,10 @@
     <state x="70" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1594125974173" />
     <state x="68" y="-1070" key="SettingsEditor/0.23.1280.727/-721.-1417.2560.1417@-721.-1417.2560.1417" timestamp="1593508953980" />
     <state x="68" y="23" key="SettingsEditor/0.23.1280.728@0.23.1280.728" timestamp="1593516377835" />
+    <state x="0" y="0" key="new project wizard" timestamp="1594126717326">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1594126717326" />
     <state x="224" y="-1105" key="search.everywhere.popup" timestamp="1593512770393">
       <screen x="-721" y="-1417" width="2560" height="1417" />
     </state>
