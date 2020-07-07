@@ -61,23 +61,29 @@ public class DataControl {
         return Aplist;//文件中的信息全部存储到list中了
     }
 
-    public static void Write(LinkedList aplist) throws IOException {
+    public static void Write(LinkedList aplist)  {
         //先把文件txt删除，再新建一个空白的文件，再把新的list写入txt文件
         int Apcount = aplist.size();
         file = new File("d:/1/pufa_HR/message.txt");
-        file.createNewFile();
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //往文件里写
-        PrintWriter pw = new PrintWriter(file);
-        for (int i = 0; i < Apcount; i++) {
-            pw.write(Aplist.get(i).getName() + "," +
-                    Aplist.get(i).getId() + "," +
-                    Aplist.get(i).getSchool() + "," +
-                    Aplist.get(i).getProcess() + "," +
-                    Aplist.get(i).getDeleteStatus()+"\n"
-            );
+        try (PrintWriter pw=new PrintWriter(file)){
+            for (int i = 0; i < Apcount; i++) {
+                pw.write(Aplist.get(i).getName() + "," +
+                        Aplist.get(i).getId() + "," +
+                        Aplist.get(i).getSchool() + "," +
+                        Aplist.get(i).getProcess() + "," +
+                        Aplist.get(i).getDeleteStatus()+"\n"
+                );
+                pw.flush();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        pw.close();
-
     }
 }
