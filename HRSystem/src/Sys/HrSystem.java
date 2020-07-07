@@ -149,7 +149,7 @@ public class HrSystem {
 
             int choice = input.nextInt();
 
-            //用switch退不出最外圈的循环，咋搞？
+//            //用switch退不出最外圈的循环，咋搞？
 //            switch (choice) {
 //                case 1:addPerson();break;
 //                case 2:deletePerson();break;
