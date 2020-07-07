@@ -136,8 +136,7 @@ public class WordCountDriver {
 7. 注意：初学时，KEYIN和VALUEIN写死。KEYOUT和VALUEOUT则需要根据需求进行改变。
 
 8. Writable机制是Hadoop自身的序列化机制，常用的类型：
-
-9. 1. LongWritable 
+   1. LongWritable 
    2. Text(String)
    3. IntWritable
    4. NullWritable
@@ -383,8 +382,7 @@ job.setNumReduceTasks(3);
 ##### job执行流程
 
 1. run job：客户端提交一个mr的jar包给JobClient。提交方式：hadoop jar …
-
-2. 1. 做job环境信息的收集，比如各个组件类，输入输出的kv类型等，检测是否合法
+   1. 做job环境信息的收集，比如各个组件类，输入输出的kv类型等，检测是否合法
    2. 检测输入输出的路径是否合法
 
 3. JobClient通过RPC和ResourceManager进行通信，返回一个存放jar包的地址（HDFS）和jobId。jobID是全局唯一的，用于标识该job
@@ -584,15 +582,17 @@ public class SortDriver {
 
 1. Map阶段的调优：
 
-2. 1. 调大缓冲区，一般可以调为250~350M
+   1. 调大缓冲区，一般可以调为250~350M
    2. 可以引入combine过程
    3. merge之后的文件可以进行压缩，减少网络传输的消耗
 
-3. Reduce阶段的调优：
+2. Reduce阶段的调优：
 
-4. 1. 增多fetch的线程数
+   1. 增多fetch的线程数
+
    2. 降低ReduceTask的阈值
    3. 提高merge因子
+
 
 #### InputFormat
 
@@ -608,8 +608,7 @@ public class SortDriver {
 2. KeyValueTextInputFormat：同样用于读取文本文件，如果行被分隔符（默认是\t）分割为两部分，第一部分为key，剩下的部分为value；如果没有分隔符，整行作为     key，value为空。
 
 3. SequenceFileInputFormat：用于读取sequence     file。 sequence file是Hadoop用于存储数据自定义格式的binary文件。它有两个子类：
-
-4. 1. SequenceFileAsBinaryInputFormat，将 key和value以BytesWritable的类型读出
+   1. SequenceFileAsBinaryInputFormat，将 key和value以BytesWritable的类型读出
    2. SequenceFileAsTextInputFormat，将key和value以Text类型读出
 
 5. SequenceFileInputFilter：根据filter从sequence文件中取得部分满足条件的数据，通过     setFilterClass指定Filter，内置了三种     Filter，RegexFilter取key值满足指定的正则表达式的记录；PercentFilter通过指定参数f，取记录行数%f==0的记录；MD5Filter通过指定参数f，取MD5(key)%f==0的记录
@@ -809,16 +808,17 @@ public class AutoDriver {
 
 2. SequenceFileOutputFormat：二进制键值数据的压缩格式
 
-3. 1. SequenceFileAsBinaryOutputFormat - 原生二进制数据的压缩格式
+   1. SequenceFileAsBinaryOutputFormat - 原生二进制数据的压缩格式
 
-4. MapFileOutputFormat：一种使用部分索引键的格式
+3. MapFileOutputFormat：一种使用部分索引键的格式
 
-5. MultipleOutputFormat：使用键值对参数写入文件的抽象类
+4. MultipleOutputFormat：使用键值对参数写入文件的抽象类
 
-6. 1. MultipleTextOutputFormat：输出多个以标准行分割、制表符定界格式的文件
+   1. MultipleTextOutputFormat：输出多个以标准行分割、制表符定界格式的文件
+
    2. MultipleSequenceFileOutputFormat：输出多个压缩格式的文件      
 
-7. DBOutputFormat：将数据以指定形式写到数据库中
+5. DBOutputFormat：将数据以指定形式写到数据库中
 
 ##### 自定义输出格式
 
@@ -951,11 +951,11 @@ public class WCComparator extends WritableComparator {
 1. 如果是因为shuffle分配数据不均匀造成数据倾斜，重写 parition 均匀分配数据即可
 
 2. 如果是数据本身带有倾斜的特点，无法通过修改parition来解决倾斜问题，可以采取如下方案进行：
-
-3. 1. 利用combiner减轻倾斜的情况
+   1. 利用combiner减轻倾斜的情况
    2. 将造成倾斜的数据拿出单独处理
    3. 将一个mr拆分成多个mr      降低倾斜造成的危害
    4. 多表联查
+
 
 #### 小文件处理
 
