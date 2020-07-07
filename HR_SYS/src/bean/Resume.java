@@ -33,10 +33,10 @@ public class Resume {
     private int process;
 
     /**
-     *逻辑删除
+    *逻辑删除
      * 0 : bu zhanshi
      * 1  展示
-     */
+    */
     private int deleteStatus;
 
     public String getName() {
