@@ -99,7 +99,6 @@ public class HRS {
 		Scanner input=new Scanner(System.in);
 		System.out.println("欢迎进入删除图书界面");
 		System.out.println("请输入需要删除的图书名");
-		bookList.
 		String bookName=input.nextLine();
 		if(bookCount!=0)//图书管理系统不为空
 		{
