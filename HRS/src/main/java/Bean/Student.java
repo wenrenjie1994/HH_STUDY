@@ -1,4 +1,4 @@
-package bean;
+package Bean;
 
 /**
  * @author：ljj0452@gmail.com

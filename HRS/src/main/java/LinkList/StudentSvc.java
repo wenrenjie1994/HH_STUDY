@@ -1,6 +1,6 @@
 package LinkList;
 
-import bean.Student;
+import Bean.Student;
 
 import java.util.Scanner;
 

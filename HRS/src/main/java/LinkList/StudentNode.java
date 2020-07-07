@@ -1,6 +1,6 @@
 package LinkList;
 
-import bean.Student;
+import Bean.Student;
 
 /**
  * @author：ljj0452@gmail.com
