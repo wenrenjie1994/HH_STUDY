@@ -7,6 +7,7 @@ import bean.BookList;
 
 public class HRS {
 
+
 	private int MAXSIZE=100;
 	//在数组初始化的时候，限制了数组的大小，有没有别的方式更好呢？
 	private Book[] bookList=new Book[MAXSIZE];
