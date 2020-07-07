@@ -2,7 +2,7 @@
 
 ---
 HDFS是Hadoop中用于进行数据分布式存储的模块
-![avatar](hdfs体系结构.png)
+![avatar](picture/hdfs体系结构.png)
 
 #### 概述
 1. HDFS中，存储数据时会将数据进行切块，每一个块称之为Block。
@@ -40,7 +40,7 @@ HDFS是Hadoop中用于进行数据分布式存储的模块
    1. edits：记录写操作的文件。
    2. fsimage：映像文件。记录元数据，但是这个文件中的元数据和内存中的元数据并不是同步的，fsimage中的元数据往往是落后于内存中的元数据的。
 7. NameNode在接收到写操作的时候，先将这个操作记录到edits_inprogress文件中，如果记录成功，则更改内存中的元数据，内存中的元数据更改成功之后会给客户端返回成功信号。这样设计的目的是为了保证操作的可靠 - 只要记录成功了，这个操作就一定会执行。
-![avatar](write.png)
+![avatar](picture/write.png)
 8. fsimage更新/edits滚动的触发条件：
    1. 空间：当edits文件达到指定大小（默认是64M，这个大小可以通过fs.checkpoint.size --- core-site.xml来调节）的时候，会触发edits文件的滚动。
    2. 时间：当距离上次滚动间隔指定时间（默认是3600s，这个时间可以通过fs.checkpoint.period来调节）之后，会触发edits文件的滚动。
@@ -166,8 +166,79 @@ HDFS是Hadoop中用于进行数据分布式存储的模块
 4. 当保存着这些数据块的DataNode节点向NameNode节点发送心跳时，在心跳应答里，NameNode节点会向DataNode发出指令，从而把数据删除掉。
 5. 所以在执行完delete方法后的一段时间内，数据块才能被真正的删除掉。
 
-#### API操作
-##### 读取文件
+####  API操作
+
+1. 下载
+
+```java
+	@Test
+	public void get() throws IOException {
+		// 连接HDFS
+		// uri - 连接地址
+		// conf - 代码中自主指定的配置
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(URI.create("hdfs://192.168.245.130:9000"), conf);
+		// 指定下载文件
+		InputStream in = fs.open(new Path("/VERSION"));
+		// 创建一个输出流
+		FileOutputStream out = new FileOutputStream("b.txt");
+		// 读写文件
+		// byte[] bs = new byte[1024];
+		// int len;
+		// while ((len = in.read(bs)) != -1)
+		// out.write(bs, 0, len);
+		IOUtils.copyBytes(in, out, conf);
+
+		// 关流
+		in.close();
+		out.close();
+
+	}
+```
+
+
+
+2. 上传
+
+```java
+	@Test
+	public void put() throws IOException, InterruptedException {
+
+		// 连接HDFS
+		// 用于指定属性配置
+		// 凡是放到XXX-site.xml中的配置都可以用conf来指定
+		// 代码中的配置要优先于配置文件中的内容
+		Configuration conf = new Configuration();
+		// conf.set("dfs.replication", "3");
+		// 所知即所得 --- 就是你说是谁HDFS就认为是谁
+		FileSystem fs = FileSystem.get(URI.create("hdfs://192.168.245.130:9000"), conf, "root");
+		// 指定上传的文件
+		OutputStream out = fs.create(new Path("/a.log"));
+		// 创建一个输入流读取文件
+		FileInputStream in = new FileInputStream("b.txt");
+		// 读写文件
+		IOUtils.copyBytes(in, out, conf);
+		// 关流
+		in.close();
+		out.close();
+	}
+```
+
+3.  删除
+
+```java
+	// 删除
+	@SuppressWarnings("deprecation")
+	@Test
+	public void delete() throws IOException, InterruptedException {
+
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(URI.create("hdfs://192.168.245.130:9000"), conf, "root");
+
+		fs.delete(new Path("/VERSION"));
+
+	}
+```
 
 
 
@@ -178,9 +249,13 @@ HDFS是Hadoop中用于进行数据分布式存储的模块
 
 
 
-   
 
-   
+
+
+
+
+
+
 
 
 
