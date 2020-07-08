@@ -1,4 +1,4 @@
-![Logo]("https://github.com/wenrenjie1994/HH_STUDY/blob/yangguang8290/Others/Logo.svg")
+![Logo](https://github.com/wenrenjie1994/HH_STUDY/blob/yangguang8290/Others/Logo1.png)
 # Java学习计划
 
 
