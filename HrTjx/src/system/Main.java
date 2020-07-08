@@ -1,12 +1,18 @@
 package system;
-import student.student;
+
+import hr.hr;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("111");
-        student stu = new student();
-        stu.select();
+        // write your code here
+
+        hr hr1 = new hr();
+        while (true) {
+            int max = hr1.printWelcome();
+            int num = hr1.inputNum(max);
+            hr1.choose(num);
+        }
+
     }
 }
