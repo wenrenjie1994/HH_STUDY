@@ -1,6 +1,6 @@
 package Main;
-import com.ram.utils.Resume;
-import com.ram.utils.ResumeOperate;
+import com.ram.utils.Candidate;
+import com.ram.utils.CandidateOperate;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Hrsys {
     public static void main(String[] args) {
         // LinkedList<类型> list = new LinkedList<>() 创建新链表型列表
 
-        LinkedList<Resume> ResumeList = new LinkedList<Resume>();
+        LinkedList<Candidate> candidateList = new LinkedList<Candidate>();
         // LinkedList和ArrayList的区别：
         // （1）ArrayList是Array(动态数组)的数据结构
         // （2）LinkedList是Link(链表)的数据结构。
@@ -32,26 +32,26 @@ public class Hrsys {
             switch(choice) {
                 // 增
                 case 1:
-                    ResumeOperate.addResume(ResumeList);
+                    CandidateOperate.addCandidate(candidateList);
                     break;
 
                 // 删
                 case 2:
-                    ResumeOperate.deleteResume(ResumeList);
+                    CandidateOperate.deleteCandidate(candidateList);
                     break;
 
                 // 改
                 case 3:
-                    ResumeOperate.updateResume(ResumeList);
+                    CandidateOperate.updateCandidate(candidateList);
                     break;
 
                 // 查
                 case 4:
-                    ResumeOperate.searchResume(ResumeList);
+                    CandidateOperate.searchCandidate(candidateList);
                     break;
                 // 遍历
                 case 5:
-                    ResumeOperate.showResume(ResumeList);
+                    CandidateOperate.showCandidate(candidateList);
                     break;
 
                 default:
