@@ -1,6 +1,6 @@
 package com.ram.utils;
 
-public class Candidate {
+public class Resume {
 
     private String Name;
     private String Age;
@@ -39,7 +39,7 @@ public class Candidate {
         this.Gender = Gender;
     }
 
-    public Candidate(String Name, String Age, String Education, String Gender) {
+    public Resume(String Name, String Age, String Education, String Gender) {
         this.Name = Name;
         this.Age = Age;
         this.Education = Education;
