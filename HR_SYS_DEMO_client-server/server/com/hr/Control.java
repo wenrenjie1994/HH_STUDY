@@ -1,9 +1,6 @@
 package com.hr;
 
-import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.ResultSet;
@@ -21,8 +18,25 @@ public class Control {
 
         HumanResourceService hr = HumanResourceService.getInstance();
 
-        while(socket.isConnected()){
-            RequestInfo requestInfo = (RequestInfo) ois.readObject();
+        while(!serverSocket.isClosed()){
+            if(socket.isClosed()){
+                System.out.println("重新等待连接");
+                socket = serverSocket.accept();
+                os = socket.getOutputStream();
+                is = socket.getInputStream();
+                oos = new ObjectOutputStream(os);
+                ois = new ObjectInputStream(is);
+                continue;
+            }
+            RequestInfo requestInfo = null;
+            try {
+                requestInfo = (RequestInfo) ois.readObject();
+            }catch (Exception e){
+                if(e.toString().equals(new EOFException().toString()));
+                socket.close();
+                System.out.println("连接关闭");
+                continue;
+            }
             OpType opCode = requestInfo.getOpType();
             if(opCode == OpType.ADD){
                 if(hr.addStudent(requestInfo.getCurResume()) != 1){

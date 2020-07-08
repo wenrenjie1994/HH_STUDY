@@ -29,7 +29,7 @@ public class HumanResourceService {
     String sql = null;
     PreparedStatement st = null;
     ResultSet rs = null;
-    List<Resume> rl = new LinkedList<>();
+    List<Resume> rl = null;
 
     private void connectDatabase() throws Exception{
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -106,6 +106,7 @@ public class HumanResourceService {
         try{
             st = conn.prepareStatement(sql);
             rs = st.executeQuery();
+            rl = new LinkedList<>();
             while(rs.next()){
                 if(rs.getString("status").equals("7")){
                     continue;
@@ -137,6 +138,7 @@ public class HumanResourceService {
             st = conn.prepareStatement(sql);
             st.setString(1, studentName);
             rs = st.executeQuery();
+            rl = new LinkedList<>();
             if(rs != null && rs.next() && !rs.getString("status").equals("7")){
                 Resume curResume = new Resume(null);
                 curResume.setId(Integer.valueOf(rs.getString("id")));
