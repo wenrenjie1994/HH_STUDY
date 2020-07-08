@@ -1,6 +1,6 @@
-![Logo](https://github.com/wenrenjie1994/HH_STUDY/blob/yangguang8290/Others/Logo1.png)
 # Java学习计划
 
+![Logo](https://github.com/wenrenjie1994/HH_STUDY/blob/yangguang8290/Others/Logo1.png)
 
 ## HR系统
 
@@ -10,6 +10,7 @@
 - [ ] 基于Socket与多线程的信息读写
 
 ## Java SE
+
 - [x] Java基础语法
 - [x] 面向对象
 - [ ] 异常的捕获及处理
@@ -22,6 +23,7 @@
 - [ ] 设计模式
 
 ## SpringBoot
+
 - [ ] Spring Boot配置
 - [ ] Spring Boot测试
 - [ ] Groovy与Spring Boot CLI
@@ -30,6 +32,7 @@
 - [ ] 部署Spring Boot应用程序
 
 ## Java虚拟机
+
 - [ ] 自动内存管理机制
     - [ ] Java内存区域与内存溢出异常
     - [ ] 垃圾收集器与内存分配策略
