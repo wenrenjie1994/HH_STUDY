@@ -22,6 +22,11 @@
 - [ ] Java数据库编程
 - [ ] 设计模式
 
+## SQL
+- [ ] SQL增删查改
+- [ ] SQL进阶
+- [ ] SQL函数
+
 ## SpringBoot
 
 - [ ] Spring Boot配置
