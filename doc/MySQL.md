@@ -1,3 +1,15 @@
+## 用户管理
+
+用户的创建以及授权。
+
+```sql
+create user 'hr@localhost' identified by 'hr_1234';
+
+grant privileges on hr_sys to 'hr@localhost';
+```
+
+
+
 ## Arch 安装 MySQL
 
 安装 AUR 版本：mysql
