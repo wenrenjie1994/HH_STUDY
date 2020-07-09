@@ -2,7 +2,7 @@ package sys;
 import bean.Resume;
 import java.util.Scanner;
 
-/*第一版本：*/
+/*第一版本：基于内存控制台的HR管理系统*/
 public class my_HRS {
     private int MAXSIZE=100;
     //在数组初始化
