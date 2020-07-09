@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca5626b1-92af-40fa-8eae-76a61f20c68f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/$PROJECT_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/lowbhrsys3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/META-INF/lowbhrsys3.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/bean/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/bean/BookList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/database/DBConnection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/library06/LMS06.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/work/Action.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/out/production/lowbhrsys3/work/Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/src/bean/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/src/bean/BookList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/src/database/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/src/library06/LMS06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/src/work/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowbhrsys3/src/work/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HH_STUDY-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HH_STUDY-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS/src/bean/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/HR_SYS/src/bean/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS/src/bean/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/HR_SYS/src/bean/BookList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS/src/sys/HRS.java" beforeDir="false" afterPath="$PROJECT_DIR$/HR_SYS/src/sys/HRS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/library05/LMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/library05/LMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/loadandsaveData/DataOperate.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/loadandsaveData/DataOperate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/service/BookService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git@github.com:wenrenjie1994/HH_STUDY.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eOgHIWXdwcUf8rrWJa9SgC8gK6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca5626b1-92af-40fa-8eae-76a61f20c68f" name="Default Changelist" comment="" />
+      <created>1594197964279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594197964279</updated>
+      <workItem from="1594197972121" duration="4411000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1594198369661">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594198369661" />
+  </component>
+</project>

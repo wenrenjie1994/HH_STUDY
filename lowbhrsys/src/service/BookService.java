@@ -1,8 +1,9 @@
 package service;
 
+import model.Book;
+
 import java.util.LinkedList;
 import java.util.Scanner;
-import model.Book;
 public class BookService
 {
 	public static void addBook(LinkedList<Book> bookList)
