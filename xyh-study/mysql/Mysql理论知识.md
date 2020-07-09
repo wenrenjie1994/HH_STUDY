@@ -1,5 +1,5 @@
 ## SQL语句语言（操作数据库）
-###mysql数据库的概念
+### mysql数据库的概念
 一个数据库的服务器包含多个数据库，一个数据库中有多张表，一个表中包含多个字段（字段和JavaBean的属性是对应的）<br>
 表中存放数据,一行数据和一个JavaBean实体对象相对应
 ### SQL：Structured Query Language（结构化查询语言）
