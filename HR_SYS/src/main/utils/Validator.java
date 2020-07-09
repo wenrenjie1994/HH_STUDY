@@ -8,7 +8,7 @@ import main.entity.AbstractResume;
  * Created on 7/2/20 12:31 PM
  */
 public class Validator {
-  public static boolean ValidResumeAllFields(AbstractResume resume) {
+  public static boolean validResumeAllFields(AbstractResume resume) {
     if (resume.getId() == null || resume.getId().equals("")) {
       return false;
     }
@@ -19,6 +19,13 @@ public class Validator {
       return false;
     }
     if (resume.getProcess() == null) {
+      return false;
+    }
+    return true;
+  }
+
+  public static boolean validResumeID(AbstractResume resume) {
+    if (resume.getId() == null || resume.getId().trim().equals("")) {
       return false;
     }
     return true;

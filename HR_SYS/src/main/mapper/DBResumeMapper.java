@@ -36,8 +36,33 @@ public class DBResumeMapper implements ResumeMapper {
 
   @Override
   public Result getResumeByID(AbstractResume resume) {
-    return null;
+    String sql = "select * from resume where deleteStatus != 1 and id = " + resume.getId();
+    Connection conn = DBConnection.getConnection();
+    ResultSet rs = null;
+    Statement statement = null;
+    ResumeList resumes = new ResumeList();
+
+    try {
+      statement = conn.createStatement();
+      rs = statement.executeQuery(sql);
+      while (rs.next()) {
+        ProcessEnum processEnum = ProcessEnum.PASS_APPLICATION;
+        processEnum.setProcess(Integer.parseInt(rs.getString("process")));
+
+        Resume resume = new Resume(rs.getString("name"), rs.getString("id"),
+                rs.getString("school"), processEnum, rs.getBoolean("deleteStatus"));
+        resumes.add(resume);
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return Result.errorResult();
+    } finally {
+      DBConnection.closeConnection(rs, statement, conn);
+    }
+    return Result.successResult(resumes);
   }
+
+}
 
   @Override
   public Result listResume() {

@@ -34,7 +34,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
    * */
   public Result saveResume(AbstractResume resume) {
     // 前置判断，写个工具类吧。
-    if (!Validator.ValidResumeAllFields(resume)) {
+    if (!Validator.validResumeAllFields(resume)) {
       return Result.errorParamValidResult();
     }
     if (hasResume(resume)) {
@@ -71,7 +71,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
     // oldId 用于修改时查找匹配
     String oldId = oldResume.getId();
     //  前置判断
-    if (!Validator.ValidResumeAllFields(newResume) || oldId == null || oldId.equals("")) {
+    if (!Validator.validResumeAllFields(newResume) || oldId == null || oldId.equals("")) {
       return Result.errorParamValidResult();
     }
 
@@ -118,7 +118,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
 
   @Override
   public Result getResumeByID(AbstractResume resume) {
-    if (resume.getId() == null || resume.getId().trim().equals("")) {
+    if (!Validator.validResumeID(resume)) {
       return null;
     }
     for (AbstractResume res : resumeList) {
