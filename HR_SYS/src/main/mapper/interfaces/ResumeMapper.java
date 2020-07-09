@@ -15,7 +15,7 @@ public interface ResumeMapper {
 
   Result updateResume(AbstractResume oldResume, AbstractResume newResume);
 
-  Result getResume(AbstractResume resume);
+  Result getResumeByID(AbstractResume resume);
 
   Result listResume();
 }

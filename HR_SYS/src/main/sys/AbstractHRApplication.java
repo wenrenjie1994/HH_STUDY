@@ -82,7 +82,7 @@ public abstract class AbstractHRApplication implements HRApplication {
         resumeService.listResume();
         break;
       case 2:
-        resumeService.getResume();
+        resumeService.getResumeByID();
         break;
       case 3:
         resumeService.saveResume();

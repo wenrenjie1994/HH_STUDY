@@ -26,7 +26,7 @@ public class AbstractResumeMapper implements ResumeMapper {
   }
 
   @Override
-  public Result getResume(AbstractResume resume) {
+  public Result getResumeByID(AbstractResume resume) {
     return Result.errorResult();
   }
 
@@ -34,5 +34,5 @@ public class AbstractResumeMapper implements ResumeMapper {
   public Result listResume() {
     return Result.errorResult();
   }
-  
+
 }

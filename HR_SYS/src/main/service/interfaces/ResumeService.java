@@ -12,7 +12,7 @@ public interface ResumeService {
 
   void updateResume();
 
-  void getResume();
+  void getResumeByID();
 
   void listResume();
 }

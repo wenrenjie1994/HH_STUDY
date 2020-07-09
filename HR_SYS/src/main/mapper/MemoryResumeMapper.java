@@ -117,7 +117,7 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public Result getResume(AbstractResume resume) {
+  public Result getResumeByID(AbstractResume resume) {
     if (resume.getId() == null || resume.getId().trim().equals("")) {
       return null;
     }

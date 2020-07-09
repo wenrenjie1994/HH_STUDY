@@ -62,7 +62,7 @@ public class ResumeServiceImpl implements ResumeService {
     String id = scanner.nextLine();
     Resume resume = new Resume();
     resume.setId(id);
-    Result result = resumeMapper.getResume(resume);
+    Result result = resumeMapper.getResumeByID(resume);
     // if (result.getResultCode().getCode() == 503) {
     //   System.out.println("warn:====没有该用户的简历");
     //   return;
@@ -81,7 +81,7 @@ public class ResumeServiceImpl implements ResumeService {
     Resume resume = new Resume();
     resume.setId(id);
 
-    Result result = resumeMapper.getResume(resume);
+    Result result = resumeMapper.getResumeByID(resume);
     Resume oldResume = (Resume) result.getData();
     if (oldResume == null) {
       System.out.println("====没有该用户的简历");
@@ -116,13 +116,13 @@ public class ResumeServiceImpl implements ResumeService {
   }
 
   @Override
-  public void getResume() {
+  public void getResumeByID() {
     System.out.println("====输入身份证号");
     String id = scanner.nextLine();
     Resume resume = new Resume();
     resume.setId(id);
 
-    Result result = resumeMapper.getResume(resume);
+    Result result = resumeMapper.getResumeByID(resume);
     Integer code = result.getResultCode().getCode();
     Resume newResume = (Resume) result.getData();
 

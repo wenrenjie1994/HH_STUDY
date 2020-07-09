@@ -35,7 +35,7 @@ public class DBResumeMapper implements ResumeMapper {
   }
 
   @Override
-  public Result getResume(AbstractResume resume) {
+  public Result getResumeByID(AbstractResume resume) {
     return null;
   }
 
