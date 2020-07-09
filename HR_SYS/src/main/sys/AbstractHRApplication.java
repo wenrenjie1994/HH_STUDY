@@ -1,5 +1,6 @@
 package main.sys;
 
+import main.config.Config;
 import main.mapper.MemoryResumeMapper;
 import main.service.ResumeServiceImpl;
 import main.sys.interfaces.HRApplication;
@@ -13,6 +14,9 @@ import java.util.Scanner;
  * Created on 7/2/20 1:13 PM
  */
 public abstract class AbstractHRApplication implements HRApplication {
+
+  // 由启动类的构造方法传入
+  Config config;
   Scanner scanner = new Scanner(System.in);
   LocalPersistence localPersistence = new LocalPersistence();
   private boolean exitFlag = false;
@@ -21,16 +25,23 @@ public abstract class AbstractHRApplication implements HRApplication {
   // 初始化应用
   @Override
   public void applicationInit() {
-    // 初始化 Service，从本地读取数据
-    resumeService = new ResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
+    if (config.isLocalPersistence()) {
+      // 初始化 Service，从本地读取数据
+      resumeService = new ResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
+    } else {
+      resumeService = new ResumeServiceImpl(new MemoryResumeMapper());
+    }
+
     resumeService.setScanner(this.scanner);
   }
 
   // 退出应用
   @Override
   public void applicationDestory() {
-    // 保存至本地
-    localPersistence.saveToLocal(resumeService.getResumeMapper().getResumeList());
+    if (config.isLocalPersistence()) {
+      // 保存至本地
+      localPersistence.saveToLocal(resumeService.getResumeMapper().getResumeList());
+    }
     // 关闭输入
     scanner.close();
   }
