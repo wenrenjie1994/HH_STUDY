@@ -9,14 +9,10 @@
 public class HRApplication extends AbstractHRApplication {
 
   public static void main(String[] args) {
-    new HRApplication().run();
-  }
-
-  public HRApplication() {
     // 当 localPersistence 为 false、useDB 为 false，使用内存保存数据且不持久化
     // 当 localPersistence 为 true、useDB 为 false，使用内存保存数据并使用 txt 文件持久化
     // 只要 useDB 为 true，使用数据库读写数据，不考虑持久化
-    super.config = new Config(false, true);
+    new HRApplication(new Config(false, true)).run();
   }
 }
 

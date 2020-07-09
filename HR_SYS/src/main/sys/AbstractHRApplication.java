@@ -23,6 +23,13 @@ public abstract class AbstractHRApplication implements HRApplication {
   private boolean exitFlag = false;
   ResumeServiceImpl resumeService;
 
+  public AbstractHRApplication() {
+  }
+
+  public AbstractHRApplication(Config config) {
+    this.config = config;
+  }
+
   // 初始化应用
   @Override
   public void applicationInit() {
