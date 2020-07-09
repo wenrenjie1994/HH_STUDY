@@ -3,45 +3,45 @@
  * @version 1.2 2016-03-11
  * @author 文仁杰 2014214225
  */
-package library05;
+package hr05;
 import java.util.LinkedList;
 import java.util.Scanner;
 import loadandsaveData.DataOperate;
-import model.Book;
-import service.BookService;
+import model.Resume;
+import service.HRService;
 
-public class LMS
+public class HRS
 {
 	public static void main(String[] args) {
 
-		LinkedList<Book> bookList = new LinkedList<Book>();
+		LinkedList<Resume> bookList = new LinkedList<Resume>();
 		Scanner input = new Scanner(System.in);
 		DataOperate.loadData(bookList);//下载所有图书
 		while(true)
 		{
-			System.out.println("************欢迎来到陈老板图书管理系统************");
-			System.out.println("增加图书请按----------1");
-			System.out.println("删除图书请按----------2");
-			System.out.println("修改图书请按----------3");
-			System.out.println("查询图书请按----------4");
+			System.out.println("************欢迎来到HR管理系统************");
+			System.out.println("录入员工信息请按----------1");
+			System.out.println("删除员工信息请按----------2");
+			System.out.println("修改员工信息请按----------3");
+			System.out.println("查询员工信息请按----------4");
 			System.out.println("退出请按--------------5");
 		//if语句指令判断
 			int choice =input.nextInt();
 			if(choice==1)
 			{
-				BookService.addBook(bookList);
+				HRService.addResume(bookList);
 			}
 			else if(choice==2)
 			{
-				BookService.deleteBook(bookList);
+				HRService.deleteResume(bookList);
 			}
 			else if(choice==3)
 			{
-				BookService.updateBook(bookList);
+				HRService.updateResume(bookList);
 			}
 			else if(choice==4)
 			{
-				BookService.showBook(bookList);
+				HRService.showResume(bookList);
 			}
 			else if(choice==5)
 			{
@@ -52,6 +52,6 @@ public class LMS
 				System.out.println("输入错误，请确认后从新输入");
 			}
 		}
-		System.out.println("您已退出图书管理系统");
+		System.out.println("您已退出HR管理系统");
 	}
 }
