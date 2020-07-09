@@ -7,9 +7,15 @@ package main.config;
  */
 public class Config {
   private boolean localPersistence = true;
+  private boolean useDB = true;
 
   public Config(boolean localPersistence) {
     this.localPersistence = localPersistence;
+  }
+
+  public Config(boolean localPersistence, boolean useDB) {
+    this.localPersistence = localPersistence;
+    this.useDB = useDB;
   }
 
   public boolean isLocalPersistence() {
@@ -18,5 +24,13 @@ public class Config {
 
   public void setLocalPersistence(boolean localPersistence) {
     this.localPersistence = localPersistence;
+  }
+
+  public boolean isUseDB() {
+    return useDB;
+  }
+
+  public void setUseDB(boolean useDB) {
+    this.useDB = useDB;
   }
 }

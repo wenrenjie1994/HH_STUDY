@@ -4,6 +4,7 @@ import main.dto.Result;
 import main.dto.ResumeList;
 import main.entity.AbstractResume;
 import main.entity.Resume;
+import main.mapper.AbstractResumeMapper;
 import main.mapper.MemoryResumeMapper;
 import main.service.interfaces.ResumeService;
 
@@ -17,14 +18,14 @@ import java.util.Scanner;
 public class ResumeServiceImpl implements ResumeService {
   // 都得从上层传入
   private Scanner scanner;
-  private MemoryResumeMapper resumeMapper;
+  private AbstractResumeMapper resumeMapper;
 
-  public ResumeServiceImpl(MemoryResumeMapper resumeMapper) {
+  public ResumeServiceImpl(AbstractResumeMapper resumeMapper) {
     this.resumeMapper = resumeMapper;
   }
 
   public MemoryResumeMapper getResumeMapper() {
-    return resumeMapper;
+    return (MemoryResumeMapper) resumeMapper;
   }
 
   public void setScanner(Scanner scanner) {

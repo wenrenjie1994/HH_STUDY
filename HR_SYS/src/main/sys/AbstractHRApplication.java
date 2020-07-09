@@ -1,6 +1,7 @@
 package main.sys;
 
 import main.config.Config;
+import main.mapper.DBResumeMapper;
 import main.mapper.MemoryResumeMapper;
 import main.service.ResumeServiceImpl;
 import main.sys.interfaces.HRApplication;
@@ -25,9 +26,11 @@ public abstract class AbstractHRApplication implements HRApplication {
   // 初始化应用
   @Override
   public void applicationInit() {
-    if (config.isLocalPersistence()) {
+    if (config.isLocalPersistence() && !config.isUseDB()) {
       // 初始化 Service，从本地读取数据
       resumeService = new ResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
+    } else if (config.isUseDB()) {
+      resumeService = new ResumeServiceImpl(new DBResumeMapper());
     } else {
       resumeService = new ResumeServiceImpl(new MemoryResumeMapper());
     }

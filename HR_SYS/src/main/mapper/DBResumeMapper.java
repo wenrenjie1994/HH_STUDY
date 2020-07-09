@@ -6,7 +6,6 @@ import main.dto.ResumeList;
 import main.entity.AbstractResume;
 import main.entity.Resume;
 import main.enums.ProcessEnum;
-import main.mapper.interfaces.ResumeMapper;
 import main.utils.Validator;
 
 import java.sql.Connection;
@@ -19,7 +18,10 @@ import java.sql.Statement;
  * @description: TODO
  * Created on 7/9/20 2:51 PM
  */
-public class DBResumeMapper implements ResumeMapper {
+public class DBResumeMapper extends AbstractResumeMapper {
+  public DBResumeMapper() {
+  }
+
   @Override
   public Result saveResume(AbstractResume resume) {
     if (!Validator.validResumeAllFields(resume)) {
