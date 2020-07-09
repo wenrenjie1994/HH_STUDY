@@ -16,7 +16,13 @@ public class DBResumeMapperTest {
   public static void main(String[] args) {
     // listResumeTest();
     // getResumeByIDTest();
-    updateResumeTest();
+    // updateResumeTest();
+    removeResumeTest();
+  }
+
+  public static void removeResumeTest() {
+    Result result = new DBResumeMapper().removeResume(new Resume("", "510966199603016563", "", ProcessEnum.EMPLOYED,
+            false));
   }
 
   public static void updateResumeTest() {

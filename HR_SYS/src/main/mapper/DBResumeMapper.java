@@ -26,7 +26,20 @@ public class DBResumeMapper implements ResumeMapper {
 
   @Override
   public Result removeResume(AbstractResume resume) {
-    return null;
+    String sql = "update resume set deleteStatus = true where id = '" + resume.getId() + "';";
+    Connection conn = DBConnection.getConnection();
+    int rs = 0;
+    Statement statement = null;
+    try {
+      statement = conn.createStatement();
+      rs = statement.executeUpdate(sql);
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return Result.errorResult();
+    } finally {
+      DBConnection.closeConnection(null, statement, conn);
+    }
+    return Result.successResult();
   }
 
   @Override
