@@ -66,7 +66,7 @@ public class LocalPersistence {
         // resumeStr to resume object
         String[] resumeFields = resumeStr.split(",");
         ProcessEnum processEnum = ProcessEnum.PASS_APPLICATION;
-        processEnum.setProcess(Integer.parseInt(resumeFields[3]));
+        processEnum.setCode(Integer.parseInt(resumeFields[3]));
         Resume resume = new Resume(resumeFields[0], resumeFields[1], resumeFields[2], processEnum, false);
         list.add(resume);
       }

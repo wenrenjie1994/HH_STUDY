@@ -14,8 +14,17 @@ import main.mapper.DBResumeMapper;
 public class DBResumeMapperTest {
 
   public static void main(String[] args) {
-    listResumeTest();
-    getResumeByIDTest();
+    // listResumeTest();
+    // getResumeByIDTest();
+    updateResumeTest();
+  }
+
+  public static void updateResumeTest() {
+    Result result = new DBResumeMapper().updateResume(new Resume("", "510966199603016563", "", ProcessEnum.EMPLOYED,
+                    false),
+            new Resume("王换换", "510966199603016563", "美洲大学", ProcessEnum.EMPLOYED,
+                    false)
+    );
   }
 
   public static void listResumeTest() {

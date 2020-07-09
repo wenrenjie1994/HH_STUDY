@@ -26,25 +26,25 @@ public enum ProcessEnum {
    * 6：已入职
    */
   @SuppressWarnings("AlibabaEnumConstantsMustHaveComment")
-  private int process;
+  private int code;
 
   ProcessEnum(int process) {
-    this.process = process;
+    this.code = process;
   }
 
-  public int getProcess() {
-    return process;
+  public int getCode() {
+    return code;
   }
 
-  public void setProcess(int process) {
-    this.process = process;
+  public void setCode(int code) {
+    this.code = code;
   }
 
 
   @Override
   public String toString() {
     String str;
-    switch (process) {
+    switch (code) {
       case 0:
         str = "已申请";
         break;

@@ -95,6 +95,6 @@ public abstract class AbstractResume {
   }
 
   public String toSaveString() {
-    return this.name + "," + this.id + "," + this.school + "," + this.process.getProcess();
+    return this.name + "," + this.id + "," + this.school + "," + this.process.getCode();
   }
 }

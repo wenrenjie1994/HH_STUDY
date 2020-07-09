@@ -89,14 +89,17 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
     //   }
     // }
 
-    // 判断 newResume 是否重复
-    for (int i = 0; i < resumeList.size(); i++) {
-      if (resumeList.get(i).getId().equals(newResume.getId())) {
-        if (resumeList.get(i).getDeleteStatus()) {
-          resumeList.remove(i);
-          break;
-        } else {
-          return Result.errorIsExistResult();
+    // 如果修改前的 resume ID 与修改后一致，就不存在 更改后的简历与已有简历重复了
+    if (!oldResume.getId().equals(newResume.getId())) {
+      // 判断 newResume 是否重复
+      for (int i = 0; i < resumeList.size(); i++) {
+        if (resumeList.get(i).getId().equals(newResume.getId())) {
+          if (resumeList.get(i).getDeleteStatus()) {
+            resumeList.remove(i);
+            break;
+          } else {
+            return Result.errorIsExistResult();
+          }
         }
       }
     }
