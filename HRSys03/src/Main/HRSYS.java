@@ -11,9 +11,9 @@ public class HRSYS {
     public static void main(String[] args) {
         LinkedList<Candidate> candidateList = new LinkedList<Candidate>();
         Scanner input = new Scanner(System.in);
-        DataOperate.loadData(candidateList);//下载所有图书
+        DataOperate.loadData(candidateList);
         while (true) {
-            System.out.println("************欢迎来到张老板图书管理系统************");
+            System.out.println("************张某人基于数据库的HR管理系统************");
             System.out.println("增加应聘者请按----------1");
             System.out.println("删除应聘者请按----------2");
             System.out.println("修改应聘者请按----------3");

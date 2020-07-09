@@ -38,8 +38,8 @@ public class CandidateService {
 
     public static void updateCandidate(LinkedList<Candidate> CandidateList) {
         Scanner input = new Scanner(System.in);
-        System.out.println("欢迎来到修改图书界面");
-        System.out.println("请输入需要修改的图书名");
+        System.out.println("欢迎来到修改简历界面");
+        System.out.println("请输入需要修改的简历名");
         String jianliName = input.nextLine();
         int bookCount = CandidateList.size();
         for (int i = 0; i < bookCount; i++) {
@@ -68,7 +68,7 @@ public class CandidateService {
             System.out.println("本简历管理系统共有" + CandidateList.size() + "个简历");
             int CandidateCount = CandidateList.size();
             for (int i = 0; i < CandidateCount; i++) {
-                System.out.println("第" + (i + 1) + "本" + "---------" + "<<" + CandidateList.get(i).Name + ">>");
+                System.out.println("第" + (i + 1) + "个" + "---------" + "<<" + CandidateList.get(i).Name + ">>");
             }
         }
     }
