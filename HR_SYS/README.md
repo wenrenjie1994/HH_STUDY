@@ -1,10 +1,11 @@
 ## HR_SYS
 
-项目结构还不错，解耦挺到位的。现在提供了 Config 类在启动时注入，可以实现应用的功能切换。
+现在提供了 Config 类在启动时注入，可以实现应用的功能切换。
 
 如下启动类：
 
 ```Java
+// HRApplication.java
 public class HRApplication extends AbstractHRApplication {
 
   public static void main(String[] args) {
@@ -17,6 +18,12 @@ public class HRApplication extends AbstractHRApplication {
     // 只要 useDB 为 true，使用数据库读写数据，不考虑持久化
     super.config = new Config(false, true);
   }
+}
+
+// Config.java
+public Config(boolean localPersistence, boolean useDB) {
+  this.localPersistence = localPersistence;
+  this.useDB = useDB;
 }
 ```
 
