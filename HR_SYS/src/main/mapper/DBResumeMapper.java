@@ -7,6 +7,7 @@ import main.entity.AbstractResume;
 import main.entity.Resume;
 import main.enums.ProcessEnum;
 import main.mapper.interfaces.ResumeMapper;
+import main.utils.Validator;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,7 +22,43 @@ import java.sql.Statement;
 public class DBResumeMapper implements ResumeMapper {
   @Override
   public Result saveResume(AbstractResume resume) {
-    return null;
+    if (!Validator.validResumeAllFields(resume)) {
+      return Result.errorParamValidResult();
+    }
+    String sql = "insert into resume(name, id, school, process, deleteStatus) "
+            + "values('"
+            + resume.getName()
+            + "', '"
+            + resume.getId()
+            + "', '"
+            + resume.getSchool()
+            + "', '"
+            + resume.getProcess().getCode()
+            + "', '"
+            + '0'
+            + "');";
+    Connection conn = DBConnection.getConnection();
+    int rs = 0;
+    Statement statement = null;
+    Resume validResume = getResumeByIDUtil(resume);
+    // 如果已存在逻辑删除数据，直接物理删除先
+    if (validResume != null && validResume.getDeleteStatus() == true) {
+      removeResume(resume);
+    }
+    // 已存在
+    if (validResume != null && validResume.getDeleteStatus() == false) {
+      return Result.errorIsExistResult();
+    }
+    try {
+      statement = conn.createStatement();
+      rs = statement.executeUpdate(sql);
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return Result.errorResult();
+    } finally {
+      DBConnection.closeConnection(null, statement, conn);
+    }
+    return Result.successResult();
   }
 
   @Override

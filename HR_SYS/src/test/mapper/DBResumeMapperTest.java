@@ -18,10 +18,17 @@ public class DBResumeMapperTest {
     // getResumeByIDTest();
     // updateResumeTest();
     removeResumeTest();
+    // saveResumeTest();
+  }
+
+  public static void saveResumeTest() {
+    Result result = new DBResumeMapper().saveResume(new Resume("马晓红", "510966199603016763", "中心小学",
+            ProcessEnum.EMPLOYED,
+            false));
   }
 
   public static void removeResumeTest() {
-    Result result = new DBResumeMapper().removeResume(new Resume("", "510966199603016563", "", ProcessEnum.EMPLOYED,
+    Result result = new DBResumeMapper().removeResume(new Resume("", "510966199603016763", "", ProcessEnum.EMPLOYED,
             false));
   }
 
