@@ -4,7 +4,7 @@ import java.util.Scanner;
 import loadandsaveData.DataOperate;
 import model.Resume;
 import service.ResumeService;
-
+//第二版本：基于文件存储的HR管理系统
 public class HRMS {
     public static void main(String[] args) {
         //主程序入口
