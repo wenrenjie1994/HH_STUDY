@@ -12,7 +12,7 @@ public class DataOperate
 	BufferedReader br = null;
 	try
 		{
-			br = new BufferedReader(new FileReader("/Users/wenrenjie/Desktop/booklist.txt"));
+			br = new BufferedReader(new FileReader("/Users/Administrator/Desktop/booklist.txt"));
 			String data = br.readLine();
 			while(data!=null)
 				{
@@ -43,7 +43,7 @@ public class DataOperate
 	{
 		PrintWriter printWriter = null;
 		try {
-			printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream("/Users/wenrenjie/Desktop/booklist.txt",false)));//∏≤∏«–¥»Î
+			printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream("/Users/Administrator/Desktop/booklist.txt",false)));//∏≤∏«–¥»Î
 			int bookCount = bookList.size();
 			for(int i=0;i<bookCount;i++)
 			{
