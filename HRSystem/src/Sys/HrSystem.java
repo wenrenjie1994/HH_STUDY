@@ -2,6 +2,8 @@ package Sys;
 
 import bean.Person;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -23,7 +25,7 @@ public class HrSystem {
         String name = input.nextLine();
         String id = input.nextLine();
         String school = input.nextLine();
-        int process = input.nextInt();
+        String process = input.nextLine();
 
         Person person = new Person(name, id, school, process);
         personList.add(person);
@@ -87,9 +89,10 @@ public class HrSystem {
                 searchStatus = true;
                 System.out.println(person.toString());
             }
-            if (searchStatus == false) {
-                System.out.println("查无此人");
-            }
+        }
+
+        if (searchStatus == false) {
+            System.out.println("查无此人");
         }
 
     }
@@ -123,7 +126,7 @@ public class HrSystem {
             String newName = input.nextLine();
             String newId = input.nextLine();
             String newSchool = input.nextLine();
-            int newProcess = input.nextInt();
+            String newProcess = input.nextLine();
             Person newInformation = new Person(newName, newId, newSchool, newProcess);
 
             personList.set(Index, newInformation);
@@ -135,7 +138,88 @@ public class HrSystem {
         }
     }
 
+    /**
+     * 读取记录人员信息的文件内容
+     * @return
+     * @throws IOException
+     */
+    public static ArrayList<String[]> readFile() throws IOException {
+
+        //打开应聘人员记录文件
+        BufferedInputStream InputFromFile = new BufferedInputStream(new FileInputStream("ApplicantRecords.txt"));
+
+        //将文件中所有数据存入str字符串中
+        String allData = "";
+        byte[] bytes = new byte[1024];
+        int len;
+        while ((len = InputFromFile.read(bytes)) != -1) {
+            allData = allData + new String(bytes,0,len);
+        }
+
+        //关闭流
+        InputFromFile.close();
+
+        //将每行数据分离出来，依次保存在字符串数组Datas中
+        String[] Datas =  allData.split("\n");
+        String[] temp = new String[4];
+
+        //处理每行（一行包括一个person对象的4个属性值）数据，将处理后的数据保存到dataList中
+        ArrayList<String[]> dataList = new ArrayList<String[]>();
+        for (String s : Datas) {
+            temp = s.split(",");
+            dataList.add(temp);
+        }
+
+        for (String[] singleData : dataList) {
+            personList.add(new Person(singleData[0], singleData[1], singleData[2], singleData[3]));
+        }
+
+        return dataList;
+    }
+
+    /**
+     * 将人员信息写入文件
+     * @throws IOException
+     */
+    public static void writeFile() throws IOException {
+
+        //新建输出流
+        BufferedOutputStream OutputToFile = new BufferedOutputStream(new FileOutputStream("ApplicantRecords.txt"));
+
+        //将person标准输出到txt文件夹
+        String allData = new String();
+        for (Person person : personList) {
+            allData = allData + person.formatToFile();
+        }
+        OutputToFile.write(allData.getBytes());
+
+        //关闭流
+        OutputToFile.close();
+    }
+
     public static void main(String[] args) {
+
+        try {
+            readFile();
+        } catch (FileNotFoundException e) {
+            System.out.println("无应聘人员信息文件。");
+            File ApplicantRecordsTxt = new File("ApplicantRecords.txt");
+            try {
+                ApplicantRecordsTxt.createNewFile();
+                System.out.println("已为您创建空文件，等待信息录入。");
+            } catch (IOException ex) {
+                System.out.println("空文件创建失败，请在主目录手动创建文件ApplicantRecords.txt");
+                ex.printStackTrace();
+            }
+//            if (ApplicantRecordsTxt.createNewFile()) {
+//                System.out.println("已为您创建空文件，等待信息录入。");
+//            } else {
+//                System.out.println("空文件创建失败，请在主目录手动创建文件ApplicantRecords.txt");
+//            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         while (true) {
 
             System.out.println("-----欢迎进入人力资源管理系统-----");
@@ -184,7 +268,14 @@ public class HrSystem {
                 System.out.println("输入错误，请重新输入");
             }
         }
+
+        try {
+            writeFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         input.close();
         System.out.println("您已经退出人力资源管理系统");
     }
+
 }

@@ -23,12 +23,12 @@ public class Person {
      * 5：已签约
      * 6：已入职
      */
-    private int process;
+    private String process;
 
     public Person() {
     }
 
-    public Person(String name, String id, String school, int process) {
+    public Person(String name, String id, String school, String process) {
         this.name = name;
         this.id = id;
         this.school = school;
@@ -59,11 +59,11 @@ public class Person {
         this.school = school;
     }
 
-    public int getProcess() {
+    public String getProcess() {
         return process;
     }
 
-    public void setProcess(int process) {
+    public void setProcess(String process) {
         this.process = process;
     }
 
@@ -82,6 +82,6 @@ public class Person {
      * @return
      */
     public String formatToFile() {
-        return name + "," + id + "," + school + "," + process;
+        return name + "," + id + "," + school + "," + process + "\n";
     }
 }
