@@ -35,12 +35,12 @@ public class DBResumeMapper implements ResumeMapper {
   }
 
   @Override
-  public Result getResumeByID(AbstractResume resume) {
-    String sql = "select * from resume where deleteStatus != 1 and id = " + resume.getId();
+  public Result getResumeByID(AbstractResume oldResume) {
+    String sql = "select * from resume where deleteStatus != 1 and id = " + oldResume.getId();
     Connection conn = DBConnection.getConnection();
     ResultSet rs = null;
     Statement statement = null;
-    ResumeList resumes = new ResumeList();
+    Resume resume = null;
 
     try {
       statement = conn.createStatement();
@@ -49,20 +49,20 @@ public class DBResumeMapper implements ResumeMapper {
         ProcessEnum processEnum = ProcessEnum.PASS_APPLICATION;
         processEnum.setProcess(Integer.parseInt(rs.getString("process")));
 
-        Resume resume = new Resume(rs.getString("name"), rs.getString("id"),
+        resume = new Resume(rs.getString("name"), rs.getString("id"),
                 rs.getString("school"), processEnum, rs.getBoolean("deleteStatus"));
-        resumes.add(resume);
       }
+
     } catch (SQLException throwables) {
       throwables.printStackTrace();
       return Result.errorResult();
     } finally {
       DBConnection.closeConnection(rs, statement, conn);
     }
-    return Result.successResult(resumes);
+
+    return Result.successResult(resume);
   }
 
-}
 
   @Override
   public Result listResume() {
