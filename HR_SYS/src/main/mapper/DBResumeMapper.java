@@ -31,12 +31,35 @@ public class DBResumeMapper implements ResumeMapper {
 
   @Override
   public Result updateResume(AbstractResume oldResume, AbstractResume newResume) {
-    return null;
+    String sql = "select * from resume where deleteStatus != 1 and id = " + oldResume.getId();
+    Connection conn = DBConnection.getConnection();
+    ResultSet rs = null;
+    Statement statement = null;
+    Resume resume = null;
+
+    try {
+      statement = conn.createStatement();
+      rs = statement.executeQuery(sql);
+      while (rs.next()) {
+        ProcessEnum processEnum = ProcessEnum.PASS_APPLICATION;
+        processEnum.setProcess(Integer.parseInt(rs.getString("process")));
+
+        resume = new Resume(rs.getString("name"), rs.getString("id"),
+                rs.getString("school"), processEnum, rs.getBoolean("deleteStatus"));
+      }
+
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+      return Result.errorResult();
+    } finally {
+      DBConnection.closeConnection(rs, statement, conn);
+    }
+    return Result.successResult();
   }
 
   @Override
   public Result getResumeByID(AbstractResume oldResume) {
-    String sql = "select * from resume where deleteStatus != 1 and id = " + oldResume.getId();
+    String sql = "select * from resume where deleteStatus != 1 and id = '" + oldResume.getId() + "';";
     Connection conn = DBConnection.getConnection();
     ResultSet rs = null;
     Statement statement = null;
@@ -66,7 +89,7 @@ public class DBResumeMapper implements ResumeMapper {
 
   @Override
   public Result listResume() {
-    String sql = "select * from resume where deleteStatus != 1";
+    String sql = "select * from resume where deleteStatus != 1;";
     Connection conn = DBConnection.getConnection();
     ResultSet rs = null;
     Statement statement = null;

@@ -14,7 +14,7 @@ import main.mapper.DBResumeMapper;
 public class DBResumeMapperTest {
 
   public static void main(String[] args) {
-    // listResumeTest();
+    listResumeTest();
     getResumeByIDTest();
   }
 

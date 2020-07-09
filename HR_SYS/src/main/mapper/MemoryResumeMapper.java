@@ -117,12 +117,12 @@ public class MemoryResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public Result getResumeByID(AbstractResume resume) {
-    if (!Validator.validResumeID(resume)) {
+  public Result getResumeByID(AbstractResume oldResume) {
+    if (!Validator.validResumeID(oldResume)) {
       return null;
     }
     for (AbstractResume res : resumeList) {
-      if (res.getId().equals(resume.getId())) {
+      if (res.getId().equals(oldResume.getId())) {
         if (res.getDeleteStatus()) {
           //删除了
           Result.errorNotFoundResult();

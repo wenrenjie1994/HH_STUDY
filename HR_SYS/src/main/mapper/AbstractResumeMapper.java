@@ -26,7 +26,7 @@ public class AbstractResumeMapper implements ResumeMapper {
   }
 
   @Override
-  public Result getResumeByID(AbstractResume resume) {
+  public Result getResumeByID(AbstractResume oldResume) {
     return Result.errorResult();
   }
 
