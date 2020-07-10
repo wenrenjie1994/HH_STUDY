@@ -2,6 +2,7 @@ package hr;
 
 import student.student;
 
+import java.io.*;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,19 +13,21 @@ public class hr {
 
     Map<String, student> student = new HashMap<String, student>();
     Map<String, String> info = new HashMap<String, String>();
-
-    public hr() {
+String url;
+    public hr(String url) {
         this.info.put("姓名", "name");
         this.info.put("身份证号", "IDcard");
         this.info.put("手机号", "phoneNumber");
         this.info.put("出生日期", "birthday");
 
-        info.put("性别", "gender");
+        this.info.put("性别", "gender");
         this.info.put("年龄", "age");
         this.info.put("学历", "degree");
         this.info.put("学校", "school");
         this.info.put("应聘岗位", "job");
         this.info.put("期望薪资", "salary");
+        this.url=url;
+        this.readTxt();
     }
 
     public void addStudent() {
@@ -136,10 +139,11 @@ public class hr {
         System.out.println("请按2进行删除学生信息操作");
         System.out.println("请按3进行更改学生信息操作");
         System.out.println("请按4进行查询学生信息操作");
-        return 4;
+        System.out.println("请按5退出程序");
+        return 5;
     }
 
-    public void choose(int num) {
+    public boolean choose(int num) {
 
         switch (num) {
             case 1:
@@ -154,7 +158,12 @@ public class hr {
             case 4:
                 this.selectStudent();
                 break;
+            case 5:
+                this.writeTxt();
+                System.out.println("程序结束！！！感谢使用。");
+                return true;
         }
+        return false;
     }
 
     public int inputNum(int max) {
@@ -173,10 +182,38 @@ public class hr {
         }
         return num;
     }
+public void writeTxt(){
+    try {
+        BufferedWriter out = new BufferedWriter(new FileWriter(this.url));
+        for (student value : student.values()) {
+            out.write(value.writeInfo());
 
-    public void saveToTxt() {
+
+        }
+        out.close();
+
+    } catch (Exception e) {
+        System.out.println(e);
 
     }
+}
+
+public void readTxt(){
+                try {
+                    BufferedReader in = new BufferedReader(new FileReader(this.url));
+                    String str;
+                    while ((str=in.readLine())!=null){
+                        String[] infoString = str.split("\t");
+                        this.student.put(infoString[2], new student(infoString[0], infoString[1], infoString[2],
+                                infoString[3], infoString[4], infoString[5], infoString[6], infoString[7],
+                                infoString[8], infoString[9], infoString[10].equals("True")));
+                    }
+                } catch (Exception e) {
+                    System.out.println(e);
+
+                }
+}
+
 
     public void saveToDatabase() {
 
