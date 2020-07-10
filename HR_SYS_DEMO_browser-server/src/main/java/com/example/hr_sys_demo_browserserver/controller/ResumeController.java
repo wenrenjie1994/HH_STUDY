@@ -1,5 +1,6 @@
 package com.example.hr_sys_demo_browserserver.controller;
 
+import com.example.hr_sys_demo_browserserver.pojo.Resume;
 import com.example.hr_sys_demo_browserserver.service.ResumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -13,6 +14,6 @@ public class ResumeController {
     @RequestMapping("/home/get")
     public String login(Model model
     ){
-        return resumeService.get(1).getSchool();
+        return resumeService.get(2).getSchool();
     }
 }

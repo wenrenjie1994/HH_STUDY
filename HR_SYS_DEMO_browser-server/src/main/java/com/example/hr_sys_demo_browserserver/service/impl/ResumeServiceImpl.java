@@ -3,13 +3,17 @@ package com.example.hr_sys_demo_browserserver.service.impl;
 import com.example.hr_sys_demo_browserserver.mapper.ResumeMapper;
 import com.example.hr_sys_demo_browserserver.pojo.Resume;
 import com.example.hr_sys_demo_browserserver.service.ResumeService;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.InputStream;
 import java.util.List;
 
 @Service
-public class ResumeServiceImpl implements ResumeService {
+public class ResumeServiceImpl implements ResumeService{
     @Autowired ResumeMapper resumeMapper;
 
     @Override

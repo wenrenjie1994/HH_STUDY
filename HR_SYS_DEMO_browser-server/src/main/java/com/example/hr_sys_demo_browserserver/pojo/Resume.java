@@ -2,8 +2,7 @@ package com.example.hr_sys_demo_browserserver.pojo;
 
 import java.io.Serializable;
 
-public class Resume implements Serializable {
-    private static final long serialVersionUID = 11;
+public class Resume{
     private Integer id;
     private String name;
     private String school;
@@ -19,14 +18,7 @@ public class Resume implements Serializable {
      * 7: 简历已失效
      */
     private String status;
-    public Resume(String stdName, String stdSchool, String stdStatus){
-        this.name = stdName;
-        this.status = stdStatus;
-        this.school = stdSchool;
-    }
-    public Resume(String stdName){
-        this.name = stdName;
-    }
+
     public int getId(){ return this.id; }
     public String getName(){
         return this.name;
