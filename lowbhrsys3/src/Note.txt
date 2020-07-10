@@ -1,0 +1,8 @@
+在LowbHRSystem3.0实现过程中遇到的问题与解决
+1、找不到JDBC驱动
+    数据库驱动com.mysql.jdbc.Driver'已经被弃用了、应当使用新的驱动com.mysql.cj.jdbc.Driver'
+2、服务器时区值
+    须配置服务器或JDBC驱动程序（通过“serverTimezone”配置属性）以使用更具体的时区值，如在配置数据库的url后面加上serverTimezone=GMT%2B8。
+3、Scanner问题
+    使用nextInt()方法时以空格作为分隔，如果想要单独一行输入，可以先读取一行nextLine()，再通过Integer强制转化。
+4、本地测试已经通过，可以直接使用
