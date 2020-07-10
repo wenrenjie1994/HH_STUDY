@@ -1,0 +1,10 @@
+IDE  集成开发环境
+
+Eclipse、IntelliJ IDEA
+
+Project->Module->Packages
+
+快捷键：alt + Enter                  自动修正
+            Ctrl + /                       单行注释       
+            Ctrl + Shift + /            多行注释
+            Ctrl + alt + L               代码格式化     敲好用！！！！！！！！！ 
