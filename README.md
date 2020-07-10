@@ -1,6 +1,4 @@
 # HH_STUDY
-新员工入职前学习计划
-
 zhaopan2443Java学习目录
 # Java基础
 - [x] 04/5/6 面向对象
