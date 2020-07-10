@@ -1,14 +1,122 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="jquery.min.js"></script>
     <script src="vue.min.js"></script>
     <script src="axios.min.js"></script>
+    <link rel="stylesheet" href= "home.css"></link>
     <title>HR控制系统</title>
 </head>
 
+<script>
+    $(function(){
+        $("a.disableHref").click(function(event){
+            return false;
+// 	    		  event.preventDefault();
+        });
+    });
+</script>
 <body>
-
+    <div id = “app”>
+        <table id = "resumeListTable">
+            <tr>
+                <td colspan="3">
+                    <div id = "pagination">
+                        <a :class = "{ disableHref: pagination.pageNum == 1}" herf = "#nowhere" @click = "jump('first')">[首页]</a>
+                        <a :class="{ disableHref: !pagination.hasPreviousPage }" href="#nowhere" @click="jump('pre')">[前一页]</a>
+                        <a href ="#nowhere" :class="{disableHref:pagination.pageNum==i}"  v-for="i in pagination.navigatepageNums" @click="jumpByNumber(i)" >
+                            {{i}}</a>
+                        <a :class ="{ disableHref: !pagination.hasNextPage }" href="#nowhere" @click="jump('next')">[下一页]></a>
+                        <a :class ="{ disableHref: pagination.pageNum==pagination.pages }" href="#nowhere" @click="jump('last')">[尾页]</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>简历编号</td>
+                <td>姓名</td>
+                <td>学校</td>
+                <td>简历状态</td>
+            </tr>
+            <tr v-for="resume in resumes ">
+                <td>{{resume.id}}</td>
+                <td>{{resume.name}}</td>
+                <td>{{resume.school}}</td>
+                <td>{{resume.status}}</td>
+                <td>
+                    <a :href="'editResume?id=' + resume.id ">编辑</a>
+                    <a href="#nowhere" @click="deleteResum(resume.id)">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <br>
+                    姓名：
+                    <input type = "text" v-model = "resume4Add.id" />
+                    <br>
+                    学校：
+                    <input type = "text" v-model = "resume4Add.school" />
+                    <br>
+                    简历状态：
+                    <input type = "text" v-model = "resume4Add.status" />
+                    <br>
+                    <button type="button"  v-on:click="add">增加</button>
+                    </br>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script type = "text/javascript">
+        var data4Vue = {
+            resumes: [],
+            resume4Add: {id: 0, name:'', school:'', status:''},
+            pagination:{}
+        }
+        //ViewModel
+        var vue = new Vue({
+            el: '#app',
+            data: data4Vue,
+            mounted:function () { //mounted 表示该Vue对象加载成功
+                this.list(1);
+            },
+            methods:{
+                list:function (start) {
+                    var url = "resumes?start = " + start;
+                    axios.get(url).then(function (response) {
+                        vue.pagination = response.data
+                        console.log(vue.pagination);
+                        vue.resumes = response.data.list();
+                    })
+                },
+                add: function (event) {
+                    var  url = "resumes";
+                    axios.post(url, this.resume4Add).then(function (response) {
+                        vue.list(1);
+                        vue.resume4Add = {id:0, name:'', school:'', status: ''}
+                    });
+                },
+                deleteResume:function (id) {
+                    var  url = "resumes/" + id;
+                    axios.delete(url).then(function (response) {
+                        vue.list(1);
+                    });
+                },
+                jump: function (page) {
+                    if('first' == page && 1 != vue.pagination.pageNum)
+                        vue.list(1);
+                    else if('pre' == page && vue.pagination.hasPreviousPage)
+                        vue.list(vue.pagination.prePage);
+                    else if('next' == page && vue.pagination.pageNum != vue.pagination.pages)
+                        vue.list(vue.pagination.pages);
+                    else if('last'== page && vue.pagination.pageNum!=vue.pagination.pages)
+                        vue.list(vue.pagination.pages);
+                },
+                jumpByNumber: function(start){
+                    if(start!=vue.pagination.pageNum)
+                        vue.list(start);
+                }
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+
+td{
+    border:1px solid gray;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+div#app{
+    margin:20px auto;
+    width:400px;
+    padding:20px;
+
+}
+
+div#pagination{
+    text-align: center;
+    line-height: 100px;
+}
+div#pagination a{
+    text-decoration:none;
+}
+
+.disableHref{
+    cursor:default;
+    color:#E5E0E0;
+    text-decoration:none;
+}
