@@ -1,0 +1,25 @@
+String:
+	*java有字符串常量池机制，即创建一个新的String对象，如果常量池中有，则不会真正创建一个对象，而是引用已经存在的对象
+	*java中堆区存放对象，栈区存放对象的引用
+	*字符串不可变：private final char[]，对象不可变，引用可以重新赋值
+		原因：常量池需要；效率优化；安全性问题
+	*字符串比较：equals()；忽略大小写equalsIgnoreCase();
+	*搜索字符串：contains();
+	*提取字符串：substring();
+	*去除首尾字符串：trim();得到一个新的字符串
+	*移除首尾字符串：strip();
+	*判断为空：isEmpty();
+	*判断为空白字符串:：isBlack()；
+	*替换字符串：repalce();正则表达式replaceAll();
+	*分割字符串：正则表达式split();
+	*拼接字符串：join();拼接字符串数组；StringJoiner()
+	*格式化字符串：formatted();format()
+	*类型转换：
+		其他类型转字符串：valueOf()
+		字符串转其他类型：parseInt();parseBoolean()
+		String转char[]：toCharArray()
+		char[]转String：new String(...);
+StringBuilder:
+	*作用：快速拼接字符串
+		可变对象，预分配缓冲区，往StringBuilder中新增字符时，不会创建新的临时对象
+	*可进行链式操作：通过带返回this，调用自身实现
