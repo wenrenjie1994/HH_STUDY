@@ -1,0 +1,33 @@
+package com.pan.exer;
+/*
+ * 1.创建Person类的对象，
+ * 设置该对象的name、 age和sex属性
+ */
+public class Person {
+	String name = "Tom";
+	int age = 18;
+	int sex = 1;
+	/**
+	 * 0表示女性；
+	 * 1表示男性。
+	 * Description
+	 * @author Pan  Email:zhaopan1848@163.com
+	 * @date 2020年2月9日下午3:29:06
+	 */
+/*
+ * 2.调用study方法，输出字符串 “studying”
+ */
+	public void study() {
+		System.out.println("Studying!");
+	}
+/*
+ * 3.调用 addAge()方法给对象的age属性值增加2岁。
+
+ */
+	public void showAge(int i) {
+		age +=i;
+		System.out.println("Age is " + age);		
+	}
+	
+
+}

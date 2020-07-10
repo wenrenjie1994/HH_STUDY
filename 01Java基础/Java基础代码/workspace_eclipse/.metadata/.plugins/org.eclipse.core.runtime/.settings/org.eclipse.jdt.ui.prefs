@@ -1,0 +1,17 @@
+breadcrumb.org.eclipse.jst.j2ee.J2EEPerspective=true
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.pan.exer.Customer"><rhs name\="com.pan.exer.Customer"/></lhs><lhs name\="com.pan.exer1.Account"><rhs name\="com.pan.exer1.Account"/></lhs><lhs name\="com.pan.p2.bean.Customer"><rhs name\="com.pan.p2.bean.Customer"/></lhs><lhs name\="com.pan.p2.service.CustomerList"><rhs name\="com.pan.p2.service.CustomerList"/></lhs><lhs name\="com.pan.exer.Employee"><rhs name\="com.pan.exer.SalariedEmployee"/></lhs><lhs name\="com.pan.exer.MyDate"><rhs name\="com.pan.exer.MyDate"/></lhs><lhs name\="com.pan.team.domain.Employee"><rhs name\="com.pan.team.domain.Employee"/><rhs name\="com.pan.team.domain.Architect"/><rhs name\="com.pan.team.domain.Designer"/><rhs name\="com.pan.team.domain.Programmer"/></lhs><lhs name\="com.pan.team.domain.Equipment"><rhs name\="com.pan.team.domain.NoteBook"/><rhs name\="com.pan.team.domain.Printer"/></lhs><lhs name\="com.pan.team.service.Status"><rhs name\="com.pan.team.service.Status"/></lhs></history>
+content_assist_number_of_computers=23
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.formatterprofiles.version=18
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.overrideannotation=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="false" context\="typecomment_context" deleted\="false" description\="Comment for created types" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.typecomment" name\="typecomment">/**\r\n * Description\r\n * @author Pan  Email\:zhaopan1848@163.com\r\n * @version\r\n * @date ${date}${time}\r\n */</template><template autoinsert\="false" context\="methodcomment_context" deleted\="false" description\="Comment for non-overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodcomment" name\="methodcomment">/**\r\n * Description\r\n * @author Pan  Email\:zhaopan1848@163.com\r\n * @date ${date}${time}\r\n * ${tags}\r\n */\r\n</template></templates>
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.tools.sjavac.server.SysInfo"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.pan.java.valueTransferTest"/>
+    <fullyQualifiedTypeName name="com.pan.exer.Customer"/>
+    <fullyQualifiedTypeName name="com.pan.exer1.BankTest"/>
+    <fullyQualifiedTypeName name="com.pan.exer1.Account"/>
+    <fullyQualifiedTypeName name="com.pan.p2.service.CustomerList"/>
+    <fullyQualifiedTypeName name="com.pan.p2.utlity.CMUtility"/>
+    <fullyQualifiedTypeName name="com.pan.p2.ui.CustomerView"/>
+    <fullyQualifiedTypeName name="com.pan.p2.bean.Customer"/>
+    <fullyQualifiedTypeName name="com.pan.exer.SalariedEmployee"/>
+    <fullyQualifiedTypeName name="com.pan.exer.MyDate"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.Architect"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.Equipment"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.Designer"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.PC"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.NoteBook"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.Printer"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.Programmer"/>
+    <fullyQualifiedTypeName name="com.pan.team.domain.Employee"/>
+    <fullyQualifiedTypeName name="com.pan.team.service.TeamException"/>
+    <fullyQualifiedTypeName name="com.pan.team.service.Status"/>
+</qualifiedTypeNameHistroy>

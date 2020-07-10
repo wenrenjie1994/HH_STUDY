@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.pan.java&apos; to &apos;com.pan.exer&apos;&#x0D;&#x0A;- Original project: &apos;day12&apos;&#x0D;&#x0A;- Original element: &apos;day12/src/com.pan.java&apos;&#x0D;&#x0A;- Renamed element: &apos;day12/src/com.pan.exer&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.pan.java&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.pan.java" name="com.pan.exer" qualified="false" references="true" stamp="1585126887751" textual="false" version="1.0"/>
+</session>

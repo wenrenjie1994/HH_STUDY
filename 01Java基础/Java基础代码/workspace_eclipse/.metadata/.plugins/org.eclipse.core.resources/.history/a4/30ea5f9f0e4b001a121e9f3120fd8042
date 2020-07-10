@@ -1,0 +1,7 @@
+package com.pan.exer;
+
+public class PersonTest {
+	Person p1 = new  Person();
+	String name = p1.name;
+	System.out.prinln(name);
+}

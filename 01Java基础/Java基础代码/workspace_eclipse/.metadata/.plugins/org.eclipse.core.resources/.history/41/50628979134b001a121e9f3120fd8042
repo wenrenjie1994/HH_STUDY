@@ -1,0 +1,14 @@
+package com.pan.exer;
+/*
+ * 利用面向对象的编程方法，设计类Circle计算圆的面积
+ */
+public class Area {
+	//定义属性
+	double r;
+	//定义方法
+	public double findArea() {
+		double area = Math.PI * r * r;
+		return area;
+	}
+
+}

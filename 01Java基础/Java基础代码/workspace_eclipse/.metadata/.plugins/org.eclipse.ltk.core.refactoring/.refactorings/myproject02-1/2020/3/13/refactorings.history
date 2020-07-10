@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.pan.bean&apos; to &apos;com.pan.p2.bean&apos;&#x0D;&#x0A;- Original project: &apos;myproject01&apos;&#x0D;&#x0A;- Original element: &apos;myproject01/src/com.pan.bean&apos;&#x0D;&#x0A;- Renamed element: &apos;myproject01/src/com.pan.p2.bean&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.pan.bean&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.pan.bean" name="com.pan.p2.bean" qualified="false" references="true" stamp="1585234414414" textual="false" version="1.0"/>
+</session>

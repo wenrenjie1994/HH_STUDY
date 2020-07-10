@@ -1,0 +1,16 @@
+package com.pan.exer;
+
+public class PersonTest {
+	public static void main(String[] args) {
+		Person p1 = new  Person();
+		String name = p1.name;
+		int sex = p1.sex;
+//		System.out.println(sex);
+		
+		p1.study();
+		p1.showAge(2);
+		
+	}
+	
+
+}

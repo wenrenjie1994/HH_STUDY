@@ -1,0 +1,12 @@
+package com.pan.exer;
+
+public class AreaTest {
+public static void main(String[] args) {
+	Area a = new Area();
+	a.r = 2.1;
+//	double area = a.findArea();
+//	System.out.println("面积为：" + area);
+//	
+	a.findArea();
+}
+}
