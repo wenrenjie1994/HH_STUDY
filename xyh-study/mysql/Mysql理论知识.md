@@ -2,6 +2,7 @@
 ### mysql数据库的概念
 一个数据库的服务器包含多个数据库，一个数据库中有多张表，一个表中包含多个字段（字段和JavaBean的属性是对应的）<br>
 表中存放数据,一行数据和一个JavaBean实体对象相对应
+
 ### SQL：Structured Query Language（结构化查询语言）
 1. SQL非过程性的语言
 *过程性语言：依赖上一条或者几条语句执行
@@ -45,7 +46,7 @@ create table 表名称(<br>
 	字段2 类型(长度) 约束，<br>
 	字段3 类型(长度) 约束<br>
 	
-);
+);<br>
 2. 注意：
 * 创建表的时候，后面用小括号，且最后以分号结束
 * 编写字段，字段与字段之间使用逗号，最后一个字段不能使用逗号
@@ -60,7 +61,7 @@ create table employee(<br>
 	 job varchar(50),<br>
 	 salary double,<br>
 	 resume text<br>
-);
+);<br>
 4.表设计类型（重点）
 * 字符串型
 varchar：长度可变。可节省空间<br>
