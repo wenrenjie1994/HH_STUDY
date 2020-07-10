@@ -77,11 +77,11 @@ public class Resume {
 		this.deleteStatus = deleteStatus;
 	}
 
-	public Resume(String name, String id, String school) {
+	public Resume(String name, String id, String school, int process) {
 		this.name = name;
 		this.id = id;
 		this.school = school;
-		this.process=0;
-		this.deleteStatus=0;
+		this.process = process;
+		this.deleteStatus = 0;
 	}
 }

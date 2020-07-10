@@ -10,11 +10,17 @@ public class HRService
 	{
 		System.out.println("欢迎来到员工信息录入界面");
 		Scanner input = new Scanner(System.in);
-		System.out.println("请依次输入需要录入员工的名字，身份证号，学校");
+		System.out.println("请依次输入需要录入员工的名字，身份证号，学校，申请进度");
 		String workerName = input.nextLine();
 		String workerId = input.nextLine();
 		String workerSchool = input.nextLine();
-		Resume resume = new Resume(workerName, workerId, workerSchool);
+		int preProcess = input.nextInt();
+		while (preProcess > 6 || preProcess <0){
+			System.out.println("申请进度只能为0-6，请重新输入：");
+			preProcess = input.nextInt();
+		}
+		int process = preProcess;
+		Resume resume = new Resume(workerName, workerId, workerSchool, process);
 		resumeList.add(resume);
 		System.out.println("您已成功录入员工信息");
 		showResume(resumeList);
@@ -60,7 +66,8 @@ public class HRService
 				String newworkerName = input.nextLine();
 				String newworkerId = input.nextLine();
 				String newworkerSchool = input.nextLine();
-				Resume resume = new Resume(newworkerName, newworkerId, newworkerSchool);
+				int process = input.nextInt();
+				Resume resume = new Resume(newworkerName, newworkerId, newworkerSchool, process);
 				resumeList.set(i, resume);
 				System.out.println("您已成功修改成功");
 				showResume(resumeList);

@@ -14,9 +14,9 @@ public class HRS
 {
 	public static void main(String[] args) {
 
-		LinkedList<Resume> bookList = new LinkedList<Resume>();
+		LinkedList<Resume> resumeList = new LinkedList<Resume>();
 		Scanner input = new Scanner(System.in);
-		DataOperate.loadData(bookList);//下载所有图书
+		DataOperate.loadData(resumeList);//下载所有图书
 		while(true)
 		{
 			System.out.println("************欢迎来到HR管理系统************");
@@ -29,23 +29,26 @@ public class HRS
 			int choice =input.nextInt();
 			if(choice==1)
 			{
-				HRService.addResume(bookList);
+				HRService.addResume(resumeList);
+				DataOperate.saveData(resumeList);
 			}
 			else if(choice==2)
 			{
-				HRService.deleteResume(bookList);
+				HRService.deleteResume(resumeList);
+				DataOperate.saveData(resumeList);
 			}
 			else if(choice==3)
 			{
-				HRService.updateResume(bookList);
+				HRService.updateResume(resumeList);
+				DataOperate.saveData(resumeList);
 			}
 			else if(choice==4)
 			{
-				HRService.showResume(bookList);
+				HRService.showResume(resumeList);
+				DataOperate.saveData(resumeList);
 			}
 			else if(choice==5)
 			{
-				DataOperate.saveData(bookList);
 				break;
 			}
 			else {

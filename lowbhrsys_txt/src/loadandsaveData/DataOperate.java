@@ -35,7 +35,8 @@ public class DataOperate {
 							String workerName =str[0];
 							String workerId =str[1];
 							String workerSchool = str[2];
-							Resume book = new Resume(workerName, workerId, workerSchool);
+							int process = Integer.parseInt(str[3]);
+							Resume book = new Resume(workerName, workerId, workerSchool, process);
 							resumeList.add(book);
 							data = br.readLine();
 			}
@@ -52,7 +53,7 @@ public class DataOperate {
 				) {
 			int workerCount = resumeList.size();
 			for (int i = 0; i < workerCount; i++) {
-				printWriter.println(resumeList.get(i).getName() + "," + resumeList.get(i).getId() + "," + resumeList.get(i).getSchool());
+				printWriter.println(resumeList.get(i).getName()+","+resumeList.get(i).getId()+","+resumeList.get(i).getSchool()+","+resumeList.get(i).getProcess());
 			}
 			printWriter.flush();
 		}
