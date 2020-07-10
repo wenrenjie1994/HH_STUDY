@@ -38,9 +38,10 @@ public class student {
 
 
     }
+
     public student(String name, String IDcard, String phoneNumber,
                    String gender, String birthday, String age, String degree,
-                   String school, String job, String salary,boolean isDelete) {
+                   String school, String job, String salary, boolean isDelete) {
         /*idea不太会设置方法注释
          * 构造方法有些类似于Python的init函数*/
         this.name = name;
@@ -54,7 +55,7 @@ public class student {
         this.school = school;
         this.job = job;
         this.salary = salary;
-this.isDelete=isDelete;
+        this.isDelete = isDelete;
 
     }
 
@@ -72,7 +73,7 @@ this.isDelete=isDelete;
         this.IDcard = IDcard;
     }
 
-    public String writeInfo(){
+    public String writeInfo() {
         return this.name + "\t" + this.IDcard + "\t" + this.phoneNumber + "\t" + this.gender + "\t" + this.birthday + "\t" + this.age + "\t" + this.degree + "\t" + this.school + "\t" + this.job + "\t" + this.salary + "\t" + this.isDelete + "\n";
     }
 

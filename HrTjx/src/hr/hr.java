@@ -2,7 +2,10 @@ package hr;
 
 import student.student;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +16,8 @@ public class hr {
 
     Map<String, student> student = new HashMap<String, student>();
     Map<String, String> info = new HashMap<String, String>();
-String url;
+    String url;
+
     public hr(String url) {
         this.info.put("姓名", "name");
         this.info.put("身份证号", "IDcard");
@@ -26,7 +30,7 @@ String url;
         this.info.put("学校", "school");
         this.info.put("应聘岗位", "job");
         this.info.put("期望薪资", "salary");
-        this.url=url;
+        this.url = url;
         this.readTxt();
     }
 
@@ -182,37 +186,38 @@ String url;
         }
         return num;
     }
-public void writeTxt(){
-    try {
-        BufferedWriter out = new BufferedWriter(new FileWriter(this.url));
-        for (student value : student.values()) {
-            out.write(value.writeInfo());
 
+    public void writeTxt() {
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter(this.url));
+            for (student value : student.values()) {
+                out.write(value.writeInfo());
+
+
+            }
+            out.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
 
         }
-        out.close();
-
-    } catch (Exception e) {
-        System.out.println(e);
-
     }
-}
 
-public void readTxt(){
-                try {
-                    BufferedReader in = new BufferedReader(new FileReader(this.url));
-                    String str;
-                    while ((str=in.readLine())!=null){
-                        String[] infoString = str.split("\t");
-                        this.student.put(infoString[2], new student(infoString[0], infoString[1], infoString[2],
-                                infoString[3], infoString[4], infoString[5], infoString[6], infoString[7],
-                                infoString[8], infoString[9], infoString[10].equals("True")));
-                    }
-                } catch (Exception e) {
-                    System.out.println(e);
+    public void readTxt() {
+        try {
+            BufferedReader in = new BufferedReader(new FileReader(this.url));
+            String str;
+            while ((str = in.readLine()) != null) {
+                String[] infoString = str.split("\t");
+                this.student.put(infoString[2], new student(infoString[0], infoString[1], infoString[2],
+                        infoString[3], infoString[4], infoString[5], infoString[6], infoString[7],
+                        infoString[8], infoString[9], infoString[10].equals("True")));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
 
-                }
-}
+        }
+    }
 
 
     public void saveToDatabase() {

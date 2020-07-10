@@ -12,7 +12,7 @@ public class Main {
             int max = hr1.printWelcome();
             int num = hr1.inputNum(max);
 
-            if (hr1.choose(num)){
+            if (hr1.choose(num)) {
                 break;
             }
 
