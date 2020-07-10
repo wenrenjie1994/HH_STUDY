@@ -1,5 +1,7 @@
 package com.spdb.study.java8.stream;
 
+import java.util.concurrent.atomic.AtomicReference;
+
 /**
  * Stream中default method(解决多重继承冲突问题)
  * 1、Class优先级最高(重写了父类的方法)
@@ -35,6 +37,17 @@ public class DefaultMethod {
 
         MethodA a = new MethodC();
         a.hello();
+
+        String initialReference = "initial value referenced";
+
+        AtomicReference<String> atomicStringReference = new AtomicReference<>(initialReference);
+
+        String newReference = "new value referenced";
+        boolean exchanged = atomicStringReference.compareAndSet(initialReference, newReference);
+        System.out.println("exchanged: " + exchanged);
+
+        exchanged = atomicStringReference.compareAndSet(initialReference, newReference);
+        System.out.println("exchanged: " + exchanged);
     }
 
     private interface MethodA {
