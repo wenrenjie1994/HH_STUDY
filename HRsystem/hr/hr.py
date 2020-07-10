@@ -8,11 +8,13 @@ from HRsystem.student.student import student
 
 
 class hr():
-    def __init__(self):
+    def __init__(self,url):
+        self.url=url
         self.student = {}
         self.info = {"姓名": "name", "身份证号": "IDcard", "手机号": "phoneNumber", "性别": "gender",
                      "出生日期": "birthday", "年龄": "age", "学历": "degree",
                      "学校": "school", "应聘岗位": "job", "期望薪资": "salary"}
+        self.readTxt()
 
     def add(self):
         try:
@@ -77,7 +79,8 @@ class hr():
         print("请按2进行删除学生信息操作")
         print("请按3进行更改学生信息操作")
         print("请按4进行查询学生信息操作")
-        return 4
+        print("请按5退出程序")
+        return 5
 
     def choose(self, num):
         if num == 1:
@@ -88,6 +91,11 @@ class hr():
             self.alter()
         elif num == 4:
             self.select()
+        elif num ==5:
+            self.writeTxt()
+            print("程序结束！！！感谢使用。")
+            return True
+        return False
 
     def inputNum(self, max):
         try:
@@ -100,16 +108,37 @@ class hr():
 
         return num
 
-    def saveToTxt(self):
-        pass
+    def writeTxt(self):
+        with open(self.url, "wb") as f1:
+            for k,v in self.student.items():
+                # print(v)
+                f1.write(v.writeInfo().encode("utf-8"))
+
+    def readTxt(self):
+        try:
+            with open(self.url, "rb") as f2:
+                for i in f2.readlines():
+                    # print(i.decode("utf-8"))
+                    name, IDcard, phoneNumber, gender, birthday, age, degree, school, job, salary,isDelete \
+                        = i.decode("utf-8").split("\t")
+                    # print(bool(isDelete))
+                    # print(isDelete)
+                    self.student[IDcard] = \
+                        student(name, IDcard, phoneNumber, gender, birthday, age,
+                                degree, school, job, salary,"True"==isDelete)
+                    # print(self.student)
+        except Exception as e:
+            print(e)
+
 
     def saveToDatabase(self):
         pass
 
 
 if __name__ == '__main__':
-    hr1 = hr()
+    hr1 = hr('studentInfo.txt')
     while True:
         max = hr1.printWelcome()
         num = hr1.inputNum(max)
-        hr1.choose(num)
+        if hr1.choose(num):
+            break

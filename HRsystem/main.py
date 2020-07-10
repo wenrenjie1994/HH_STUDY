@@ -8,8 +8,9 @@ from student.student import student
 from hr.hr import hr
 
 if __name__ == '__main__':
-    hr1 = hr()
+    hr1 = hr('studentInfo.txt')
     while True:
         max = hr1.printWelcome()
         num = hr1.inputNum(max)
-        hr1.choose(num)
+        if hr1.choose(num):
+            break
