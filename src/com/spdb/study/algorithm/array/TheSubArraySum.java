@@ -118,7 +118,7 @@ public class TheSubArraySum {
     }
 
     public static void main(String[] args) {
-        int[] ins = new int[]{1,2,3,4,2,6,8};
+        int[] ins = new int[]{1,2,3,4,2,-1,8};
         System.out.println(TheSubArraySum.subarraySum(ins,6));
     }
 

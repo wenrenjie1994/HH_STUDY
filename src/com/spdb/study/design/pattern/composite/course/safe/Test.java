@@ -28,6 +28,7 @@ public class Test {
 
         root.show();
 
+        System.out.println("======================List=======================");
         root.list();
     }
 }
