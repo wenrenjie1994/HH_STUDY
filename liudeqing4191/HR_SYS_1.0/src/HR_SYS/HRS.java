@@ -1,6 +1,5 @@
 package HR_SYS;
 
-import loadandsaveData.DataOperate;
 import model.Resume;
 import service.ResumeService;
 
@@ -16,7 +15,6 @@ public class HRS {
     public static void main(String[] args) {
         LinkedList<Resume> resumeList = new LinkedList<Resume>();
         Scanner input = new Scanner(System.in);
-        DataOperate.loadData(resumeList);//下载所有简历
 
         boolean c = true;
         while (c) {
@@ -33,19 +31,18 @@ public class HRS {
 
             switch (choice) {
                 case 1:
-                    ResumeService.addResume(resumeList);
+                    ResumeService.addResume();
                     break;
                 case 2:
-                    ResumeService.deleteResume(resumeList);
+                    ResumeService.deleteResume();
                     break;
                 case 3:
-                    ResumeService.updateResume(resumeList);
+                    ResumeService.updateResume();
                     break;
                 case 4:
-                    ResumeService.searchResume(resumeList);
+                    ResumeService.searchResume();
                     break;
                 case 5:
-                    DataOperate.saveData(resumeList);
                     c = false;
                     break;
                 default:

@@ -1,8 +1,8 @@
 package service;
 
 import model.Resume;
+import model.ResumeList;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -12,127 +12,147 @@ import java.util.Scanner;
  **/
 public class ResumeService {
 
-    public static void addResume(LinkedList<Resume> resumeList) {
+    public static void addResume() {
+        //UI
         System.out.println("欢迎进入添加学生信息界面");
         Scanner input = new Scanner(System.in);
         System.out.println("请依次输入需要添加的姓名和id");
         String resumeName = input.nextLine();
         String resumeId = input.nextLine();
 
-        //get/SET
         Resume resume = new Resume(resumeName, resumeId);
 
-        resumeList.add(resume);
-        System.out.println("您已经成功添加学生信息");
-        showResume(resumeList);
-//        input.close();
+        Action a =new Action();
+        if(a.addResume(resume)>0){
+            System.out.println("您已经成功添加学生信息");
+        }
+        else
+        {
+            System.out.println("添加学生信息失败");
+        }
     }
 
-    public static void deleteResume(LinkedList<Resume> resumeList){
-        Scanner input=new Scanner(System.in);
-        System.out.println("欢迎进入删除学生信息界面");
-        System.out.println("请输入需要删除的学生id");
-        String resumeId=input.nextLine();
-        int resumeCount=resumeList.size();
-        for(int i=0;i<resumeCount;i++)
-        {
-            if(resumeList.get(i).getId().equals(resumeId))
-            {
-                resumeList.remove(i);
+    public static void deleteResume(){
+        while (true){
+            //UI
+            Scanner input=new Scanner(System.in);
+            System.out.println("欢迎进入删除学生信息界面");
+            System.out.println("请输入需要删除的学生id");
+            System.out.println("退出请按-1");
+            String resumeId=input.nextLine();
+            int q=Integer.parseInt(resumeId);
+            if(q==-1){
+                break;
+            }
+
+            //
+            Action d=new Action();
+            if(d.deleteResume(resumeId)>0){
                 System.out.println("您已经成功删除学生信息");
-                break;
             }
-            else if(i==resumeCount-1) {
-                System.out.println("没有找到该学生");
+            else
+            {
+                System.out.println("没有找到该学生信息，无法删除");
             }
         }
-        showResume(resumeList);
-//        input.close();
     }
 
-    public static void updateResume(LinkedList<Resume> resumeList)
-    {
-        Scanner input=new Scanner(System.in);
-        System.out.println("欢迎进入修改学生信息界面");
-        System.out.println("请输入需要修改的学生Id");
-        String resumeId=input.nextLine();
-        int resumeCount=resumeList.size();
-        if(resumeCount!=0)//hr系统不为空
-        {
-            for(int i=0;i<resumeCount;i++)
+    public static void updateResume(){
+        while (true){
+            //UI
+            Scanner input=new Scanner(System.in);
+            System.out.println("欢迎进入删除学生信息界面");
+            System.out.println("请输入需要更新的学生id、和他的新姓名、新学校、新进度、新deleteStatus");
+            System.out.println("退出请按-1");
+            String resumeId=input.nextLine();
+            int q=Integer.parseInt(resumeId);
+            if(q==-1){
+                break;
+            }
+
+            String newName=input.nextLine();
+            String newSchool=input.nextLine();
+            int newProcess=input.nextInt();
+            int newDeleteStatus=input.nextInt();
+
+            Action u=new Action();
+            if(u.updataResume(resumeId,newName,newSchool,newProcess,newDeleteStatus)>0){
+                System.out.println("您已经成功更新学生信息");
+            }
+            else
             {
-                if(resumeList.get(i).getId().equals(resumeId))
-                {
-                    System.out.println("请依次输入新的姓名，id，学校，进度");
-                    String newresumeName=input.nextLine();
-                    String newresumeId=input.nextLine();
-                    String newresumeSchool=input.nextLine();
-                    int newresumeProcess=input.nextInt();
+                System.out.println("没有找到该学生信息，无法更新");
+            }
+        }
+    }
 
-                    Resume resume=new Resume(newresumeName,newresumeId);
-                    resume.setSchool(newresumeSchool);
-                    resume.setProcess(newresumeProcess);
-                    resumeList.set(i,resume);
-
-                    System.out.println("您已经修改成功");
-                    showResume(resumeList);
-
+    public static void searchResume() {
+        boolean c=true;
+        while (c){
+            Scanner input=new Scanner(System.in);
+            System.out.println("欢迎进入查询学生信息界面");
+            System.out.println("按姓名名查找请按----------1");
+            System.out.println("按ID查找请按----------2");
+            System.out.println("按学校查找请按----------3");
+            System.out.println("按进度查找请按----------4");
+            System.out.println("模糊查找请按------------5");
+            System.out.println("退出请按----------------6");
+            int choice =input.nextInt();//这里正常
+            ResumeList resumes = null;
+            Action s=new Action();
+            switch (choice){
+                case 1:
+                    System.out.println("请输入学生姓名：");
+                    String resumeName =input.nextLine();
+                    resumeName =input.nextLine();//如果不加这一行系统就会自动输入空行使我无法输入
+                    System.out.println(resumeName);
+                    resumes=s.searchResume("name =",resumeName);
                     break;
+                case 2:
+                    System.out.println("请输入学生身份证号：");
+                    String resumeId =input.nextLine();//2开始到后面都会跳过
+                    resumes=s.searchResume("id =",resumeId);
+                    break;
+                case 3:
+                    System.out.println("请输入学生学校：");
+                    String resumeSchool =input.nextLine();
+                    resumes=s.searchResume("school =",resumeSchool);
+                    break;
+                case 4:
+                    System.out.println("请输入学生进度：");
+                    String resumeProcess =input.nextLine();
+                    resumes=s.searchResume("process =",resumeProcess);
+                    break;
+                case 5:
+                    System.out.println("请输入关键字：");
+                    String point =input.nextLine();
+                    resumes=s.searchResume("name like","%"+point+"%");
+                    break;
+                case 6:
+                    c=false;
+                    break;
+                default:System.out.println("输入错误，请重新输入");
+            }
+            //输出
+            if(choice<6){
+                int resumeCount = resumes.size();
+                if(resumeCount>0)
+                {
+                    System.out.println("共找到" + resumeCount + "个同学");
+                    for (int i = 0; i < resumeCount; i++) {
+                        System.out.println("第" + (i + 1) + "个同学:");
+                        System.out.println("姓名为"+ "----" + resumes.get(i).getName());
+                        System.out.println("身份证号为"+ "----" + resumes.get(i).getId());
+                        System.out.println("进度为"+ "----" + resumes.get(i).getProcess());
+                        System.out.println("学校为"+ "----" + resumes.get(i).getSchool());
+                    }
                 }
-                else if(i==resumeCount-1||resumeCount==0) {
-                    System.out.println("没有查找到该学生");
+                else {
+                    System.out.println("没有找到这种同学");
                 }
             }
         }
-        else{
-            System.out.println("系统为空，没有查找到该学生");
-        }
-//		input.close();
     }
-
-    public static void searchResume(LinkedList<Resume> resumeList) {
-        Scanner input=new Scanner(System.in);
-        System.out.println("欢迎进入查询学生信息界面");
-        System.out.println("请输入需要查询的学生id");
-        String resumeId=input.nextLine();
-
-        int resumeCount=resumeList.size();
-        for(int i=0;i<resumeCount;i++)
-        {
-            if(resumeList.get(i).getId().equals(resumeId))
-            {
-                Resume resume=resumeList.get(i);
-                System.out.println("姓名："+resume.getName()+"\n"+
-                        "ID"+":"+resume.getId()+"\n"
-                        +"学校"+":"+resume.getSchool()+"\n"
-                        +"进度："+resume.getProcess());
-                break;
-            }
-            else if(i==resumeCount-1) {
-                System.out.println("没有查找到该学生，请重新输入");
-            }
-        }
-//		input.close();
-    }
-
-
-
-    private static void showResume(LinkedList<Resume> resumeList) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("是否需要打印所有学生信息，是请输入Y，不用打印则输入任意");
-        String XUANZE = input.nextLine();
-        String Y = "Y";
-        if (XUANZE.equals(Y)) {
-            System.out.println("本hr系统共有" + resumeList.size() + "个同学");
-            int resumeCount = resumeList.size();
-            for (int i = 0; i < resumeCount; i++) {
-                System.out.println("第" + (i + 1) + "个同学" + "----" + resumeList.get(i).getName());
-            }
-        }
-//        input.close();
-    }
-
-
 }
 
 
