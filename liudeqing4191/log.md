@@ -1,4 +1,16 @@
+###### 2020/7/11
+
+完成数据库版本
+
+之前只顾着做东西忘记记笔记了orz
+
+今日分的进步
+
+- 记得引入mysql-connector-java-5.1.38.jar库
+- input中的next方法并不会像nextLine一样处理换行符的问题，所以要自己处理。感谢陈艺文大佬（https://blog.csdn.net/jediael_lu/article/details/12653513?utm_source=blogxgwz7）
+
 ###### 2020/7/3
+
 想用LinkedList实现存储，但是不会写ResumeList类，先用arrylist完成功能吧
 
 ###### 2020/7/1
