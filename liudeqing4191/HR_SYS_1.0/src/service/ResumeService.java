@@ -97,20 +97,20 @@ public class ResumeService {
             System.out.println("按进度查找请按----------4");
             System.out.println("模糊查找请按------------5");
             System.out.println("退出请按----------------6");
-            int choice =input.nextInt();//这里正常
+            int choice =input.nextInt();
+            input.nextLine();
             ResumeList resumes = null;
             Action s=new Action();
             switch (choice){
                 case 1:
                     System.out.println("请输入学生姓名：");
                     String resumeName =input.nextLine();
-                    resumeName =input.nextLine();//如果不加这一行系统就会自动输入空行使我无法输入
                     System.out.println(resumeName);
                     resumes=s.searchResume("name =",resumeName);
                     break;
                 case 2:
                     System.out.println("请输入学生身份证号：");
-                    String resumeId =input.nextLine();//2开始到后面都会跳过
+                    String resumeId =input.next();
                     resumes=s.searchResume("id =",resumeId);
                     break;
                 case 3:
