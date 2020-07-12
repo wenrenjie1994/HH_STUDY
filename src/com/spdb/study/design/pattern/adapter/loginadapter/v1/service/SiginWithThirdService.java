@@ -7,7 +7,7 @@ import com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg;
  * @author Mr.Longyx
  * @date 2020年07月02日 16:33
  */
-public class SiginWithThirdService extends SiginService{
+public class SiginWithThirdService extends SiginService {
     public ResultMsg loginWithQQ(String openId){
         return loginWithRegist(openId,null);
     }
