@@ -8,7 +8,7 @@ import bean.BookList;
 public class HRS {
 
 	private int MAXSIZE=100;
-	//ÔÚÊı×é³õÊ¼»¯µÄÊ±ºò£¬ÏŞÖÆÁËÊı×éµÄ´óĞ¡£¬ÓĞÃ»ÓĞ±ğµÄ·½Ê½¸üºÃÄØ£¿
+	//åœ¨æ•°ç»„åˆå§‹åŒ–çš„æ—¶å€™ï¼Œé™åˆ¶äº†æ•°ç»„çš„å¤§å°ï¼Œæœ‰æ²¡æœ‰åˆ«çš„æ–¹å¼æ›´å¥½å‘¢ï¼Ÿ
 	private Book[] bookList=new Book[MAXSIZE];
 
 	ArrayList<Book> bookArrayList=new ArrayList<>();
@@ -18,8 +18,8 @@ public class HRS {
 //	int[] shuzu1={1,2,3};
 //	int[] shuzu3=new  int[]{1,2,3};
 
-	private int bookCount=0;//¶¼ÊÇÊı×é´øÀ´µÄ·³ÄÕ£¿»¹µÃ·ÀÖ¹Ô½½ç£»
-	//»ñÈ¡±ê×¼ÊäÈëÁ÷
+	private int bookCount=0;//éƒ½æ˜¯æ•°ç»„å¸¦æ¥çš„çƒ¦æ¼ï¼Ÿè¿˜å¾—é˜²æ­¢è¶Šç•Œï¼›
+	//è·å–æ ‡å‡†è¾“å…¥æµ
 	private Scanner input=new Scanner(System.in);
 
 
@@ -29,16 +29,16 @@ public class HRS {
 		while(true)
 		{
 
-			System.out.println("-----»¶Ó­½øÈë´ó±í¹øµÄÍ¼Êé¹ÜÀíÏµÍ³-----");
-			System.out.println("Ìí¼ÓÍ¼ÊéÇë°´----1");
-			System.out.println("É¾³ıÍ¼ÊéÇë°´----2");
-			System.out.println("ĞŞ¸ÄÍ¼ÊéÇë°´----3");
-			System.out.println("²éÑ¯Í¼ÊéÇë°´----4");
-			System.out.println("ÍË³öÇë°´--------5");
+			System.out.println("-----æ¬¢è¿è¿›å…¥å¤§è¡¨é”…çš„å›¾ä¹¦ç®¡ç†ç³»ç»Ÿ-----");
+			System.out.println("æ·»åŠ å›¾ä¹¦è¯·æŒ‰----1");
+			System.out.println("åˆ é™¤å›¾ä¹¦è¯·æŒ‰----2");
+			System.out.println("ä¿®æ”¹å›¾ä¹¦è¯·æŒ‰----3");
+			System.out.println("æŸ¥è¯¢å›¾ä¹¦è¯·æŒ‰----4");
+			System.out.println("é€€å‡ºè¯·æŒ‰--------5");
 
 
 			int choice=input.nextInt();
-			//³ıÁËÓÃif »¹ÄÜÓÃÊ²Ã´·½Ê½¿ÉÒÔÊµÏÖÂß¼­ÅĞ¶Ï£¿
+			//é™¤äº†ç”¨if è¿˜èƒ½ç”¨ä»€ä¹ˆæ–¹å¼å¯ä»¥å®ç°é€»è¾‘åˆ¤æ–­ï¼Ÿ
 			if(choice==1)
 			{
 				addBook();
@@ -59,21 +59,21 @@ public class HRS {
 			{
 				break;
 			}else {
-				System.out.println("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë");
+				System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥");
 			}
 		}
-		input.close();//Á÷°¡ Á¬½Ó°¡ ÕâĞ©¶«Î÷ ÓÃÍê¼ÇµÃ¹Ø£»ÒªÃ´¼ÇµÃ»¹£¨ÄÇÃ´Ê²Ã´µØ·½ÊÇĞèÒª»¹µÄ£¬Ê²Ã´µØ·½ÊÇ¹ØµÄ£©£»
-		System.out.println("ÄúÒÑ¾­ÍË³öÍ¼Êé¹ÜÀíÏµÍ³");
+		input.close();//æµå•Š è¿æ¥å•Š è¿™äº›ä¸œè¥¿ ç”¨å®Œè®°å¾—å…³ï¼›è¦ä¹ˆè®°å¾—è¿˜ï¼ˆé‚£ä¹ˆä»€ä¹ˆåœ°æ–¹æ˜¯éœ€è¦è¿˜çš„ï¼Œä»€ä¹ˆåœ°æ–¹æ˜¯å…³çš„ï¼‰ï¼›
+		System.out.println("æ‚¨å·²ç»é€€å‡ºå›¾ä¹¦ç®¡ç†ç³»ç»Ÿ");
 	}
 
-	//Ìí¼ÓÍ¼Êé
+	//æ·»åŠ å›¾ä¹¦
 	void addBook()
 	{
-		System.out.println("»¶Ó­½øÈëÌí¼ÓÍ¼Êé½çÃæ");
-		if(bookCount<MAXSIZE)//ÅĞ¶ÏÍ¼Êé¹ÜÀíÏµÍ³ÊÇ·ñÎ´Âú
+		System.out.println("æ¬¢è¿è¿›å…¥æ·»åŠ å›¾ä¹¦ç•Œé¢");
+		if(bookCount<MAXSIZE)//åˆ¤æ–­å›¾ä¹¦ç®¡ç†ç³»ç»Ÿæ˜¯å¦æœªæ»¡
 		{
 			Scanner input=new Scanner(System.in);
-			System.out.println("ÇëÒÀ´ÎÊäÈëĞèÒªÌí¼ÓµÄÍ¼ÊéÃû£¬×÷Õß£¬¼Û¸ñ");
+			System.out.println("è¯·ä¾æ¬¡è¾“å…¥éœ€è¦æ·»åŠ çš„å›¾ä¹¦åï¼Œä½œè€…ï¼Œä»·æ ¼");
 			String bookName=input.nextLine();
 			String bookAuthor=input.nextLine();
 			float bookPrice=input.nextFloat();
@@ -81,27 +81,27 @@ public class HRS {
 			//get/SET
 			Book book=new Book(bookName,bookAuthor,bookPrice);
 
-			//Èç¹ûÕâ¸öÊ±ºòÒÑ¾­ÓĞ79±¾ÊéÁË£¬ÄÇÃ´µÚ79±¾ÊéµÄÎ»ÖÃÊÇ¼¸
+			//å¦‚æœè¿™ä¸ªæ—¶å€™å·²ç»æœ‰79æœ¬ä¹¦äº†ï¼Œé‚£ä¹ˆç¬¬79æœ¬ä¹¦çš„ä½ç½®æ˜¯å‡ 
 			bookList[bookCount]=book;
 			bookCount++;
-			System.out.println("ÄúÒÑ¾­³É¹¦Ìí¼ÓÍ¼Êé");
+			System.out.println("æ‚¨å·²ç»æˆåŠŸæ·»åŠ å›¾ä¹¦");
 			showBook();
 		}
 		else{
-			System.out.println("Í¼Êé¹ÜÀíÏµÍ³ÒÑÂú£¬ÎŞ·¨Ìí¼ÓÍ¼Êé");
+			System.out.println("å›¾ä¹¦ç®¡ç†ç³»ç»Ÿå·²æ»¡ï¼Œæ— æ³•æ·»åŠ å›¾ä¹¦");
 		}
 	}
 
-	//É¾³ıÍ¼Êé
+	//åˆ é™¤å›¾ä¹¦
 	void deleteBook()
 	{
 		@SuppressWarnings("resource")
 		Scanner input=new Scanner(System.in);
-		System.out.println("»¶Ó­½øÈëÉ¾³ıÍ¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒªÉ¾³ıµÄÍ¼ÊéÃû");
+		System.out.println("æ¬¢è¿è¿›å…¥åˆ é™¤å›¾ä¹¦ç•Œé¢");
+		System.out.println("è¯·è¾“å…¥éœ€è¦åˆ é™¤çš„å›¾ä¹¦å");
 		bookList.
 		String bookName=input.nextLine();
-		if(bookCount!=0)//Í¼Êé¹ÜÀíÏµÍ³²»Îª¿Õ
+		if(bookCount!=0)//å›¾ä¹¦ç®¡ç†ç³»ç»Ÿä¸ä¸ºç©º
 		{
 			for(int i=0;i<bookCount;i++)
 			{
@@ -111,93 +111,93 @@ public class HRS {
 					{
 						bookList[j]=bookList[j+1];
 					}
-					System.out.println("ÄúÒÑ¾­³É¹¦É¾³ıÍ¼Êé");
+					System.out.println("æ‚¨å·²ç»æˆåŠŸåˆ é™¤å›¾ä¹¦");
 					bookCount--;
 					break;
 				}
 				else if(i==bookCount-1) {
-					System.out.println("Ã»ÓĞÕÒµ½¸ÃÊé¼®");
+					System.out.println("æ²¡æœ‰æ‰¾åˆ°è¯¥ä¹¦ç±");
 				}
 			}
 			showBook();
 		}
 		else{
-			System.out.println("Í¼ÊéÏµÍ³Îª¿Õ£¬Ã»ÓĞÕÒµ½¸ÃÊé¼®");
+			System.out.println("å›¾ä¹¦ç³»ç»Ÿä¸ºç©ºï¼Œæ²¡æœ‰æ‰¾åˆ°è¯¥ä¹¦ç±");
 		}
 //		input.close();
 	}
 
-	//ĞŞ¸ÄÍ¼Êé
+	//ä¿®æ”¹å›¾ä¹¦
 	void updateBook()
 	{
 		Scanner input=new Scanner(System.in);
-		System.out.println("»¶Ó­½øÈëĞŞ¸ÄÍ¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒªĞŞ¸ÄµÄÍ¼ÊéÃû");
+		System.out.println("æ¬¢è¿è¿›å…¥ä¿®æ”¹å›¾ä¹¦ç•Œé¢");
+		System.out.println("è¯·è¾“å…¥éœ€è¦ä¿®æ”¹çš„å›¾ä¹¦å");
 		String bookName=input.nextLine();
-		if(bookCount!=0)//Í¼Êé¹ÜÀíÏµÍ³²»Îª¿Õ
+		if(bookCount!=0)//å›¾ä¹¦ç®¡ç†ç³»ç»Ÿä¸ä¸ºç©º
 		{
 			for(int i=0;i<bookCount;i++)
 			{
 				if(bookList[i].bookName.equals(bookName))
 				{
-					System.out.println("ÇëÒÀ´ÎÊäÈëĞÂµÄÊéÃû£¬×÷Õß£¬¼Û¸ñ");
+					System.out.println("è¯·ä¾æ¬¡è¾“å…¥æ–°çš„ä¹¦åï¼Œä½œè€…ï¼Œä»·æ ¼");
 					String newbookName=input.nextLine();
 					String newbookAuthor=input.nextLine();
 					float newbookPrice=input.nextFloat();
 					Book book=new Book(newbookName,newbookAuthor,newbookPrice);
 					bookList[i]=book;
-					System.out.println("ÄúÒÑ¾­ĞŞ¸Ä³É¹¦");
+					System.out.println("æ‚¨å·²ç»ä¿®æ”¹æˆåŠŸ");
 					showBook();
 				}
 				else if(i==bookCount-1||bookCount==0) {
-					System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
+					System.out.println("æ²¡æœ‰æŸ¥æ‰¾åˆ°è¯¥ä¹¦ç±");
 				}
 			}
 		}
 		else{
-			System.out.println("ÏµÍ³Îª¿Õ£¬Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
+			System.out.println("ç³»ç»Ÿä¸ºç©ºï¼Œæ²¡æœ‰æŸ¥æ‰¾åˆ°è¯¥ä¹¦ç±");
 		}
 //		input.close();
 	}
 
-	//²éÑ¯Í¼Êé
+	//æŸ¥è¯¢å›¾ä¹¦
 	void searchBook()
 	{
 		@SuppressWarnings("resource")
 		Scanner input=new Scanner(System.in);
-		System.out.println("»¶Ó­½øÈë²éÑ¯Í¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒª²éÑ¯µÄÍ¼ÊéÃû");
+		System.out.println("æ¬¢è¿è¿›å…¥æŸ¥è¯¢å›¾ä¹¦ç•Œé¢");
+		System.out.println("è¯·è¾“å…¥éœ€è¦æŸ¥è¯¢çš„å›¾ä¹¦å");
 		String bookName=input.nextLine();
 		for(int i=0;i<bookCount;i++)
 		{
 			if(bookList[i].bookName.equals(bookName))
 			{
 				System.out.println("<<"+bookList[i].bookName+">>"+"\n"+
-									"×÷Õß"+":"+bookList[i].bookAuthor+"\n"
-									+"¼Û¸ñ"+":"+bookList[i].bookPrice+"\n"
-									+"Î»ÓÚµÚ"+(i+1)+"Î»ÖÃ");
+									"ä½œè€…"+":"+bookList[i].bookAuthor+"\n"
+									+"ä»·æ ¼"+":"+bookList[i].bookPrice+"\n"
+									+"ä½äºç¬¬"+(i+1)+"ä½ç½®");
 				break;
 			}
 			else if(i==bookCount-1) {
-				System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®£¬ÇëÖØĞÂÊäÈë");
+				System.out.println("æ²¡æœ‰æŸ¥æ‰¾åˆ°è¯¥ä¹¦ç±ï¼Œè¯·é‡æ–°è¾“å…¥");
 			}
 		}
 //		input.close();
 	}
 
-	//Í¼Êé±éÀú
+	//å›¾ä¹¦éå†
 	void showBook()
 	{
 		@SuppressWarnings("resource")
 		Scanner input=new Scanner(System.in);
-		System.out.println("ÊÇ·ñĞèÒª´òÓ¡ËùÓĞÍ¼Êé£¬ÊÇÇëÊäÈëY£¬²»ÓÃ´òÓ¡ÔòÊäÈëÈÎÒâ");
+		System.out.println("æ˜¯å¦éœ€è¦æ‰“å°æ‰€æœ‰å›¾ä¹¦ï¼Œæ˜¯è¯·è¾“å…¥Yï¼Œä¸ç”¨æ‰“å°åˆ™è¾“å…¥ä»»æ„");
 		String XUANZE=input.nextLine();
 		String Y="Y";
 		if(XUANZE.equals(Y))
 		{
-			System.out.println("±¾Í¼Êé¹ÜÀíÏµÍ³¹²ÓĞ"+bookCount+"±¾Êé");
+			System.out.println("æœ¬å›¾ä¹¦ç®¡ç†ç³»ç»Ÿå…±æœ‰"+bookCount+"æœ¬ä¹¦");
 			for(int i=0;i<bookCount;i++) {
-				System.out.println("µÚ"+(i+1)+"±¾"+"----"+"<<"+bookList[i].bookName+">>");
+				System.out.println("ç¬¬"+(i+1)+"æœ¬"+"----"+"<<"+bookList[i].bookName+">>");
 			}
 		}
 //		input.close();
