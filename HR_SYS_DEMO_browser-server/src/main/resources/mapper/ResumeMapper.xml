@@ -12,7 +12,7 @@
     </update>
 
     <select id = "get" parameterType="_int" resultType="Resume">
-        select * from resume_list where id = #{id}
+        select * from resume_list where id = #{id} and status != 7
     </select>
 
     <update id="update" parameterType="Resume" >
@@ -20,6 +20,6 @@
     </update>
 
     <select id = "list" resultType="Resume">
-            select * from resume_list
+            select * from resume_list where status != 7
     </select>
 </mapper>

@@ -6,6 +6,7 @@
     <script src="vue.min.js"></script>
     <script src="axios.min.js"></script>
     <link rel="stylesheet" href= "home.css"></link>
+
     <title>HR控制系统</title>
 </head>
 
@@ -18,7 +19,7 @@
     });
 </script>
 <body>
-    <div id = “app”>
+    <div id = "app">
         <table id = "resumeListTable">
             <tr>
                 <td colspan="3">
@@ -45,14 +46,19 @@
                 <td>{{resume.status}}</td>
                 <td>
                     <a :href="'editResume?id=' + resume.id ">编辑</a>
-                    <a href="#nowhere" @click="deleteResum(resume.id)">删除</a>
+                    <a href="#nowhere" @click="deleteResume(resume.id)">删除</a>
                 </td>
             </tr>
+            <!--<ol>
+                <li v-for="list in lists">
+                    {{ list.name }}
+                </li>
+            </ol>-->
             <tr>
                 <td colspan = "4">
                     <br>
                     姓名：
-                    <input type = "text" v-model = "resume4Add.id" />
+                    <input type = "text" v-model = "resume4Add.name" />
                     <br>
                     学校：
                     <input type = "text" v-model = "resume4Add.school" />
@@ -71,7 +77,11 @@
             resumes: [],
             resume4Add: {id: 0, name:'', school:'', status:''},
             pagination:{}
-        }
+        }/*
+        var lists = [
+            {name:'haha'},
+            {name:'xixi'}
+        ]*/
         //ViewModel
         var vue = new Vue({
             el: '#app',
@@ -81,11 +91,12 @@
             },
             methods:{
                 list:function (start) {
-                    var url = "resumes?start = " + start;
+                    var url = "resumes?start=" + start;
                     axios.get(url).then(function (response) {
-                        vue.pagination = response.data
+                        vue.pagination = response.data;
                         console.log(vue.pagination);
-                        vue.resumes = response.data.list();
+                        vue.resumes = response.data.list;
+                        console.log(vue.resumes);
                     })
                 },
                 add: function (event) {
@@ -106,8 +117,8 @@
                         vue.list(1);
                     else if('pre' == page && vue.pagination.hasPreviousPage)
                         vue.list(vue.pagination.prePage);
-                    else if('next' == page && vue.pagination.pageNum != vue.pagination.pages)
-                        vue.list(vue.pagination.pages);
+                    else if('next' == page && vue.pagination.hasNextPage)
+                        vue.list(vue.pagination.nextPage);
                     else if('last'== page && vue.pagination.pageNum!=vue.pagination.pages)
                         vue.list(vue.pagination.pages);
                 },
