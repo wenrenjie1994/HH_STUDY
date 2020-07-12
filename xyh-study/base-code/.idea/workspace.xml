@@ -20,56 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/day07-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo1String.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo2StringPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo3StringEquals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo4StringGet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo5SubString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo6StringConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/Demo7StringSplit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/practice01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day07-code/src/day07/demo/practice02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/day08-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/Demo1StaticField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/Demo2StaticMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/Demo3StaticStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/Demo4StaticBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day08-code/src/day08/demo/myclass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/Demo1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/Demo2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/Demo3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/practice01.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/practice02.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/practice03.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day06-code/day06/demo/practice04.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo1String.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo2StringPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo3StringEquals.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo4StringGet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo5SubString.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo6StringConvert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/Demo7StringSplit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/practice01.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day07-code/day07/demo/practice02.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/META-INF/day08-code.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo1StaticField.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo2StaticMethod.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo3StaticStudent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo4StaticBlock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/myclass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../material/day08/Demo1StaticField.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../material/day08/Demo3StaticStudent.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day05-code/META-INF/day05-code.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day07-code/META-INF/day07-code.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../material/day05/TCP通信示意图.png" beforeDir="false" afterPath="$PROJECT_DIR$/../material/day05/TCP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo02/FileUpload/TCPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo02/FileUpload/TCPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo03/FileUpload/TCPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo03/FileUpload/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day05-code/src/day05/demo/TCPClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day05-code/src/day05/demo/TCPServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day01-code/META-INF/day01-code.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day02-code/META-INF/day02-code.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day02-code/day02/demo/Demo02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day02-code/day02/demo/Demo02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day03-code/META-INF/day03-code.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo08.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo08.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day04-code/META-INF/day04-code.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day04-code/day04/demo/Demo3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day04-code/day04/demo/Demo3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day05-code/day05/demo/TCPClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day05-code/day05/demo/TCPServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day07-code/META-INF/day07-code.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day08-code/META-INF/day08-code.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo4StaticBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo4StaticBlock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,18 +67,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day06-code/day06-code.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day05-code/src/demo03/FileUpload" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Demo4StaticBlock">
-    <configuration name="Demo1StaticField" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day08.demo.Demo1StaticField" />
-      <module name="day08-code" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TCPClient (2)">
+    <configuration name="TCPClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.FileUpload.TCPClient" />
+      <module name="day05-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day08.demo.*" />
+          <option name="PATTERN" value="demo02.FileUpload.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo2StaticMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day08.demo.Demo2StaticMethod" />
-      <module name="day08-code" />
+    <configuration name="TCPClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPClient" />
+      <module name="day05-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day08.demo.*" />
+          <option name="PATTERN" value="demo03.FileUpload.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo3StaticStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day08.demo.Demo3StaticStudent" />
-      <module name="day08-code" />
+    <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.TCP.TCPClient" />
+      <module name="day05-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day08.demo.*" />
+          <option name="PATTERN" value="demo01.TCP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo4StaticBlock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day08.demo.Demo4StaticBlock" />
-      <module name="day08-code" />
+    <configuration name="TCPServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.FileUpload.TCPServer" />
+      <module name="day05-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day08.demo.*" />
+          <option name="PATTERN" value="demo02.FileUpload.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="practice02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day07.demo.practice02" />
-      <module name="day07-code" />
+    <configuration name="TCPServer (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPServer" />
+      <module name="day05-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day07.demo.*" />
+          <option name="PATTERN" value="demo03.FileUpload.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo4StaticBlock" />
-        <item itemvalue="Application.Demo3StaticStudent" />
-        <item itemvalue="Application.Demo2StaticMethod" />
-        <item itemvalue="Application.Demo1StaticField" />
-        <item itemvalue="Application.practice02" />
+        <item itemvalue="Application.TCPClient (2)" />
+        <item itemvalue="Application.TCPServer (2)" />
+        <item itemvalue="Application.TCPClient (1)" />
+        <item itemvalue="Application.TCPServer (1)" />
+        <item itemvalue="Application.TCPClient" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594288201840</updated>
       <workItem from="1594288213639" duration="21260000" />
+      <workItem from="1594537400110" duration="7532000" />
     </task>
     <servers />
   </component>
@@ -205,6 +181,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594522736477">
@@ -215,22 +192,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594288412797" />
-    <state width="1313" height="176" key="GridCell.Tab.0.bottom" timestamp="1594525832328">
+    <state width="1313" height="278" key="GridCell.Tab.0.bottom" timestamp="1594544950052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594525832328" />
-    <state width="1313" height="176" key="GridCell.Tab.0.center" timestamp="1594525832328">
+    <state width="1313" height="278" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
+    <state width="1313" height="278" key="GridCell.Tab.0.center" timestamp="1594544950052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594525832328" />
-    <state width="1313" height="176" key="GridCell.Tab.0.left" timestamp="1594525832328">
+    <state width="1313" height="278" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
+    <state width="1313" height="278" key="GridCell.Tab.0.left" timestamp="1594544950052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594525832328" />
-    <state width="1313" height="176" key="GridCell.Tab.0.right" timestamp="1594525832328">
+    <state width="1313" height="278" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
+    <state width="1313" height="278" key="GridCell.Tab.0.right" timestamp="1594544950052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594525832328" />
+    <state width="1313" height="278" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -243,10 +220,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594351769057" />
-    <state x="255" y="159" key="run.anything.popup" timestamp="1594354336892">
+    <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594354336892" />
+    <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594539911419" />
     <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1594524670576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
