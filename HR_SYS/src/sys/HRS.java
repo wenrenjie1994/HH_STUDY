@@ -197,7 +197,7 @@ public class HRS {
 		{
 			System.out.println("本图书管理系统共有"+bookCount+"本书");
 			for(int i=0;i<bookCount;i++) {
-				System.out.println("第"+(i+1)+"本"+"----"+"<<"+bookList[i].bookName+">>");
+				System.out.println("第"+(i+1)+"本"+"--------"+"<<"+bookList[i].bookName+">>");
 			}
 		}
 //		input.close();
