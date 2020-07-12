@@ -100,7 +100,7 @@ public class HRS {
 		System.out.println("欢迎进入删除图书界面");
 		System.out.println("请输入需要删除的图书名");
 		bookList.
-		String bookName=input.nextLine();
+				String bookName=input.nextLine();
 		if(bookCount!=0)//图书管理系统不为空
 		{
 			for(int i=0;i<bookCount;i++)
@@ -173,9 +173,9 @@ public class HRS {
 			if(bookList[i].bookName.equals(bookName))
 			{
 				System.out.println("<<"+bookList[i].bookName+">>"+"\n"+
-									"作者"+":"+bookList[i].bookAuthor+"\n"
-									+"价格"+":"+bookList[i].bookPrice+"\n"
-									+"位于第"+(i+1)+"位置");
+						"作者"+":"+bookList[i].bookAuthor+"\n"
+						+"价格"+":"+bookList[i].bookPrice+"\n"
+						+"位于第"+(i+1)+"位置");
 				break;
 			}
 			else if(i==bookCount-1) {
@@ -202,7 +202,7 @@ public class HRS {
 		}
 //		input.close();
 	}
-	
+
 	public static void main(String[] args)
 	{
 		new HRS();
