@@ -46,6 +46,8 @@ public class HRSystem {
                     System.out.println("请输入正确的选项");
             }
         }
+        //scanner只能在程序最后面关闭，否则会影响到system。in从而是该方法失效
+        scanner.close();
     }
 
     void addResume() {
