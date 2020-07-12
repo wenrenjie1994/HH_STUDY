@@ -20,26 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo02/FileUpload/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo02/FileUpload/TCPServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo03/FileUpload/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo03/FileUpload/TCPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo04/BSTCP/TCPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day05-code/src/day05/demo/TCPClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day05-code/src/day05/demo/TCPServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day01-code/META-INF/day01-code.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day02-code/META-INF/day02-code.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day02-code/day02/demo/Demo02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day02-code/day02/demo/Demo02.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day03-code/META-INF/day03-code.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo02.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo08.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day03-code/day03/demo/Demo08.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day04-code/META-INF/day04-code.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day04-code/day04/demo/Demo3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day04-code/day04/demo/Demo3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day05-code/day05/demo/TCPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day05-code/day05/demo/TCPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day07-code/META-INF/day07-code.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day08-code/META-INF/day08-code.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo4StaticBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day08-code/day08/demo/Demo4StaticBlock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,26 +54,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TCPClient (2)">
-    <configuration name="TCPClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo02.FileUpload.TCPClient" />
-      <module name="day05-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="demo02.FileUpload.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TCPServer">
     <configuration name="TCPClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPClient" />
       <module name="day05-code" />
@@ -117,19 +88,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TCPServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo02.FileUpload.TCPServer" />
-      <module name="day05-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="demo02.FileUpload.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TCPServer (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPServer" />
       <module name="day05-code" />
@@ -143,15 +101,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TCPServer (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.TCP.TCPServer" />
+      <module name="day05-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo01.TCP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.BSTCP.TCPServer" />
+      <module name="day05-code" />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo04.BSTCP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TCPClient" />
+      <item itemvalue="Application.TCPClient (2)" />
+      <item itemvalue="Application.TCPServer" />
+      <item itemvalue="Application.TCPServer (2)" />
+      <item itemvalue="Application.TCPServer (3)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCPServer" />
+        <item itemvalue="Application.TCPClient" />
+        <item itemvalue="Application.TCPServer (3)" />
         <item itemvalue="Application.TCPClient (2)" />
         <item itemvalue="Application.TCPServer (2)" />
-        <item itemvalue="Application.TCPClient (1)" />
-        <item itemvalue="Application.TCPServer (1)" />
-        <item itemvalue="Application.TCPClient" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="GBK" />
+    <option name="myConnectionType" value="NONE" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -164,7 +160,10 @@
       <option name="presentableId" value="Default" />
       <updated>1594288201840</updated>
       <workItem from="1594288213639" duration="21260000" />
-      <workItem from="1594537400110" duration="7532000" />
+      <workItem from="1594537400110" duration="10581000" />
+      <workItem from="1594548132099" duration="411000" />
+      <workItem from="1594548570461" duration="2465000" />
+      <workItem from="1594564374375" duration="2103000" />
     </task>
     <servers />
   </component>
@@ -184,6 +183,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="540" y="199" key="#Notifications" timestamp="1594548024933">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="540" y="199" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1594548024933" />
+    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594548616289">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548616289" />
+    <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1594548458424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548458424" />
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594522736477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -192,30 +203,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594288412797" />
-    <state width="1313" height="278" key="GridCell.Tab.0.bottom" timestamp="1594544950052">
+    <state width="1313" height="295" key="GridCell.Tab.0.bottom" timestamp="1594566349714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="278" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
-    <state width="1313" height="278" key="GridCell.Tab.0.center" timestamp="1594544950052">
+    <state width="1313" height="295" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
+    <state width="1313" height="295" key="GridCell.Tab.0.center" timestamp="1594566349714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="278" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
-    <state width="1313" height="278" key="GridCell.Tab.0.left" timestamp="1594544950052">
+    <state width="1313" height="295" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
+    <state width="1313" height="295" key="GridCell.Tab.0.left" timestamp="1594566349714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="278" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
-    <state width="1313" height="278" key="GridCell.Tab.0.right" timestamp="1594544950052">
+    <state width="1313" height="295" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
+    <state width="1313" height="295" key="GridCell.Tab.0.right" timestamp="1594566349714">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="278" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594544950052" />
+    <state width="1313" height="295" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="252" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1594288322774" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1594351772146">
+    <state x="35" y="0" key="SettingsEditor" timestamp="1594548011351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594351772146" />
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594548011351" />
     <state x="0" y="0" key="new project wizard" timestamp="1594351769057">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
