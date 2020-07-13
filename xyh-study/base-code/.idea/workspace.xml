@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day05-code/src/demo04/BSTCP/TCPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/HR_SYS_3.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/src/database/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/src/testconnection/dbconnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day05-code/src/demo03/FileUpload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HR_SYS_3.0/HR_SYS_3.0.iml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -61,7 +64,7 @@
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TCPServer">
+  <component name="RunManager" selected="Application.dbconnection">
     <configuration name="TCPClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPClient" />
       <module name="day05-code" />
@@ -81,19 +84,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="demo01.TCP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TCPServer (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPServer" />
-      <module name="day05-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="demo03.FileUpload.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,20 +118,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dbconnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testconnection.dbconnection" />
+      <module name="HR_SYS_3.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testconnection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.TCPClient" />
       <item itemvalue="Application.TCPClient (2)" />
       <item itemvalue="Application.TCPServer" />
-      <item itemvalue="Application.TCPServer (2)" />
       <item itemvalue="Application.TCPServer (3)" />
+      <item itemvalue="Application.dbconnection" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.dbconnection" />
         <item itemvalue="Application.TCPServer" />
         <item itemvalue="Application.TCPClient" />
         <item itemvalue="Application.TCPServer (3)" />
         <item itemvalue="Application.TCPClient (2)" />
-        <item itemvalue="Application.TCPServer (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +166,7 @@
       <workItem from="1594537400110" duration="10581000" />
       <workItem from="1594548132099" duration="411000" />
       <workItem from="1594548570461" duration="2465000" />
-      <workItem from="1594564374375" duration="2103000" />
+      <workItem from="1594564374375" duration="7565000" />
     </task>
     <servers />
   </component>
@@ -199,38 +202,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594522736477" />
-    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1594288412797">
+    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1594607445901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594288412797" />
-    <state width="1313" height="295" key="GridCell.Tab.0.bottom" timestamp="1594566349714">
+    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594607445901" />
+    <state width="1313" height="116" key="GridCell.Tab.0.bottom" timestamp="1594610483678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="295" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
-    <state width="1313" height="295" key="GridCell.Tab.0.center" timestamp="1594566349714">
+    <state width="1313" height="116" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
+    <state width="1313" height="116" key="GridCell.Tab.0.center" timestamp="1594610483678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="295" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
-    <state width="1313" height="295" key="GridCell.Tab.0.left" timestamp="1594566349714">
+    <state width="1313" height="116" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
+    <state width="1313" height="116" key="GridCell.Tab.0.left" timestamp="1594610483678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="295" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
-    <state width="1313" height="295" key="GridCell.Tab.0.right" timestamp="1594566349714">
+    <state width="1313" height="116" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
+    <state width="1313" height="116" key="GridCell.Tab.0.right" timestamp="1594610483678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="295" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594566349714" />
+    <state width="1313" height="116" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="252" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1594288322774" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1594548011351">
+    <state x="35" y="0" key="SettingsEditor" timestamp="1594607448046">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594548011351" />
-    <state x="0" y="0" key="new project wizard" timestamp="1594351769057">
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594607448046" />
+    <state x="0" y="0" key="new project wizard" timestamp="1594607339306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594351769057" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594607339306" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
