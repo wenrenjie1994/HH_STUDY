@@ -41,12 +41,7 @@ public class Employe {
 
     @Override
     public String toString() {
-        return "Employe{" +
-                "姓名='" + name + '\'' +
-                ", 年龄='" + age + '\'' +
-                ", 性别='" + sex + '\'' +
-                ", 毕业高校='" + university + '\'' +
-                '}';
+        return  name  +","+ age  +","+ sex  +","+ university;
     }
 
 }
