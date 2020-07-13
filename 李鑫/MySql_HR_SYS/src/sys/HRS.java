@@ -41,7 +41,8 @@ public class HRS {
                     break;
 
                 case 5:
-                    DBConnection.closeConnection(Service.action.con, Service.action.statement, null);  // 流啊 连接啊 这些东西 用完记得关；要么记得还（那么什么地方是需要还的，什么地方是关的）；
+                    input.close();
+                    Service.action.closeConnection();// 流啊 连接啊 这些东西 用完记得关；要么记得还（那么什么地方是需要还的，什么地方是关的）；
                     System.out.println("您已经退出HR简历管理系统");
                     return;
 
