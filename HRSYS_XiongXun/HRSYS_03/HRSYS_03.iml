@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../HRSYS_XiongXun/HRSYS_03/out/production/HRSYS01" />
-    <output-test url="file://$MODULE_DIR$/../../HRSYS_XiongXun/HRSYS_03/out/production/HRSYS01" />
+    <output url="file://$MODULE_DIR$/../../HRSYS_XiongXun/HRSYS_03/out/production/HRSYS_03" />
+    <output-test url="file://$MODULE_DIR$/../../HRSYS_XiongXun/HRSYS_03/out/production/HRSYS_03" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../HRSYS_XiongXun/HRSYS_03">
       <sourceFolder url="file://$MODULE_DIR$/../../HRSYS_XiongXun/HRSYS_03/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-5.1.18.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
