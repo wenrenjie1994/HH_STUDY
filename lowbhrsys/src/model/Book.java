@@ -1,7 +1,7 @@
 /**
- * A program for JAVA��һ�ڿ���ҵ---ͼ�����ϵͳ
+ * A program for JAVA第一节课作业---图书管理系统
  * @version 1.2 2016-03-11
- * @author ���ʽ� 2014214225
+ * @author 文仁杰 2014214225
  */
 package model;
 

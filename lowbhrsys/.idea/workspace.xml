@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="419271f3-3c45-4e95-8253-10c18e1dd665" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/HR_SYS/HR_SYS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/HR_SYS/src/bean/JobHunter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/HR_SYS/src/bean/JobHunterOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/HR_SYS/src/sys/HRS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/out/production/HR_SYS/bean/JobHunter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/out/production/HR_SYS/bean/JobHunterOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HRS_V1/out/production/HR_SYS/sys/HRS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java笔记/java第一章/java第一章.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/library05/LMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/library05/LMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BookService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1eWS7XKNjrIqNEX8qfH1mEXOcNg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HRS_QR_VERSION" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="419271f3-3c45-4e95-8253-10c18e1dd665" name="Default Changelist" comment="" />
+      <created>1594435689031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594435689031</updated>
+      <workItem from="1594435693129" duration="2464000" />
+      <workItem from="1594610762384" duration="331000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

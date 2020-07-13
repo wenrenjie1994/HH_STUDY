@@ -1,7 +1,7 @@
 /**
- * A program for JAVAµÚÒ»½Ú¿Î×÷Òµ---Í¼Êé¹ÜÀíÏµÍ³
+ * A program for JAVAç¬¬ä¸€èŠ‚è¯¾ä½œä¸š---å›¾ä¹¦ç®¡ç†ç³»ç»Ÿ
  * @version 1.2 2016-03-11
- * @author ÎÄÈÊ½Ü 2014214225
+ * @author æ–‡ä»æ° 2014214225
  */
 package library05;
 import java.util.LinkedList;
@@ -16,16 +16,16 @@ public class LMS
 
 		LinkedList<Book> bookList = new LinkedList<Book>();
 		Scanner input = new Scanner(System.in);
-		DataOperate.loadData(bookList);//ÏÂÔØËùÓĞÍ¼Êé
+		DataOperate.loadData(bookList);//ä¸‹è½½æ‰€æœ‰å›¾ä¹¦
 		while(true)
 		{
-			System.out.println("************»¶Ó­À´µ½³ÂÀÏ°åÍ¼Êé¹ÜÀíÏµÍ³************");
-			System.out.println("Ôö¼ÓÍ¼ÊéÇë°´----------1");
-			System.out.println("É¾³ıÍ¼ÊéÇë°´----------2");
-			System.out.println("ĞŞ¸ÄÍ¼ÊéÇë°´----------3");
-			System.out.println("²éÑ¯Í¼ÊéÇë°´----------4");
-			System.out.println("ÍË³öÇë°´--------------5");
-		//ifÓï¾äÖ¸ÁîÅĞ¶Ï
+			System.out.println("************æ¬¢è¿æ¥åˆ°é™ˆè€æ¿å›¾ä¹¦ç®¡ç†ç³»ç»Ÿ************");
+			System.out.println("å¢åŠ å›¾ä¹¦è¯·æŒ‰----------1");
+			System.out.println("åˆ é™¤å›¾ä¹¦è¯·æŒ‰----------2");
+			System.out.println("ä¿®æ”¹å›¾ä¹¦è¯·æŒ‰----------3");
+			System.out.println("æŸ¥è¯¢å›¾ä¹¦è¯·æŒ‰----------4");
+			System.out.println("é€€å‡ºè¯·æŒ‰--------------5");
+		//ifè¯­å¥æŒ‡ä»¤åˆ¤æ–­
 			int choice =input.nextInt();
 			if(choice==1)
 			{
@@ -49,9 +49,9 @@ public class LMS
 				break;
 			}
 			else {
-				System.out.println("ÊäÈë´íÎó£¬ÇëÈ·ÈÏºó´ÓĞÂÊäÈë");
+				System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·ç¡®è®¤åä»æ–°è¾“å…¥");
 			}
 		}
-		System.out.println("ÄúÒÑÍË³öÍ¼Êé¹ÜÀíÏµÍ³");
+		System.out.println("æ‚¨å·²é€€å‡ºå›¾ä¹¦ç®¡ç†ç³»ç»Ÿ");
 	}
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="acd40beb-4a93-4996-b256-301c52966e53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lowbhrsys/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/library05/LMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/library05/LMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowbhrsys/src/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowbhrsys/src/service/BookService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/lowbhrsys3">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eaBKc9FpJJ6dy6PP6jbx4IKO6R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lowbhrsys3" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="acd40beb-4a93-4996-b256-301c52966e53" name="Default Changelist" comment="" />
+      <created>1594549760684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594549760684</updated>
+      <workItem from="1594549766658" duration="1194000" />
+      <workItem from="1594552019219" duration="1890000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="30" key="FileChooserDialogImpl" timestamp="1594552426389">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="30" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594552426389" />
+    <state x="287" y="44" key="NewModule_or_Project.wizard" timestamp="1594552436939">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="287" y="44" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1594552436939" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1594552441603">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594552441603" />
+  </component>
+</project>

@@ -7,23 +7,23 @@ public class BookService
 {
 	public static void addBook(LinkedList<Book> bookList)
 	{
-		System.out.println("»¶Ó­À´µ½Ìí¼ÓÍ¼Êé½çÃæ");
+		System.out.println("æ¬¢è¿æ¥åˆ°æ·»åŠ å›¾ä¹¦ç•Œé¢");
 		Scanner input = new Scanner(System.in);
-		System.out.println("ÇëÒÀ´ÎÊäÈëĞèÒªÌí¼ÓÍ¼ÊéÃû£¬×÷Õß£¬¼Û¸ñ");
+		System.out.println("è¯·ä¾æ¬¡è¾“å…¥éœ€è¦æ·»åŠ å›¾ä¹¦åï¼Œä½œè€…ï¼Œä»·æ ¼");
 		String bookName =input.nextLine();
 		String bookAuthor =input.nextLine();
 		float bookPrice =input.nextFloat();
 		Book book= new Book(bookName,bookAuthor,bookPrice);
 		bookList.add(book);
-		System.out.println("ÄúÒÑ³É¹¦Ìí¼ÓÍ¼Êé");
+		System.out.println("æ‚¨å·²æˆåŠŸæ·»åŠ å›¾ä¹¦");
 		showBook(bookList);
 	}
 
 	public static void deleteBook(LinkedList<Book> bookList)
 	{
 		Scanner input = new Scanner(System.in);
-		System.out.println("»¶Ó­À´µ½É¾³ıÍ¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒªÉ¾³ıµÄÍ¼ÊéÃû");
+		System.out.println("æ¬¢è¿æ¥åˆ°åˆ é™¤å›¾ä¹¦ç•Œé¢");
+		System.out.println("è¯·è¾“å…¥éœ€è¦åˆ é™¤çš„å›¾ä¹¦å");
 		String bookName =input.nextLine();
 		int bookCount = bookList.size();
 		for(int i=0;i<bookCount;i++)
@@ -31,11 +31,11 @@ public class BookService
 			if(bookList.get(i).bookName.equals(bookName))
 			{
 				bookList.remove(i);
-				System.out.println("ÄúÒÑ³É¹¦É¾³ıÍ¼Êé");
+				System.out.println("æ‚¨å·²æˆåŠŸåˆ é™¤å›¾ä¹¦");
 				break;
 			}
 			else if(i==bookCount-1) {
-				System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
+				System.out.println("æ²¡æœ‰æŸ¥æ‰¾åˆ°è¯¥ä¹¦ç±");
 			}
 		}
 		 showBook(bookList);
@@ -45,42 +45,42 @@ public class BookService
 	public static void updateBook(LinkedList<Book> bookList)
 	{
 		Scanner input = new Scanner(System.in);
-		System.out.println("»¶Ó­À´µ½ĞŞ¸ÄÍ¼Êé½çÃæ");
-		System.out.println("ÇëÊäÈëĞèÒªĞŞ¸ÄµÄÍ¼ÊéÃû");
+		System.out.println("æ¬¢è¿æ¥åˆ°ä¿®æ”¹å›¾ä¹¦ç•Œé¢");
+		System.out.println("è¯·è¾“å…¥éœ€è¦ä¿®æ”¹çš„å›¾ä¹¦å");
 		String bookName=input.nextLine();
 		int bookCount = bookList.size();
 		for(int i=0;i<bookCount;i++)
 		{
 			if(bookList.get(i).bookName.equals(bookName))
 			{
-				System.out.println("ÇëÒÀ´ÎÊäÈëĞÂµÄÊéÃû£¬×÷Õß£¬¼Û¸ñ");
+				System.out.println("è¯·ä¾æ¬¡è¾“å…¥æ–°çš„ä¹¦åï¼Œä½œè€…ï¼Œä»·æ ¼");
 				String newbookName=input.nextLine();
 				String newbookAuthor=input.nextLine();
 				float newbookPrice=input.nextFloat();
 				Book book=new Book(newbookName,newbookAuthor,newbookPrice);
 				bookList.set(i, book);
-				System.out.println("ÄúÒÑ³É¹¦ĞŞ¸Ä³É¹¦");
+				System.out.println("æ‚¨å·²æˆåŠŸä¿®æ”¹æˆåŠŸ");
 				showBook(bookList);
 			}
 			else if(i==bookCount-1||bookCount==0) {
-				System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
+				System.out.println("æ²¡æœ‰æŸ¥æ‰¾åˆ°è¯¥ä¹¦ç±");
 			}
 		}
-		System.out.println("Ã»ÓĞ²éÕÒµ½¸ÃÊé¼®");
+		System.out.println("æ²¡æœ‰æŸ¥æ‰¾åˆ°è¯¥ä¹¦ç±");
 	}
 
 	public static void showBook(LinkedList<Book> bookList)
 	{
 		Scanner input = new Scanner(System.in);
-		System.out.println("ÊÇ·ñĞèÒª´òÓ¡ËùÓĞÍ¼Êé£¬ÊÇÇëÊäÈëY£¬²»ÓÃ´òÓ¡ÔòÊäÈëÈÎÒâ");
+		System.out.println("æ˜¯å¦éœ€è¦æ‰“å°æ‰€æœ‰å›¾ä¹¦ï¼Œæ˜¯è¯·è¾“å…¥Yï¼Œä¸ç”¨æ‰“å°åˆ™è¾“å…¥ä»»æ„");
 		String XUANZE=input.nextLine();
 		String Y ="Y";
 		if(XUANZE.equals(Y))
 		{
-			System.out.println("±¾Í¼Êé¹ÜÀíÏµÍ³¹²ÓĞ"+bookList.size()+"±¾Êé");
+			System.out.println("æœ¬å›¾ä¹¦ç®¡ç†ç³»ç»Ÿå…±æœ‰"+bookList.size()+"æœ¬ä¹¦");
 			int bookCount = bookList.size();
 			for(int i=0;i<bookCount;i++) {
-				System.out.println("µÚ"+(i+1)+"±¾"+"---------"+"<<"+bookList.get(i).bookName+">>");
+				System.out.println("ç¬¬"+(i+1)+"æœ¬"+"---------"+"<<"+bookList.get(i).bookName+">>");
 			}
 		}
 	}
