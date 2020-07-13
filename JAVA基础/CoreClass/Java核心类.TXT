@@ -1,25 +1,91 @@
 String:
-	*java���ַ��������ػ��ƣ�������һ���µ�String����������������У��򲻻���������һ�����󣬶��������Ѿ����ڵĶ���
-	*java�ж�����Ŷ���ջ����Ŷ��������
-	*�ַ������ɱ䣺private final char[]�����󲻿ɱ䣬���ÿ������¸�ֵ
-		ԭ�򣺳�������Ҫ��Ч���Ż�����ȫ������
-	*�ַ����Ƚϣ�equals()�����Դ�СдequalsIgnoreCase();
-	*�����ַ�����contains();
-	*��ȡ�ַ�����substring();
-	*ȥ����β�ַ�����trim();�õ�һ���µ��ַ���
-	*�Ƴ���β�ַ�����strip();
-	*�ж�Ϊ�գ�isEmpty();
-	*�ж�Ϊ�հ��ַ���:��isBlack()��
-	*�滻�ַ�����repalce();�������ʽreplaceAll();
-	*�ָ��ַ������������ʽsplit();
-	*ƴ���ַ�����join();ƴ���ַ������飻StringJoiner()
-	*��ʽ���ַ�����formatted();format()
-	*����ת����
-		��������ת�ַ�����valueOf()
-		�ַ���ת�������ͣ�parseInt();parseBoolean()
-		Stringתchar[]��toCharArray()
-		char[]תString��new String(...);
+	*java有字符串常量池机制，即创建一个新的String对象，如果常量池中有，则不会真正创建一个对象，而是引用已经存在的对象
+	*java中堆区存放对象，栈区存放对象的引用
+	*字符串不可变：private final char[]，对象不可变，引用可以重新赋值
+		原因：常量池需要；效率优化；安全性问题
+	*字符串比较：equals()；忽略大小写equalsIgnoreCase();
+	*搜索字符串：contains();
+	*提取字符串：substring();
+	*去除首尾字符串：trim();得到一个新的字符串
+	*移除首尾字符串：strip();
+	*判断为空：isEmpty();
+	*判断为空白字符串:：isBlack()；
+	*替换字符串：repalce();正则表达式replaceAll();
+	*分割字符串：正则表达式split();
+	*拼接字符串：join();拼接字符串数组；StringJoiner()
+	*格式化字符串：formatted();format()
+	*类型转换：
+		其他类型转字符串：valueOf()
+		字符串转其他类型：parseInt();parseBoolean()
+		String转char[]：toCharArray()
+		char[]转String：new String(...);
+
 StringBuilder:
-	*���ã�����ƴ���ַ���
-		�ɱ����Ԥ���仺��������StringBuilder�������ַ�ʱ�����ᴴ���µ���ʱ����
-	*�ɽ�����ʽ������ͨ��������this����������ʵ��
+	*作用：快速拼接字符串
+		可变对象，预分配缓冲区，往StringBuilder中新增字符时，不会创建新的临时对象
+	*可进行链式操作：通过带返回this，调用自身实现
+
+包装类型：
+	*int=>Integer
+	*boolean=>Boolean
+	*byte=>Byte
+	*short=>Short
+	*long=>Long
+	*float=>Float
+	*double=>Double
+	*char=>Character
+	*（只发生在编译阶段）基本类型和包装类型之间可以自动转换=》自动装箱/自动拆箱（auto boxing/auto unboxing）
+	*装箱和拆箱会影响代码执行效率
+	*所有包装类型都是不变类不能用“==”进行比较，因为是引用类型，所以比较需要equals()
+	*创建新对象时，优先选用静态工厂方法（Integer.valueOf）而不是new操作符。
+	*包装类型可以将字符串解析成一个整数，并且可以进行进制转换(如parseInt)
+	*java没有无符号数据类型，可以通过包装类型处理无符号类型（Byte.toUnsignedInt()）
+	
+JavaBean：
+	*实例字段为private，读写示例字段的方法为public
+	*JavaBean主要用来传递数据，即把一组数据组合成一个JavaBean便于传输。
+	*JavaBean可以方便地被IDE工具分析，生成读写属性的代码，主要用在图形界面的可视化设计中。
+	*枚举JavaBean属性：Introspector.getBeanInfo(..class..)
+	
+枚举类：
+	*enum
+	*enum常量本身带有类型信息，编译器会自动检查出类型错误。
+	*不可能引用到非枚举的值，因为无法通过编译
+	*不同类型的枚举不能互相比较或者赋值，因为类型不符
+	*同类型枚举比较：引用类型（equals()）
+	*如果使用==比较，它比较的是两个引用类型的变量是否是同一个对象
+	*引用类型比较，要始终使用equals()方法，但enum类型可以例外
+	*
+		**定义的enum类型总是继承自java.lang.Enum，且无法被继承；
+		**只能定义出enum的实例，而无法通过new操作符创建enum的实例；
+		**定义的每个实例都是引用类型的唯一实例；
+		**可以将enum类型用于switch语句。
+	*返回常量名name()
+	*返回定义常量的顺序，从0开始计数ordinal()
+
+记录类：（java 14后的feature）
+	*record
+	*定义不变类
+	*可以编写Compact Constructor对参数进行验证；
+	*可以定义静态方法。
+	
+BigInteger：
+	*模拟大整数
+	*BigInteger是不变类，并且继承自Number；
+	*将BigInteger转换成基本类型时可使用longValueExact()等方法保证结果准确。
+	
+BigDecimal：
+	*任意大小浮点数
+	*BigDecimal用scale()表示小数位数
+	*通过stripTrailingZeros()方法，去掉末尾无效的0
+	*使用equals()方法不但要求两个BigDecimal的值相等，还要求它们的scale()相等，因此常使用compareTo()比较两个BigDecimal的大小
+	*compareTo根据两个值的大小分别返回负数、正数和0，分别表示小于、大于和等于
+
+常用工具类：
+	*Math：abs;max,min;pow;sqrt;exp;log;log10;sin,cos...;PI;E;random(0,1);
+	*Random：生成伪随机数
+	*SecureRandom：生成安全的随机数
+	
+异常处理：
+	
+	
