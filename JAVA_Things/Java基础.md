@@ -1,8 +1,24 @@
 # Java学习笔记(SE)
 
-## Day 1
+## 一些基础
 
-### 卸载JDK
+1. 查看IP地址
+
+   ``ipconfig``
+
+   ``ipconfig /all``
+
+2. 两台计算机能否正常通信
+
+   ``ping IP地址``
+
+   ``ping 域名``
+
+   ``ping IP地址 -t``			#forever    ``Ctrl + c``强行终止
+
+
+
+## 卸载JDK
 
 1. 删除Java的安装目录
 2. 删除JAVA_HOME
@@ -11,7 +27,7 @@
 
 
 
-### 安装JDK
+## 安装JDK
 
 1. 下载JDK8（企业使用的版本）
 2. 安装电脑对应版本，记住安装路径
@@ -23,11 +39,11 @@
 
 
 
-### notepad++
+## notepad++
 
 
 
-### 第一个程序
+## 第一个程序
 
 1. 新建一个java文件
 
@@ -50,13 +66,13 @@
    }
    ```
 
-3. 编译java文件，生成c一个lass文件
+3. 编译java文件，生成一个class文件
 
-   javac java文件
+   *``javac java文件的路径``*
 
 4. 运行class文件 
 
-   java class文件
+   *``java className``*			#不含.class
 
 >+ Java是大小写敏感的
 >+ 尽量使用英文
@@ -64,43 +80,169 @@
 
 
 
-### Java基础
+## Java基础00
 
-#### 注释
+### 注释
 
 + 单行注释
 
+  ``// AlohaWorld``
+
 + 多行注释
+
+  ```java
+  /*
+  AlohaWorld
+  */
+  ```
 
 + 文档注释
 
+  ```java
+  /**
+  * class infomation
+  * @version 1.0
+  * @author ChenglLiu
+  * ...
+  */
+  ```
+
+  **JavaDoc**
+
+  + javadoc命令用来生成自己API文档
+  + 参数信息
+    - @author 作者名
+    - @version 版本号
+    - @since 指明需要最早使用的jdk版本
+    - @param 参数名
+    - @return 返回值情况
+    - @throws 异常抛出情况
+  + 命令行打开doc文件
+
+  ```java
+  javadoc -encoding UTF-8 -charset UTF-8 Doc.java
+  ```
+
+  + 使用IDEA生成javaDoc文档
+
+    [IDEA生成Javadoc文档]([https://blog.csdn.net/weixin_42140580/article/details/89635775?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159170359019726869024446%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=159170359019726869024446&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-89635775.first_rank_ecpm_v1_pc_rank_v3&utm_term=IDEA%E7%94%9F%E6%88%90Javadoc%E6%96%87%E6%A1%A3](https://blog.csdn.net/weixin_42140580/article/details/89635775?ops_request_misc=%7B%22request%5Fid%22%3A%22159170359019726869024446%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&request_id=159170359019726869024446&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-89635775.first_rank_ecpm_v1_pc_rank_v3&utm_term=IDEA生成Javadoc文档))
+
   **书写注释很重要**
 
-#### 标识符
+### 类体
 
-1. 关键词
+> Java中有效的代码必须在“类体”中，最外层是一个类的定义
+>
+> **类体中放方法，不能直接放Java语句**
+>
+> **一个Java文件可以有多个类，但只能有一个public修饰的类且该类要与文件名相同**
+>
+> + for example：有一个test.java文件
+>
+> ```java
+> class A {
+>     
+> }
+> public class B {
+>     
+> }
+> ```
+>
+> > 编译报错 class B is public，应该在B.java文件中声明
+>
+> 一个Java程序需要一个main方法，没有main方法可以编译通过，但是不能执行
 
-   > abstract	assert	boolean	break	byte
-   >
-   > case	catch	char	class	const	continue
-   >
-   > default	do	double
-   >
-   > else	enum	extends	final	finally	float	for
-   >
-   > goto	if	implments	import	instanceof	int
-   >
-   > interface	long	native	new	package	private
-   >
-   > protected	public	return	strictfp	short	static
-   >
-   > super	switch	synchronized	this	throw	throws
-   >
-   > transient	try	void	volatile	while
 
-2. 标识符以字母、$、_开始
 
-#### 数据类型
+## Java基础01
+
+### 标识符与关键字
+
+#### 1. 关键字
+
+> abstract	assert	boolean	break	byte
+>
+> case	catch	char	class	const	continue
+>
+> default	do	double
+>
+> else	enum	extends	final	finally	float	for
+>
+> goto	if	implments	import	instanceof	int
+>
+> interface	long	native	new	package	private
+>
+> protected	public	return	strictfp	short	static
+>
+> super	switch	synchronized	this	throw	throws
+>
+> transient	try	void	volatile	while
+
+#### 2. 标识符
+
++ 以字母、$、_开始
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        
+    }
+    public static void doSomething() {
+        int k = 100;
+    }
+}
+/*
+标识符：Test、k
+类名：Test
+方法名：doSomething
+*/
+```
+
++ 区分大小写，但若在Java源文件中同时出现A类和a类，谁在前就生成谁
+
++ **命名规范**
+
+  - 见名知义
+
+    标识符测试：``IdentifierTest``
+
+  - ***驼峰命名法***
+
+  - 类名、接口特殊要求
+
+    > 类名和接口名首字母**大写**，后续单词首字母**大写**
+
+  - 变量名和方法名首字母**小写**，后续单词首字母**大写**
+
+  - 常量名**大写**，多个单词用_连接
+
+    ``MAXN_PI``
+
+
+
+### 变量
+
+#### 0. 字面量
+
++ 整数型字面量
++ 浮点型字面量
++ 布尔型字面量
++ 字符型字面量
++ 字符串型字面量
+
+#### 1. 变量
+
++ 数据类型、变量名、数值
+
++ 分类
+
+  > 方法体中声明的变量：局部变量
+  >
+  > 方法体之外，类中声明的变量：成员变量
+
+
+
+### 数据类型
 
 - 强类型语言
 
@@ -110,6 +252,8 @@
 
   - 基本类型
 
+    > **大容量转小容量需要强制类型转换**
+    >
     > byte: 1字节
     >
     > short: 2字节
@@ -118,24 +262,65 @@
     >
     > long: 8字节
     >
-    > float: 4字节
+    > > 整数型字面量默认是 ``int`` 型
+    > >
+    > > 但这个字面量不超过 ``byte/short`` 的取值范围，那么可以直接复制给 ``byte/short``类型的变量
+    > >
+    > > ```java
+  > > byte x = 127;			//ok
+    > > byte y = 128;			//error
+  > > long i = 214783647		//ok
+    > > long j = 214783648		//error
+    > > long j = 214783648L		//ok
+    > > ```
     >
+    > float: 4字节
+  >
     > double: 8字节
+  >
+    > > 字面量默认为 ``double`` 类型
+    > >
+    > > ```java
+    > > float i = 3.14;			//error
+    > > double j = 3.1415936;
+    > > float k = 3.14F;		//ok
+    > > ```
     >
     > char: 2字节
     >
+    > > ``byte char short``做混合运算时，均转换为 ``int`` 再做运算
+    > >
+    > > ```java
+    > > int i = 98;
+    > > short x = i;			//error
+    > > short x1 = (short)i;	//ok
+    > > short y = 98;			//ok
+    > > ```
+    >
     > boolean: 1bit
-
+    >
+    > > **不同于 ``C/C++`` 无法用 ``0 1`` 表示布尔类型**
+    >
+    > + 原码：
+    > + 反码：符号位变，数字位取反
+    > + 补码：符号位不变，数字位取反加1
+  
+  - 转义字符
+  
+    - 制表符 ``/t``		#Tab键
+    - 换行符 ``\n``
+    - 输出``" ' \`` 用 ``\`` 转义 
+    
   - 引用类型
-
+  
     > 类
     >
     > 接口
     >
     > 数组
-
+  
   - 类型转换
-
+  
     > 强制类型转换：高---->低
     >
     > 自动类型转换：低---->高
@@ -144,9 +329,29 @@
 
 
 
----
+### 运算符
 
-## Day 2
++ 算术运算
+
++ 关系运算
+
++ 逻辑运算
+
+  > - 逻辑与 ``&``	逻辑或 ``|``
+  >
+  > - 短路与 ``&&``  短路或 ``||``   
+
++ 赋值运算
+
++ 三目运算
+
++ 字符串连接运算符
+
+  ``+``  字符串拼接
+
+
+
+## Java基础02
 
 ### 包机制
 
@@ -168,60 +373,39 @@
 
 
 
----
-
-### JavaDoc
-
-+ javadoc命令用来生成自己API文档
-+ 参数信息
-  - @author 作者名
-  - @version 版本号
-  - @since 指明需要最早使用的jdk版本
-  - @param 参数名
-  - @return 返回值情况
-  - @throws 异常抛出情况
-+ 命令行打开doc文件
-
-```java
-javadoc -encoding UTF-8 -charset UTF-8 Doc.java
-```
-
-+ 使用IDEA生成javaDoc文档
-
-  [IDEA生成Javadoc文档]([https://blog.csdn.net/weixin_42140580/article/details/89635775?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159170359019726869024446%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=159170359019726869024446&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-89635775.first_rank_ecpm_v1_pc_rank_v3&utm_term=IDEA%E7%94%9F%E6%88%90Javadoc%E6%96%87%E6%A1%A3](https://blog.csdn.net/weixin_42140580/article/details/89635775?ops_request_misc=%7B%22request%5Fid%22%3A%22159170359019726869024446%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&request_id=159170359019726869024446&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-89635775.first_rank_ecpm_v1_pc_rank_v3&utm_term=IDEA生成Javadoc文档))
-
-
-
-----
-
 ### Java流程控制
 
 #### 用户交互Scanner
 
-**Scanner对象**
++ **Scanner对象**
+  + ``java.util.Scanner``是Java5的新特征，通过Scanner类来获取用户的输入
 
-+ ``java.util.Scanner``是Java5的新特征，通过Scanner类来获取用户的输入
-
-+ 基本语法
+  + 基本语法
 
   ```java
   Scanner s = new Scanner(System.in);
   ```
 
-+ 通过Scanner类的``next()``与``nextLine()``方法获取输入的字符串，在读取前一半需要使用``hasNext()``与``hasNextLine()``判断是否还有输入的数据
+  + 通过Scanner类的``next()``与``nextLine()``方法获取输入的字符串，在读取前一半需要使用``hasNext()``与``hasNextLine()``判断是否还有输入的数据
 
-+ next()
-  1. 读取到有效字符才结束输入
-  2. 输入的有效字符前遇到的空格，next()方法会将其自动去掉
-  3. 将有效字符后的空格作为分隔符或者结束符
-  4. **next()不能得到带有空格的字符串**
-+ nextLine()
-  1. 以换行符为结束符
-  2. **能够输入带有空格的字符串**
+  + next()
+
+    - 读取到有效字符才结束输入
+
+    - 输入的有效字符前遇到的空格，next()方法会将其自动去掉
+
+    + 将有效字符后的空格作为分隔符或者结束符
+
+    + **next()不能得到带有空格的字符串**
+
+  + nextLine()
+
+    + 以**换行符**为结束符
+    + **能够输入带有空格的字符串**
 
 
 
------
+## Java基础03
 
 ### 方法
 
@@ -270,7 +454,6 @@ javadoc -encoding UTF-8 -charset UTF-8 Doc.java
   }
   ```
 
-  
 
 #### 可变参数
 
@@ -296,8 +479,6 @@ public static void printMax(double... numbers) {
 ```
 
 
-
-----
 
 ### 数组
 
@@ -369,19 +550,17 @@ public static void printMax(double... numbers) {
 
 
 
----
-
-## Day 3-5
+## Java基础04
 
 ### 面向对象编程
 
 #### 面向对象 & 面向过程
 
 + 面向过程
-  - 步骤清晰简单
+  - **步骤**清晰简单
   - 简单问题
 + 面向对象
-  - 问题分类
+  - **问题分类**
   - 处理复杂问题
 + **宏观面向对象分析整个系统，微观上面向过程**
 
@@ -397,11 +576,21 @@ public static void printMax(double... numbers) {
 
 
 
-----
-
 ### 类与对象
 
-+ 类是一种抽象的数据类型
+#### 1. 类
+
++ 一种抽象的数据类型
++ 构成：
+  - 属性：成员变量
+  - 方法
+
+#### 2. 对象
+
++ 构造方法
+
+  > 创建对象，初始化实例变量
+
 + 对象是抽象概念的具体实例
 
 #### 创建与初始化对象
@@ -653,8 +842,6 @@ public class Test {
 
 
 
-## Day6
-
 ### 设计原则
 
 #### 消除代码复制
@@ -687,8 +874,6 @@ public class Test {
 + 用Hash Table来保存命令和Handler之间的关系
 
 
-
-## Day7
 
 ### 抽象函数/抽象类
 
@@ -773,13 +958,13 @@ public class Test {
 
 
 
-# Day8
 
-## ``JTable``
+
+### ``JTable``
 
 + 用``JTbale``类可以用表格的形式显示和编辑数据。``JTbale``类的对象并不存储数据，它只是数据的**表现**
 
-## MVC
+### MVC
 
 + 数据、表现、控制三者分离，各负其责
   - M——Model（模型）
@@ -791,9 +976,7 @@ public class Test {
 
 
 
-# Day9
-
-## 捕捉异常
+### 捕捉异常
 
 ```java
 try {
@@ -807,24 +990,16 @@ try {
 }
 ```
 
+#### 异常机制
 
-
-## 异常机制
-
-
-
-##  捕捉异常做什么
+####  捕捉异常做什么
 
 + 拿到异常对象之后
   - ``String getMessage();``
   - ``String toString();``
   - ``void printStackTrace();``
 
-
-
-# Day10
-
-## 用上异常机制
+#### 用上异常机制
 
 ```java
 try {
@@ -846,18 +1021,14 @@ try {
 }
 ```
 
-
-
-## 异常
+#### 异常
 
 + 有不寻常的事情发生了
 + 当这个事情发生时，原本打算要做的事情不能再继续了，必须停下来，让其他地方的某段短发来处理
 
 > 异常机制的最大好处就是清晰地分开了正常的业务逻辑代码和遇到情况时的处理代码
 
-
-
-## 异常声明
+#### 异常声明
 
 + 如果你的函数可能抛出异常，就必须在函数头部加以声明
 
@@ -871,16 +1042,14 @@ try {
   - 把函数的调用放在try块中，并设置catch来捕捉所有可能抛出的异常；或
   - 声明自己会抛出无法处理的异常
 
-
-
-### 异常声明遇到继承关系
+#### 异常声明遇到继承关系
 
 + 当覆盖一个函数的时候，子类不能声明抛出比父类的版本更多的异常
 + 在子类的构造函数中，必须声明父类可能抛出的全部异常
 
 
 
-## 什么能扔
+### 什么能扔
 
 + 任何继承了``Throwable``类的对象
 + ``Exception``类继承了``Throwable``
@@ -889,14 +1058,12 @@ try {
 
 
 
-## catch怎么匹配异常的
+#### catch怎么匹配异常的
 
 + Is-A的关系
 + 就是说，抛出子类异常会被捕捉父类异常的catch给捉住
 
-
-
-## 捕捉任何异常
+#### 捕捉任何异常
 
 ```java
 catch (Exception e) {
@@ -904,20 +1071,16 @@ catch (Exception e) {
 }
 ```
 
-
-
-## 运行时刻异常
+#### 运行时刻异常
 
 + 像``ArrayIndexOutOfBoundsException``这样的异常是不需要声明的
 + 但是没有适当的机制来捕捉，就会最终导致程序终止
 
 
 
-# Day11
+### 流
 
-## 流
-
-### 流是输入输出的方式
+#### 流是输入输出的方式
 
 + 流是一维单向的
 + ``stream``
@@ -929,14 +1092,14 @@ catch (Exception e) {
 > * ``println``：out成员可以做的事情
 > * ``out``：某种用来做输出的流
 
-## 流的基础类
+#### 流的基础类
 
 + ``InputStream``
 + ``OutputStream``
 
 
 
-## 文件流
+### 文件流
 
 + ``FileInputStream``
 + ``FileOutputStream``
@@ -945,14 +1108,12 @@ catch (Exception e) {
   - 更常用的是以在内存数据或通信数据上建立的流，如数据库的二进制数据读写或网络端口通信
   - 具体的文件读写往往有更专业的类，比如配置文件和日志文件
 
-
-
-## Reader & Writer
+#### Reader & Writer
 
 + 二进制数据采用``InputStream/OutStreamStream``
 + 文本数据采用``Reader/Writer``
 
-### 在流上建立文本处理
+#### 在流上建立文本处理
 
 ```java
 PrintWriter pw = new PrintWriter (
