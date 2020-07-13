@@ -48,7 +48,7 @@ public class DepTest {
          * @date 2020/6/17 13:05
          */
         Longyx longyx = new Longyx();
-        longyx.setiCourse(new JavaCourse());
+        longyx.setCourse(new JavaCourse());
         longyx.study();
 
     }

@@ -7,7 +7,6 @@ package com.spdb.study.design.pattern.interpreter.calculate;
 public class NumInterpreter implements ArithmeticInterpreter {
     private int value;
 
-
     public NumInterpreter(int value) {
         this.value = value;
     }

@@ -20,7 +20,7 @@ public class OpenCloseTest {
          * @author Mr.Longyx
          * @date 2020/6/16 23:25
          */
-        IProduct iProduct = new ShoeDisCountProduct(1,"运动鞋",new BigDecimal(998.98));
+        Product iProduct = new ShoeDisCountProduct(1,"运动鞋",new BigDecimal(998.98));
         ShoeDisCountProduct disCountProduct = (ShoeDisCountProduct) iProduct;
 
         System.out.println("鞋ID: "+disCountProduct.getId() +

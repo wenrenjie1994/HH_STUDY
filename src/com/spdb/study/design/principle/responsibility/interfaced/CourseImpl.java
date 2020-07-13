@@ -4,7 +4,7 @@ package com.spdb.study.design.principle.responsibility.interfaced;
  * @author Mr.Longyx
  * @date 2020年06月17日 14:34
  */
-public class CourseImpl implements ICourseInfo,ICourseManage{
+public class CourseImpl implements CourseInfo, CourseManage {
     @Override
     public String getCourseName() {
         return null;

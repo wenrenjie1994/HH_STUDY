@@ -8,7 +8,7 @@ package com.spdb.study.design.pattern.factory.abstractfactory.course;
  */
 public class AbstractFactoryTest {
     public static void main(String[] args) {
-        ICourseFactory factory = new JavaCourseFactory();
+        CourseFactory factory = new JavaCourseFactory();
         factory.createCourse().getCourse();
         factory.createNote();
         factory.createScore();

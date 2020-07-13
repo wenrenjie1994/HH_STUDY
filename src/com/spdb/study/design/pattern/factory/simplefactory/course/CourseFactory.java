@@ -45,10 +45,10 @@ public class CourseFactory {
      * @date 2020/6/21 14:16
      */
 
-    public ICourse choice(Class<?> clazz) {
+    public Course choice(Class<?> clazz) {
         try {
             if (null != clazz) {
-                return (ICourse) clazz.newInstance();
+                return (Course) clazz.newInstance();
             }
         } catch (Exception e) {
             e.printStackTrace();

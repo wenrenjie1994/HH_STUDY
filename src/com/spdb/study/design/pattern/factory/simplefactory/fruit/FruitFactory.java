@@ -28,7 +28,7 @@ public class FruitFactory {
      * @author Mr.Longyx
      * @date 2020/6/21 14:59
      */
-    public static IFruit collectFruit(String type){
+    public static Fruit collectFruit(String type){
         if (type.equalsIgnoreCase("apple")) {
             try {
                 return Apple.class.newInstance();
@@ -52,7 +52,7 @@ public class FruitFactory {
      * @author Mr.Longyx
      * @date 2020/6/21 15:06
      */
-    public static IFruit collectFruit(Class<?> clazz) throws IllegalAccessException, InstantiationException {
-        return (IFruit)clazz.newInstance();
+    public static Fruit collectFruit(Class<?> clazz) throws IllegalAccessException, InstantiationException {
+        return (Fruit)clazz.newInstance();
     }
 }

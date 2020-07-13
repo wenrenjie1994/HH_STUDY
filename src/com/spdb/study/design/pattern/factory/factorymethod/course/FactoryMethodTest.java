@@ -1,6 +1,6 @@
 package com.spdb.study.design.pattern.factory.factorymethod.course;
 
-import com.spdb.study.design.pattern.factory.simplefactory.course.ICourse;
+import com.spdb.study.design.pattern.factory.simplefactory.course.Course;
 
 /**
  * 工厂方法模式：不同的产品用不同的工厂去创建，不同的工厂负责差异化的创建逻辑
@@ -12,8 +12,8 @@ import com.spdb.study.design.pattern.factory.simplefactory.course.ICourse;
  */
 public class FactoryMethodTest {
     public static void main(String[] args) {
-        ICourseFactory factory = new PythonCourseFactory();
-        ICourse course = factory.create();
+        CourseFactory factory = new PythonCourseFactory();
+        Course course = factory.create();
         course.getCourse();
     }
 }

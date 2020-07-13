@@ -1,26 +1,26 @@
 package com.spdb.study.design.pattern.factory.abstractfactory.course;
 
-import com.spdb.study.design.pattern.factory.simplefactory.course.ICourse;
+import com.spdb.study.design.pattern.factory.simplefactory.course.Course;
 import com.spdb.study.design.pattern.factory.simplefactory.course.JavaCourse;
 
 /**
  * @author Mr.Longyx
  * @date 2020年06月21日 17:01
  */
-public class JavaCourseFactory implements ICourseFactory {
+public class JavaCourseFactory implements CourseFactory {
 
     @Override
-    public ICourse createCourse() {
+    public Course createCourse() {
         return new JavaCourse();
     }
 
     @Override
-    public INote createNote() {
+    public Note createNote() {
         return new JavaNote();
     }
 
     @Override
-    public IScore createScore() {
+    public Score createScore() {
         return new JavaScore();
     }
 }

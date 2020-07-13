@@ -46,8 +46,8 @@ public class FruitFactoryTest {
      * @date 2020/6/21 15:13
      */
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
-        IFruit apple = FruitFactory.collectFruit(Apple.class);
-        IFruit banana = FruitFactory.collectFruit(Banana.class);
+        Fruit apple = FruitFactory.collectFruit(Apple.class);
+        Fruit banana = FruitFactory.collectFruit(Banana.class);
         apple.collect();
         banana.collect();
     }

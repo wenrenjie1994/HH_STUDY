@@ -23,21 +23,21 @@ public class Longyx {
      *         System.out.println("龙远栩正在学习AI课程");
      *     }
      */
-//    public void study(ICourse item){
+//    public void study(Course item){
 //        item.study();
 //    }
 
-    private ICourse iCourse;
+    private Course course;
 
-//    public Longyx(ICourse iCourse){
-//        this.iCourse = iCourse;
+//    public Longyx(Course course){
+//        this.course = course;
 //    }
 
     public void study(){
-        iCourse.study();
+        course.study();
     }
 
-    public void setiCourse(ICourse iCourse) {
-        this.iCourse = iCourse;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }

@@ -44,7 +44,7 @@ public class SimpleFactoryTest {
          */
 
         CourseFactory factory = new CourseFactory();
-        ICourse course = factory.choice(PythonCourse.class);
+        Course course = factory.choice(PythonCourse.class);
         course.getCourse();
     }
 }
