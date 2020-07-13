@@ -88,7 +88,7 @@ public class Resume {
         this.deleteStatus=0;
     }
 
-    public Resume(String name, String id, String school, int process, int deleteStatus) {
+    public Resume(String id, String name, String school, int process, int deleteStatus) {
         this.name = name;
         this.id = id;
         this.school = school;
