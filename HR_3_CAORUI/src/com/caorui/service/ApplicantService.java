@@ -2,10 +2,9 @@ package com.caorui.service;
 
 
 import com.caorui.bean.Applicant;
-import com.caorui.data.DataControl;
+import com.caorui.dao.ApplicantDao;
 
 import java.io.*;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class ApplicantService {
@@ -15,8 +14,10 @@ public class ApplicantService {
         String name = sc.nextLine();//获得学生姓名
         System.out.println("输入招聘者身份证号");
         String id = sc.nextLine();//获得学生身份证号
+        System.out.println("输入招聘者学校");
+        String school = sc.nextLine();
 
-        Applicant ap = new Applicant(name, id);//创建一个学生对象
+        Applicant ap = new Applicant(name, id,school);//创建一个学生对象
 
         ApplicantDao dao = new ApplicantDao();
         int i = dao.insert(ap);
@@ -47,8 +48,7 @@ public class ApplicantService {
         int process = Integer.parseInt(sc.nextLine());
 
         //创建一个ap对象
-        Applicant ap = new Applicant(name, id);
-        ap.setSchool(school);
+        Applicant ap = new Applicant(name, id,school);
         ap.setProcess(process);
         ApplicantDao dao = new ApplicantDao();
         if (dao.update(ap) == 1) {

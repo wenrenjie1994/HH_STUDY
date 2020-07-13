@@ -1,4 +1,4 @@
-package com.caorui.service;
+package com.caorui.dao;
 
 import com.caorui.bean.Applicant;
 
@@ -25,28 +25,19 @@ public class ApplicantDao {
     }
 
     public int insert(Applicant applicant) {
-        Connection conn = getConnection();
+
         int count = 0;
         //4、定义sql
         String name = applicant.getName();
         String id = applicant.getId();
-        String sql = "insert into app values('" + name + "','" + id + "',null,0,1)";
+        String sql = "insert into app values('" + name + "','" + id + "','" + applicant.getSchool() + "',0,1)";
         // 5、获取执行sql语句的对象 statement
-        Statement statement = null;
-        try {
-            statement = conn.createStatement();
+
+        try (Connection conn = getConnection(); Statement statement = conn.createStatement();) {
             //6、执行sql。接收返回结果
             count = statement.executeUpdate(sql);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        } finally {
-            // 释放资源
-            try {
-                statement.close();
-                conn.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
         }
 
         // 7、处理结果
@@ -54,27 +45,16 @@ public class ApplicantDao {
     }
 
     public int delete(String id) {
-        Connection conn = getConnection();
         int count = 0;
         //4、定义sql
         //String sql = "delete from app where id='" + id + "'";
-        String sql = "update  app set "+ "deleteStatus= 0 where id='" + id + "'";
+        String sql = "update  app set " + "deleteStatus= 0 where id='" + id + "'";
         // 5、获取执行sql语句的对象 statement
-        Statement statement = null;
-        try {
-            statement = conn.createStatement();
+        try (Connection conn = getConnection(); Statement statement = conn.createStatement();) {
             //6、执行sql。接收返回结果
             count = statement.executeUpdate(sql);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        } finally {
-            // 释放资源
-            try {
-                statement.close();
-                conn.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
         }
 
         // 7、处理结果
@@ -82,7 +62,6 @@ public class ApplicantDao {
     }
 
     public int update(Applicant ap) {
-        Connection conn = getConnection();
         int count = 0;
         String id = ap.getId();
         String school = ap.getSchool();
@@ -97,21 +76,11 @@ public class ApplicantDao {
                 "where id='" + id + "'";
         System.out.println(sql);
         // 5、获取执行sql语句的对象 statement
-        Statement statement = null;
-        try {
-            statement = conn.createStatement();
+        try (Connection conn = getConnection(); Statement statement = conn.createStatement();) {
             //6、执行sql。接收返回结果
             count = statement.executeUpdate(sql);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        } finally {
-            // 释放资源
-            try {
-                statement.close();
-                conn.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
         }
 
         // 7、处理结果
@@ -119,36 +88,22 @@ public class ApplicantDao {
     }
 
     public Applicant queryId(String id) {
-        Applicant app=null;
-        Connection conn = getConnection();
+        Applicant app = null;
         int count = 0;
         //4、定义sql
         String sql = "select  * from app where id='" + id + "'";
         System.out.println(sql);
         // 5、获取执行sql语句的对象 statement
-        Statement statement = null;
-        try {
-            statement = conn.createStatement();
+        try (Connection conn = getConnection(); Statement statement = conn.createStatement();) {
             //6、执行sql。接收返回结果
-            ResultSet rs= statement.executeQuery(sql);
-            if(rs.next()){
-                id=rs.getString(2);
-                String name=rs.getString(1);
-                app=new Applicant(name,id);
-                app.setSchool(rs.getString(3));
+            ResultSet rs = statement.executeQuery(sql);
+            if (rs.next()) {
+                app = new Applicant(rs.getString(1), rs.getString(2),rs.getString(3));
                 app.setProcess(rs.getInt(4));
                 app.setDeleteStatus(rs.getInt(5));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        } finally {
-            // 释放资源
-            try {
-                statement.close();
-                conn.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
         }
 
         // 7、处理结果

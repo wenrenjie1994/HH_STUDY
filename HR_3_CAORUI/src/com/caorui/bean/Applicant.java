@@ -76,7 +76,8 @@ public class Applicant {
         this.deleteStatus = deleteStatus;
     }
 
-    public  Applicant(String name, String id) {
+    public  Applicant(String name, String id,String school) {
+        this.school=school;
         this.name = name;
         this.id = id;
         this.process=0;
