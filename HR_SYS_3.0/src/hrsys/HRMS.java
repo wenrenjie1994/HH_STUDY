@@ -5,12 +5,12 @@ import bean.Resume;
 import bean.ResumeList;
 import work.Action;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class HRMS {
-    public static void main(String[] args) {
-        //主程序入口
+    public HRMS() {
         Scanner input = new Scanner(System.in);
         while (true) {
             System.out.println("************欢迎进入xxx简历管理系统************");
@@ -283,5 +283,8 @@ public class HRMS {
         }
     }
 
+    public static void main(String[] args) {
+        new HRMS();
+    }
 
 }
