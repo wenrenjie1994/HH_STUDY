@@ -46,6 +46,7 @@ public class HrSys {
 
             }
         }
+        input.close();
         System.out.println("您已退出系统！");
 
     }
