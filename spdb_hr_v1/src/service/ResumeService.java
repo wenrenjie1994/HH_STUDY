@@ -76,7 +76,7 @@ public class ResumeService {
     }
 
     public static void updateResume(LinkedList<Resume> resumeList){
-        System.out.println("欢迎来到修改图书界面");
+        System.out.println("欢迎来到修改简历界面");
         System.out.println("请输入需要修改的id");
         Scanner sc = new Scanner(System.in);
         String id = sc.nextLine();
