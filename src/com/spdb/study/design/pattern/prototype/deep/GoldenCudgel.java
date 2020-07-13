@@ -9,6 +9,7 @@ import java.io.Serializable;
  */
 public class GoldenCudgel implements Serializable {
 
+    private static final long serialVersionUID = 2758859228723585671L;
     public float h = 100;
     public float d = 20;
 
