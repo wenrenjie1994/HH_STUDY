@@ -1,6 +1,20 @@
-1、强化对面向对象中七种软件设计原则的学习和认知
-2、结合算法题巩固Java基础
-3、进一步学习和巩固Java中的23种设计模式，争取能够达到灵活应用，提高代码的复用性和可维护性
-4、在学习过程中进一步强化对反射等知识的掌握，解决一些实际问题
+HRS3.0使用springboot整合mysql开发了增删改查四个后端接口，使用Swagger UI模拟前端进行接口测试。
+踩过的坑如下：
 
-实际需求：执行某个类中全部以test开头的无参数无返回值的非静态方法(反射)
+1.SpringBoot启动提示找不到或无法加载主类
+  解决：rebuild项目
+
+2.报错The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone.
+  原因：mysql时区问题
+  解决：在MySQL的URL后面加上“?serverTimezone=UTC”
+	例如：jdbc:mysql://localhost:3306/spdb?serverTimezone=UTC&characterEncoding=utf-8
+
+3.swagger与springboot版本不一致
+  解决：springboot2.3.1对应swagger2.9.1
+
+4.No identifier specified for entity
+  解决：model的主键字段加 @Id 注释
+
+5.template might not exist or might not be accessible by any of the configured Template Resolvers
+  原因：在controller层请求处理完了返回时，没有使用@RestController或@ResponseBody而返回了非json格式
+  解决：使用@RestController注解
