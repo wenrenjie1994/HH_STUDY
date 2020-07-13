@@ -5,11 +5,12 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/*测试数据库连接是否成功，熟悉使用数据库的方法*/
 public class dbconnection {
     public static void main(String[] args) {
         try
         {
+            //url = "jdbc:mysql://127.0.0.1:3306/mydb1";
             Connection conn =  DBConnection.getConnection();
             Statement statement =conn.createStatement();
             String stringSql ="select *from employee";

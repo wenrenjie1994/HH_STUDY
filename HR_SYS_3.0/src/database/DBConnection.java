@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 public class DBConnection {
-    static final String url = "jdbc:mysql://127.0.0.1:3306/mydb1?useSSL=false";
+    static final String url = "jdbc:mysql://127.0.0.1:3306/hrsysdatabase?useSSL=false";
     static final String name = "com.mysql.jdbc.Driver";
     static final String user = "root";
     static final String password = "root";
