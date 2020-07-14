@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b536198f-b34e-4f7b-a7c0-4487c6effed3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java笔记/java第一章/java第一章.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA_Things/Java_Demo/Java_Demo.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +56,7 @@
       <workItem from="1594559655547" duration="797000" />
       <workItem from="1594608168565" duration="583000" />
       <workItem from="1594623149738" duration="67000" />
+      <workItem from="1594692056131" duration="1066000" />
     </task>
     <servers />
   </component>
@@ -75,6 +76,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="376" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594693519626">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="376" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594693519626" />
     <state x="419" y="98" key="FileChooserDialogImpl" timestamp="1594559553782">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

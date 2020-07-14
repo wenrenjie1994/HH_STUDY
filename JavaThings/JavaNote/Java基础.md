@@ -267,43 +267,48 @@ public class Test {
     > > 但这个字面量不超过 ``byte/short`` 的取值范围，那么可以直接复制给 ``byte/short``类型的变量
     > >
     > > ```java
+    > > 
+    > > ```
   > > byte x = 127;			//ok
-    > > byte y = 128;			//error
+  > > byte y = 128;			//error
   > > long i = 214783647		//ok
-    > > long j = 214783648		//error
-    > > long j = 214783648L		//ok
-    > > ```
-    >
-    > float: 4字节
+  > > long j = 214783648		//error
+  > > long j = 214783648L		//ok
+  > >
+  > > ```
+  > > 
+  > > ```
   >
-    > double: 8字节
+  > float: 4字节
   >
-    > > 字面量默认为 ``double`` 类型
-    > >
-    > > ```java
-    > > float i = 3.14;			//error
-    > > double j = 3.1415936;
-    > > float k = 3.14F;		//ok
-    > > ```
-    >
-    > char: 2字节
-    >
-    > > ``byte char short``做混合运算时，均转换为 ``int`` 再做运算
-    > >
-    > > ```java
-    > > int i = 98;
-    > > short x = i;			//error
-    > > short x1 = (short)i;	//ok
-    > > short y = 98;			//ok
-    > > ```
-    >
-    > boolean: 1bit
-    >
-    > > **不同于 ``C/C++`` 无法用 ``0 1`` 表示布尔类型**
-    >
-    > + 原码：
-    > + 反码：符号位变，数字位取反
-    > + 补码：符号位不变，数字位取反加1
+  > double: 8字节
+  >
+  > > 字面量默认为 ``double`` 类型
+  > >
+  > > ```java
+  > > float i = 3.14;			//error
+  > > double j = 3.1415936;
+  > > float k = 3.14F;		//ok
+  > > ```
+  >
+  > char: 2字节
+  >
+  > > ``byte char short``做混合运算时，均转换为 ``int`` 再做运算
+  > >
+  > > ```java
+  > > int i = 98;
+  > > short x = i;			//error
+  > > short x1 = (short)i;	//ok
+  > > short y = 98;			//ok
+  > > ```
+  >
+  > boolean: 1bit
+  >
+  > > **不同于 ``C/C++`` 无法用 ``0 1`` 表示布尔类型**
+  >
+  > + 原码：
+  > + 反码：符号位变，数字位取反
+  > + 补码：符号位不变，数字位取反加1
   
   - 转义字符
   
@@ -496,6 +501,23 @@ public static void printMax(double... numbers) {
 
 + 获取长度：`` arrays.length``
 
++ 二维数组
+
+  ```java
+  int[][] arr = new int[4][3];
+  //外层元素：arr[0], arr[1]
+  //内层元素：arr[0][0]
+  
+  //外层元素的初始化值：地址值
+  //内层元素的初始化值：与一维数组初始化情况相同
+  
+  int[][] arr = new int[4][];
+  //外层元素的初始化值为：null
+  //内层元素的初始化值为：不能调用，否则报错
+  ```
+
+  
+
 #### 内存分析
 
 + Java内存分析
@@ -541,12 +563,42 @@ public static void printMax(double... numbers) {
 
 + 数组的工具类`` java.util.Arrays``
 + **查看JDK帮助文档**
-+ Arrays类中的方法都是static修饰的静态方法，使用时直接使用类型进行调用
++ Arrays类中的方法都是static修饰的**静态方法**，使用时直接使用类型进行调用
 + 常用功能：
   - 给数组赋值：fill
+  
+    ``void fill(int[] a, int val)``
+  
   - 数组排序：sort，按升序
+  
+    ``void sort[int[] a]``
+  
   - 比较数组：equals，比较数组元素是否相等
+  
+    ``boolean euqals(int[] a, int[] b)``
+  
   - 查找数组元素：binarySearch，对排序好的数组进行二分查找
+  
+    ``int binarySearch(int[] a, int key)``
+  
+  - 输出数组信息
+  
+    ``String toString(int[] a)``
+
+#### 常见异常
+
+1. 数组下标越界异常：``ArrayIndexOutOfBoundsException``
+
+2. 空指针异常：``NullPointerException``
+
+   ```java
+   int[] arr = null;
+   System.out.println(arr[0]);			//exception2
+   
+   int[][] arr2 = new int[4][];
+   Syetem.out.println(arr2[0]);		//output:null
+   System.out.println(arr2[0][0]);		//exception2
+   ```
 
 
 
@@ -556,10 +608,10 @@ public static void printMax(double... numbers) {
 
 #### 面向对象 & 面向过程
 
-+ 面向过程
++ 面向过程(POP)
   - **步骤**清晰简单
   - 简单问题
-+ 面向对象
++ 面向对象(OOP)
   - **问题分类**
   - 处理复杂问题
 + **宏观面向对象分析整个系统，微观上面向过程**
@@ -567,12 +619,19 @@ public static void printMax(double... numbers) {
 #### 面向对象
 
 + Object-Oriented Programming，OOP
+
 + 本质：**以类的方式组织代码，以对象的组织(封装)数据**
+
 + 抽象
+
 + 特性：
   - 封装
   - 继承
   - 多态
+  
++ 关键字
+
+  > ``this、super、static、final、abstract、interface、package、import``
 
 
 
@@ -581,9 +640,18 @@ public static void printMax(double... numbers) {
 #### 1. 类
 
 + 一种抽象的数据类型
+
 + 构成：
-  - 属性：成员变量
-  - 方法
+  - 属性(filed)：成员变量
+  - 方法(method)：可以**调用**当前类中的其他方法/属性
+  - 构造器
+  - 代码块
+  - 内部类
+  - (局部变量：声明在方法中、方法形参、代码块内、构造器形参、构造器内的变量)
+  
++ 权限修饰符
+
+  ``private public 缺省 protected``
 
 #### 2. 对象
 
