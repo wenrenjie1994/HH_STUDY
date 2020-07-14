@@ -20,12 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/HR_SYS_3.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/src/database/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/src/testconnection/dbconnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day09-code/day09-code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/day10-code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo03/threeMember/Demo01Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo03/threeMember/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo03/threeMember/Son.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Demo01Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Demo02Override.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Son.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_3.0/database/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_3.0/database/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_3.0/testconnection/dbconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_3.0/testconnection/dbconnection.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,17 +67,20 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bean" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.dbconnection">
-    <configuration name="TCPClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo03.FileUpload.TCPClient" />
-      <module name="day05-code" />
+  <component name="RunManager" selected="Application.Demo01Method">
+    <configuration name="Demo01ExtendsField (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.MemberVariable.Demo01ExtendsField" />
+      <module name="day10-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo03.FileUpload.*" />
+          <option name="PATTERN" value="demo02.MemberVariable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo01.TCP.TCPClient" />
-      <module name="day05-code" />
+    <configuration name="Demo01Inherit (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.Demo01Inherit" />
+      <module name="day10-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo01.TCP.*" />
+          <option name="PATTERN" value="demo01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TCPServer (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo01.TCP.TCPServer" />
-      <module name="day05-code" />
+    <configuration name="Demo01Inherit (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.extend.Demo01Inherit" />
+      <module name="day10-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo01.TCP.*" />
+          <option name="PATTERN" value="demo01.extend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,13 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.BSTCP.TCPServer" />
-      <module name="day05-code" />
-      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
+    <configuration name="Demo01Member" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo03.threeMember.Demo01Member" />
+      <module name="day10-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.BSTCP.*" />
+          <option name="PATTERN" value="demo03.threeMember.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dbconnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testconnection.dbconnection" />
-      <module name="HR_SYS_3.0" />
+    <configuration name="Demo01Method" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.method.Demo01Method" />
+      <module name="day10-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testconnection.*" />
+          <option name="PATTERN" value="demo04.method.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,19 +141,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TCPClient" />
-      <item itemvalue="Application.TCPClient (2)" />
-      <item itemvalue="Application.TCPServer" />
-      <item itemvalue="Application.TCPServer (3)" />
-      <item itemvalue="Application.dbconnection" />
+      <item itemvalue="Application.Demo01Inherit (1)" />
+      <item itemvalue="Application.Demo01Inherit (2)" />
+      <item itemvalue="Application.Demo01ExtendsField (1)" />
+      <item itemvalue="Application.Demo01Member" />
+      <item itemvalue="Application.Demo01Method" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.dbconnection" />
-        <item itemvalue="Application.TCPServer" />
-        <item itemvalue="Application.TCPClient" />
-        <item itemvalue="Application.TCPServer (3)" />
-        <item itemvalue="Application.TCPClient (2)" />
+        <item itemvalue="Application.Demo01Method" />
+        <item itemvalue="Application.Demo01Member" />
+        <item itemvalue="Application.Demo01ExtendsField (1)" />
+        <item itemvalue="Application.Demo01Inherit (2)" />
+        <item itemvalue="Application.Demo01Inherit (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +175,8 @@
       <workItem from="1594537400110" duration="10581000" />
       <workItem from="1594548132099" duration="411000" />
       <workItem from="1594548570461" duration="2465000" />
-      <workItem from="1594564374375" duration="7565000" />
+      <workItem from="1594564374375" duration="20838000" />
+      <workItem from="1594713867237" duration="9325000" />
     </task>
     <servers />
   </component>
@@ -190,6 +200,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="540" y="199" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1594548024933" />
+    <state x="0" y="171" key="#SQL_Dialects" timestamp="1594613533768">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="171" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1594613533768" />
     <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594548616289">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -198,50 +212,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548458424" />
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594522736477">
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594722557232">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594522736477" />
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594722557232" />
     <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1594607445901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594607445901" />
-    <state width="1313" height="116" key="GridCell.Tab.0.bottom" timestamp="1594610483678">
+    <state width="1313" height="199" key="GridCell.Tab.0.bottom" timestamp="1594721975624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="116" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
-    <state width="1313" height="116" key="GridCell.Tab.0.center" timestamp="1594610483678">
+    <state width="1313" height="199" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
+    <state width="1313" height="199" key="GridCell.Tab.0.center" timestamp="1594721975624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="116" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
-    <state width="1313" height="116" key="GridCell.Tab.0.left" timestamp="1594610483678">
+    <state width="1313" height="199" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
+    <state width="1313" height="199" key="GridCell.Tab.0.left" timestamp="1594721975624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="116" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
-    <state width="1313" height="116" key="GridCell.Tab.0.right" timestamp="1594610483678">
+    <state width="1313" height="199" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
+    <state width="1313" height="199" key="GridCell.Tab.0.right" timestamp="1594721975624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="116" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594610483678" />
+    <state width="1313" height="199" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="252" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1594288322774" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1594607448046">
+    <state x="35" y="0" key="SettingsEditor" timestamp="1594717180020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594607448046" />
-    <state x="0" y="0" key="new project wizard" timestamp="1594607339306">
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594717180020" />
+    <state x="0" y="0" key="new project wizard" timestamp="1594717178702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594607339306" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594717178702" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594539911419" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1594524670576">
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1594628206246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594524670576" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594628206246" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
