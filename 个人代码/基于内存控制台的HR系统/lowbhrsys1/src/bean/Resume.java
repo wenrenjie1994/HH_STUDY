@@ -1,5 +1,9 @@
 package bean;
 
+/**
+ * @author 杜波
+ * @version 创建时间: 2020/7/9 9:20
+ */
 public class Resume {
     /**
      *姓名
@@ -15,7 +19,7 @@ public class Resume {
     private String school;
     /**
      *
-     * * 0：已申请
+     * 0：已申请
      * 1：简历通过
      * 2：笔试通过
      * 3：体检通过
@@ -25,6 +29,13 @@ public class Resume {
      */
     private int process;
 
+    /**
+     * 有参构造方法
+     * @param name
+     * @param id
+     * @param school
+     * @param process
+     */
     public Resume(String name, String id, String school, int process) {
         this.name = name;
         this.id = id;
@@ -32,6 +43,9 @@ public class Resume {
         this.process = process;
     }
 
+    /**
+     * 无参构造方法
+     */
     public Resume() {
     }
 

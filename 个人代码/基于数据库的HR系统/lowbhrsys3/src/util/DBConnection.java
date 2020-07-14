@@ -2,18 +2,23 @@ package util;
 
 import java.sql.*;
 
+/**
+ * jdbc连接数据库操作
+ * @author 杜波
+ * @version 创建时间: 2020/7/13 11:27
+ */
 public class DBConnection
 {
-	    private static final String url = "jdbc:mysql://127.0.0.1:3306/hrsys?useSSL=false";
-	    private static final String name = "com.mysql.jdbc.Driver";
-	    private static final String user = "root";
-	    private static final String password = "dubo000000";
+	    private static final String  URL= "jdbc:mysql://127.0.0.1:3306/hrsys?useSSL=false";
+	    private static final String NAME = "com.mysql.jdbc.Driver";
+	    private static final String USER = "root";
+	    private static final String PASSWORD = "dubo000000";
 	    
 		static
 		{
 			try
 				{
-				 Class.forName(name);
+				 Class.forName(NAME);
 				}
 			catch(ClassNotFoundException cE)
 				{
@@ -23,7 +28,7 @@ public class DBConnection
 		public static Connection getConnection()
 		{
 			try {
-				return DriverManager.getConnection(url,user,password);
+				return DriverManager.getConnection(URL,USER,PASSWORD);
 			} catch (SQLException e) {
 				e.printStackTrace();
 				return null;

@@ -5,7 +5,16 @@ import model.Resume;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * 文本数据操作方法类
+ * @author 杜波
+ * @version 创建时间: 2020/7/9 13:40
+ */
 public class DataOperate {
+    /**
+     * 加载文本数据方法
+     * @param resumeList
+     */
     public static void loadData(ArrayList<Resume> resumeList)
     {
         BufferedReader br = null;
@@ -40,12 +49,17 @@ public class DataOperate {
         }
     }
 
+    /**
+     * 保存数据到文本
+     * @param resumeList
+     */
     public static void saveData(ArrayList<Resume> resumeList)
     {
         PrintWriter printWriter = null;
         try {
             String path=System.getProperty("user.dir")+File.separator+"textFile"+File.separator+"resumelist.txt";
-            printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(path,false)));//覆盖写入
+            //覆盖写入
+            printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(path,false)));
             int resumeCount = resumeList.size();
             for(int i=0;i<resumeCount;i++)
             {

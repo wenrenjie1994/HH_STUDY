@@ -1,12 +1,17 @@
 package main;
 
-import model.Resume;
 import service.ResumeSevice;
-import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * 系统启动入口类
+ * @author 杜波
+ * @version 创建时间: 2020/7/13 15:40
+ */
 public class HRS {
-    //获取标准输入流
+    /**
+     * 获取标准输入流
+     */
     public static Scanner scanner = new Scanner(System.in);
 
     HRS() {

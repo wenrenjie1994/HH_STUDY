@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.49826026" />
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
@@ -41,7 +42,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -84,6 +85,8 @@
       <updated>1594607197650</updated>
       <workItem from="1594607202161" duration="17206000" />
       <workItem from="1594649233651" duration="2918000" />
+      <workItem from="1594693345428" duration="5665000" />
+      <workItem from="1594699287979" duration="637000" />
     </task>
     <servers />
   </component>
@@ -99,26 +102,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594608634921" />
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1594654748845">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1594699104842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594654748845" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1594654748845">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594699104842" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1594699104832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594654748845" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1594654748845">
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594699104832" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1594699104832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594654748845" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1594654748845">
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594699104832" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1594699104842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594654748845" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1594648419362">
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594699104842" />
+    <state x="301" y="109" key="SettingsEditor" timestamp="1594696593409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594648419362" />
+    <state x="301" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594696593409" />
     <state x="425" y="66" width="670" height="676" key="search.everywhere.popup" timestamp="1594627394290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * 简历实体信息
+ * @author 杜波
+ * @version 创建时间: 2020/7/13 11:17
+ */
 public class Resume {
     /**
      *主键id
@@ -18,8 +23,7 @@ public class Resume {
      */
     private String school;
     /**
-     *
-     * * 0：已申请
+     * 0：已申请
      * 1：简历通过
      * 2：笔试通过
      * 3：体检通过
@@ -29,6 +33,14 @@ public class Resume {
      */
     private int process;
 
+    /**
+     * 带参构造函数
+     * @param resumeId
+     * @param name
+     * @param id
+     * @param school
+     * @param process
+     */
     public Resume(String resumeId, String name, String id, String school, int process) {
         this.resumeId = resumeId;
         this.name = name;
@@ -37,6 +49,9 @@ public class Resume {
         this.process = process;
     }
 
+    /**
+     * 无参构造函数
+     */
     public Resume() {
     }
 

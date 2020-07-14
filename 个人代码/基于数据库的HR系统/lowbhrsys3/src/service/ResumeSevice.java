@@ -6,7 +6,16 @@ import model.Resume;
 import java.util.Scanner;
 import java.util.UUID;
 
+/**
+ * 简历信息业务处理
+ * @author 杜波
+ * @version 创建时间: 2020/7/13 15:00
+ */
 public class ResumeSevice {
+
+    /**
+     * 添加简历信息业务方法
+     */
     public static void addResume() {
         System.out.println("欢迎来到添加简历界面");
         System.out.println("请依次输入需要添加的简历信息:姓名，身份证号，学校，简历状态( 0:已申请,1:简历通过,2:笔试通过," +
@@ -20,6 +29,9 @@ public class ResumeSevice {
         new ResumeDao().addResume(resume);
     }
 
+    /**
+     * 删除简历信息业务方法
+     */
     public static void deleteResume() {
         System.out.println("欢迎来到删除简历界面");
         ResumeDao resumeDao=new ResumeDao();
@@ -69,7 +81,9 @@ public class ResumeSevice {
         }
     }
 
-
+    /**
+     * 修改简历信息业务方法
+     */
     public static void updateResume() {
         System.out.println("欢迎来到修改简历界面");
         ResumeDao resumeDao=new ResumeDao();
@@ -102,7 +116,7 @@ public class ResumeSevice {
                     System.out.println("请输入修改后简历的身份证号码");
                     String id = HRS.scanner.nextLine();
                     resume.setId(id);
-                    resumeDao.updateResumeIDCard(resume);
+                    resumeDao.updateResumeIdCard(resume);
                     break;
                 case 3:
                     System.out.println("请输入修改后简历的学校名称");
@@ -136,6 +150,9 @@ public class ResumeSevice {
         }
     }
 
+    /**
+     * 查询简历信息业务方法
+     */
     public static void queryResume() {
         System.out.println("欢迎来到查询简历界面");
         ResumeDao resumeDao=new ResumeDao();

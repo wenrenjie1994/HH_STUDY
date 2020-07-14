@@ -4,10 +4,17 @@ import model.Resume;
 import util.DBConnection;
 import java.sql.*;
 
+/**
+ * 简历信息的数据库操作
+ * @author 杜波
+ * @version 创建时间: 2020/7/13 13:10
+ */
 public class ResumeDao
 {
-    //****************************简历添加方法**************************
-    //添加简历信息方法。
+    /**
+     * 向数据库中添加简历信息
+     * @param resume
+     */
     public void addResume(Resume resume)
     {
         int line = 0;
@@ -38,8 +45,11 @@ public class ResumeDao
             System.out.println("添加成功!");
         }
     }
-    //****************************简历删除方法**************************
-    //1.通过简历ID删除
+
+    /**
+     * 根据简历ID从数据库中删除简历
+     * @param resumeId
+     */
     public void deleteResumeByResumeId(String resumeId)
     {
         int line=0;
@@ -66,7 +76,11 @@ public class ResumeDao
         }
 
     }
-    //2.通过姓名删除
+
+    /**
+     * 根据简历姓名从数据库中删除简历
+     * @param name
+     */
     public void deleteResumeByName(String name)
     {
         int line=0;
@@ -92,7 +106,11 @@ public class ResumeDao
             System.out.println("删除成功!");
         }
     }
-    //3.通过身份证号删除
+
+    /**
+     * 根据简历身份证号码从数据库中删除简历
+     * @param id
+     */
     public void deleteResumeById(String id)
     {
         int line=0;
@@ -118,7 +136,11 @@ public class ResumeDao
             System.out.println("删除成功!");
         }
     }
-    //4.通过学校名称删除
+
+    /**
+     * 根据简历学校名称从数据库中删除简历
+     * @param school
+     */
     public void deleteResumeBySchool(String school)
     {
         int line=0;
@@ -144,7 +166,11 @@ public class ResumeDao
             System.out.println("删除成功!");
         }
     }
-    //5.通过简历状态删除
+
+    /**
+     * 根据简历状态从数据库中删除简历
+     * @param process
+     */
     public void deleteResumeByProcess(int process)
     {
         int line=0;
@@ -171,9 +197,12 @@ public class ResumeDao
             System.out.println("删除成功!");
         }
     }
-    //****************************简历修改方法**************************
-    //1.修改简历姓名。
-    public int updateResumeName(Resume resume)
+
+    /**
+     * 根据简历ID修改该简历的姓名
+     * @param resume
+     */
+    public void updateResumeName(Resume resume)
     {
         int line=0;
         try
@@ -198,10 +227,13 @@ public class ResumeDao
         {
             System.out.println("SQL Exception:"+e.toString());
         }
-        return line;
     }
-    //2.修改简历身份证
-    public int updateResumeIDCard(Resume resume)
+
+    /**
+     * 根据简历ID修改该简历的身份证号码
+     * @param resume
+     */
+    public void updateResumeIdCard(Resume resume)
     {
         int line=0;
         try
@@ -226,10 +258,13 @@ public class ResumeDao
         {
             System.out.println("SQL Exception:"+e.toString());
         }
-        return line;
     }
-    //3.修改简历学校
-    public int updateResumeSchool(Resume resume)
+
+    /**
+     * 根据简历ID修改该简历的学校名称
+     * @param resume
+     */
+    public void updateResumeSchool(Resume resume)
     {
         int line=0;
         try
@@ -254,10 +289,14 @@ public class ResumeDao
         {
             System.out.println("SQL Exception:"+e.toString());
         }
-        return line;
     }
-    //4.修改简历状态
-    public int updateResumeProcess(Resume resume)
+
+    /**
+     * 根据简历ID修改该简历的状态
+     * @param resume
+     * @return
+     */
+    public void updateResumeProcess(Resume resume)
     {
         int line=0;
         try
@@ -282,9 +321,13 @@ public class ResumeDao
         {
             System.out.println("SQL Exception:"+e.toString());
         }
-        return line;
     }
-    //5.修改简历所有信息
+
+    /**
+     * 根据简历ID修改该简历的姓名、身份证号码、学校名称、简历状态
+     * @param resume
+     * @return
+     */
     public int updateResumeAll(Resume resume)
     {
         int line=0;
@@ -315,8 +358,11 @@ public class ResumeDao
         }
         return line;
     }
-    //****************************简历查询方法**************************
-    //1.通过姓名查询
+
+    /**
+     * 根据简历姓名从数据库中查询简历信息
+     * @param name
+     */
     public void queryResumeByName(String name)
     {
         try
@@ -345,7 +391,11 @@ public class ResumeDao
             System.out.println("SQL Exception:"+e.toString());
         }
     }
-    //2.通过身份证号查询
+
+    /**
+     * 根据简历身份证号码从数据库中查询简历信息
+     * @param id
+     */
     public void queryResumeById(String  id)
     {
         try
@@ -374,7 +424,11 @@ public class ResumeDao
             System.out.println("SQL Exception:"+e.toString());
         }
     }
-    //3.通过学校名称查询
+
+    /**
+     * 根据简历学校名称从数据库中查询简历信息
+     * @param school
+     */
     public void queryResumeBySchool(String school)
     {
         try
@@ -403,7 +457,11 @@ public class ResumeDao
             System.out.println("SQL Exception:"+e.toString());
         }
     }
-    //4.通过简历状态查询
+
+    /**
+     * 根据简历状态从数据库中查询简历信息
+     * @param process
+     */
     public void queryResumeByProcess(int process)
     {
         try
@@ -432,7 +490,10 @@ public class ResumeDao
             System.out.println("SQL Exception:"+e.toString());
         }
     }
-    //5.查询所有
+
+    /**
+     * 从数据库中查询所有简历信息
+     */
     public void queryResumeAll()
     {
         try
