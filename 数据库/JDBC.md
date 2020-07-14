@@ -54,35 +54,7 @@
     ```
   - 解决：获取Statement对象时，不使用Statement对象，而是使用Statement的子类prepareStatement，它将传入的参数进行预处理，有效防止了sql注入。
 
-##4 JDBC连接池
-  - 定义：用于`存放一定数量的Connection连接对象`，`相当于容器`。当Java application（应用程序）需要获取数据库连接时，直接从连接池中取一个出来，`用完后不关闭`，再放到池中，`重复利用`，做到`资源共享`。
-  - 好处：
-    - 原生jdbc获取连接的弊端：<br>
-    　　每次连接都要验证密码和用户名，用完后由被关闭，当下次执行的时候又再次连接，这样既耗时又浪费资源（可以比较为一次性手机和公共电话）
-    - 连接池的优势：<br>
-    　　使用连接池可以降低服务器系统压力，提升程序运行效率，但是小型项目不适用数据库连接池，因为会维护连接池本身会消耗资源。
-##DBUtils操作数据库
-  - DBUtils工具：简化JDBC代码，查询数据，可以完成自动封装，但是只能单表查询封装，多表关联无法封装，多表关联封装以后MyBatis 框架或者Hibernate 框架来完成。
-  -  DBUtils简化的代码：
-    - 提供QueryRunner对象代替了PrepareStatement对象进行sql语句执行
-    - 提供了ResultSetHandler接口对象代替ResultSet对象接收查询结果集
-  ```
-  a、在使用DBUtils提供的ResultSetHandler接口之前，
-    PrepareStatement pst = conn.prepareStatement(sql);
-    pst.setObject(1,..);
-    pst.setObject(2,..);//替换?的参数
-    ResultSet rs = pst.executeQuery();
-    while(rs.next){//若查询到值，获取
-    Object obj1 = rs.getObject("字段名");//获取查询的结果字段值
-    ...
-    }
-    只能获取到查询结果的字段
-  b、现在可以将查询结果映射成对象体现出来(利用反射实现)
-    QueryRunner qr = new QueryRunner()
-    List<Xxx> list = qr.query(conn,sql,new BeanListHandler<Xxx>(Xxx.class));
-    //使用查询的方法名也不同[executeQuery和query]
-  ```
-##5 事物
+##4 事务
   - 定义：一组要么同时成功，要么同时失败的sql语句，是数据库(并发操作)的一个基本执行单元
     ```
     并行：指两个或多个事件在同一时刻(同时)发生
