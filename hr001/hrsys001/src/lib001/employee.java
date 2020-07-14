@@ -8,11 +8,11 @@ package lib001;
  */
 public class employee {
     private String name;
-    private int age;
+    private String age;
     private String sex;
     private String home;
     private String entry;
-    public employee(String name,int age,String sex,String home,String entry){
+    public employee(String name,String age,String sex,String home,String entry){
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -28,11 +28,11 @@ public class employee {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 

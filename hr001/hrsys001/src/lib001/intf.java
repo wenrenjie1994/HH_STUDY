@@ -1,8 +1,6 @@
 package lib001;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.beans.PropertyChangeListener;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,9 +11,8 @@ import java.util.Scanner;
  * @create: 2020-07-10 20:57
  */
 public class intf  {
-    private employee[] employeeList=new employee[];
-    ArrayList<employee> eArrayList=new ArrayList<>();
-    employeeList employees = new employeeList();
+    ArrayList<employee> eArrayList=new ArrayList<>();//ArrayList泛型数组，不限制数组大小
+    private int eNum=0;
 
     public   intf() {
         Scanner input = new Scanner(System.in);
@@ -30,7 +27,6 @@ public class intf  {
             System.out.println("press 4 to find");
             System.out.println("press 5 to exit");
 
-            System.out.println("press 6 to print all messages");
             //判断指令
             int choice = input.nextInt();
             if(choice==1)
@@ -43,7 +39,7 @@ public class intf  {
             }
             else if(choice==3)
             {
-                break;
+                update();
             }
             else if(choice==4)
             {
@@ -54,7 +50,7 @@ public class intf  {
                 break;
             }
             else {
-                System.out.println("输入错误，请确认后从新输入");
+                System.out.println("输错了兄弟！");
             }
 
         }
@@ -65,73 +61,109 @@ public class intf  {
 
     //增加员工信息
     private void add(){
-        System.out.println("欢迎来到增加员工界面");
+        System.out.println("欢迎来到增加员工信息界面");
         Scanner input = new Scanner(System.in);
         System.out.println("请依次输入员工姓名，年龄，性别，家乡，是否入职");
         String name =input.nextLine();
-        int age = input.nextInt();
+        String age = input.nextLine();
         String sex = input.nextLine();
         String home = input.nextLine();
         String entry = input.nextLine();
         employee e = new employee(name,age,sex,home,entry);
-        employeeList[]= e;
+        eArrayList.add(e);
+        eNum ++;
+        System.out.println("添加成功啦！！");
+        showList();
+    }
 
+//遍历打印信息
+    private void showList() {
+        for (int i = 0; i < eArrayList.size(); i++) {
+            employee s = eArrayList.get(i);
+            printEmployee(s);
+        }
+    }
+
+    //打印信息
+    private void printEmployee(employee s){
+        System.out.println("姓名："+ s.getName());
+        System.out.println("年龄："+ s.getAge());
+        System.out.println("性别："+ s.getSex());
+        System.out.println("家乡："+ s.getHome());
+        System.out.println("是否入职："+ s.getEntry());
     }
 
     //删除员工信息
     private void delete() {
-        while (true) {
-            Scanner input = new Scanner(System.in);
-            System.out.println("欢迎来到删除员工信息界面");
-            System.out.println("按姓名删除请按----------1");
-            System.out.println("按家乡删除请按----------2");
-            System.out.println("退出请按--------------3");
-            int choice = input.nextInt();
-            if (choice == 1) {
-                deleteByName();
-            } else if (choice == 2) {
-                deleteByEntry();
-            } else if (choice == 3) {
-                break;
-            }
-            input.close();
+        int flag = 0;
+        System.out.println("欢迎来到删除员工信息界面");
+        Scanner input = new Scanner(System.in);
+        if(eNum==0){
+            System.out.println("木有信息啊，快去添加吧！");
         }
-
+        else{
+            System.out.println("请输入要删除的员工的姓名");
+            String name = input.nextLine();
+        for(int i = 0;i < eArrayList.size();i++){      //基础for循环，s完整写出。
+            employee s = eArrayList.get(i);
+    if(s.getName().equals(name)){
+        eArrayList.remove(s);
+        flag = 1;
     }
-    void deleteByName() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("请输入需要删除的员工姓名");
-        String name =input.nextLine();
-        employee e =new employee(name,0,null,null,null);
-
+        }
+            if(flag !=1){
+        System.out.println("没有找到对应的员工，是不是输错啦！");
     }
-    void deleteByEntry() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("请输入需要删除的员工家乡情况");
-        String home =input.nextLine();
-        employee e=new employee(null,0,null,home,null);
-
+        }
     }
-    //查询员工
-    void find()
-    {
+
+    //修改员工信息
+    private void update(){
+        int flag = 0;
+        System.out.println("欢迎来到员工信息修改界面");
         Scanner input = new Scanner(System.in);
-        System.out.println("请输入需要查询的员工名字");
-        String name =input.nextLine();
-        employee e = new employee(name,0,null,null,null);
-        int employeeCount = employeelist.size();
-        if(employeeCount>0)
-        {
-            for(int i=0;i<employeeCount;i++) {
-                System.out.println("<<"+elist.get(i).name+">>"+"  "
-                        +"作者"+"："+elist.get(i).bookAuthor+"  "
-                        +"价格"+"："+elist.get(i).bookPrice+"  ");
-            }
+        if(eNum==0){
+            System.out.println("没有信息改锤子！");
         }
         else {
-            System.out.println("没有找到姓名为"+name+"的y员工");
+            System.out.println("输入需要修改的员工的姓名");
+            String name = input.nextLine();
+            for (employee s : eArrayList) {                //foreach 循环
+                if (s.getName().equals(name)) {
+                    System.out.println("找到啦！请输入新的姓名，年龄，性别，家庭住址，是否入职");
+                    flag = 1;
+                }
+            }
+            if(flag!=1) {
+                    System.out.println("没有对应的员工哦！");
+                }
         }
 
+    }
+
+
+    //查询员工
+    private void find() {
+        int flag = 0;
+        System.out.println("欢迎来到员工信息查找界面");
+        Scanner input = new Scanner(System.in);
+        if(eNum==0){
+            System.out.println("空的呀！");
+        }
+        else{
+            System.out.println("输入需要查询的员工的姓名");
+            String name = input.nextLine();
+            for (int i = 0;i< eArrayList.size();i++){
+                employee s = eArrayList.get(i);
+                if(s.getName().equals(name)){
+                    printEmployee(s);
+                    flag =1;
+                }
+            }
+                if(flag!=1){
+                    System.out.println("没有这个员工哦！");
+                }
+        }
     }
 
     public static void main(String[] args) {
