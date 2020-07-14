@@ -1,4 +1,4 @@
-package LowHR1;
+package bean;
 
 /**
  * @program: HR_SYS
@@ -79,7 +79,7 @@ public class Resume {
         this.deleteStatus = deleteStatus;
     }
 
-    public Resume(String name, String id,String school) {
+    public Resume(String name, String id,String school,Integer process) {
         this.name = name;
         this.id = id;
         this.school=school;

@@ -1,11 +1,11 @@
 package LowHR1;
 import java.util.ArrayList;
 import java.util.Scanner;
-import LowHR1.HR;
-import LowHR1.HRList;
+
+import bean.Resume;
 
 public class HRS {
-
+    private boolean iscndb=false;//是否采用数据库
     private int MAXSIZE=100;
 //在数组初始化的时候，限制了数组的大小，有没有别的方式更好呢？
 //    private HR[] HRList=new HR[MAXSIZE];
@@ -68,7 +68,7 @@ public class HRS {
             Integer ReProcess=input.nextInt();
 //          Integer ReDeleteStatus=input.nextInt();
             //get/SET
-            Resume Resume=new Resume(ReName,ReId,ReSchool);
+            Resume Resume=new Resume(ReName,ReId,ReSchool,ReProcess);
             Resume.setProcess(ReProcess);
 //            Resume.setDeleteStatus(ReDeleteStatus);
             //如果这个时候已经有79本书了，那么第79本书的位置是78
@@ -164,7 +164,8 @@ public class HRS {
                     String newname=input.nextLine();
                     String newreid=input.nextLine();
                     String newschool=input.nextLine();
-                    Resume resume=new Resume(newname,newreid,newschool);
+                    Integer newprocess=input.nextInt();
+                    Resume resume=new Resume(newname,newreid,newschool,newprocess);
                     ResumeArrayList.add(i,resume);
                     System.out.println("您已经修改成功");
                     showHR();

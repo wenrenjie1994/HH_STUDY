@@ -1,4 +1,4 @@
-package LowHR1;
+package bean;
 
 import java.util.ArrayList;
 
