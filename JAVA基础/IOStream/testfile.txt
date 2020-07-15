@@ -1,0 +1,4 @@
+测试输入：
+java中文输入文件
+English:
+input english

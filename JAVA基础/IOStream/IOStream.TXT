@@ -1,0 +1,34 @@
+读取控制台输入：
+	*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	*读取一个字符：int read() throws IOException
+	*读取一行字符：int readLine() throws IOException
+
+控制台输出：
+	*void write(int byteval)
+	*print();println();
+	
+文件读写：
+	*读文件：InputStream f = new FileInputStream(...);
+	*
+		File f = new File(...);
+		InputStream out new FileInputStream(f);
+	*关闭文件:public void close() throws IOException{}
+	*清除与文件的连接: protected void finalize() throws IOException{}
+	*读取指定字节的数据:public int read(int r)throws IOException{}
+	*读取r.length长度的数据:public int read(bute[] r)throws IOException{}
+	*InputStreamReader
+	
+	*写文件：OutputStream f = new FileOutputStream(...)
+	*
+		File f = new File(...)
+		OutputStream f = new FileOutputStream(f);
+	*关闭文件：public void close() throws IOException{}
+	*清除连接：protected void finalize()throws IOException {}
+	*写指定字节的数据：	public void write(int w)throws IOException{}
+	*写w.length长度的数据：public void write(byte[] w)
+	*OutputStreamWriter
+	
+目录：
+	*创建目录：mkdir();mkdirs()
+	*读取目录：isDirectory()
+	*删除目录：deleteFolder(...)
