@@ -45,7 +45,7 @@
 
     var data4Vue = {
         resumes: [],
-        hero4Update: { id: 0, name: '', school: '', status: 0}
+        resume4Update: { id: 0, name: '', school: '', status: 0}
     };
 
     //ViewModel
@@ -58,20 +58,20 @@
         methods: {
             get:function(){
                 var id = getUrlParms("id");
-                var url = "heroes/"+id;
+                var url = "resumes/"+id;
                 console.log(url);
                 axios.get(url).then(function(response) {
-                    vue.hero4Update = response.data;
+                    vue.resume4Update = response.data;
                 })
             },
             update:function (event) {
-                var url = "heroes/"+vue.hero4Update.id;
-                axios.put(url,vue.hero4Update).then(function(response){
-                    location.href="listHero";
+                var url = "resumes/"+vue.resume4Update.id;
+                axios.put(url,vue.resume4Update).then(function(response){
+                    location.href="home";
                 });
             },
             cancel:function(){
-                location.href="listHero";
+                location.href="home";
             }
         }
     });
