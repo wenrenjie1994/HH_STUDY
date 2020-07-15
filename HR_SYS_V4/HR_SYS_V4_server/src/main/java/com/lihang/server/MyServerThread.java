@@ -40,7 +40,7 @@ public class MyServerThread extends Thread{
                     String reback = Parse.responseToString(response);
                     ow = new OutputStreamWriter(socket.getOutputStream());
                     writer = new PrintWriter(ow);
-                    writer.println(reback);
+                    writer.println(reback+"\n");
                     writer.flush();
                 }
 
@@ -66,7 +66,7 @@ public class MyServerThread extends Thread{
         try {
             ow = new OutputStreamWriter(socket.getOutputStream());
             writer = new PrintWriter(ow);
-            writer.println("accept exit");
+            writer.println("accept exit\n");
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
