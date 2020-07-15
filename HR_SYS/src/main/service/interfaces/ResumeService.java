@@ -1,18 +1,23 @@
 package main.service.interfaces;
 
+import main.dto.Result;
+import main.entity.Resume;
+
 /**
  * @author: hqweay
- * @description: 定义 Resume 在 Service 的操作
- * Created on 7/4/20 11:48 AM
+ * @description: 通过 ResumeResultService 返回结果集
+ * Created on 7/15/20 12:04 PM
  */
 public interface ResumeService {
-  void saveResume();
 
-  void removeResume();
 
-  void updateResume();
+  Result saveResume(Resume resume);
 
-  void getResumeByID();
+  Result removeResume(Resume resume);
 
-  void listResume();
+  Result updateResume(Resume resume, Resume newResume);
+
+  Result getResumeByID(Resume resume);
+
+  Result listResume();
 }

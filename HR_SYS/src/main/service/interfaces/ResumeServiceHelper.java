@@ -4,7 +4,7 @@ import main.entity.Resume;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 通过 ResumeServiceHelper 操作 Mapper
  * Created on 7/15/20 11:40 AM
  */
 public interface ResumeServiceHelper {

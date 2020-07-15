@@ -2,12 +2,14 @@ package main.entity;
 
 import main.enums.ProcessEnum;
 
+import java.io.Serializable;
+
 /**
  * @author: hqweay
  * @description: 简历信息
  * Created on 7/2/20 10:53 AM
  */
-public abstract class AbstractResume {
+public abstract class AbstractResume implements Serializable {
   // 姓名
   private String name;
   // 身份证号

@@ -25,6 +25,36 @@ public Config(boolean localPersistence, boolean useDB) {
 
 ### 分析
 
+### C/S
+
+得自己实现 C/S 交互，定义信息交互格式。
+
+入参：`/api/listResume` + Resume 对象（或 ）
+
+
+
+返回值：
+
+```Json
+Result{
+  code : xxx,
+  data: xxx
+}
+```
+
+
+
+用户 -》 界面（输入数据）-》【Client】-》【Server】接受数据 -》 Service 层 -》 Mapper 层……
+
+现在 Client 的概念还不包括界面。界面还是先用终端吧。
+
+**坑**：
+
+* Client 与 Server 的 in 与 out 顺序似乎有要求
+* 服务端的 in 和 out 得用单例，不然报错 invalid stream header
+
+### 其它
+
 HR 端操作，对应聘人员的简历信息进行管理。
 
 * 应聘人员的简历（Resume）——》扩展性

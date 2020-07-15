@@ -2,8 +2,9 @@ package main.sys;
 
 import main.config.Config;
 import main.mapper.DBResumeMapper;
-import main.mapper.MemoryResumeMapper;
-import main.service.ResumeServiceImpl;
+import main.service.TerminalResumeServiceImpl;
+import main.sys.client.request.AbstractRequest;
+import main.sys.client.request.Request;
 import main.sys.interfaces.HRApplication;
 import main.utils.LocalPersistence;
 
@@ -18,10 +19,14 @@ public abstract class AbstractHRApplication implements HRApplication {
 
   // 由启动类的构造方法传入
   Config config;
+
   Scanner scanner = new Scanner(System.in);
   LocalPersistence localPersistence = new LocalPersistence();
   private boolean exitFlag = false;
-  ResumeServiceImpl resumeService;
+  TerminalResumeServiceImpl resumeService;
+
+  // 通过 request 与服务端交互
+  AbstractRequest request;
 
   public AbstractHRApplication() {
   }
@@ -33,16 +38,20 @@ public abstract class AbstractHRApplication implements HRApplication {
   // 初始化应用
   @Override
   public void applicationInit() {
-    if (config.isLocalPersistence() && !config.isUseDB()) {
-      // 初始化 Service，从本地读取数据
-      resumeService = new ResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
-    } else if (config.isUseDB()) {
-      resumeService = new ResumeServiceImpl(new DBResumeMapper());
-    } else {
-      resumeService = new ResumeServiceImpl(new MemoryResumeMapper());
-    }
 
-    resumeService.setScanner(this.scanner);
+
+    // if (config.isLocalPersistence() && !config.isUseDB()) {
+    //   // 初始化 Service，从本地读取数据
+    //   resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
+    // } else if (config.isUseDB()) {
+    //   resumeService = new TerminalResumeServiceImpl(new DBResumeMapper());
+    // } else {
+    //   resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper());
+    // }
+    //
+    // resumeService.setScanner(this.scanner);
+
+    request = new Request(new DBResumeMapper(), scanner);
   }
 
   // 退出应用
@@ -89,19 +98,24 @@ public abstract class AbstractHRApplication implements HRApplication {
     scanner.nextLine();
     switch (choice) {
       case 1:
-        resumeService.listResume();
+        // resumeService.listResume();
+        request.listResume();
         break;
       case 2:
-        resumeService.getResumeByID();
+        // resumeService.getResumeByID();
+        request.getResumeByID();
         break;
       case 3:
-        resumeService.saveResume();
+        // resumeService.saveResume();
+        request.saveResume();
         break;
       case 4:
-        resumeService.updateResume();
+        // resumeService.updateResume();
+        request.updateResume();
         break;
       case 5:
-        resumeService.removeResume();
+        // resumeService.removeResume();
+        request.removeResume();
         break;
       case 0:
         exitFlag = true;

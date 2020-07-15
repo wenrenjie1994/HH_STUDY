@@ -78,7 +78,12 @@ public class DBResumeMapper extends AbstractResumeMapper {
     } finally {
       DBConnection.closeConnection(null, statement, conn);
     }
-    return Result.successResult();
+    if (rs > 0) {
+      return Result.successResult(resume);
+    } else {
+      return Result.errorNotFoundResult();
+    }
+
   }
 
   @Override
@@ -134,8 +139,11 @@ public class DBResumeMapper extends AbstractResumeMapper {
         ProcessEnum processEnum = ProcessEnum.PASS_APPLICATION;
         processEnum.setCode(Integer.parseInt(rs.getString("process")));
 
-        resume = new Resume(rs.getString("name"), rs.getString("id"),
-                rs.getString("school"), processEnum, rs.getBoolean("deleteStatus"));
+        if (rs.getString("id") != null && !rs.getString("id").equals("")) {
+          resume = new Resume(rs.getString("name"), rs.getString("id"),
+                  rs.getString("school"), processEnum, rs.getBoolean("deleteStatus"));
+        }
+
       }
 
     } catch (SQLException throwables) {
@@ -144,8 +152,12 @@ public class DBResumeMapper extends AbstractResumeMapper {
     } finally {
       DBConnection.closeConnection(rs, statement, conn);
     }
+    if (resume == null) {
+      return Result.errorNotFoundResult();
+    } else {
+      return Result.successResult(resume);
+    }
 
-    return Result.successResult(resume);
   }
 
 
