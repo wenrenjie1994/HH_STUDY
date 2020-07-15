@@ -2,6 +2,7 @@ package main.sys;
 
 import main.config.Config;
 import main.mapper.DBResumeMapper;
+import main.mapper.MemoryResumeMapper;
 import main.service.TerminalResumeServiceImpl;
 import main.sys.client.request.AbstractRequest;
 import main.sys.client.request.Request;
@@ -39,19 +40,22 @@ public abstract class AbstractHRApplication implements HRApplication {
   @Override
   public void applicationInit() {
 
+    if (config.isCS()) {
+      request = new Request(new DBResumeMapper(), scanner);
+      return;
+    }
 
-    // if (config.isLocalPersistence() && !config.isUseDB()) {
-    //   // 初始化 Service，从本地读取数据
-    //   resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
-    // } else if (config.isUseDB()) {
-    //   resumeService = new TerminalResumeServiceImpl(new DBResumeMapper());
-    // } else {
-    //   resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper());
-    // }
-    //
-    // resumeService.setScanner(this.scanner);
+    if (config.isLocalPersistence()) {
+      // 初始化 Service，从本地读取数据
+      resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
+    } else if (config.isUseDB()) {
+      resumeService = new TerminalResumeServiceImpl(new DBResumeMapper());
+    } else {
+      resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper());
+    }
 
-    request = new Request(new DBResumeMapper(), scanner);
+    resumeService.setScanner(this.scanner);
+
   }
 
   // 退出应用
@@ -96,26 +100,43 @@ public abstract class AbstractHRApplication implements HRApplication {
     int choice = scanner.nextInt();
     // 接受 nextInt 后的换行符
     scanner.nextLine();
+
+    // 模式的切换应该放在 request 的，暂且这样吧。
     switch (choice) {
       case 1:
-        // resumeService.listResume();
-        request.listResume();
+        if (config.isCS()) {
+          request.listResume();
+        } else {
+          resumeService.listResume();
+        }
         break;
       case 2:
-        // resumeService.getResumeByID();
-        request.getResumeByID();
+        if (config.isCS()) {
+          request.getResumeByID();
+        } else {
+          resumeService.getResumeByID();
+        }
         break;
       case 3:
-        // resumeService.saveResume();
-        request.saveResume();
+        if (config.isCS()) {
+          request.saveResume();
+        } else {
+          resumeService.saveResume();
+        }
         break;
       case 4:
-        // resumeService.updateResume();
-        request.updateResume();
+        if (config.isCS()) {
+          request.updateResume();
+        } else {
+          resumeService.updateResume();
+        }
         break;
       case 5:
-        // resumeService.removeResume();
-        request.removeResume();
+        if (config.isCS()) {
+          request.removeResume();
+        } else {
+          resumeService.removeResume();
+        }
         break;
       case 0:
         exitFlag = true;
@@ -124,5 +145,9 @@ public abstract class AbstractHRApplication implements HRApplication {
         System.out.println("warn:====请输入菜单对应的相应数字～");
         break;
     }
+  }
+
+  void chooseMode() {
+
   }
 }

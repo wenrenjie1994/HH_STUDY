@@ -54,8 +54,6 @@ public class ServerThread implements Runnable {
       switch (requestDTO.getRequestEnum()) {
         case LIST_RESUME:
           result = resumeService.listResume();
-
-
           break;
         case SAVE_RESUME:
           result = resumeService.saveResume(requestDTO.getParamsResume()[0]);

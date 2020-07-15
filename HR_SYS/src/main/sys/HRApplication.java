@@ -10,10 +10,13 @@ import main.config.Config;
 public class HRApplication extends AbstractHRApplication {
 
   public static void main(String[] args) {
-    // 当 localPersistence 为 false、useDB 为 false，使用内存保存数据且不持久化
-    // 当 localPersistence 为 true、useDB 为 false，使用内存保存数据并使用 txt 文件持久化
-    // 只要 useDB 为 true，使用数据库读写数据，不考虑持久化
-    new HRApplication(new Config(false, true)).run();
+    // new Config(); 内存读写
+    // new Config().setLocalPersistence(true); 内存读写并持久化
+    // new Config().setUseDB(true); 使用数据库
+    // new Config().setCS(true); C/S 分离，需要启动 sys/ServerApplication
+
+    Config config = new Config();
+    new HRApplication(config).run();
   }
 
   public HRApplication() {

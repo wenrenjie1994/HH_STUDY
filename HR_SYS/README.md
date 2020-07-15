@@ -1,5 +1,25 @@
 ## HR_SYS
 
+### 使用
+
+```Java
+  public static void main(String[] args) {
+    // new Config(); 内存读写
+    // new Config().setLocalPersistence(true); 内存读写持久化
+    // new Config().setUseDB(true); 使用数据库
+    // new Config().setCS(true); C/S 分离，需要启动 sys/ServerApplication
+
+    Config config = new Config().setCS(true);
+    new HRApplication(config).run();
+  }
+```
+
+
+
+### 草稿（deprecated）
+
+
+
 现在提供了 Config 类在启动时注入，可以实现应用的功能切换。
 
 如下启动类：
