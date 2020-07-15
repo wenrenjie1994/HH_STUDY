@@ -9,6 +9,8 @@ import java.io.*;
  */
 public class SerialSingleton implements Serializable {
     private static final SerialSingleton INSTANCE = new SerialSingleton();
+    private static final long serialVersionUID = -1529834271516750160L;
+
     /**
      * 构造方法私有化
      * @author Mr.Longyx

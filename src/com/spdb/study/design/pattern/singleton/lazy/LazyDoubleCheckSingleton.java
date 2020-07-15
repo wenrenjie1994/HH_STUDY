@@ -6,7 +6,7 @@ package com.spdb.study.design.pattern.singleton.lazy;
  * @date 2020年06月22日 23:03
  */
 public class LazyDoubleCheckSingleton {
-    private static LazyDoubleCheckSingleton INSTANCE = null;
+    private static volatile LazyDoubleCheckSingleton INSTANCE = null;
     /**
      * 构造方法私有化
      * @author Mr.Longyx

@@ -1,9 +1,7 @@
 package com.spdb.study.design.pattern.template.jdbc;
 
-import com.spdb.study.design.pattern.template.jdbc.dao.User;
 import com.spdb.study.design.pattern.template.jdbc.dao.UserDao;
 
-import javax.sql.DataSource;
 import java.util.List;
 
 /**
