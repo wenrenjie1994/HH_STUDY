@@ -51,7 +51,7 @@ public class StudentImpl implements IStudent {
 
     public boolean delStudentByStuID(String stuID) {
         String selectSql = "select stuID from tblstudent where stuID='" + stuID + "' and isDelete=0";
-        String delSql = "update tblstudent set idDelete=1 where stuID='" + stuID + "'";
+        String delSql = "update tblstudent set isDelete=1 where stuID='" + stuID + "'";
         try {
             if (DBUtil.runQuery(selectSql).next()) {
                 DBUtil.runUpdate(delSql);
