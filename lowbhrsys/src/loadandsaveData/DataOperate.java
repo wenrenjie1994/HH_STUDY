@@ -55,7 +55,7 @@ import model.Resume;
             int resumeCount = resumeList.size();
 			for(int i=0;i<resumeCount;i++)
 			{
-				printWriter.println(resumeList.get(i).studentName +","+ resumeList.get(i).studentID +","+ resumeList.get(i).studentSchool +","+resumeList.get(i).process);
+				printWriter.println(resumeList.get(i).studentName +","+ resumeList.get(i).studnetID +","+ resumeList.get(i).studentSchool +","+resumeList.get(i).process);
 			}
 //            printWriter.println("hh");
 //            printWriter.println("jjj");
