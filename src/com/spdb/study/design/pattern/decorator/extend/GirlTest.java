@@ -11,10 +11,12 @@ public class GirlTest {
         showable = new Girl();
         showable.show();
 
+        System.out.println();
         //素颜+打粉底
         showable = new FoundationMakeUp(new Girl());
         showable.show();
 
+        System.out.println();
         //素颜+打粉底+涂口红
         showable = new LipStick(new FoundationMakeUp(new Girl()));
         showable.show();

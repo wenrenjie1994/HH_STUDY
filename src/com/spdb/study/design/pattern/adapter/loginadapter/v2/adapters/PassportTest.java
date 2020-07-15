@@ -10,6 +10,6 @@ import com.spdb.study.design.pattern.adapter.loginadapter.v2.PassportForThirdAda
 public class PassportTest {
     public static void main(String[] args) {
         PassportForThird adapter =  new PassportForThirdAdapter();
-        adapter.loginForQQ("");
+        adapter.loginForQQ("2102584776");
     }
 }
