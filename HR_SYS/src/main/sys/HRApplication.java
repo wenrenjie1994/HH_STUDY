@@ -15,7 +15,7 @@ public class HRApplication extends AbstractHRApplication {
     // new Config().setUseDB(true); 使用数据库
     // new Config().setCS(true); C/S 分离，需要启动 sys/ServerApplication
 
-    Config config = new Config();
+    Config config = new Config().setCS(true);
     new HRApplication(config).run();
   }
 
