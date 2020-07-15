@@ -66,7 +66,7 @@ public class ResponseData<T> {
     }
 
     public static <T> ResponseData<T> returnData(T data){
-        return new ResponseData<>(200,data);
+        return new ResponseData<>(200,"success",data);
     }
 
     public static <T> ResponseData<T> returnError(String msg){
