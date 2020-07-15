@@ -9,8 +9,25 @@ public class Resume {
     private String name;
     private Integer id;
     private String school;
+    /**
+     * 状态
+     * 0：已申请
+     * 1：简历通过
+     * 2：笔试通过
+     * 3：体检通过
+     * 4：背调通过
+     * 5：已签约
+     * 6：已入职
+     */
     private Integer process;
+    /**
+     * 逻辑删除
+     * 0：不展示
+     * 1：展示
+     */
     private Integer deleteStatus;
+
+    public Resume(){}
 
     public Resume(String name, Integer id, String school) {
         this.name = name;
@@ -67,5 +84,14 @@ public class Resume {
                 ", process=" + process +
                 ", deleteStatus=" + deleteStatus +
                 '}';
+    }
+
+    public void show() {
+        System.out.println("Resume{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", school='" + school + '\'' +
+                ", process=" + process +
+                '}');
     }
 }

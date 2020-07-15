@@ -9,5 +9,5 @@ public interface ResumeService {
     void addResume();
     void deleteResume();
     void updateResume();
-    void searchResume();
+    void queryResume();
 }
