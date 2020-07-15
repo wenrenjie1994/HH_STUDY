@@ -1,2 +1,2 @@
-public class Hello {11111
+public class Hello {
 }
