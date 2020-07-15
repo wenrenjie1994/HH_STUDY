@@ -5,6 +5,7 @@ import sys.HRS;
 import sys.HRSService;
 
 import java.net.* ;
+import java.util.Iterator;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.io.* ;
@@ -43,17 +44,11 @@ public class SocketService {
                 //read
                 while(true){
                     buf = br.readLine();
-                    System.out.println(buf);
                     String[] split = buf.split(" ");
                     //获取操作码，看采取哪种方式
                     int operate = Integer.parseInt(split[0]);
                     switch (operate){
                         case 1:
-//                            try {
-//                                Thread.sleep(3000);
-//                            } catch (InterruptedException e) {
-//                                e.printStackTrace();
-//                            }
                             name = split[1];
                             idcard = split[2];
                             school = split[3];
@@ -107,11 +102,25 @@ public class SocketService {
                             break;
                         case 4:
                             int choose = Integer.parseInt(split[1]);
-                            HRS.selectResume(choose,split[2]);
+                            ResumeList resumes = HRS.selectResume(choose, split[2]);
+                            if (resumes.size() == 0){
+                                pw.println("没有该用户");
+                                pw.flush();
+                            }else {
+                                String res = "----------查询结果---------" + "\n";
+                                Iterator it = resumes.iterator();
+                                while (it.hasNext()){
+                                    Resume resume1 = (Resume) it.next();
+                                    res += (" 姓名："+resume1.getName()+" 身份证："+resume1.getId()
+                                            +" 学校："+resume1.getSchool() + "\n");
+
+                                }
+                                res += "-------------------" + "\n";
+                                pw.println(res);
+                                pw.flush();
+                            }
 
                     }
-
-                    System.out.println(Thread.currentThread().getName()+" client: " + buf);
 
 
                     if(buf.equals("close")){

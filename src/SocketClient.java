@@ -81,21 +81,29 @@ public class SocketClient {
                             buf = "4 1 " + sc.nextLine();
                             pw.println(buf);
                             pw.flush();
+                            //操作完成后，打印服务器给的反馈信息
+                            System.out.println("server: " + br.readLine());
                         }else if (choose==2){
                             System.out.println("请输入需要查询简历的姓名");
                             buf = "4 2 " + sc.nextLine();
                             pw.println(buf);
                             pw.flush();
+                            //操作完成后，打印服务器给的反馈信息
+                            System.out.println("server: " + br.readLine());
                         }else if (choose==3){
                             System.out.println("请输入需要查询简历的学校");
                             buf = "4 3 " + sc.nextLine();
                             pw.println(buf);
                             pw.flush();
+                            //操作完成后，打印服务器给的反馈信息
+                            System.out.println("server: " + br.readLine());
                         }else if(choose==4){
                             System.out.println("请输入需要查询简历的全部信息");
                             buf = "4 4 " + sc.nextLine();
                             pw.println(buf);
                             pw.flush();
+                            //操作完成后，打印服务器给的反馈信息
+                            System.out.println("server: " + br.readLine());
                         }else if (choose==5){
                             return;
                         }else {

@@ -60,20 +60,20 @@ public class HRS {
     private static ResumeList selectResumeBySchool(String school) {
         HRSService hrsService = new HRSService();
         ResumeList resumeList = hrsService.selectResuemBySchool(school);
-        if (resumeList.size() == 0){
-            System.out.println("该学校没有用户");
-        }else {
-            Iterator it = resumeList.iterator();
-            System.out.println("----------查询结果---------");
-            while (it.hasNext()){
-
-                Resume resume = (Resume) it.next();
-                System.out.println(" 姓名："+resume.getName()+" 身份证："+resume.getId()
-                        +" 学校："+resume.getSchool());
-
-            }
-            System.out.println("-------------------");
-        }
+//        if (resumeList.size() == 0){
+//            System.out.println("该学校没有用户");
+//        }else {
+//            Iterator it = resumeList.iterator();
+//            System.out.println("----------查询结果---------");
+//            while (it.hasNext()){
+//
+//                Resume resume = (Resume) it.next();
+//                System.out.println(" 姓名："+resume.getName()+" 身份证："+resume.getId()
+//                        +" 学校："+resume.getSchool());
+//
+//            }
+//            System.out.println("-------------------");
+//        }
         return resumeList;
     }
 
@@ -100,20 +100,20 @@ public class HRS {
     private static ResumeList selectResumeById(String id) {
         HRSService hrsService = new HRSService();
         ResumeList resumeList = hrsService.selectResuemById(id);
-        if (resumeList.size() == 0){
-            System.out.println("没有该用户");
-        }else {
-            Iterator it = resumeList.iterator();
-            System.out.println("----------查询结果---------");
-            while (it.hasNext()){
-
-                Resume resume = (Resume) it.next();
-                System.out.println(" 姓名："+resume.getName()+" 身份证："+resume.getId()
-                        +" 学校："+resume.getSchool());
-
-            }
-            System.out.println("-------------------");
-        }
+//        if (resumeList.size() == 0){
+//            System.out.println("没有该用户");
+//        }else {
+//            Iterator it = resumeList.iterator();
+//            System.out.println("----------查询结果---------");
+//            while (it.hasNext()){
+//
+//                Resume resume = (Resume) it.next();
+//                System.out.println(" 姓名："+resume.getName()+" 身份证："+resume.getId()
+//                        +" 学校："+resume.getSchool());
+//
+//            }
+//            System.out.println("-------------------");
+//        }
         return resumeList;
 
     }
@@ -124,17 +124,17 @@ public class HRS {
         HRSService hrsService = new HRSService();
         ResumeList resumeList = hrsService.selectAllResuem();
 
-        Iterator it = resumeList.iterator();
-        System.out.println("----------查询结果---------");
-        while (it.hasNext()){
-
-            Resume resume = (Resume) it.next();
-            System.out.println(" 姓名："+resume.getName()+" 身份证："+resume.getId()
-                        +" 学校："+resume.getSchool());
-
-        }
-        System.out.println("-------------------");
-        //DataOperate.saveData(resumeList);
+//        Iterator it = resumeList.iterator();
+//        System.out.println("----------查询结果---------");
+//        while (it.hasNext()){
+//
+//            Resume resume = (Resume) it.next();
+//            System.out.println(" 姓名："+resume.getName()+" 身份证："+resume.getId()
+//                        +" 学校："+resume.getSchool());
+//
+//        }
+//        System.out.println("-------------------");
+//        //DataOperate.saveData(resumeList);
         return resumeList;
     }
 }
