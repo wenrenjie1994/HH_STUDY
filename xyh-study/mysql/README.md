@@ -91,10 +91,10 @@ timestamp：包含日期和时间。如果插入数据的时候，设置字段�
 * 非空约束
 声明字段的值不能为空。使用关键字not null
 #### 删除和查看表
-1. 删除表：drop table 表明
+1. 删除表：drop table 表名
 2. 查看标签
-* desc 表名; --查询表的信息
-* show tables; --查看当前数据库中所有标签
+* desc 表名; --查询表结构的详细信息
+* show tables; --查看当前数据库中所有的表结构
 * show create table 表名; --查看表的创建信息
 
 
