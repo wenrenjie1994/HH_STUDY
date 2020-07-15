@@ -9,7 +9,7 @@ import java.sql.*;
  */
 public class DBConnection {
   static final String url = "jdbc:mysql://127.0.0.1:3306/hr_sys";
-  static final String name = "com.mysql.jdbc.Driver";
+  static final String name = "com.mysql.cj.jdbc.Driver";
   static final String user = "hr";
   static final String password = "hr_1234";
   Connection con = null;
