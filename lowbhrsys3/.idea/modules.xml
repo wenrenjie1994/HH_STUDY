@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Hello/Hello.iml" filepath="$PROJECT_DIR$/../Hello/Hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/lowbhrsys3.iml" filepath="$PROJECT_DIR$/lowbhrsys3.iml" />
     </modules>
   </component>
