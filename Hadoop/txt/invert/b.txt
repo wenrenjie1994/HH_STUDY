@@ -1,0 +1,4 @@
+hi hadoop
+hello hdfs
+hi mapreduce
+hi yarn

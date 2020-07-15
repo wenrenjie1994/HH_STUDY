@@ -1,0 +1,18 @@
+tom
+math 90
+english 98
+jary
+math 78
+english 87
+rose
+math 87
+english 90
+bob
+math 67
+english 87
+alex
+math 59
+english 80
+helen
+math 79
+english 60

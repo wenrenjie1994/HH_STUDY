@@ -1,0 +1,9 @@
+1 zhang 89
+2 zhang 73
+3 zhang 67
+1 wang 49
+2 wang 83
+3 wang 27
+1 li 77
+2 li 66
+3 li 89

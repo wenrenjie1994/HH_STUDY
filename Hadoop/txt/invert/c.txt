@@ -1,0 +1,5 @@
+hadoop hdfs
+netty nio
+serial avro
+hadoop mapreduce
+serial thrift

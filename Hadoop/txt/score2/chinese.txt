@@ -1,0 +1,9 @@
+Bob 50
+Alex 83
+Grace 31
+Henry 70
+Adair 40
+Chad 95
+Colin 60
+Eden 69
+Grover 25
