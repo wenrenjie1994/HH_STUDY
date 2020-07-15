@@ -15,7 +15,7 @@ public class HrSystem {
         Scanner input = new Scanner(System.in);
         ResumeService resumeService = new ResumeServiceImpl();
         while (true){
-            System.out.println("********欢迎来到HR系统 1.0**********");
+            System.out.println("********欢迎来到HR系统 3.0**********");
             System.out.println("---------添加简历请输入1----------");
             System.out.println("---------删除简历请输入2----------");
             System.out.println("---------修改简历请输入3----------");
