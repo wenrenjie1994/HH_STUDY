@@ -20,19 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day09-code/day09-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/day10-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo03/threeMember/Demo01Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo03/threeMember/Father.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo03/threeMember/Son.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Demo01Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Demo02Override.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Father.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10-code/src/demo04/method/Son.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo05/imporve/Demo01Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo05/imporve/NewPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo05/imporve/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo06/Consturctor/Demo01Constructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo06/Consturctor/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo06/Consturctor/Son.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo07/Super/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo07/Super/Son.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo08/This/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day10-code/src/demo08/This/Son.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_3.0/database/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_3.0/database/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_3.0/testconnection/dbconnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_3.0/testconnection/dbconnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day10-code/src/demo01/extend/Demo01Inherit.java" beforeDir="false" afterPath="$PROJECT_DIR$/day10-code/src/demo01/extend/Demo01Inherit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day10-code/demo01/extend/Demo01Inherit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day10-code/demo01/extend/Demo01Inherit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day10-code/demo04/method/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day10-code/demo04/method/Father.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/day10-code/demo04/method/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day10-code/demo04/method/Son.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,39 +76,26 @@
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo01Method">
+  <component name="RunManager" selected="Application.Demo01Constructor">
+    <configuration name="Demo01Constructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo06.Consturctor.Demo01Constructor" />
+      <module name="day10-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo06.Consturctor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo01ExtendsField (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo02.MemberVariable.Demo01ExtendsField" />
       <module name="day10-code" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="demo02.MemberVariable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo01Inherit (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo01.Demo01Inherit" />
-      <module name="day10-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="demo01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo01Inherit (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo01.extend.Demo01Inherit" />
-      <module name="day10-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="demo01.extend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,20 +129,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Demo01Phone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo05.imporve.Demo01Phone" />
+      <module name="day10-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo05.imporve.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Demo01Inherit (1)" />
-      <item itemvalue="Application.Demo01Inherit (2)" />
       <item itemvalue="Application.Demo01ExtendsField (1)" />
       <item itemvalue="Application.Demo01Member" />
       <item itemvalue="Application.Demo01Method" />
+      <item itemvalue="Application.Demo01Phone" />
+      <item itemvalue="Application.Demo01Constructor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo01Constructor" />
+        <item itemvalue="Application.Demo01Phone" />
         <item itemvalue="Application.Demo01Method" />
         <item itemvalue="Application.Demo01Member" />
         <item itemvalue="Application.Demo01ExtendsField (1)" />
-        <item itemvalue="Application.Demo01Inherit (2)" />
-        <item itemvalue="Application.Demo01Inherit (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +178,7 @@
       <workItem from="1594548132099" duration="411000" />
       <workItem from="1594548570461" duration="2465000" />
       <workItem from="1594564374375" duration="20838000" />
-      <workItem from="1594713867237" duration="9325000" />
+      <workItem from="1594713867237" duration="16008000" />
     </task>
     <servers />
   </component>
@@ -220,22 +222,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594607445901" />
-    <state width="1313" height="199" key="GridCell.Tab.0.bottom" timestamp="1594721975624">
+    <state width="1313" height="157" key="GridCell.Tab.0.bottom" timestamp="1594781642420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="199" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
-    <state width="1313" height="199" key="GridCell.Tab.0.center" timestamp="1594721975624">
+    <state width="1313" height="157" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594781642420" />
+    <state width="1313" height="157" key="GridCell.Tab.0.center" timestamp="1594781642411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="199" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
-    <state width="1313" height="199" key="GridCell.Tab.0.left" timestamp="1594721975624">
+    <state width="1313" height="157" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594781642411" />
+    <state width="1313" height="157" key="GridCell.Tab.0.left" timestamp="1594781642411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="199" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
-    <state width="1313" height="199" key="GridCell.Tab.0.right" timestamp="1594721975624">
+    <state width="1313" height="157" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594781642411" />
+    <state width="1313" height="157" key="GridCell.Tab.0.right" timestamp="1594781642411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="199" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594721975624" />
+    <state width="1313" height="157" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594781642411" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

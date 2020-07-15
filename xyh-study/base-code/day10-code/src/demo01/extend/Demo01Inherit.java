@@ -16,9 +16,32 @@ package demo01.extend;
 public class 父类名称{
 
 }
-
 public class 子类名称 extends 父类名称{
 }
+三、java继承的三个特点
+1.java语言是单继承的。即一个雷的直接父类只能有唯一一个。
+class A(){
+}
+class B() extends A{
+}//正确
+class C(){
+}
+class D() extends A,C{
+}//错误
+2.java语言可以多级继承.最高级是java.lang.Object类
+class A(){
+}
+class B() extends A{
+}
+class C() extends B{
+}//正确
+3.一个子类的直接父类是惟一的，但是一个父类可以拥有多个子类
+class A(){
+}
+class B() extends A{
+}
+class C() extends A{
+}//正确
 */
 public class Demo01Inherit {
     public static void main(String[] args) {
