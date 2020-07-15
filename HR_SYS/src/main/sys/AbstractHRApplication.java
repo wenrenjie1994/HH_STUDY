@@ -45,11 +45,11 @@ public abstract class AbstractHRApplication implements HRApplication {
       return;
     }
 
-    if (config.isLocalPersistence()) {
-      // 初始化 Service，从本地读取数据
-      resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
-    } else if (config.isUseDB()) {
+    if (config.isUseDB()) {
       resumeService = new TerminalResumeServiceImpl(new DBResumeMapper());
+    } else if (config.isLocalPersistence()) {
+      // 初始化 Service，从本地读取数据并使用持久化
+      resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper(localPersistence.getFromLocal()));
     } else {
       resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper());
     }

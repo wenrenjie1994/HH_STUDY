@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: Client 与 Server 交互的传输类
  * Created on 7/15/20 4:36 PM
  */
 public class RequestDTO implements Serializable {

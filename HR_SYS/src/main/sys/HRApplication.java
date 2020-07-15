@@ -14,6 +14,7 @@ public class HRApplication extends AbstractHRApplication {
     // new Config().setLocalPersistence(true); 内存读写并持久化
     // new Config().setUseDB(true); 使用数据库
     // new Config().setCS(true); C/S 分离，需要启动 sys/ServerApplication
+    // 优先级：setCS > setUseDB > setLocalPersistence > 啥都不干
 
     Config config = new Config().setCS(true);
     new HRApplication(config).run();

@@ -13,8 +13,7 @@ import java.net.Socket;
 
 /**
  * @author: hqweay
- * @description: TODO
- * Server Client 得自定义数据传输格式
+ * @description: Server 线程
  * Created on 7/15/20 12:48 PM
  */
 public class ServerThread implements Runnable {

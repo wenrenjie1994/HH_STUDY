@@ -2,7 +2,7 @@ package main.enums;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: Client 与 Server 交互的可用链接
  * Created on 7/15/20 3:26 PM
  */
 public enum RequestEnum {

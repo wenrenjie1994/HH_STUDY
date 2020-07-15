@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: Server
  * Created on 7/15/20 12:43 PM
  */
 public class Server {
@@ -41,10 +41,7 @@ public class Server {
         tcpConnection = serverSocket.accept();
         System.out.println("info: accpet data from client.");
         //  开启线程
-
         threadPoolExecutor.execute(new Thread(new ServerThread(tcpConnection)));
-
-
       } catch (IOException e) {
         e.printStackTrace();
       }
