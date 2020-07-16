@@ -182,6 +182,3 @@ git branch -r // 列出远程分支(远程所有分支名)
 git branch -a // 查看远程分支(列出远程分支以及本地分支名)
 git fetch // 更新remote索引
 git push -u origin 分支名 // 将本地分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push
-————————————————
-版权声明：本文为CSDN博主「create13」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/qq_38111015/article/details/84885809
