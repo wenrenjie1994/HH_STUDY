@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/File类和IO流/File类和IO流.iml" filepath="$PROJECT_DIR$/File类和IO流/File类和IO流.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hr_client/hr_client.iml" filepath="$PROJECT_DIR$/hr_client/hr_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hr_server/hr_server.iml" filepath="$PROJECT_DIR$/hr_server/hr_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/hr_system/hr_system.iml" filepath="$PROJECT_DIR$/hr_system/hr_system.iml" />
       <module fileurl="file://$PROJECT_DIR$/zengxianjie2402.iml" filepath="$PROJECT_DIR$/zengxianjie2402.iml" />
       <module fileurl="file://$PROJECT_DIR$/数据库/数据库.iml" filepath="$PROJECT_DIR$/数据库/数据库.iml" />
