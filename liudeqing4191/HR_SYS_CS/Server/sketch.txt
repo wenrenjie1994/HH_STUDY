@@ -1,0 +1,23 @@
+r_msg:
+    add
+    delete
+    update
+    searchby
+        id
+        name
+        school
+        process
+        key
+
+    bye
+
+action_msg:
+    add
+    delete
+    update
+    searchby
+        id
+        name
+        school
+        process
+        key

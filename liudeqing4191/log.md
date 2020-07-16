@@ -1,3 +1,26 @@
+###### 2020/7/16
+
+学习cs结构模式，研究协议在其中的应用
+
+进步：
+
+- 
+
+- ```
+  public interface ResultSet extends Wrapper, AutoCloseable{}//接受query查询结果
+  while(rs.next())
+              {
+                  out.add(res.get())
+              }
+  ```
+
+完成 ：
+
+- model.*
+- database.*
+- work.Action
+- util.*
+
 ###### 2020/7/11
 
 完成数据库版本
