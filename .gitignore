@@ -9,5 +9,6 @@
 .idea/modules.xml
 .idea/project-template.xml
 .idea/vcs.xml
+.idea/sqldialects.xml
 HH_STUDY.iml
-#src/
+out/
