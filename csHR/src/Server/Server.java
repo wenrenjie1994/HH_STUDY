@@ -32,17 +32,40 @@ public class Server {
         public void run() {
             DataInputStream input;
             DataOutputStream output;
-            try {
-                input = new DataInputStream(client.getInputStream());
-                output = new DataOutputStream(client.getOutputStream());
-                String listMsg = input.readUTF();
-                output.writeUTF("Recive:  " + listMsg + "    \r\n Thx...");
-                System.out.println("Recive:   " + listMsg);
-                listMsg = input.readUTF();
-                output.writeUTF("Recive Second:  " + listMsg + "    \r\n Thx...");
-                System.out.println("Recive Second:   " + listMsg);
-            } catch (IOException e) {
-                e.printStackTrace();
+            while(true) {
+                try {
+                    input = new DataInputStream(client.getInputStream());
+                    output = new DataOutputStream(client.getOutputStream());
+                    String listMsg = input.readUTF();
+                    Parse pa = new Parse(listMsg);
+                    String head = pa.gethead();
+                    //System.out.println(head);
+                    String content = pa.getcontent();
+                    System.out.println(content);
+                    if (head.equals("1")) {
+                        JDBC.addCandidate(content);
+                        output.writeUTF("add success");
+
+                    }
+                    if (head.equals("2")) {
+                        JDBC.deleteCandidate(content);
+                        output.writeUTF("delete success");
+
+                    }
+                    if (head.equals("3")) {
+                        JDBC.updateCandidate(content);
+                        output.writeUTF("update success");
+
+                    }
+                    if (head.equals("4")) {
+                       String a = JDBC.showCandidate();
+                        output.writeUTF(a);
+
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

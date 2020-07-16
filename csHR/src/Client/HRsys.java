@@ -29,22 +29,46 @@ public class HRsys {
                 //if语句指令判断
                 int choice = input.nextInt();
 
-                if (choice == 5) {
+                if (choice == 1) {
                     //  DataOperate.saveCandidate(candidateList);
-                    System.out.println("您已退出简历管理系统");
+                    System.out.println("请用逗号隔开，分别输入姓名，年龄，学历");
+                 String add =  input.next();
+                 String newadd = choice+"#"+add;
+                    doc.writeUTF(newadd);
+                    String res = in.readUTF();
+                    System.out.println(res);
+                }
+                if (choice == 2) {
+                    //  DataOperate.saveCandidate(candidateList);
+                    System.out.println("请输入要删除的简历的姓名");
+                    String add =  input.next();
+                    String delename = choice+"#"+add;
+                    doc.writeUTF(delename);
+                    String res = in.readUTF();
+                    System.out.println(res);
+                }
+                if (choice == 3) {
+                    //  DataOperate.saveCandidate(candidateList);
+                    System.out.println("请用逗号隔开，输入要更新的人的姓名，年龄，学历");
+                    String add =  input.next();
+                    String change = choice+"#"+add;
+                    doc.writeUTF(change);
+                    String res = in.readUTF();
+                    System.out.println(res);
+                }
+                if (choice == 4) {
+                    //  DataOperate.saveCandidate(candidateList);
+
+                    String show = ""+choice+"#"+"123";
+                    doc.writeUTF(show);
+                    String res = in.readUTF();
+                    System.out.println(res);
+                }
+                if(choice==5){
+                    doc.close();
+                    in.close();
                     break;
                 }
-                else
-
-                //向服务器端第二次发送字符串
-                doc.writeUTF("list");
-                String res = in.readUTF();
-                System.out.println(res);
-                doc.writeUTF("bye");
-                res = in.readUTF();
-                System.out.println(res);
-                doc.close();
-                in.close();
             }
 
         } catch (UnknownHostException e) {
