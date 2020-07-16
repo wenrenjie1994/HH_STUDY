@@ -1,6 +1,6 @@
 /**
- * projectName: HRS1.0
- * fileName: HRSController.java
+ * projectName: HRS3.0
+ * fileName: HRS.java
  * packageName: sys
  * date: 2020-07-13 16:26
  * copyright(c) tianyifan
@@ -16,21 +16,21 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
- * @version: V1.0
+ * @version: V3.0
  * @author: tianyifan
- * @className: HRSController
+ * @className: HRS
  * @packageName: sys
  * @description: HRS控制类
  * @date: 2020-07-13 16:26
  **/
-public class HRSController {
+public class HRS {
     private DBConnection dbConnection = new DBConnection();
     private Connection connection = dbConnection.getDBConnection();//从连接池中获取连接
     private PreparedStatement preparedStatement;
     //标准输入流，System.in 在java中是静态变量，当前类所有的scanner对象共享它，当一个scanner对象执行close()操作后，其他所有的scanner对象都不可用
     Scanner scanner = new Scanner(System.in);
     int choice;
-    private HRSController() throws SQLException {
+    private HRS() throws SQLException {
 
         while (true && choice != 5) {
             System.out.println("**************************************************************");
@@ -232,6 +232,6 @@ public class HRSController {
     }
 
     public static void main(String[] args) throws SQLException {
-        new HRSController();
+        new HRS();
     }
 }

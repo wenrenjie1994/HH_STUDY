@@ -1,5 +1,5 @@
 /**
- * projectName: HRS1.0
+ * projectName: HRS3.0
  * fileName: Employee.java
  * packageName: entity
  * date: 2020-07-13 16:25
@@ -8,7 +8,7 @@
 package entity;
 
 /**
- * @version: V1.0
+ * @version: V3.0
  * @author: tianyifan
  * @className: Employee
  * @packageName: entity

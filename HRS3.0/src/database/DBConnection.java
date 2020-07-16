@@ -1,5 +1,5 @@
 /**
- * projectName: HRS1.0
+ * projectName: HRS3.0
  * fileName: DBConnection.java
  * packageName: util
  * date: 2020-07-14 23:02
@@ -11,12 +11,10 @@ import com.alibaba.druid.pool.DruidDataSource;//引入站点的配置信息
 import com.alibaba.druid.pool.DruidPooledConnection;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * @version: V1.0
+ * @version: V3.0
  * @author: tianyifan
  * @className: DBConnection
  * @packageName: util
