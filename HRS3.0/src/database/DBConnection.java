@@ -1,7 +1,7 @@
 /**
  * projectName: HRS3.0
  * fileName: DBConnection.java
- * packageName: util
+ * packageName: database
  * date: 2020-07-14 23:02
  * copyright(c) tianyifan
  */
@@ -17,7 +17,7 @@ import java.sql.SQLException;
  * @version: V3.0
  * @author: tianyifan
  * @className: DBConnection
- * @packageName: util
+ * @packageName: database
  * @description: 数据库连接类
  * @date: 2020-07-14 23:02
  **/
