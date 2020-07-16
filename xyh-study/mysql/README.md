@@ -156,6 +156,104 @@ timestamp：包含日期和时间。如果插入数据的时候，设置字段�
 * truncate 表中存放数据
 > 先把整个表删掉（数据删除了），创建一个与原来一模一样的表
 
+#### 查询数据select
+
+1. 查询语句的语法
+* select * from 表;  --默认查询所有的字段数据
+* select 字段1,字段2,字段3 from 表; --查询指定的字段数据
+* DISTINCT   --去掉重复 select  distinct salary  from 表;
+* 可以对查询的列进行运算  <br>
+select salary+100 from employees; <br>
+select username ,(math+english+chinese) from students<br>
+select username ,(math+english+chinese) as total from students<br>
+2. 查询语句中可以使用as关键字起别名
+* 别名的真正用法，采用的多表查询，为了区分每张表，起个别名
+* as的关键字可以省略不写，中间需要用空格
+* 一般都是给表起别名<br>
+select s.username,s.math from stu s;<br>
+select s.username,u.username from stu s,user u;<br>
+3. 可以使用where语句对查询结果进行过滤<br>
+select * from employees as emp where salary>4000;<br>;
+select username ,(math+english+chinese) as total from students where total>200; 写法错误<br>
+select username ,(math+english+chinese) as total from students where math+english+chinese>200; 写法正确<br>
+
+#### where字句后可以使用的符号
+1. 常用的符号
+* >  <  <=  >=  =  <>(不等于)  
+
+* in  --代表范围
+* select * from employees where salary in(6600,4000);
+
+* like  --模糊查询<br>
+
+like 关键字的写法：<br>
+select * from employees where name like '张_'; 使用_ 占位符，结果：张飞 张三 张x（符合）张得顺（不符合）<br><br>
+select * from employees where name like '张%'; 结果 张飞 张三 张x 张得顺都符合<br>
+
+like '%张';     --结果：以张结尾的都可以<br>
+like '%张%';    --结果：只要包含张就可以<br>
+总结<br>
+条件需要使用单引号<br>
+需要使用占位符  _ :代表一个位置，%代表多个位置<br>
+
+* and    --与    例如：select * from employees where  salary>6000 and age<30; --查询工资大于6000且年龄小于30的员工信息
+* or     --或   例如：select * from employees where  salary>6000 or age<30;  --查询工资大于6000或者年龄小于30的员工信息
+* not    --非   例如：select * from employees where salary not in(4000,6000); --查询工资不是4000和6000的员工
+* between  and  例如：select * from employees where salary between 4000 and 6600; --查询工资在4000（包括）到6600（包括）以内的员工信息
+
+#### 使用order by 对结果进行排序
+1. 语法：
+* order by 字段 asc  --降序排列
+* order by 字段 desc  --升序排列
+
+* select name, (math+chinses+english) as total from students order by total desc;  --对学生的数学、语文、英语总成绩进行降序排序，并显示姓名和总分
+* select name, math,english from students order by english desc,math desc; --对学生成绩按照英语进行降序，再按照数据进行降序排列，并显示姓名、数据和英语成绩
+
+2. 注意事项
+* order by 放在select语句末尾
+* select * from xx where xx order by xx；
+
+#### 聚合函数
+1. 概念：excel表格。求数量，求和，平均值，最大值，最小值
+2. 聚合函数操作的都是某一列的数据
+3. 聚合函数
+* count() --求数量
+> select count(*) | count(列名) from 表
+> 统计一个班级共有多少学生： select count(*) from students；
+> 统计学生数学成绩大于90的学生个数： select count(math) from students where math>90;
+* sum() --求某一列数据的和
+* 注意： 没有sum(*),只有sum(列明),且只对数值类型起作用
+> select sum(math) from students; --查询班级的数学总成绩
+> select sum(math+english+chinese) from students; --查询班级所有成绩的总成绩
+> select sum(chinese)/cout(*) from students; --查询班级语文的平均分
+
+* avg() --求平均值
+>select avg(chinese) from students; --查询班级语文的平均分
+4. 总结 
+* 聚集函数，是函数，不要忘记写()
+* 计算都是某一列的数据
+* 聚集函数
+> count() --求数量
+> sum() --求和
+> avg() --求平均值
+> max() --求最大值
+> min() --最小值
+
+#### 分组查询
+
+1. 分组的概念
+* select * from students --查询所有数据，默认为一组
+* 可以使用关键字 group by sex 根据字段进行分组
+> select count(*) from employees group by gender; --统计两个性别的人数
+> select product,sum(price) from orders group by product having sum(price)>100 ; --查询购买了几类商品，并且每类总价大于100的商品
+> select product ,sum(price) from orders where price>95 group by product having sum(price)>100;--查询购买几类商品，并且商品价格需要大于100，每类总价大于100的商品
+* 使用where的条件语句，若果有分组，是在分组之前的条件
+* having关键字是进行分组的条件过滤
+* where关键字后不能使用聚集函数，而having可以使用聚集函数
+
+
+
+
 
 
 
