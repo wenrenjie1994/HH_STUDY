@@ -23,7 +23,7 @@
 **Spring中的编程思想总结**
 
 | Spring思想 | 应用场景(特点) | 一句话归纳 |
-| ----- | ----- | ------ |
+| -------- | -------- | --------- |
 | OOP | Object Oriented Programming(面向切面编程)，用程序归纳总结生活中的一切事物 |  封装、继承、多态 |
 | BOP | Bean Oriented Programming(面向Bean编程)面向Bean(普通的Java类)设计程序 | 一切从Bean开始 |
 | AOP | Aspect Oriented Programming(面向切面编程)找出多个类中有一定规律的代码，开发时拆开，运行时再合并。面向切面编程，即面向规则编程 | 解耦，专人做专事 |
