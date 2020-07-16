@@ -3,7 +3,7 @@
  * @version 1.2 2016-03-11
  * @author 文仁杰 2014214225
  */
-package hr05;
+package hrs_txt;
 import java.util.LinkedList;
 import java.util.Scanner;
 import loadandsaveData.DataOperate;
@@ -52,7 +52,7 @@ public class HRS
 				break;
 			}
 			else {
-				System.out.println("输入错误，请确认后从新输入");
+				System.out.println("输入错误，请确认后重新输入");
 			}
 		}
 		System.out.println("您已退出HR管理系统");

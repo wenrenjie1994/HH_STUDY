@@ -26,4 +26,10 @@
 ### 3、非线程安全转换为线程安全
 * 使用Collections.synchronizedList
 
-## 五、死锁
+## 五、死锁（deadlock）
+
+## 六、交互（deadlock）
+### 1、wait()、notify()、notifyAll()
+* wait()：让占用了这个同步对象的线程，临时释放当前占用，并等待。 在synchronized块里调用wait()，否则就会出错。
+* notify()：通知一个等待在这个同步对象上的线程，有机会重新占用当前对象了。
+* notifyAll()：通知所有的等待在这个同步对象上的线程，有机会重新占用当前对象了。
