@@ -20,7 +20,7 @@ import java.util.Scanner;
  * @author: tianyifan
  * @className: HRS
  * @packageName: sys
- * @description: HRS控制类
+ * @description: HRS类
  * @date: 2020-07-13 16:26
  **/
 public class HRS {
@@ -29,9 +29,8 @@ public class HRS {
     private PreparedStatement preparedStatement;
     //标准输入流，System.in 在java中是静态变量，当前类所有的scanner对象共享它，当一个scanner对象执行close()操作后，其他所有的scanner对象都不可用
     Scanner scanner = new Scanner(System.in);
-    int choice;
+    int choice;//操作选择变量
     private HRS() throws SQLException {
-
         while (true && choice != 5) {
             System.out.println("**************************************************************");
             System.out.println("*                                                            *");
@@ -98,7 +97,7 @@ public class HRS {
 
     /**
      *@title: print
-     *@description: 输入结果集信息
+     *@description: 输出结果集信息
      *@author: tianyifan
      *@date: 2020-07-16 11:56
      *@param: [resultSet]
