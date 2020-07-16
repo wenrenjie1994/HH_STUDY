@@ -661,6 +661,8 @@ public static void printMax(double... numbers) {
 
 + 对象是抽象概念的具体实例
 
++ 匿名对象
+
 #### 创建与初始化对象
 
 + 使用new关键字创建对象
@@ -676,7 +678,8 @@ public static void printMax(double... numbers) {
   - 高内聚：类的内部数据操作细节自己完成，不允许外部干涉
   - 低耦合：仅暴露少量的方法给外部使用
 + 封装：数据隐藏，通过接口访问
-+ 属性私有
++ 属性**私有**、不对外提供接口的方法
++ 提供公共的方法用以访问``get function()`` ``set function()``
 + ``private``
   - 只有这个类内部可以访问
   - 类内部的成员函数和定义初始化
@@ -685,6 +688,29 @@ public static void printMax(double... numbers) {
   - 
 + 没有``private``和``public``表示是``friendly``
   - 同一个包内部可以访问
+
+#### 访问权限修饰符 
+
+| 修饰符    | 类内部 | 同一个包 | 不同包的子类 | 同一个工程 |
+| --------- | ------ | -------- | ------------ | ---------- |
+| private   | Yes    |          |              |            |
+| 缺省      | Yes    | Yes      |              |            |
+| protected | Yes    | Yes      | Yes          |            |
+| public    | Yes    | Yes      | Yes          | Yes        |
+
+> 可以修饰类
+>
+> + 缺省
+> + ``public``
+>
+> 可以修饰类的内部结构
+>
+> + 属性
+> + 方法
+> + 构造器
+> + 内部类
+
+
 
  #### 继承
 
