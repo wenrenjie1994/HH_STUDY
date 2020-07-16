@@ -13,7 +13,7 @@
 | 设计原则 | 一句话归纳 | 目的 |
 | -------- | -------- | -------- |
 | 开闭原则(Open-Close) | 对扩展开放，对修改封闭 | 减少维护带来的新风险 |
-| 依赖倒置原则(Dependency Inversion) | 高层不应该依赖于低层 | 更利于代码结构的升级和扩展 |
+| 依赖倒置原则(Dependency Inversion) | 高层不应该依赖于低层，而应该依赖于抽象 | 更利于代码结构的升级和扩展 |
 | 单一职责原则(Simple Responsibility) | 一个类只做一件事情 | 便于理解，提高代码可读性 |
 | 接口隔离原则(Interface Segregation) | 一个接口只做一件事情 | 功能解耦，高内聚，低耦合 |
 | 迪米特法则(Law of Demeter) | 不该知道的不要知道 | 只和朋友交流，不和陌生人说话，减少代码臃肿 |
@@ -49,7 +49,7 @@
 | 模板模式(Template) | 流程全部标准化，需要微调请覆盖 | 逻辑复用 | 装大象进冰箱的步骤 | JdbcTemplate、HttpServlet |
 | 策略模式(Strategy) | 条条大路通罗马 | 把选择权交给用户 | 选择支付方式 | Comparator、InstantiationStrategy |
 | 责任链模式(Chain of Responsibility) | 审批盖章即担责 | 解耦处理逻辑 | 踢皮球 | FilterChain、Pipeline |
-| 迭代器模式(Iterator) | 海纳百川 | 统一集合访问 | 逐个检票进站 | Iterator |
+| 迭代器模式(Iterator) | 不撞南墙不回头 | 统一集合访问 | 逐个检票进站 | Iterator |
 | 命令模式(Command) | 上行下效 | 解耦请求与处理 | 遥控器 | Runnable |
 | 状态模式(State) | 忽阴忽晴，忽冷忽热 | 绑定状态和行为 | 订单状态跟踪 | Lifecycle |
 | 备忘录模式(Memento) | 给我一剂"后悔药" | 记录特定时间点下的特定行为 | 草稿箱 | StateManageableMessageContext |
@@ -77,7 +77,7 @@
 
 | Spring思想 | 应用场景(特点) | 一句话归纳 |
 | -------- | -------- | --------- |
-| OOP | Object Oriented Programming(面向切面编程)，用程序归纳总结生活中的一切事物 |  封装、继承、多态 |
+| OOP | Object Oriented Programming(面向对象编程)，用程序归纳总结生活中的一切事物 |  封装、继承、多态 |
 | BOP | Bean Oriented Programming(面向Bean编程)面向Bean(普通的Java类)设计程序 | 一切从Bean开始 |
 | AOP | Aspect Oriented Programming(面向切面编程)找出多个类中有一定规律的代码，开发时拆开，运行时再合并。面向切面编程，即面向规则编程 | 解耦，专人做专事 |
 | IOC | 找人办事，增强职责。Inversion Of Controller(控制反转)将new对象的动作，交给Spring管理，并由Spring保存已创建的对象(IOC容器) | 转交控制权(即控制权反转) |
