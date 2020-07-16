@@ -6,24 +6,24 @@ qhr学习计划
   - 学习网址https://how2j.cn/ 
   - 书籍《JAVA核心技术 卷I》
 - 基础内容
-  - [ ] content关键字/标识符
-  - [ ] content常量
-  - [ ] content变量/数据类型（https://how2j.cn/k/variable/variable-tutorial/258.html）
-  - [ ] content运算符/操作符（https://how2j.cn/k/variable/variable-tutorial/258.html）
-  - [ ] content类与对象（https://how2j.cn/k/class-object/class-object-reference/307.html）
-  - [ ] content选择结构/循环结构
-  - [ ] content面向对象（https://how2j.cn/k/oo/oo-class-object/286.html）
-  - [ ] content常用API
-  - [ ] content接口与继承/多态（https://how2j.cn/k/interface-inheritance/interface-inheritance-interface/289.html）
-  - [ ] content集合（https://how2j.cn/k/collection/collection-arraylist/363.html）
-  - [ ] content异常（https://how2j.cn/k/exception/exception-tutorial/332.html）
-  - [x] content**多线程**（https://how2j.cn/k/thread/thread-start/353.html）
-  - [x] content**File类与IO流**（https://how2j.cn/k/io/io-file/345.html）
-  - [x] contentJDBC（https://how2j.cn/k/jdbc/jdbc-mysql/386.html）
-  - [ ] content网络编程（https://how2j.cn/k/socket/socket-ip-port/399.html）
-  - [ ] content泛型（https://how2j.cn/k/generic/generic-generic/373.html）
-  - [x] content**反射**（https://how2j.cn/k/reflection/reflection-class/108.html）
-  - [ ] contentLAMBDA表达式（https://how2j.cn/k/lambda/lambda-lamdba-tutorials/697.html）![image](https://github.com/wenrenjie1994/HH_STUDY/tree/qiuhaoran3097/pic/githubreadme.png)
+  - [ ] 关键字/标识符
+  - [ ] 常量
+  - [ ] 变量/数据类型（https://how2j.cn/k/variable/variable-tutorial/258.html）
+  - [ ] 运算符/操作符（https://how2j.cn/k/variable/variable-tutorial/258.html）
+  - [ ] 类与对象（https://how2j.cn/k/class-object/class-object-reference/307.html）
+  - [ ] 选择结构/循环结构
+  - [ ] 面向对象（https://how2j.cn/k/oo/oo-class-object/286.html）
+  - [ ] 常用API
+  - [ ] 接口与继承/多态（https://how2j.cn/k/interface-inheritance/interface-inheritance-interface/289.html）
+  - [ ] 集合（https://how2j.cn/k/collection/collection-arraylist/363.html）
+  - [ ] 异常（https://how2j.cn/k/exception/exception-tutorial/332.html）
+  - [x] **多线程**（https://how2j.cn/k/thread/thread-start/353.html）
+  - [x] **File类与IO流**（https://how2j.cn/k/io/io-file/345.html）
+  - [x] JDBC（https://how2j.cn/k/jdbc/jdbc-mysql/386.html）
+  - [ ] 网络编程（https://how2j.cn/k/socket/socket-ip-port/399.html）
+  - [ ] 泛型（https://how2j.cn/k/generic/generic-generic/373.html）
+  - [x] **反射**（https://how2j.cn/k/reflection/reflection-class/108.html）
+  - [ ] LAMBDA表达式（https://how2j.cn/k/lambda/lambda-lamdba-tutorials/697.html）![image](https://github.com/wenrenjie1994/HH_STUDY/tree/qiuhaoran3097/pic/githubreadme.png)
   
 
 第二阶段
