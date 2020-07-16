@@ -25,7 +25,7 @@ public class DBConnection {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";//JDBC驱动（本机数据库版本8.0）
     private static final String DB_URL = "jdbc:mysql://localhost:3306/hrs?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";//数据库URL
     private static final String USERNAME = "root";//数据库用户名
-    private static final String PASSWORD = "1234598760muhan";//数据库密码
+    private static final String PASSWORD = "111111";//数据库密码
 
     private static DruidDataSource DataSource=null;
 
