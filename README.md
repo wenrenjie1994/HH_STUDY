@@ -8,6 +8,56 @@
 | 进一步学习和巩固Java中的23种设计模式，争取能够达到灵活应用，提高代码的复用性和可维护性 | ✔︎ |
 | 在学习过程中进一步强化对反射等知识的掌握，解决一些实际问题，如执行某个类中全部以test开头的无参数无返回值的非静态方法 | ✔︎ |
 
+**对软件设计七大原则的归纳总结**
+
+| 设计原则 | 一句话归纳 | 目的 |
+| -------- | -------- | -------- |
+| 开闭原则(Open-Close) | 对扩展开放，对修改封闭 | 减少维护带来的新风险 |
+| 依赖倒置原则(Dependency Inversion) | 高层不应该依赖于低层 | 更利于代码结构的升级和扩展 |
+| 单一职责原则(Simple Responsibility) | 一个类只做一件事情 | 便于理解，提高代码可读性 |
+| 接口隔离原则(Interface Segregation) | 一个接口只做一件事情 | 功能解耦，高内聚，低耦合 |
+| 迪米特法则(Law of Demeter) | 不该知道的不要知道 | 只和朋友交流，不和陌生人说话，减少代码臃肿 |
+| 里氏替换原则(Liskov Substitution) | 子类重写父类方法功能发生改变，不应该影响父类方法的含义 | 防止继承泛滥 |
+| 合成复用原则(Composite Reuse) | 尽量使用组合实现代码复用，而不使用继承 | 降低代码耦合度 |
+
+**创建型设计模式归纳总结**
+
+| 设计模式 | 一句话归纳 | 目的 | 生活案例 | 框架源码举例 |
+| -------- | -------- | -------- | -------- | -------- |
+| 工厂模式(Factory) | 产品标准化，生产高效化 | 封装创建细节 | 实体工厂 | LoggerFactory、BeanFactory |
+| 单例模式(Singleton) | 世界上没有相同的两片树叶 | 保证独一无二 | CEO | Calender、Runtime |
+| 原型模式(Prototype) | 拔一根猴毛，吹出千万个 | 高效创建对象(读内存) | 克隆 | ArrayList、PrototypeBean |
+| 建造者模式(Builder) | 不同结果的配置将由你来决定 | 开发个性配置步骤 | 选配 | StringBuilder、BeanDefinitionBuilder |
+
+**结构型设计模式归纳总结**
+
+| 设计模式 | 一句话归纳 | 目的 | 生活案例 | 框架源码举例 |
+| -------- | -------- | -------- | -------- | -------- |
+| 代理模式(Proxy) | 没有资源和时间，得找媒婆来帮忙 | 增强职责 | 媒婆 | ProxyFactoryBean、JdkDynamicAopProxy |
+| 门面模式(Facade) | 由点及面 | 统一访问入口 | 前台 包工头 | JdbcUtils、RequestFacade |
+| 装饰器模式(Decorator) | 他大舅他二舅，都是他舅 | 灵活扩展，同宗同源 | 蛋糕 | BufferedReader、InputStream |
+| 享元模式(FlyWeight) | 优化资源配置，减少重复浪费 | 共享资源池 | 全国社保联网 | String、Integer、ObjectPool |
+| 组合模式(Composite) | 人在一起叫团伙，心在一起叫团队 | 统一整体和个体 | 组织架构树 | HashMap |
+| 适配器模式(Adapter) | 求同存异 | 兼容转换 | 电源适配 | AdvisorAdapter、HandlerAdapter |
+| 桥接模式(Bridge) | 约定优于配置 | 不允许用继承 | 桥 | DriverManager |
+
+**行为型设计模式归纳总结**
+
+| 设计模式 | 一句话归纳 | 目的 | 生活案例 | 框架源码举例 |
+| -------- | -------- | -------- | -------- | -------- |
+| 委派模式(Delegate) | 这个需求给到你，怎么实现我不管 | 只对结果负责 | 授权委托书 | ClassLoader、BeanDefinitionParserDelegate |
+| 模板模式(Template) | 流程全部标准化，需要微调请覆盖 | 逻辑复用 | 装大象进冰箱的步骤 | JdbcTemplate、HttpServlet |
+| 策略模式(Strategy) | 条条大路通罗马 | 把选择权交给用户 | 选择支付方式 | Comparator、InstantiationStrategy |
+| 责任链模式(Chain of Responsibility) | 审批盖章即担责 | 解耦处理逻辑 | 踢皮球 | FilterChain、Pipeline |
+| 迭代器模式(Iterator) | 海纳百川 | 统一集合访问 | 逐个检票进站 | Iterator |
+| 命令模式(Command) | 上行下效 | 解耦请求与处理 | 遥控器 | Runnable |
+| 状态模式(State) | 忽阴忽晴，忽冷忽热 | 绑定状态和行为 | 订单状态跟踪 | Lifecycle |
+| 备忘录模式(Memento) | 给我一剂"后悔药" | 记录特定时间点下的特定行为 | 草稿箱 | StateManageableMessageContext |
+| 中介者模式(Mediator) | 联系方式我给你，怎么搞定我不管 | 统一管理网状资源 | 朋友圈 | Timer |
+| 解释器模式(Interpreter) | 我想说“方言” | 统一处理解释行为 | 摩斯密码 | Pattern |
+| 观察者模式(Observer) | 到点记得通知我 | 解耦观察者与被观察者 | 闹钟 | ContextLoaderListener |
+| 访问者模式(Visitor) | 世界那么大，我想去看看 | 解耦数据结构与数据操作 | KPI考核 | FileVisitor|
+
 **Spring中常用的设计模式总结**
 
 | 设计模式 | 一句话归纳 | 示例 |
