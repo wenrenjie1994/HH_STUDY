@@ -1,43 +1,34 @@
-新员工学习计划
-
-
-
-一、背景与目的
-
-因疫情影响，目前大家的入职时间还不确定，大家可以在空余时间对科技人员的通识知识点进行学习和巩固，并且根据这段时间同学们的学习情况、学习过程中的难点痛点，在入职后可以更有针对性地进行带教。目前我们选取JAVA这一门语言及其相关技术栈作为切入点，大家可以把JAVA当做通识课程，不管以后是不是使用JAVA都可以学一学。
-
-二、学习内容
+qhr学习计划
 
 第一阶段
 
-- 推荐学习材料(不做局限)
-  - 推荐学习网址https://how2j.cn/ 
-  - 同学之间互相分享的学习资料
-  - 推荐书籍《JAVA核心技术 卷I》
+- 学习材料(不做局限)
+  - 学习网址https://how2j.cn/ 
+  - 书籍《JAVA核心技术 卷I》
 - 基础内容
-  - 关键字/标识符
-  - 常量
-  - 变量/数据类型（https://how2j.cn/k/variable/variable-tutorial/258.html）
-  - 运算符/操作符（https://how2j.cn/k/variable/variable-tutorial/258.html）
-  - 类与对象（https://how2j.cn/k/class-object/class-object-reference/307.html）
-  - 选择结构/循环结构
-  - 面向对象（https://how2j.cn/k/oo/oo-class-object/286.html）
-  - 常用API
-  - 接口与继承/多态（https://how2j.cn/k/interface-inheritance/interface-inheritance-interface/289.html）
-  - 集合（https://how2j.cn/k/collection/collection-arraylist/363.html）
-  - 异常（https://how2j.cn/k/exception/exception-tutorial/332.html）
-  - **多线程**（`__`https://how2j.cn/k/thread/thread-start/353.html`__`）![image](https://github.com/wenrenjie1994/HH_STUDY/tree/qiuhaoran3097/pic/githubreadme.png)
-  - File类与IO流（https://how2j.cn/k/io/io-file/345.html）
-  - JDBC（https://how2j.cn/k/jdbc/jdbc-mysql/386.html）
-  - 网络编程（https://how2j.cn/k/socket/socket-ip-port/399.html）
-  - 泛型（https://how2j.cn/k/generic/generic-generic/373.html）
-  - **反射**（https://how2j.cn/k/reflection/reflection-class/108.html）
-  - LAMBDA表达式（https://how2j.cn/k/lambda/lambda-lamdba-tutorials/697.html）![image](https://github.com/wenrenjie1994/HH_STUDY/tree/qiuhaoran3097/pic/githubreadme.png)
+  - [ ] content关键字/标识符
+  - [ ] content常量
+  - [ ] content变量/数据类型（https://how2j.cn/k/variable/variable-tutorial/258.html）
+  - [ ] content运算符/操作符（https://how2j.cn/k/variable/variable-tutorial/258.html）
+  - [ ] content类与对象（https://how2j.cn/k/class-object/class-object-reference/307.html）
+  - [ ] content选择结构/循环结构
+  - [ ] content面向对象（https://how2j.cn/k/oo/oo-class-object/286.html）
+  - [ ] content常用API
+  - [ ] content接口与继承/多态（https://how2j.cn/k/interface-inheritance/interface-inheritance-interface/289.html）
+  - [ ] content集合（https://how2j.cn/k/collection/collection-arraylist/363.html）
+  - [ ] content异常（https://how2j.cn/k/exception/exception-tutorial/332.html）
+  - [x] content**多线程**（https://how2j.cn/k/thread/thread-start/353.html）
+  - [x] content**File类与IO流**（https://how2j.cn/k/io/io-file/345.html）
+  - [x] contentJDBC（https://how2j.cn/k/jdbc/jdbc-mysql/386.html）
+  - [ ] content网络编程（https://how2j.cn/k/socket/socket-ip-port/399.html）
+  - [ ] content泛型（https://how2j.cn/k/generic/generic-generic/373.html）
+  - [x] content**反射**（https://how2j.cn/k/reflection/reflection-class/108.html）
+  - [ ] contentLAMBDA表达式（https://how2j.cn/k/lambda/lambda-lamdba-tutorials/697.html）![image](https://github.com/wenrenjie1994/HH_STUDY/tree/qiuhaoran3097/pic/githubreadme.png)
   
 
 第二阶段
 
-- 推荐学习材料（不做局限）
+- 学习材料
   - JAVA类
     - 《阿里巴巴JAVA开发手册》
     - 《JAVA核心技术 卷II》、《JAVA编程思想》、《Effective JAVA》《重构改善既有代码的设计》
@@ -83,14 +74,9 @@
 
 三、学习反馈
 
-目的
-
-- 为了更好地了解同学们的学习和掌握情况，方便入职后对同学们的难点和痛点制定针对性带教计划。提供以下方案对同学们的学习情况进行反馈
-
 学习反馈
 
 - 方式
-  - 同学们可在学习后把学习笔记或者demo工程、代码等提交到Github
   - Github地址：https://github.com/wenrenjie1994/HH_STUDY
 - 操作指南
   - 从github上clone下来HH_STUDY的项目
@@ -98,11 +84,10 @@
   - 然后在本地新建一个branch，分支命名为自己的名字拼音+电话号码后4位（有重名现象）例如：wenrenjie8897
         git checkout -b wenrenjie8897
   - 在自己的分支下去维护自己的学习反馈
-    
   - 每一个知识点新建一个文件夹，然后提交到自己的分支上
         //第一次push的时候可能需要以下命令
         git push --set-upstream origin wenrenjie8897
-  - 后面我们会扫描大家的代码，对一些常见的难点、问题、错误等。阶段性进行答疑。
+。
     
 
 
