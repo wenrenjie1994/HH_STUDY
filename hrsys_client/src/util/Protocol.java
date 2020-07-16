@@ -2,6 +2,11 @@ package util;
 
 import model.Resume;
 
+/**
+ * 协议类，对传入的操作和对象进行封装
+ * 封装为字符串信息
+ * 在客户端中转化为字节流向服务器发送
+ */
 public class Protocol implements BaseOperation<Resume> {
     @Override
     public String add(Resume resume) {
@@ -26,5 +31,10 @@ public class Protocol implements BaseOperation<Resume> {
     @Override
     public String query(Resume resume) {
         return "query/" + resume.toString();
+    }
+
+    @Override
+    public String quit() {
+        return "quit";
     }
 }

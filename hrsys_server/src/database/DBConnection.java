@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * MySQL连接生成类
+ */
 public class DBConnection {
 
     public static final String url = "jdbc:mysql://localhost:3306/zhongsz";

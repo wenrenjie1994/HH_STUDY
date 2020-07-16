@@ -11,6 +11,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MVC中的C层，负责向数据库获取数据并回传给客户端
+ */
 public class ResumeController {
     Operation<Resume> operation;
     Connection connection;
@@ -23,6 +26,12 @@ public class ResumeController {
         this.operation = operation;
     }
 
+    /**
+     * 获取数据库连接，并生成要执行的statement
+     * @param operation 将被解析的operation对象
+     * @return
+     * @throws SQLException
+     */
     private PreparedStatement createSqlStatement(Operation<Resume> operation) throws SQLException {
         connection = DBConnection.getConnection();
         StatementGenerator generator = new StatementGenerator(connection);
@@ -47,6 +56,13 @@ public class ResumeController {
         return null;
     }
 
+    /**
+     * 执行sql语句，根据操作不同生成不同的返回对象
+     * @return responseTemplate模板，包含返回数据的条目和数据体
+     * 如果客户端请求执行query,queryAll，返回数据体
+     * 如果客户端请求执行add,delete,update，仅返回数据条目，大于等于1为执行成功，0则执行失败
+     * @throws SQLException
+     */
     public ResponseTemplate<Resume> executeOperation() throws SQLException {
         ResponseTemplate<Resume> resumeResponse = new ResponseTemplate<>();
 

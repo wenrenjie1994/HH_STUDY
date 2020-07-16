@@ -22,26 +22,42 @@ public class HRClient {
         this.port = port;
         this.protocol = new Protocol();
         this.scanner = new Scanner(System.in);
-
     }
 
+    /**
+     * 创建socket连接
+     * @throws IOException
+     */
     private void connect() throws IOException {
         this.socket = new Socket(host, port);
         System.out.println("Socket connection created at " + port);
     }
 
+    /**
+     * 通过inputstream向服务端发送消息并处理返回
+     * Todo 对返回值进行解析生成对象来进行展示，类似于JSON的工作
+     * @param message
+     * @throws IOException
+     */
     private void sendMessage(String message) throws IOException {
         OutputStream outputStream = socket.getOutputStream();
         outputStream.write(message.getBytes());
         System.out.println("Message sent to server: " + message);
-        InputStream inputStream = socket.getInputStream();
-        byte[] bytes = new byte[MAX_BUFFERED_SIZE];
-        inputStream.read(bytes);
-        String receipt = new String(bytes);
-        System.out.println("Response from server: " + receipt);
-        printIndex();
+        if (!message.equals("quit")) {
+            InputStream inputStream = socket.getInputStream();
+            byte[] bytes = new byte[MAX_BUFFERED_SIZE];
+            inputStream.read(bytes);
+            String receipt = new String(bytes);
+            System.out.println("Response from server: " + receipt);
+            printIndex();
+        }
     }
 
+    /**
+     * 控制台
+     * 对用户输入进行处理
+     * @throws IOException
+     */
     private void chooseOperation() throws IOException {
         printIndex();
         while (scanner.hasNextLine()) {
@@ -83,7 +99,8 @@ public class HRClient {
                 sendMessage(operation);
             } else if ("6".equals(input)) {
                 System.out.println("感谢使用，再见");
-                closeClient();
+                String operation = protocol.quit();
+                sendMessage(operation);
                 break;
             } else {
                 System.out.println("输入错误，请输入数字1到6");
@@ -96,6 +113,9 @@ public class HRClient {
         scanner.close();
     }
 
+    /**
+     * 打印控制台信息
+     */
     private void printIndex() {
         System.out.println("欢迎来到HRSYS管理系统C/S版\n请选择你的操作，并按回车键确定");
         System.out.println("1.添加简历");
@@ -115,6 +135,5 @@ public class HRClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

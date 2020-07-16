@@ -13,6 +13,12 @@ import java.net.Socket;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * 新开的Socket线程中要执行的工作，
+ * 包括从inputstream中获取数据，
+ * 解析数据并执行操作，
+ * 返回数据至outputstream中
+ */
 public class SocketThread extends Thread {
 
     private final Socket socket;
@@ -40,25 +46,31 @@ public class SocketThread extends Thread {
                 Parser parser = new Parser();
 
                 Operation<Resume> resumeOperation = parser.parseOperation(message);
-                ResumeController resumeController = new ResumeController(resumeOperation);
-                ResponseTemplate<Resume> responseTemplate = resumeController.executeOperation();
+                if (!resumeOperation.getOperation().equals("quit")) {
+                    ResumeController resumeController = new ResumeController(resumeOperation);
+                    ResponseTemplate<Resume> responseTemplate = resumeController.executeOperation();
 
-                StringBuilder builder = new StringBuilder();
-                List<Resume> resumeList = responseTemplate.getList();
-                if (resumeList != null && resumeList.size() != 0) {
-                    for (Resume r :
-                            resumeList) {
-                        builder.append(r.toString()).append("\n");
+                    StringBuilder builder = new StringBuilder();
+                    List<Resume> resumeList = responseTemplate.getList();
+                    if (resumeList != null && resumeList.size() != 0) {
+                        for (Resume r :
+                                resumeList) {
+                            builder.append(r.toString()).append("\n");
+                        }
+                    } else {
+                        builder.append(responseTemplate.getRows());
                     }
-                } else {
-                    builder.append(responseTemplate.getRows());
-                }
 
-                String response = builder.toString().trim();
-                outputStream = socket.getOutputStream();
-                bytes = response.getBytes();
-                outputStream.write(bytes);
-                System.out.println("Response message sent: " + response);
+                    String response = builder.toString().trim();
+                    outputStream = socket.getOutputStream();
+                    bytes = response.getBytes();
+                    outputStream.write(bytes);
+                    System.out.println("Response message sent: " + response);
+                } else {
+                    socket.close();
+                    System.out.println("Current socket is closed, thread id is  " + getId());
+                    break;
+                }
             } catch (IOException e) {
                 e.printStackTrace();
                 break;

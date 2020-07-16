@@ -15,6 +15,13 @@ public class StatementGenerator {
     }
 
 
+    /**
+     * 根据传入的Operation对象获取操作类型及操作对象
+     * 封装成为SQL statement 交由Controller执行
+     * @param operation
+     * @return
+     * @throws SQLException
+     */
     public PreparedStatement createSqlStatement(Operation<Resume> operation) throws SQLException {
         PreparedStatement preparedStatement = null;
         String sql = "";
