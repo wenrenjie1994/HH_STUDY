@@ -5,7 +5,7 @@
 
 实际需求：执行某个类中全部以test开头的无参数无返回值的非静态方法(反射)
 
-Spring中常用的设计模式总结
+**Spring中常用的设计模式总结**
 设计模式	              一句话归纳                             示例
 工厂模式(Factory)      只对结果负责，封装创建过程               BeanFactory、Calender
 单例模式(Singleton)    保证独一无二                           ApplicationContext、Calender
