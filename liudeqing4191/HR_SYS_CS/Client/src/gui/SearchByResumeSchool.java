@@ -15,8 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import control.Operator;
-import model.Book;
-import model.BookList;
+import model.Resume;
+import model.ResumeList;
 import model.ReturnResult;
 
 import javax.swing.JButton;
@@ -26,12 +26,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
-public class SearchByBookName extends JFrame {
-	private JTextField bookNameField;
+public class SearchByResumeSchool extends JFrame {
+	private JTextField resumeSchoolField;
   
-    public SearchByBookName() {  
+    public SearchByResumeSchool() {
 
-        super("按书名查找");  
+        super("按学校查找");
         getContentPane().setBackground(new Color(240, 240, 240));
         setSize(1024,623);  
         setLocation(200, 50);  
@@ -47,41 +47,40 @@ public class SearchByBookName extends JFrame {
         getContentPane().setLayout(null);
         Font f=new Font("宋体",Font.BOLD,30);
         Font a=new Font("宋体",Font.BOLD,20);
-    
         
-        JLabel lblNewLabel = new JLabel("输入书名查找");
-        lblNewLabel.setForeground(new Color(200, 153, 102));
+        JLabel lblNewLabel = new JLabel("输入学校查找");
+        lblNewLabel.setForeground(new Color(102, 153, 102));
         lblNewLabel.setBounds(195, 169, 192, 49);
         getContentPane().add(lblNewLabel);
         lblNewLabel.setFont(f);
         
-        bookNameField = new JTextField();
-        bookNameField.setBounds(557, 174, 233, 50);
-        bookNameField.setFont(a);
-        getContentPane().add(bookNameField);
-        bookNameField.setColumns(10);
+        resumeSchoolField = new JTextField();
+        resumeSchoolField.setBounds(557, 174, 233, 50);
+        resumeSchoolField.setFont(a);
+        getContentPane().add(resumeSchoolField);
+        resumeSchoolField.setColumns(10);
         
         JButton btnNewButton_2 = new JButton("确认");
         btnNewButton_2.setBackground(SystemColor.info);
         btnNewButton_2.setForeground(new Color(102, 153, 102));
-        AbstractAction search=new AbstractAction()  {
+        AbstractAction search=new AbstractAction() {
         	@Override
             public void actionPerformed(ActionEvent e) {
-				String bookName =bookNameField.getText();
-				Book book=new Book(bookName,null,0);
-				//把界面中得到的三个数据放在Book里
-				//把Book传给Operator操作
-				Operator o =new Operator();
-				ReturnResult rr=o.searchByName(book);
-				BookList booklist=(BookList)rr.resultData;//得到的结果转化成BookList放到弹框中显示
-				int bookCount = booklist.size();
-				if(bookCount>0)
-				{
-					SearchResult rs=new SearchResult(booklist);
-					rs.setVisible(true);
-				}
-				else {
-                    JOptionPane.showMessageDialog(null, "没有找到相关书籍");
+                String resumeSchool =resumeSchoolField.getText();
+                Resume resume = new Resume(null, null);
+                resume.setSchool(resumeSchool);
+
+                Operator o =new Operator();
+                ReturnResult rr=o.searchBySchool(resume);
+                ResumeList resumes=(ResumeList) rr.resultData;//parse的结果转换成bookList放到弹框中显示
+                int resumeCount = resumes.size();
+                if(resumeCount>0)
+                {
+                    SearchResult rs=new SearchResult(resumes);
+                    rs.setVisible(true);
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "没有找到相关学生");
                 }
         	}
         };
@@ -102,7 +101,8 @@ public class SearchByBookName extends JFrame {
             public void actionPerformed(ActionEvent e) {
 				SearchResumeFrame searchResumeFrame =new SearchResumeFrame();
 				searchResumeFrame.setVisible(true);
-				SearchByBookName.this.dispose();
+				SearchByResumeSchool.this.dispose();
+        		
         	}
         });
         btnNewButton_3.setBounds(736, 426, 113, 49);
@@ -116,6 +116,6 @@ public class SearchByBookName extends JFrame {
     }  
   
     public static void main(String[] args) {  
-        new SearchByBookName();  
+        new SearchByResumeSchool();
     }  
 }  

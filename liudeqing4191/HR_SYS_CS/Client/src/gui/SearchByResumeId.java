@@ -15,8 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import control.Operator;
-import model.Book;
-import model.BookList;
+import model.Resume;
+import model.ResumeList;
 import model.ReturnResult;
 
 import javax.swing.JButton;
@@ -26,12 +26,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
-public class SearchByBookPrice extends JFrame {
-	private JTextField bookPriceField;
+public class SearchByResumeId extends JFrame {
+	private JTextField resumeIdField;
   
-    public SearchByBookPrice() {  
+    public SearchByResumeId() {  
 
-        super("按价格查找");  
+        super("按身份证号查找");
         getContentPane().setBackground(new Color(240, 240, 240));
         setSize(1024,623);  
         setLocation(200, 50);  
@@ -48,17 +48,17 @@ public class SearchByBookPrice extends JFrame {
         Font f=new Font("宋体",Font.BOLD,30);
         Font a=new Font("宋体",Font.BOLD,20);
         
-        JLabel lblNewLabel = new JLabel("输入价格查找");
+        JLabel lblNewLabel = new JLabel("输入身份证号查找");
         lblNewLabel.setForeground(new Color(102, 153, 102));
-        lblNewLabel.setBounds(195, 169, 192, 49);
+        lblNewLabel.setBounds(186, 169, 224, 49);
         getContentPane().add(lblNewLabel);
         lblNewLabel.setFont(f);
         
-        bookPriceField = new JTextField();
-        bookPriceField.setBounds(557, 174, 233, 50);
-        bookPriceField.setFont(a);
-        getContentPane().add(bookPriceField);
-        bookPriceField.setColumns(10);
+        resumeIdField = new JTextField();
+        resumeIdField.setBounds(557, 174, 233, 50);
+        resumeIdField.setFont(a);
+        getContentPane().add(resumeIdField);
+        resumeIdField.setColumns(10);
         
         JButton btnNewButton_2 = new JButton("确认");
         btnNewButton_2.setBackground(SystemColor.info);
@@ -66,21 +66,20 @@ public class SearchByBookPrice extends JFrame {
         AbstractAction search=new AbstractAction() {
         	@Override
             public void actionPerformed(ActionEvent e) {
-				double bookPrice =Double.parseDouble(bookPriceField.getText());
-				Book book=new Book(null,null,bookPrice);
-				//把界面中得到的三个数据放在Book里
-				//把Book传给Operator操作
+				String resumeId =resumeIdField.getText();
+				Resume resume = new Resume(null, resumeId);
+
 				Operator o =new Operator();
-				ReturnResult rr=o.searchByPrice(book);
-				BookList booklist=(BookList)rr.resultData;//结果转换成BookList放到弹框中显示
-				int bookCount = booklist.size();
-				if(bookCount>0)
+				ReturnResult rr=o.searchById(resume);
+				ResumeList resumes=(ResumeList) rr.resultData;//parse的结果转换成bookList放到弹框中显示
+				int resumeCount = resumes.size();
+				if(resumeCount>0)
 				{
-					SearchResult rs=new SearchResult(booklist);
+					SearchResult rs=new SearchResult(resumes);
 					rs.setVisible(true);
 				}
 				else {
-                    JOptionPane.showMessageDialog(null, rr.failReason);
+                    JOptionPane.showMessageDialog(null, "没有找到相关学生");
                 }
         	}
         };
@@ -101,8 +100,7 @@ public class SearchByBookPrice extends JFrame {
             public void actionPerformed(ActionEvent e) {
 				SearchResumeFrame searchResumeFrame =new SearchResumeFrame();
 				searchResumeFrame.setVisible(true);
-				SearchByBookPrice.this.dispose();
-        		
+				SearchByResumeId.this.dispose();
         	}
         });
         btnNewButton_3.setBounds(736, 426, 113, 49);
@@ -116,6 +114,6 @@ public class SearchByBookPrice extends JFrame {
     }  
   
     public static void main(String[] args) {  
-        new SearchByBookPrice();  
+        new SearchByResumeId();  
     }  
 }  

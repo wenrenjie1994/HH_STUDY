@@ -15,7 +15,9 @@ import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import control.Operator;
-import model.*;
+import model.Resume;
+import model.ResumeList;
+import model.ReturnResult;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -24,12 +26,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 
-public class SearchByKeyWord extends JFrame {
-	private JTextField keyWordField;
+public class SearchByResumeName extends JFrame {
+	private JTextField resumeNameField;
   
-    public SearchByKeyWord() {  
+    public SearchByResumeName() {
 
-        super("按关键字查找");  
+        super("按姓名查找");  
         getContentPane().setBackground(new Color(240, 240, 240));
         setSize(1024,623);  
         setLocation(200, 50);  
@@ -45,18 +47,19 @@ public class SearchByKeyWord extends JFrame {
         getContentPane().setLayout(null);
         Font f=new Font("宋体",Font.BOLD,30);
         Font a=new Font("宋体",Font.BOLD,20);
+    
         
-        JLabel lblNewLabel = new JLabel("请输入关键字");
-        lblNewLabel.setForeground(new Color(102, 153, 102));
+        JLabel lblNewLabel = new JLabel("输入姓名查找");
+        lblNewLabel.setForeground(new Color(200, 153, 102));
         lblNewLabel.setBounds(195, 169, 192, 49);
         getContentPane().add(lblNewLabel);
         lblNewLabel.setFont(f);
         
-        keyWordField = new JTextField();
-        keyWordField.setBounds(557, 174, 233, 50);
-        keyWordField.setFont(a);
-        getContentPane().add(keyWordField);
-        keyWordField.setColumns(10);
+        resumeNameField = new JTextField();
+        resumeNameField.setBounds(557, 174, 233, 50);
+        resumeNameField.setFont(a);
+        getContentPane().add(resumeNameField);
+        resumeNameField.setColumns(10);
         
         JButton btnNewButton_2 = new JButton("确认");
         btnNewButton_2.setBackground(SystemColor.info);
@@ -64,11 +67,11 @@ public class SearchByKeyWord extends JFrame {
         AbstractAction search=new AbstractAction()  {
         	@Override
             public void actionPerformed(ActionEvent e) {
-                String resumeKey =keyWordField.getText();
-                Resume resume = new Resume(resumeKey, null);
+                String resumeName =resumeNameField.getText();
+                Resume resume = new Resume(resumeName,null);
 
                 Operator o =new Operator();
-                ReturnResult rr=o.searchByKey(resume);
+                ReturnResult rr=o.searchByName(resume);
                 ResumeList resumes=(ResumeList) rr.resultData;//parse的结果转换成bookList放到弹框中显示
                 int resumeCount = resumes.size();
                 if(resumeCount>0)
@@ -98,10 +101,9 @@ public class SearchByKeyWord extends JFrame {
             public void actionPerformed(ActionEvent e) {
 				SearchResumeFrame searchResumeFrame =new SearchResumeFrame();
 				searchResumeFrame.setVisible(true);
-				SearchByKeyWord.this.dispose();
+				SearchByResumeName.this.dispose();
         	}
         });
-        
         btnNewButton_3.setBounds(736, 426, 113, 49);
         btnNewButton_3.setFont(a);
         getContentPane().add(btnNewButton_3);
@@ -113,6 +115,6 @@ public class SearchByKeyWord extends JFrame {
     }  
   
     public static void main(String[] args) {  
-        new SearchByKeyWord();  
+        new SearchByResumeName();
     }  
 }  

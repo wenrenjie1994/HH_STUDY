@@ -80,7 +80,7 @@ public class Action {
         return ar;
     }
 
-    public ActionResult updataResume(Resume resume){
+    public ActionResult updateResume(Resume resume){
 
         //Õµ¿¡
         String resumeId = resume.getId();
@@ -101,6 +101,7 @@ public class Action {
             pstmt.setInt(3, newProcess);
             pstmt.setInt(4,newDeleteStatus );
             pstmt.setString(5, resumeId);
+            System.out.println(pstmt.toString());
             line=pstmt.executeUpdate();
             DBConnection.closeConnection(pstmt,conn);
         }

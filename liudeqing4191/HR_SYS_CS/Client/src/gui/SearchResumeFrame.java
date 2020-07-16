@@ -15,7 +15,7 @@ public class SearchResumeFrame extends JFrame {
       
         public SearchResumeFrame() {
             //设置标题  
-            super("欢迎来到查询图书界面");  
+            super("欢迎来到查询界面");
             getContentPane().setBackground(new Color(240, 240, 240));
             setSize(1024,623);  
             setLocation(200, 50);  
@@ -31,14 +31,14 @@ public class SearchResumeFrame extends JFrame {
             getContentPane().setLayout(null);
             Font a=new Font("宋体",Font.BOLD,20);
             
-            JButton btnNewButton = new JButton("按书名查找");
+            JButton btnNewButton = new JButton("按姓名查找");
             btnNewButton.setForeground(new Color(102, 153, 102));
             btnNewButton.setBackground(SystemColor.info);
             btnNewButton.addActionListener(new ActionListener() {
             	@Override
                 public void actionPerformed(ActionEvent e) {
-    				SearchByBookName searchByBookName=new SearchByBookName();
-    				searchByBookName.setVisible(true);
+    				SearchByResumeName searchByResumeName =new SearchByResumeName();
+    				searchByResumeName.setVisible(true);
     				SearchResumeFrame.this.dispose();
             	}
             });
@@ -46,51 +46,69 @@ public class SearchResumeFrame extends JFrame {
             btnNewButton.setFont(a);
             getContentPane().add(btnNewButton);
             
-            JButton btnNewButton_1 = new JButton("按作者名查找");
+            JButton btnNewButton_1 = new JButton("按身份证号查找");
             btnNewButton_1.setForeground(new Color(102, 153, 102));
             btnNewButton_1.setBackground(SystemColor.info);
             btnNewButton_1.addActionListener(new ActionListener() {
             	@Override
                 public void actionPerformed(ActionEvent e) {
-    				SearchByBookAuthor searchByBookAuthor=new SearchByBookAuthor();
-    				searchByBookAuthor.setVisible(true);
+    				SearchByResumeId searchByResumeId =new SearchByResumeId();
+    				searchByResumeId.setVisible(true);
     				SearchResumeFrame.this.dispose();
             	}
             });
             btnNewButton_1.setBounds(417, 159, 168, 49);
             btnNewButton_1.setFont(a);
             getContentPane().add(btnNewButton_1);
-            
-            JButton btnNewButton_2 = new JButton("按价格查找");
+            //------------------------------------------
+            JButton btnNewButton_2 = new JButton("按学校查找");
             btnNewButton_2.setForeground(new Color(102, 153, 102));
             btnNewButton_2.setBackground(SystemColor.info);
             btnNewButton_2.addActionListener(new ActionListener() {
             	@Override
                 public void actionPerformed(ActionEvent e) {
-    				SearchByBookPrice searchByBookPrice=new SearchByBookPrice();
-    				searchByBookPrice.setVisible(true);
+    				SearchByResumeSchool searchByResumeSchool =new SearchByResumeSchool();
+    				searchByResumeSchool.setVisible(true);
     				SearchResumeFrame.this.dispose();
             	}
             });
             btnNewButton_2.setBounds(417, 252, 168, 49);
             btnNewButton_2.setFont(a);
             getContentPane().add(btnNewButton_2);
-            
-            JButton btnNewButton_3 = new JButton("关键字查找");
+
+            //------------------------------------------
+            JButton btnNewButton_3 = new JButton("进度查找");
             btnNewButton_3.setForeground(new Color(102, 153, 102));
             btnNewButton_3.setBackground(SystemColor.info);
             btnNewButton_3.addActionListener(new ActionListener() {
             	@Override
                 public void actionPerformed(ActionEvent e) {
-    				SearchByKeyWord searchByPointWord=new SearchByKeyWord();
-    				searchByPointWord.setVisible(true);
+    				SearchByResumeProcess searchByResumeProcess=new SearchByResumeProcess();
+                    searchByResumeProcess.setVisible(true);
     				SearchResumeFrame.this.dispose();
             	}
             });
             btnNewButton_3.setBounds(417, 342, 168, 49);
             btnNewButton_3.setFont(a);
             getContentPane().add(btnNewButton_3);
-            
+
+            //------------------------------------------
+            JButton btnNewButton_5 = new JButton("关键字查找");
+            btnNewButton_5.setForeground(new Color(102, 153, 102));
+            btnNewButton_5.setBackground(SystemColor.info);
+            btnNewButton_5.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    SearchByKeyWord searchByPointWord=new SearchByKeyWord();
+                    searchByPointWord.setVisible(true);
+                    SearchResumeFrame.this.dispose();
+                }
+            });
+            btnNewButton_5.setBounds(417, 431, 168, 49);
+            btnNewButton_5.setFont(a);
+            getContentPane().add(btnNewButton_5);
+
+            //------------------------------------------
             JButton btnNewButton_4 = new JButton("返回");
             btnNewButton_4.setForeground(new Color(102, 153, 102));
             btnNewButton_4.setBackground(SystemColor.info);
@@ -102,7 +120,7 @@ public class SearchResumeFrame extends JFrame {
     				SearchResumeFrame.this.dispose();
             	}
             });
-            btnNewButton_4.setBounds(417, 431, 168, 49);
+            btnNewButton_4.setBounds(417, 520, 168, 49);
             btnNewButton_4.setFont(a);
             getContentPane().add(btnNewButton_4);
             imagePanel.setOpaque(false);  

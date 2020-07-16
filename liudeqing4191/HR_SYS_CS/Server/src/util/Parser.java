@@ -72,7 +72,7 @@ public class Parser
 			ResumeList resumes=parserSearchByProcess(message);
 			ss.resultData=resumes;
 		}
-		else if(head.equals("searchbykeyword"))
+		else if(head.equals("searchbykey"))
 		{
 			ResumeList resumes=parserSearchByName(message);
 			ss.resultData=resumes;
@@ -93,7 +93,7 @@ public class Parser
 		int resumeProcess=Integer.parseInt(str[3]);
 		int resumeDeleteStatus=Integer.parseInt(str[4]);
 
-		Resume resume=new Resume(resumeId,resumeName);
+		Resume resume=new Resume(resumeName,resumeId);
 		resume.setSchool(resumeSchool);
 		resume.setProcess(resumeProcess);
 		resume.setDeleteStatus(resumeDeleteStatus);
@@ -125,7 +125,7 @@ public class Parser
 		int resumeProcess=Integer.parseInt(str[3]);
 		int resumeDeleteStatus=Integer.parseInt(str[4]);
 
-		Resume resume=new Resume(resumeId,resumeName);
+		Resume resume=new Resume(resumeName,resumeId);
 		resume.setSchool(resumeSchool);
 		resume.setProcess(resumeProcess);
 		resume.setDeleteStatus(resumeDeleteStatus);

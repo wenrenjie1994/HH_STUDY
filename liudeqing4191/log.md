@@ -4,7 +4,9 @@
 
 进步：
 
-- 
+- 逻辑bug是真的难找
+
+- 注意参数顺序不要反了，协议名不要搞错了
 
 - ```
   public interface ResultSet extends Wrapper, AutoCloseable{}//接受query查询结果
@@ -16,10 +18,7 @@
 
 完成 ：
 
-- model.*
-- database.*
-- work.Action
-- util.*
+- 全部完成
 
 ###### 2020/7/11
 

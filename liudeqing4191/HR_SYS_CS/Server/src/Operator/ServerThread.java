@@ -99,13 +99,12 @@ public class ServerThread extends Thread {
                     Action a = new Action();
                     ResumeList resumes = (ResumeList) ss.resultData;
                     Resume resume = resumes.get(0);
-                    ar = a.updataResume(resume);
+                    ar = a.updateResume(resume);
                     //
                     Protocol protocol = new Protocol();
                     String message = protocol.updataResumeMessage(ar);
                     System.out.println("向客户端返回：   " + message);
                     out.println(message);
-                    break;
                 } else if (ss.head.equals("searchbyid")) {
                     //数据库操作
                     Action a = new Action();
@@ -147,7 +146,7 @@ public class ServerThread extends Thread {
                     String message = protocol.searchResumeMessage(ar);
                     System.out.println("向客户端返回：   " + message);
                     out.println(message);
-                } else if (ss.head.equals("searchbykeyword")) {
+                } else if (ss.head.equals("searchbykey")) {
                     Action a = new Action();
                     ResumeList resumes = (ResumeList) ss.resultData;
                     Resume resume = resumes.get(0);

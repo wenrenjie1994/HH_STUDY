@@ -20,7 +20,7 @@ import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.JTableHeader;
 
-import model.BookList;
+import model.ResumeList;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -46,7 +46,7 @@ public class SearchResult extends JFrame {
 	/**
 	 * Create the dialog.
 	 */
-	public SearchResult(BookList booklist) {
+	public SearchResult(ResumeList resumeList) {
 //		setBounds(100, 100, 450, 300);
         super("查询结果");
         setBackground(SystemColor.info);
@@ -104,14 +104,14 @@ public class SearchResult extends JFrame {
 			}
 		}
 			Container c=getContentPane();
-			int bookCount = booklist.size();
+			int bookCount = resumeList.size();
 			Object[][] data=new Object[bookCount] [3];//表格
 			for(int i=0;i<bookCount;i++){
-				data[i][0]=booklist.get(i).bookName;
-				data[i][1]=booklist.get(i).bookAuthor;
-				data[i][2]=booklist.get(i).bookPrice;
+				data[i][0]=resumeList.get(i).getId();
+				data[i][1]=resumeList.get(i).getName();
+				data[i][2]=resumeList.get(i).getSchool();
 			}
-			String[] rowName={"书名","作者","价格"};//表头
+			String[] rowName={"姓名","身份证号","学校"};//表头
 			JTable table=new JTable(data,rowName);
 			table.setForeground(new Color(102, 153, 102));
 			table.setBackground(SystemColor.info);

@@ -20,7 +20,7 @@ public class Protocol {
 	
 	public String updateResumeMessage(Resume resume)
 	{
-		String str="add/n"+resume.getId()+","+resume.getName()+","+resume.getSchool()+","+resume.getProcess()+","+resume.getDeleteStatus();
+		String str="update/n"+resume.getId()+","+resume.getName()+","+resume.getSchool()+","+resume.getProcess()+","+resume.getDeleteStatus();
 		return str;
 	}
 	public String searchResumeByIdMessage(Resume resume)
