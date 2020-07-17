@@ -10,6 +10,14 @@ hr_system4.0
 
 ## 运行方式
 1. 设置ServerMain的运行参数：`-port 8081`,在`MySqlUtil`中配置数据库相关数据
+
 2. 运行ServerMain
+
 3. 运行ClientMain
-4. 程序运行       
+
+4. 程序运行
+
+## todo
+
+server端的多线程实现
+
