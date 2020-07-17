@@ -14,7 +14,7 @@ spring:
     time-zone: GMT+8
 
 logging:
-  file: E:/learning/HH_STUDY/logs/lowbsys.log
+  file: E:/spdb/HH_STUDY/李文义/个人代码/最终lowbsys/logs/lowbsys.log
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} %thread %logger{50} %msg%n"
 
