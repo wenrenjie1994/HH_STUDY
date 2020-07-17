@@ -1,0 +1,28 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /
+
+spring:
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/learning?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: '000000'
+  jackson:
+    time-zone: GMT+8
+
+logging:
+  file: E:/learning/HH_STUDY/logs/lowbsys.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} %thread %logger{50} %msg%n"
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true  #自动将下划线格式的表字段，转换为以驼峰格式命名的属性
+  mapper-locations: classpath:mapper/*.xml

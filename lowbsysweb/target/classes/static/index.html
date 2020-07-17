@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/layui/css/layui.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<br><br>
+<div style="position: relative;left: 80px;width: 1387px;">
+    <div class="layui-btn-group">
+        <a class="layui-btn" href="/bookAdd.html">新增</a>
+    </div>
+    <div class="demoTable" style="float: right">
+        <b style="font-size: 18px;color: #888888">搜索关键字：</b>
+        <div class="layui-inline">
+            <input class="layui-input" name="keywords" id="reload" autocomplete="off">
+        </div>
+        <button class="layui-btn" data-type="reload">搜索</button>
+    </div>
+    <div class="layui-layout layui-layout-admin">
+        <table class="layui-hide" id="booksTable" lay-filter="booksTable"></table>
+    </div>
+</div>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['table', 'layer'], function () {
+        var table = layui.table
+            , $ = layui.$;
+        table.render({
+            elem: '#booksTable'
+            , method: 'get'
+            , height: '470'
+            , width: '1403'
+            , url: 'http://localhost:8081/books'
+            , cols: [[
+                {field: 'bookName', width: 160, title: '书名'}
+                , {field: 'author', width: 160, title: '作者'}
+                , {field: 'price', width: 80, title: '价格'}
+                , {field: 'bookDesc', width: 540, title: '简介'}
+                , {field: 'createTime', width: 160, title: '创建时间'}
+                , {field: 'modifiedTime', width: 160, title: '修改时间'}
+                , {width: 120, title: '操作', align: 'center', toolbar: '#barDemo'}
+            ]]
+            , page: true
+            , response: {
+                statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
+            }
+            , id: 'testReload'
+            , parseData: function (res) { //res 即为原始返回的数据
+                return {
+                    "code": res.meta.code, //解析接口状态
+                    "msg": res.meta.message, //解析提示文本
+                    "count": res.data.total, //解析数据长度
+                    "data": res.data.records //解析数据列表
+                };
+            }
+            //, even: true, //隔行背景
+        });
+        active = {
+            reload: function () {
+                var reload = $('#reload');
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    , where: {
+                        keywords: reload.val()
+                    }
+                }, 'data');
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        //监听工具条
+        table.on('tool(booksTable)', function (obj) {
+            console.log(obj);
+            if (obj.event === 'del') {
+                layer.confirm('真的删除该数据吗？', function (index) {
+                    $.ajax({
+                        url: 'http://localhost:8081/books/' + obj.data.id,
+                        type: 'DELETE',
+                        dataType: "json",
+                        headers: {
+                            'Content-Type': 'application/json;charset=utf8'
+                        },
+                        success: function (result) {
+                            //console.log(result)
+                            if (result.meta.code == 200) {
+                                location.reload();
+                            } else {
+                                layer.msg(result.meta.message, {
+                                    icon: 2,
+                                    time: 1000
+                                });
+                            }
+                        },
+                        error: function () {
+                            layer.msg("服务器异常", {
+                                icon: 2,
+                                time: 1000
+                            });
+                        },
+                    });
+                });
+            } else if (obj.event === 'edit') {
+                window.location.href = '/bookUpdate.html?id=' + obj.data.id;
+            }
+        });
+    });
+</script>
+</body>
+</html>
