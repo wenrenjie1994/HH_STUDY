@@ -5,6 +5,8 @@
 ## Build Setup
 
 ``` bash
+# 建议使用cnpm
+
 # install dependencies
 npm install
 
@@ -23,8 +25,9 @@ npm run build --report
 ```bash
 # src目录结构
   - #api 接口调用
-  - #assetes 图片等
+  - #assetes 图片等静态资源
   - #components 通用组件
+  - #pages 界面
   - #router 路由
   - #service HTTP库封装
   - #store 状态管理工具vuex

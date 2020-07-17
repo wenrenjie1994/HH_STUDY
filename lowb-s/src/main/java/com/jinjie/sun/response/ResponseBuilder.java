@@ -13,9 +13,9 @@ public class ResponseBuilder {
         return response;
     }
 
-    public static Response buildFailResponse(Object result, String msg) {
+    public static Response buildFailResponse(Object result, String msg, Integer code) {
         Response response = new Response();
-        response.setCode(500);
+        response.setCode(code);
         response.setMessage(msg);
         response.setResult(result);
         return response;

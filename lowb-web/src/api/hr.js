@@ -1,13 +1,8 @@
-import axios from '../config/sevice'
+import axios from '../service/index'
 
 /**
- * 登录
- * @param {String} username
- * @param {String} password
+ * 获取所有用户
  */
-export function login (username, password) {
-  return axios.post('/user/login', {
-    username,
-    password
-  })
+export function getUserList () {
+  return axios.get('/user/list')
 }

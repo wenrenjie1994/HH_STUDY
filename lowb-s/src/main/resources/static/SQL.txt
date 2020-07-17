@@ -1,19 +1,24 @@
-CREATE TABLE IF NOT EXISTS `hr`(
+CREATE TABLE IF NOT EXISTS `user`(
    `id` INT UNSIGNED AUTO_INCREMENT,
    `name` VARCHAR(100) NOT NULL,
    `phone` VARCHAR(11) NOT NULL,
    `addr` VARCHAR(100) NOT NULL,
+	 `email` VARCHAR(100) NOT NULL,
    `username` VARCHAR(100) NOT NULL,
    `password` VARCHAR(256) NOT NULL,
+	 `role` VARCHAR(12) NOT NULL,
    PRIMARY KEY ( `id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO hr ( name, phone, addr, username, password )
+INSERT INTO user ( name, phone, addr, email, username, password, role )
                        VALUES
-                       ( "孙", "11111111111", "地球", "sun", "sjj123" );
-INSERT INTO hr ( name, phone, addr, username, password )
+                       ( "孙", "11111111111", "592513724@qq.com", "地球", "sun", "sjj123", "hr" );
+INSERT INTO user ( name, phone, addr, email, username, password, role )
                        VALUES
-                       ( "进", "11111111111", "地球", "jin", "sjj123" );
-INSERT INTO hr ( name, phone, addr, username, password )
+                       ( "进", "11111111111", "592513724@qq.com", "地球", "jin", "sjj123", "hr" );
+INSERT INTO user ( name, phone, addr, email, username, password, role )
                        VALUES
-                       ( "杰", "11111111111", "地球", "jie", "sjj123" );
+                       ( "杰", "11111111111", "592513724@qq.com", "地球", "jie", "sjj123", "hr" );
+INSERT INTO user ( name, phone, addr, email, username, password, role )
+                       VALUES
+                       ( "管理员", "11111111111", "592513724@qq.com", "地球", "admin", "admin", "admin" );

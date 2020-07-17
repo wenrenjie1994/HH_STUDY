@@ -1,45 +1,56 @@
-// import router from '../../router/index'
-// import { routeList } from '../../router/routes'
-// import { setDefaultRoute } from '../../utils/route'
+import router, { DynamicRoutes } from '../../router/index'
+import { recursionRouter, setDefaultRoute } from '../../utils/recursion-router'
+import dynamicRouter from '../../router/dynamic-router'
+import * as roles from '../../utils/roles'
 
-// export default {
-//   namespaced: true,
-//   state: {
-//     // 所有路由
-//     routes: null,
-//     // 导航菜单
-//     sidebarMenu: [],
-//     // 当前active导航菜单
-//     currentMenu: ''
-//   },
-//   getters: {
+export default {
+  namespaced: true,
+  state: {
+    routeList: null /** 所有路由 */,
+    sidebarMenu: [] /** 导航菜单 */,
+    currentMenu: '' /** 当前active导航菜单 */
+  },
+  getters: {},
+  mutations: {
+    setPermission (state, routes) {
+      state.routeList = routes
+    },
+    clearPermission (state) {
+      state.routeList = null
+    },
+    setMenu (state, menu) {
+      state.sidebarMenu = menu
+    },
+    clearMenu (state) {
+      state.sidebarMenu = []
+    },
+    setCurrentMenu (state, currentMenu) {
+      state.currentMenu = currentMenu
+    }
+  },
+  actions: {
+    async fetchRoutes ({ commit }) {
+      // let role = window.sessionStorage.getItem('role')
+      // let routeList = roles.default[role]
+      let routeList = roles.default.all
+      /*  根据权限筛选出我们设置好的路由并加入到path=''的children */
+      let routes = recursionRouter(routeList, dynamicRouter)
+      let MainContainer = DynamicRoutes.find(v => v.path === '')
+      let children = MainContainer.children
+      children.push(...routes)
 
-//   },
-//   mutations: {
-//     setRoutes (state, routes) {
-//       state.routes = routes
-//     },
-//     setSidebarMenu (state, menu) {
-//       state.sidebarMenu = menu
-//     },
-//     setCurrentMenu (state, currentMenu) {
-//       state.currentMenu = currentMenu
-//     }
-//   },
-//   actions: {
-//     fetchRoutes ({ commit, state }) {
-//       // 得到路由
-//       let mainContainer = routeList.find(v => v.path === '')
-//       // 生成导航菜单
-//       commit('setSidebarMenu', mainContainer.children)
-//       // 有children的路由设置第一个children为默认路由
-//       setDefaultRoute([mainContainer])
-//       // 初始路由
-//       let initialRoutes = router.options.routes
-//       // 加入所有的路由
-//       router.addRoutes(routeList)
-//       // 设置完整的路由表
-//       commit('setRoutes', [...initialRoutes, ...routeList])
-//     }
-//   }
-// }
+      /* 生成左侧导航菜单 */
+      commit('setMenu', children)
+      setDefaultRoute([MainContainer])
+
+      /*  初始路由 */
+      let initialRoutes = router.options.routes
+
+      /*  动态添加路由 */
+      router.addRoutes(DynamicRoutes)
+
+      /* 完整的路由表 */
+      commit('setPermission', [...initialRoutes, ...DynamicRoutes])
+    }
+  }
+}

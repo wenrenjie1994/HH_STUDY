@@ -1,4 +1,4 @@
-import axios from '../config/sevice'
+import axios from '../service/index'
 
 /**
  * 登录
