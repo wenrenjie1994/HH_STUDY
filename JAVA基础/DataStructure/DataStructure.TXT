@@ -1,0 +1,11 @@
+List 
+	*ArrayList
+		add(E e)
+		add(int index,E e)
+		remove(int index)
+		remove(Object e)
+		get(int index)
+		size()
+	*LinkedList
+	*List允许添加null
+	*List.of不接受null

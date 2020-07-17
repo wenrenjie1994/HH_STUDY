@@ -1,0 +1,22 @@
+Pattern类：正则表达式的编译表示
+Matcher类：对输入字符串进行解释和匹配操作的引擎
+PatternSyntaxException类表示正则表达式模式中的语法错误
+
+索引方法：
+	*public int start()
+	*public int start(int group)
+	*public int end()
+	*public int end(int group)
+	
+查找方法：
+	*public boolean lookingAt()
+	*public boolean find()
+	*public boolean find(int start)
+	*public boolean matches()
+	
+替换方法：
+	*public Matcher appendReplacement(StringBuffer sb, String replacement)
+	*public StringBuffer appendTail(StringBuffer sb)
+	*public String replaceAll(String replacement)
+	*public String replaceFirst(String replacement)
+	*public static String quoteReplacement(String s)
