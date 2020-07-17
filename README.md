@@ -47,23 +47,23 @@
 | -------- | -------- | -------- | -------- | -------- |
 | 委派模式(Delegate) | 这个需求给到你，怎么实现我不管 | 只对结果负责 | 授权委托书 | ClassLoader、BeanDefinitionParserDelegate |
 | 模板模式(Template) | 流程全部标准化，需要微调请覆盖 | 逻辑复用 | 装大象进冰箱的步骤 | JdbcTemplate、HttpServlet |
-| 策略模式(Strategy) | 条条大路通罗马 | 把选择权交给用户 | 选择支付方式 | Comparator、InstantiationStrategy |
-| 责任链模式(Chain of Responsibility) | 审批盖章即担责 | 解耦处理逻辑 | 踢皮球 | FilterChain、Pipeline |
-| 迭代器模式(Iterator) | 不撞南墙不回头 | 统一集合访问 | 逐个检票进站 | Iterator |
-| 命令模式(Command) | 上行下效 | 解耦请求与处理 | 遥控器 | Runnable |
+| 策略模式(Strategy) | 条条大路通罗马，爱走哪条走哪条 | 把选择权交给用户 | 选择支付方式 | Comparator、InstantiationStrategy |
+| 责任链模式(Chain of Responsibility) | 各人自扫门前雪，莫管他人瓦上霜 | 解耦处理逻辑 | 踢皮球 | FilterChain、Pipeline |
+| 迭代器模式(Iterator) | 流水线上坐一天，每个包裹扫一遍 | 统一集合访问方式 | 统一刷脸进站 | Iterator |
+| 命令模式(Command) | 上行下效 | 解耦请求与处理 | 遥控器 | Runnable、Callable |
 | 状态模式(State) | 忽阴忽晴，忽冷忽热 | 绑定状态和行为 | 订单状态跟踪 | Lifecycle |
-| 备忘录模式(Memento) | 给我一剂"后悔药" | 记录特定时间点下的特定行为 | 草稿箱 | StateManageableMessageContext |
+| 备忘录模式(Memento) | 给我一剂"后悔药" | 备份 | 草稿箱 | StateManageableMessageContext |
 | 中介者模式(Mediator) | 联系方式我给你，怎么搞定我不管 | 统一管理网状资源 | 朋友圈 | Timer |
-| 解释器模式(Interpreter) | 我想说“方言” | 统一处理解释行为 | 摩斯密码 | Pattern |
+| 解释器模式(Interpreter) | 我想说“方言” | 实现特定语法解析 | 摩斯密码 | Pattern |
 | 观察者模式(Observer) | 到点记得通知我 | 解耦观察者与被观察者 | 闹钟 | ContextLoaderListener |
-| 访问者模式(Visitor) | 世界那么大，我想去看看 | 解耦数据结构与数据操作 | KPI考核 | FileVisitor|
+| 访问者模式(Visitor) | 横看成岭侧成峰，远近高低各不同 | 解耦数据结构与数据操作 | KPI考核 | FileVisitor、BeanDefinitionVisitor |
 
 **Spring中常用的设计模式总结**
 
 | 设计模式 | 一句话归纳 | 示例 |
 | -------- | -------- | -------- |
 | 工厂模式(Factory) | 只对结果负责，封装创建过程 |  BeanFactory、Calender |
-| 单例模式(Singleton) | 只对结果负责，封装创建过程 | ApplicationContext、Calender |
+| 单例模式(Singleton) | 只对结果负责，封装创建过程 | ApplicationContext |
 | 原型模式(Prototype) | 拔一根猴毛，吹出千万个 | ArrayList、PrototypeBean |
 | 代理模式(Proxy) | 找人办事，增强职责 | ProxyFactoryBean、JdkDynamicAopProxy、CglibAopProxy︎ |
 | 委派模式(Delegate) | 干活算你的(普通员工),功劳算我的(项目经理) | DispatcherServlet、BeanDefinitionParserDelegate |
