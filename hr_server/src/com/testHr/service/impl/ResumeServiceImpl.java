@@ -8,12 +8,9 @@ import com.testHr.service.ResumeService;
 import com.testHr.utils.Parser;
 import com.testHr.utils.TransctionUtils;
 
-import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Scanner;
-import java.util.function.DoubleToIntFunction;
 
 /**
  * @description:
@@ -26,8 +23,8 @@ public class ResumeServiceImpl implements ResumeService {
     public ResumeDTO dealWith(String message, PrintWriter out) {
         ResumeDTO resumeDTO = new ResumeDTO();
         try {
-            resumeDTO = Parser.parserMessage(message);//解析消息，进行数据库操作
             TransctionUtils.startTransction();
+            resumeDTO = Parser.parserMessage(message);//解析消息，进行数据库操作
             if("add".equals(resumeDTO.getHead())){
                 if(resumeDao.insert(resumeDTO.getResume()) > 0){
                     resumeDTO.setSuccess(true);
@@ -37,7 +34,7 @@ public class ResumeServiceImpl implements ResumeService {
                     throw new RuntimeException(resumeDTO.getReturnfailMessage());
                 }
             } else if ("updateDeleteStatus".equals(resumeDTO.getHead())){
-                resumeDTO.setHead("delete");//删除统一传回信息头为"delete"
+                resumeDTO.setHead("delete");//删除信息头为"delete"
                 if(resumeDao.updateDeleteStatus(resumeDTO.getResume().getId()) > 0){
                     resumeDTO.setSuccess(true);
                 } else {
@@ -165,8 +162,10 @@ public class ResumeServiceImpl implements ResumeService {
                     resumeDTO.setBody(body);
                 }
             } else if ("over".equals(resumeDTO.getHead())){
-                System.out.println("以收到客户端关闭信息");
+                resumeDTO.setHead("over");//查询统一设置头为"query"
+                resumeDTO.setBody("服务器：已收到你的关闭信息");
             } else {
+                resumeDTO.setHead("false");
                 throw new RuntimeException("service:解析失败");
             }
             TransctionUtils.commit();
@@ -176,6 +175,8 @@ public class ResumeServiceImpl implements ResumeService {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
+            resumeDTO.setReturnfailMessage(e.getMessage());//记录异常信息
+            resumeDTO.setBody(resumeDTO.getReturnfailMessage());
             e.printStackTrace();
         }
         return resumeDTO;

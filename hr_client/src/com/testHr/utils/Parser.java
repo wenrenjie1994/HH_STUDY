@@ -3,8 +3,6 @@ package com.testHr.utils;
 import com.testHr.dto.ResumeDTO;
 import com.testHr.model.Resume;
 
-import java.util.List;
-
 /**
  * @description: message解析器。message[0]是信息头,[1]是成功与否,[2]是信息体
  * @author: zeng
@@ -12,7 +10,8 @@ import java.util.List;
  */
 public class Parser {
     public static ResumeDTO parseMessage(String message){
-        String[] messages = message.split("\\:");
+        String[] messages = message.split("\\-");
+        ResumeDTO resumeDTO = new ResumeDTO();
         if("add".equals(messages[0])){
             return parserAdd(messages[1],messages[2]);
         } else if ("delete".equals(messages[0])){
@@ -21,11 +20,19 @@ public class Parser {
             return parserUpdate(messages[1],messages[2]);
         } else if("query".equals(messages[0])){
            return parserQuery(messages[1], messages[2]);
+        } else if("over".equals(messages[0])){
+            return parserOver(messages[0], messages[2]);
         } else {
-            System.out.println("？？？？解析失败？？？？？");
-            System.out.println();
-            return null;
+            resumeDTO.setReturnfailMessage(messages[2]);
+            return resumeDTO;
         }
+    }
+
+    private static ResumeDTO parserOver(String message, String message1) {
+        ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead(message);
+        resumeDTO.setBody(message1);
+        return resumeDTO;
     }
 
     private static ResumeDTO parserQuery(String message1, String message2) {

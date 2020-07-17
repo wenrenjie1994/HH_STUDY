@@ -1,14 +1,9 @@
 package com.testHr.web;
 
-import com.sun.security.ntlm.Client;
 import com.testHr.service.ResumeService;
 import com.testHr.service.impl.ResumeServiceImpl;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.InetAddress;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -24,13 +19,10 @@ public class HrClient {
 
     public HrClient(){
         try {
-            tcpSocket = new Socket(InetAddress.getLocalHost(),8888);
+            tcpSocket = new Socket("127.0.0.1",1235);
             System.out.println("----------客户端启动----------");
-            in = new BufferedReader(new InputStreamReader(tcpSocket.getInputStream()));
-            out = new PrintWriter(tcpSocket.getOutputStream());//输出向服务器端
             //通道已经建立，根据菜单选择结构发送message
             Scanner input = new Scanner(System.in);
-            ResumeService resumeService = new ResumeServiceImpl();
             while (true){
                 System.out.println("********欢迎来到HR系统 3.0**********");
                 System.out.println("---------添加简历请输入1----------");
@@ -38,7 +30,10 @@ public class HrClient {
                 System.out.println("---------修改简历请输入3----------");
                 System.out.println("---------查找简历请输入4----------");
                 System.out.println("---------退出系统请输入5----------");
-                int choice = input.nextInt();
+                ResumeService resumeService = new ResumeServiceImpl();
+                in = new BufferedReader(new InputStreamReader(tcpSocket.getInputStream()));
+                out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(tcpSocket.getOutputStream())),true);//输出向服务器端
+                int choice = Integer.parseInt(input.nextLine());
                 switch (choice){
                     case 1:
                         resumeService.addResume(in,out);
@@ -58,13 +53,9 @@ public class HrClient {
                         System.out.println("您的输入有误，请重新输入！");
                 }
                 if(choice == 5){
-                    resumeService.over(out);//同时关闭服务器
-                    if(in != null){
-                        in.close();
-                    }
-                    if(out != null){
-                        out.close();
-                    }
+                    resumeService.over(in,out);//同时关闭服务器
+                    out.close();
+                    in.close();
                     break;//跳出while循环
                 }
             }

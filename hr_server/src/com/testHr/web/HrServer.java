@@ -18,47 +18,44 @@ public class HrServer {
     Socket tcpSocket ;//socket通道
     public HrServer(){
         try {
-            serverSocket = new ServerSocket(8888);
+            serverSocket = new ServerSocket(1235);
             System.out.println("-----------服务器启动------------");
         } catch (IOException e) {
             e.printStackTrace();
         }
         while(true){
             try {
+                if (serverSocket.isClosed()){
+                    System.exit(0);
+                }
                 tcpSocket = serverSocket.accept();//通道建立
-                //写信息
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
             /*
-                为增加效率，增加多线程技术
-                获取一个客户端，开启一个线程，完成文件上传
+                为增加效率，增加多线程技术处理客户端信息
              */
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    BufferedReader in = null;
-                    PrintWriter out = null;
-                    String message = null;
-
-                    try {
-                        in = new BufferedReader(new InputStreamReader(tcpSocket.getInputStream()));
-                        out = new PrintWriter(tcpSocket.getOutputStream());
-                        message = in.readLine();//获取信息
-                        ResumeService resumeService = new ResumeServiceImpl();
-                        ResumeDTO resumeDTO = resumeService.dealWith(message,out);
-                        out.println(resumeDTO.getHead()+":"+resumeDTO.isSuccess()+":"+resumeDTO.getBody());
-                        if("over".equals(resumeDTO.getHead())){
-                            if(in != null){
-                                in.close();
+                    while(true){
+                        BufferedReader in = null;
+                        PrintWriter out = null;
+                        String message = null;
+                        try {
+                            in = new BufferedReader(new InputStreamReader(tcpSocket.getInputStream()));
+                            out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(tcpSocket.getOutputStream())),true);
+                            message = in.readLine();
+                            ResumeService resumeService = new ResumeServiceImpl();
+                            ResumeDTO resumeDTO = resumeService.dealWith(message,out);
+                            out.println(resumeDTO.getHead()+"-"+resumeDTO.isSuccess()+"-"+resumeDTO.getBody());
+                            //也可以不关闭服务器端
+                            if("over".equals(resumeDTO.getHead())){
+                                serverSocket.close();
                             }
-                            if(out != null){
-                                out.close();
-                            }
-                        }
-                    } catch (IOException e) {
+                        } catch (IOException e) {
                             e.printStackTrace();
+                        }
                     }
                 }
             }).start();

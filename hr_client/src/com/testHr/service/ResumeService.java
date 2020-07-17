@@ -13,6 +13,5 @@ public interface ResumeService {
     void deleteResume(BufferedReader in,PrintWriter out);
     void updateResume(BufferedReader in,PrintWriter out);
     void queryResume(BufferedReader in,PrintWriter out);
-
-    void over(PrintWriter out);
+    void over(BufferedReader in,PrintWriter out);
 }

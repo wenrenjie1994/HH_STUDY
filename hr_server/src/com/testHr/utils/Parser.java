@@ -51,62 +51,63 @@ public class Parser {
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryByProcess(String message) {
+    private static ResumeDTO parserQueryByProcess(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("queryByProcess");
         Resume resume = new Resume();
         resume.setProcess(Integer.parseInt(message));
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("queryByProcess");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryBySchool(String message) {
+    private static ResumeDTO parserQueryBySchool(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("queryBySchool");
         Resume resume = new Resume();
         resume.setSchool(message);
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("queryBySchool");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryById(String message) {
+    private static ResumeDTO parserQueryById(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("queryById");
         Resume resume = new Resume();
         resume.setId(Integer.parseInt(message));
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("queryById");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryByName(String message) {
+    private static ResumeDTO parserQueryByName(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("queryByName");
         Resume resume = new Resume();
         resume.setName(message);
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("queryByName");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryBlackList() {
+    private static ResumeDTO parserQueryBlackList() throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
         resumeDTO.setHead("queryBlackList");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryEffList() {
+    private static ResumeDTO parserQueryEffList() throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
         resumeDTO.setHead("queryEffList");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserQueryAll() {
+    private static ResumeDTO parserQueryAll() throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
         resumeDTO.setHead("queryAll");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserUpdate(String message) {
+    private static ResumeDTO parserUpdate(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("update");
         String[] properties = message.split("\\,");
         Resume resume = new Resume();
         resume.setName(properties[0]);
@@ -114,40 +115,39 @@ public class Parser {
         resume.setSchool(properties[2]);
         resume.setProcess(Integer.parseInt(properties[3]));
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("update");
         resumeDTO.setInputId(Integer.parseInt(properties[4]));
         return resumeDTO;
     }
 
-    private static ResumeDTO parserDelete(String message) {
+    private static ResumeDTO parserDelete(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("delete");
         Integer inputId = Integer.parseInt(message);
         Resume resume = new Resume();
         resume.setId(inputId);
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("delete");
         return resumeDTO;
     }
 
-    private static ResumeDTO parserUpdateDeleteStatus(String message) {
+    private static ResumeDTO parserUpdateDeleteStatus(String message) throws Exception{
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("updateDeleteStatus");
         Integer inputId = Integer.parseInt(message);
         Resume resume = new Resume();
         resume.setId(inputId);
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("updateDeleteStatus");
         return resumeDTO;
     }
 
     private static ResumeDTO parserAdd(String message) throws Exception {
         ResumeDTO resumeDTO = new ResumeDTO();
+        resumeDTO.setHead("add");
         String[] properties = message.split("\\,");
         Resume resume = new Resume();
         resume.setName(properties[0]);
-        resume.setId(Integer.parseInt(properties[1]));
+        resume.setId(Integer.parseInt(properties[1]));//如果转换异常，则head头信息被丢失
         resume.setSchool(properties[2]);
         resumeDTO.setResume(resume);
-        resumeDTO.setHead("add");
         return resumeDTO;
     }
 }

@@ -4,16 +4,14 @@ import com.testHr.dto.ResumeDTO;
 import com.testHr.model.Resume;
 import com.testHr.service.ResumeService;
 import com.testHr.utils.Parser;
-import com.testHr.utils.TransctionUtils;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.Socket;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
- * @description:
+ * @description: 逻辑实现
  * @author: zeng
  * @modified By:
  */
@@ -34,7 +32,6 @@ public class ResumeServiceImpl implements ResumeService {
             resumeDTO.setHead("add");
             resumeDTO.setBody(name+","+id+","+school);
             out.println(resumeDTO.getHead()+":"+resumeDTO.getBody());//发送添加信息到服务器端
-//            tcpSocket.shutdownOutput();//发送信息结束
             resumeDTO = Parser.parseMessage(in.readLine());//接受返回信息，并解析
             if(resumeDTO.isSuccess() == true){
                 System.out.println("----添加成功！----");
@@ -100,7 +97,6 @@ public class ResumeServiceImpl implements ResumeService {
     @Override
     public void updateResume(BufferedReader in, PrintWriter out) {
         try {
-            TransctionUtils.startTransction();
             System.out.println("-------您已进入简历修改模式-------");
             Scanner sc = new Scanner(System.in);
             System.out.println("请输入要修改简历人的id，以回车结束");
@@ -165,13 +161,7 @@ public class ResumeServiceImpl implements ResumeService {
                     break;//退出循环
                 }
             }
-            TransctionUtils.commit();
         } catch (Exception e) {
-            try {
-                TransctionUtils.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
             e.printStackTrace();
         }
     }
@@ -293,7 +283,15 @@ public class ResumeServiceImpl implements ResumeService {
     }
 
     @Override
-    public void over(PrintWriter out) {
+    public void over(BufferedReader in, PrintWriter out) {
         out.println("over");
+        try {
+            ResumeDTO resumeDTO = Parser.parseMessage(in.readLine());
+            if ("over".equals(resumeDTO.getHead())) {
+                System.out.println(resumeDTO.getBody());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
