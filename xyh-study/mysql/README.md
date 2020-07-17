@@ -251,6 +251,86 @@ like '%张%';    --结果：只要包含张就可以<br>
 * having关键字是进行分组的条件过滤
 * where关键字后不能使用聚集函数，而having可以使用聚集函数
 
+### 约束
+
+#### 单表的约束（主键）
+1. 可以把某一列字段声明主键，这一列数据有如下特点
+* 非空
+* 唯一
+* 被引用 --当前主键列，作为一条记录的标识
+2. 声明主键
+* 使用关键字primary key 声明某一个字段为主键
+3. 主键的自动增长
+* 主键的值特点，可以把主键的值交给数据库去维护
+* 自动增长只能使用int和bigint类型
+* 通过关键字 auto_increment
+* 演示自动增长<br>
+create table person(<br>
+id int primary key auto_increment,<br>
+username varchar(20)<br>
+);
+
+insert into person values(null,"小美");<br>
+
+#### 唯一和非空约束
+1. 唯一约束
+* 可以把某个字段声明成唯一的值
+* 使用该关键字 unique
+2. 非空
+* 可以把某个字段声明成非空的
+* 值是不能为空值
+* 使用关键字 not null
+
+#### 多表约束（外键）
+1. 外键的约束：目的是保证表结构中的数据的完整性！
+2. 模拟过程
+* 有个部门表，有个员工表，一个部门下有多个员工
+> 创建表结构
+> create table dept(
+>    did int primary key auto_increment,
+>	dname varchar(30)
+
+> );
+
+> create table emp(
+> eid int primary key auto_increment,
+> ename varchar(30),
+> sal double,
+> dno int
+> );
+
+* 向部门表中添加一些数据
+> insert into dept values(1,'研发部');
+> insert into dept values(2,'人事部');
+
+* 向员工表中添加一些数据
+> insert into emp values(null,"小美",5000,2);
+> insert into emp values(null,"小凤",6000,2);
+> insert into emp values(null,"熊大",16000,1);
+> insert into emp values(null,"熊二",15000,1);
+
+* 想直接删除部门数据
+> delete from dept where id=1;
+> 不合理，因为员工表中有部门的信息，为了保证数据完整性需要添加约束
+
+* 外键多表的关系
+* 使用关键字 foreign key (dno) references dept(did)
+* 相当于dno字段作为emp表的外键，值是从dept表中的did字段取
+> create table emp(
+> eid int primary key auto_increment,
+> ename varchar(30),
+> sal double,
+> dno int
+> foreign key (dno) references dept(did)
+> );
+
+### 表设计类型（重点）
+
+
+
+
+
+
 
 
 
