@@ -20,16 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day11-code/day11-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo01/Abstract/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo01/Abstract/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo01/Abstract/DemoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo01/Abstract/Myabstract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo02/Abstract/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo02/Abstract/DemoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo02/Abstract/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo02/Abstract/Dog2Ha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo02/Abstract/DogGolden.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo01Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo02Default.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo03MyInterfaceStatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo05InterfaceConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo06Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo07Relation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Fu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/InterfaceA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/InterfaceB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/InterfaceC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Jiekou.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceAbstractimpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceDefault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceDefaultA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceDefaultB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceStatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceimpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Zi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12-code/day12-code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/AnotherClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/Demo01Modifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/MyClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/sub/Myson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/sub/Stranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -42,6 +61,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -68,19 +88,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="demo04.Interface" />
       <recent name="bean" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainPacket (1)">
-    <configuration name="Demo01Constructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo06.Consturctor.Demo01Constructor" />
-      <module name="day10-code" />
+  <component name="RunManager" selected="Application.Demo06Interface">
+    <configuration name="Demo01Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo01Interface" />
+      <module name="day11-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo06.Consturctor.*" />
+          <option name="PATTERN" value="demo04.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo02.Abstract.DemoMain" />
+    <configuration name="Demo02Default" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo02Default" />
       <module name="day11-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo02.Abstract.*" />
+          <option name="PATTERN" value="demo04.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo01.Abstract.DemoMain" />
+    <configuration name="Demo03MyInterfaceStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo03MyInterfaceStatic" />
       <module name="day11-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo01.Abstract.*" />
+          <option name="PATTERN" value="demo04.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainPacket (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo03.extendsPractice.MainPacket" />
+    <configuration name="Demo05InterfaceConst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo05InterfaceConst" />
       <module name="day11-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo03.extendsPractice.*" />
+          <option name="PATTERN" value="demo04.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +148,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainPacket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo03.Abstract.MainPacket" />
+    <configuration name="Demo06Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo06Interface" />
       <module name="day11-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo03.Abstract.*" />
+          <option name="PATTERN" value="demo04.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,19 +162,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Demo01Constructor" />
-      <item itemvalue="Application.DemoMain" />
-      <item itemvalue="Application.DemoMain (1)" />
-      <item itemvalue="Application.MainPacket" />
-      <item itemvalue="Application.MainPacket (1)" />
+      <item itemvalue="Application.Demo01Interface" />
+      <item itemvalue="Application.Demo02Default" />
+      <item itemvalue="Application.Demo03MyInterfaceStatic" />
+      <item itemvalue="Application.Demo05InterfaceConst" />
+      <item itemvalue="Application.Demo06Interface" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainPacket (1)" />
-        <item itemvalue="Application.MainPacket" />
-        <item itemvalue="Application.DemoMain (1)" />
-        <item itemvalue="Application.DemoMain" />
-        <item itemvalue="Application.Demo01Constructor" />
+        <item itemvalue="Application.Demo06Interface" />
+        <item itemvalue="Application.Demo05InterfaceConst" />
+        <item itemvalue="Application.Demo03MyInterfaceStatic" />
+        <item itemvalue="Application.Demo02Default" />
+        <item itemvalue="Application.Demo01Interface" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +197,7 @@
       <workItem from="1594548132099" duration="411000" />
       <workItem from="1594548570461" duration="2465000" />
       <workItem from="1594564374375" duration="20838000" />
-      <workItem from="1594713867237" duration="23476000" />
+      <workItem from="1594713867237" duration="35218000" />
     </task>
     <servers />
   </component>
@@ -212,50 +233,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548458424" />
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594868374417">
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594975536703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594868374417" />
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594975536703" />
     <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1594607445901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594607445901" />
-    <state width="1313" height="277" key="GridCell.Tab.0.bottom" timestamp="1594869864530">
+    <state width="1313" height="245" key="GridCell.Tab.0.bottom" timestamp="1594974488724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="277" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594869864530" />
-    <state width="1313" height="277" key="GridCell.Tab.0.center" timestamp="1594869864529">
+    <state width="1313" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
+    <state width="1313" height="245" key="GridCell.Tab.0.center" timestamp="1594974488724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="277" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594869864529" />
-    <state width="1313" height="277" key="GridCell.Tab.0.left" timestamp="1594869864529">
+    <state width="1313" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
+    <state width="1313" height="245" key="GridCell.Tab.0.left" timestamp="1594974488724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="277" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594869864529" />
-    <state width="1313" height="277" key="GridCell.Tab.0.right" timestamp="1594869864530">
+    <state width="1313" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
+    <state width="1313" height="245" key="GridCell.Tab.0.right" timestamp="1594974488724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="277" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594869864530" />
+    <state width="1313" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="252" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1594288322774" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1594863767202">
+    <state x="35" y="0" key="SettingsEditor" timestamp="1594975800759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594863767202" />
-    <state x="0" y="0" key="new project wizard" timestamp="1594863766147">
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594975800759" />
+    <state x="0" y="0" key="new project wizard" timestamp="1594975799096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594863766147" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594975799096" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594539911419" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1594628206246">
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1594971056060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594628206246" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594971056060" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
