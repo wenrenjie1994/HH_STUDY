@@ -9,8 +9,11 @@ public class HRS
 {
     public static void main(String[] args)
     {
-        //HRSDatabase.CreateDatabase("hrsdatabase");
-        //HRSDatabase.CreateTable("hrsdatabase","jobhunter");
+        String nameDatabase = "hrsdatabase";
+        String nameTable = "jobhunter";
+        //HRSDatabase.CreateDatabase("nameDatabase");
+        //HRSDatabase.CreateTable("nameDatabase","nameTable");
+
         //创建系统选项
         System.out.println("----------欢迎使用该HR系统！----------");
         System.out.println("*************功能表***********");
@@ -32,20 +35,20 @@ public class HRS
             {
                 case "1":
                 {
-                    operator.addJobHunterInf("hrsdatabase","jobhunter");
+                    operator.addJobHunterInf(nameDatabase,nameTable);
 
                 }break;
                 case "2":
                 {
-                    operator.deleteJobHunterInf("hrsdatabase","jobhunter");
+                    operator.deleteJobHunterInf(nameDatabase,nameTable);
                 }break;
                 case "3":
                 {
-                    operator.changeJobHunterInf("hrsdatabase","jobhunter");
+                    operator.changeJobHunterInf(nameDatabase,nameTable);
                 }break;
                 case "4":
                 {
-                    operator.queryJobHunterInf("hrsdatabase","jobhunter");
+                    operator.queryJobHunterInf(nameDatabase,nameTable);
                 }break;
                 case "q":
                     run = false; break;

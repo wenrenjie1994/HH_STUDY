@@ -6,8 +6,9 @@ import model.JobHunter;
 import model.HRSDatabase;
 
 public class Operator {
-    public void addJobHunterInf(String nameDatabase,String nameTable)
+    private JobHunter inputJobHunterInf()
     {
+        JobHunter jobHunter = null;
         Scanner scan = new Scanner(System.in);
         System.out.println("请输入求职者的以下信息：");
         System.out.println("姓名：");
@@ -27,7 +28,7 @@ public class Operator {
                 case "女":{ gender = Gender.FEMALE; }break;
                 default:
                 {
-                    System.out.println("性别输入错误，请重新输入");
+                    System.out.println("性别输入错误，请重新输入：");
                     right1 = false;
                 }break;
             }
@@ -82,15 +83,20 @@ public class Operator {
                 case "6":{ stage = Stage.SIGN; }break;
                 default:
                 {
-                    System.out.println("阶段输入错误，请重新输入：");
+                    System.out.println("阶段数据输入错误，请重新输入：");
                     right3 = false;
                 }break;
             }
         }while(!right3);
 
-        JobHunter jobHunter = new JobHunter(name,gender,age,degree,stage);
+        jobHunter = new JobHunter(name,gender,age,degree,stage);
+        return jobHunter;
+    }
+    public void addJobHunterInf(String nameDatabase,String nameTable)
+    {
+        JobHunter jobHunter = inputJobHunterInf();
         HRSDatabase.InsertData(nameDatabase,nameTable,jobHunter);
-        System.out.println("成功添加求职者：" + name + "的数据");
+        System.out.println("成功添加求职者：" + jobHunter.getName() + "的数据");
     }
     public void deleteJobHunterInf(String nameDatabase,String nameTable)
     {
@@ -103,7 +109,34 @@ public class Operator {
     }
     public void changeJobHunterInf(String nameDatabase,String nameTable)
     {
-        System.out.println("修改");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入需要修改除信息的求职者姓名：");
+        System.out.println("姓名：");
+        String queryName = scan.next();
+        JobHunter jobHunter = inputJobHunterInf();
+        JobHunter queryJobHunter = HRSDatabase.SearchData(nameDatabase,nameTable,queryName);
+        if (queryJobHunter != null)
+        {
+            System.out.println("修改前信息如下：");
+            System.out.println("姓名："+queryJobHunter.getName());
+            System.out.println("性别："+queryJobHunter.getGender().getChinese());
+            System.out.println("年龄："+queryJobHunter.getAge().toString());
+            System.out.println("学历："+queryJobHunter.getDegree().getChinese());
+            System.out.println("阶段："+queryJobHunter.getStage().getChinese());
+        }
+        else
+        {
+            System.out.println("查无此人，请确定信息是否输入正确");
+            return ;
+        }
+        HRSDatabase.UpdateData(nameDatabase,nameTable,queryName,jobHunter);
+        System.out.println("成功修改求职者：" + queryName + "的数据");
+        System.out.println("修改后信息如下：");
+        System.out.println("姓名："+jobHunter.getName());
+        System.out.println("性别："+jobHunter.getGender().getChinese());
+        System.out.println("年龄："+jobHunter.getAge().toString());
+        System.out.println("学历："+jobHunter.getDegree().getChinese());
+        System.out.println("阶段："+jobHunter.getStage().getChinese());
     }
     public void queryJobHunterInf(String nameDatabase,String nameTable)
     {

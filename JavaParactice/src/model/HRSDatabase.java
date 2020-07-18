@@ -169,7 +169,6 @@ public class HRSDatabase {
             exception.printStackTrace();
         }
     }
-
     //查询数据
     public static JobHunter SearchData(String nameDatabase,String nameTable,String queryName)
     {
@@ -217,5 +216,35 @@ public class HRSDatabase {
         return queryJobHunter;
     }
 
-
+    //修改数据
+    public static void UpdateData(String nameDatabase,String nameTable,String queryName,JobHunter jobHunter)
+    {
+        try
+        {
+            Connection con;
+            con = ConnectDatabase();
+            if(!con.isClosed())
+            {
+                System.out.println("成功连接数据库");
+            }
+            Statement stat = con.createStatement();
+            String sql1 = "USE " + nameDatabase;
+            String sql2 = "UPDATE " + nameTable + " SET "+
+                    "NAME=" + "\"" + jobHunter.getName() + "\"," +
+                    "GENDER=" + "\"" + jobHunter.getGender().toString() + "\"," +
+                    "AGE="  + jobHunter.getAge().toString() + "," +
+                    "DEGREE=" + "\"" + jobHunter.getDegree().toString() + "\"," +
+                    "STAGE=" + "\"" + jobHunter.getStage().toString() + "\"" +
+                    " WHERE NAME="+"\"" + jobHunter.getName() + "\"";
+            System.out.println("正在修改数据");
+            stat.executeUpdate(sql1);
+            stat.executeUpdate(sql2);
+            System.out.println("成功修改数据");
+            close(con);
+            close(stat);
+        }catch(SQLException exception)
+        {
+            exception.printStackTrace();
+        }
+    }
 }

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e41874c5-4b03-4f5d-8d5c-b7ae059fb045" name="默认" comment="">
-      <change beforePath="$PROJECT_DIR$/../JAVA基础/OperateMySQL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA基础/OperateMySQL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaParactice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaParactice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaParactice/HRS/HRS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaParactice/HRS/HRS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaParactice/model/Operate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HRS/HRS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HRS/HRS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/JobHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JobHunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Operate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/HRSDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/HRSDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lowbhrsys/out/production/lowbhrsys/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lowbhrsys/out/production/lowbhrsys/service/BookService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,7 +43,8 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,14 +61,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6472" />
+          <entry key="java" value="6953" />
           <entry key="sql" value="32" />
           <entry key="txt" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6466" />
+          <entry key="JAVA" value="6947" />
           <entry key="PLAIN_TEXT" value="55" />
           <entry key="SQL" value="6" />
           <entry key="Scratch" value="32" />
@@ -84,20 +81,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HRS/HRS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="141">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/MyFile/Install/JAVA/jdk1.8.0_144/src.zip!/java/util/Scanner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="1370" selection-start-line="1370" selection-end-line="1370" />
             </state>
           </provider>
         </entry>
@@ -114,17 +102,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/JobHunter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+            <state relative-caret-position="69">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Operator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="989">
-              <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+            <state relative-caret-position="348">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,15 +120,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/HRSDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="191" column="36" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
+            <state relative-caret-position="285">
+              <caret line="235" column="50" lean-forward="true" selection-start-line="235" selection-start-column="50" selection-end-line="235" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#ConnectDatabase#0;class#HRSDatabase#0" />
                 <element signature="method#close#0;class#HRSDatabase#0" />
                 <element signature="method#close#1;class#HRSDatabase#0" />
+                <element signature="method#CreateDatabase#0;class#HRSDatabase#0" />
+                <element signature="method#CreateTable#0;class#HRSDatabase#0" />
+                <element signature="method#InsertData#0;class#HRSDatabase#0" />
+                <element signature="method#DeleteData#0;class#HRSDatabase#0" />
               </folding>
             </state>
           </provider>
@@ -165,8 +158,8 @@
         <option value="$PROJECT_DIR$/src/model/Operate.java" />
         <option value="$PROJECT_DIR$/src/model/JobHunter.java" />
         <option value="$PROJECT_DIR$/src/HRS/HRS.java" />
-        <option value="$PROJECT_DIR$/src/model/HRSDatabase.java" />
         <option value="$PROJECT_DIR$/src/model/Operator.java" />
+        <option value="$PROJECT_DIR$/src/model/HRSDatabase.java" />
       </list>
     </option>
   </component>
@@ -177,10 +170,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="787" />
-    <option name="y" value="-13" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="添加" />
@@ -285,11 +277,12 @@
       <workItem from="1595058302879" duration="2690000" />
       <workItem from="1595084537585" duration="6685000" />
       <workItem from="1595091258413" duration="2690000" />
+      <workItem from="1595093976814" duration="3040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28154000" />
+    <option name="totallyTimeSpent" value="31194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -304,7 +297,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32624114" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3177305" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -313,7 +306,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="调试" order="11" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="调试" order="11" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3248227" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -356,15 +349,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/JobHunter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        <state relative-caret-position="69">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Operator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HRS/HRS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="141">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -373,22 +376,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/HRSDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="191" column="36" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="235" column="50" lean-forward="true" selection-start-line="235" selection-start-column="50" selection-end-line="235" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#ConnectDatabase#0;class#HRSDatabase#0" />
             <element signature="method#close#0;class#HRSDatabase#0" />
             <element signature="method#close#1;class#HRSDatabase#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Operator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#CreateDatabase#0;class#HRSDatabase#0" />
+            <element signature="method#CreateTable#0;class#HRSDatabase#0" />
+            <element signature="method#InsertData#0;class#HRSDatabase#0" />
+            <element signature="method#DeleteData#0;class#HRSDatabase#0" />
           </folding>
         </state>
       </provider>
