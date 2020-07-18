@@ -7,10 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/图书管理系统/连接Mysql用到的包/mysql-connector-java-5.1.38-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../MySQL/tool/mysql-connector-java-5.1.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
