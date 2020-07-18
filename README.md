@@ -1,22 +1,10 @@
 qhr学习计划
-
-### 嵌入思维导图2
-说明：用TAB键划分节点层次
-```mind
-:树杈图
-CSNote:Java 基础
-	数据类型
-		基本类型
-			字符型:char/16
-			布尔类型:boolean/~
-			数值类型:byte/8 short/16 int/32 float/32 long/64 double/64
-		包装类型
-		缓存池
-```
 - 学习材料(不做局限)
-  - 学习网址https://how2j.cn/ 
-  - 书籍《JAVA核心技术 卷I》
-- 基础内容
+  - [CSNote](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md "CSNote")
+  - [how2j](https://how2j.cn/)
+- 思维导图
+  -[qhr的Java基础思维导图](/java基础学习/java基础思维导图.md.html)
+- 基础内容  
   - [ ] 关键字/标识符
   - [ ] 常量
   - [ ] 变量/数据类型（https://how2j.cn/k/variable/variable-tutorial/258.html）
