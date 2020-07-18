@@ -2,6 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b671485a-edd7-42cb-9b4e-60112030fb42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_37_bin__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/HR_SYS_IV_CLIENT.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Resume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Protocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/net/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/utils/ResumeOperate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/HR_SYS_IV_SERVER.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/lib/mysql-connector-java-5.1.37-bin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Resume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Protocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/ResumeOperate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,41 +35,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/bean/Resume.java">
+        <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding>
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#777#778#0" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#839#840#0" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/utils/ResumeOperate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="130">
+              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,19 +47,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/utils/DBConnection.java">
+        <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="32" selection-end-line="41" />
+            <state relative-caret-position="364">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/sys/HRS.java">
+        <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="139" column="41" lean-forward="true" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+            <state relative-caret-position="494">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,6 +79,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>(LinkedList&lt;Resume&gt;)</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -101,6 +99,22 @@
         <option value="$PROJECT_DIR$/HR_SYS_III/src/utils/DBConnection.java" />
         <option value="$PROJECT_DIR$/HR_SYS_III/src/sys/HRS.java" />
         <option value="$PROJECT_DIR$/HR_SYS_III/src/utils/ResumeOperate.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Resume.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Resume.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Request.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Parser.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Response.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/DBConnection.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/ResumeOperate.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Response.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/net/Client.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Protocol.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Protocol.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/utils/ResumeOperate.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Parser.java" />
+        <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java" />
       </list>
     </option>
   </component>
@@ -110,7 +124,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="165" />
     <option name="y" value="105" />
     <option name="width" value="1534" />
@@ -124,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,18 +216,109 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="interaction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="interaction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
+              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594459953691" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595104885882" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -221,6 +327,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MSI -PC\Desktop\HH_STUDY\Projects\SelfTaught\HR_SYS_IV_SERVER\lib" />
       <recent name="C:\Users\MSI -PC\Desktop\HH_STUDY\Projects\SelfTaught\HR_SYS_III\lib" />
     </key>
   </component>
@@ -236,10 +343,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HRS (1)">
+  <component name="RunManager" selected="Application.HRS (2)">
     <configuration name="HRS (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sys.HRS" />
       <module name="HR_SYS_III" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HRS (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sys.HRS" />
+      <module name="HR_SYS_IV_CLIENT" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sys.*" />
@@ -263,12 +383,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.Server" />
+      <module name="HR_SYS_IV_SERVER" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.HRS" />
       <item itemvalue="Application.HRS (1)" />
+      <item itemvalue="Application.HRS (2)" />
+      <item itemvalue="Application.Server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HRS (2)" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.HRS (1)" />
         <item itemvalue="Application.HRS" />
       </list>
@@ -287,6 +424,7 @@
       <workItem from="1593740398525" duration="5866000" />
       <workItem from="1594034723858" duration="6814000" />
       <workItem from="1594448555403" duration="10315000" />
+      <workItem from="1595069999956" duration="25208000" />
     </task>
     <task id="LOCAL-00001" summary="SelfTaught I Finished !">
       <created>1593745711522</created>
@@ -313,12 +451,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22995000" />
+    <option name="totallyTimeSpent" value="48203000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="165" y="105" width="1534" height="881" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18603411" />
+      <window_info anchor="top" x="2354" y="271" width="1048" height="673" id="Run" order="0" type="WINDOWED" weight="0.21562156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25915876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -326,17 +465,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21589689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.14607948" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32975295" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32893288" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.14607948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -413,17 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/utils/DBConnection.java">
+    <entry file="file://$PROJECT_DIR$/HR_SYS/src/utils/ResumeOperate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="32" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/utils/ResumeOperate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="361">
+          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -432,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/bean/Resume.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="104">
+          <caret line="4" column="24" lean-forward="true" selection-end-line="82" />
           <folding>
             <element signature="e#560#561#0" expanded="true" />
             <element signature="e#587#588#0" expanded="true" />
@@ -459,20 +590,244 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR_SYS/src/utils/ResumeOperate.java">
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Resume.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+        <state relative-caret-position="853">
+          <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/sys/HRS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="139" column="41" lean-forward="true" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+        <state relative-caret-position="26">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-832">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/utils/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_III/src/utils/ResumeOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="109" column="56" lean-forward="true" selection-start-line="109" selection-start-column="56" selection-end-line="110" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1611">
+          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/net/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Protocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="e#1260#1261#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/ResumeOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#duplicateCodeDealing#0;class#ResumeOperate#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Protocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/CodingTools/Java/jdk8/src.zip!/java/net/SocketInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/utils/ResumeOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
