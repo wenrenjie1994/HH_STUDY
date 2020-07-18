@@ -3,7 +3,7 @@ qhr学习计划
   - [CSNote](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md "CSNote")
   - [how2j](https://how2j.cn/)
 - 思维导图
-  -[qhr的Java基础思维导图](/java基础学习/java基础思维导图.md.html)
+  -[qhr的Java基础思维导图](/输入输出流/java基础.md.pdf)
 - 基础内容  
   - [ ] 关键字/标识符
   - [ ] 常量
