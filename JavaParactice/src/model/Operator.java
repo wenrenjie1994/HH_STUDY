@@ -1,9 +1,12 @@
 package model;
 
 import java.util.*;
+
 import model.JobHunter;
-public class Operate {
-    public static void addJobHunterInf()
+import model.HRSDatabase;
+
+public class Operator {
+    public void addJobHunterInf(String nameDatabase,String nameTable)
     {
         Scanner scan = new Scanner(System.in);
         System.out.println("请输入求职者的以下信息：");
@@ -86,22 +89,43 @@ public class Operate {
         }while(!right3);
 
         JobHunter jobHunter = new JobHunter(name,gender,age,degree,stage);
-        System.out.println("名字： "+jobHunter.getName());
-        System.out.println("性别： "+jobHunter.getGender().getChainese());
-        System.out.println("年龄： "+jobHunter.getAge());
-        System.out.println("学历： "+jobHunter.getDegree().getChinese());
-        System.out.println("阶段： "+jobHunter.getStage().getChinese());
+        HRSDatabase.InsertData(nameDatabase,nameTable,jobHunter);
+        System.out.println("成功添加求职者：" + name + "的数据");
     }
-    public static void deleteJobHunterInf()
+    public void deleteJobHunterInf(String nameDatabase,String nameTable)
     {
-        System.out.println("删除");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入需要删除信息的求职者姓名：");
+        System.out.println("姓名：");
+        String queryName = scan.next();
+        HRSDatabase.DeleteData(nameDatabase,nameTable,queryName);
+        System.out.println("成功删除求职者：" + queryName + "的数据");
     }
-    public static void changeJobHunterInf()
+    public void changeJobHunterInf(String nameDatabase,String nameTable)
     {
         System.out.println("修改");
     }
-    public static void queryJobHunterInf()
+    public void queryJobHunterInf(String nameDatabase,String nameTable)
     {
-        System.out.println("查询");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("请输入需要查询信息的求职者姓名：");
+        System.out.println("姓名：");
+        String queryName = scan.next();
+        JobHunter queryJobHunter =  HRSDatabase.SearchData(nameDatabase,nameTable,queryName);
+        if (queryJobHunter != null)
+        {
+            System.out.println("查询信息如下：");
+            System.out.println("姓名："+queryJobHunter.getName());
+            System.out.println("性别："+queryJobHunter.getGender().getChinese());
+            System.out.println("年龄："+queryJobHunter.getAge().toString());
+            System.out.println("学历："+queryJobHunter.getDegree().getChinese());
+            System.out.println("阶段："+queryJobHunter.getStage().getChinese());
+        }
+        else
+        {
+            System.out.println("查无此人，请确定信息是否输入正确");
+        }
     }
+
 }
+

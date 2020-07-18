@@ -37,7 +37,7 @@ enum Gender
     private final String chinese;
     private Gender(String chinese) { this.chinese = chinese; }
 
-    public String getChainese() { return chinese; }
+    public String getChinese() { return chinese; }
 }
 enum Degree
 {
@@ -54,7 +54,7 @@ enum Stage
     BACKGROUND("背调通过"),SIGN("签约完成");
 
     private final String chinese;
-    private Stage(String chinese){ this.chinese = chinese; };
+    private Stage(String chinese){ this.chinese = chinese; }
 
     public String getChinese() { return chinese; }
 }
