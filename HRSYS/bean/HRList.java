@@ -1,4 +1,6 @@
-package LowHR1;
+package bean;
+
+import bean.HR;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

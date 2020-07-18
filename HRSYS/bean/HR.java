@@ -1,4 +1,4 @@
-package LowHR1;
+package bean;
 
 
 class HR

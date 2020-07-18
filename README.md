@@ -3,7 +3,7 @@ qhr学习计划
   - [CSNote](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md "CSNote")
   - [how2j](https://how2j.cn/)
 - 思维导图
-  -[qhr的Java基础思维导图](/输入输出流/java基础.md.pdf)
+  -[qhr的Java基础思维导图](/java基础学习/java基础.md.pdf)
 - 基础内容  
   - [ ] 关键字/标识符
   - [ ] 常量
@@ -71,22 +71,5 @@ qhr学习计划
     - 定时任务
     - 等等
 
-三、学习反馈
-
-学习反馈
-
-- 方式
-  - Github地址：https://github.com/wenrenjie1994/HH_STUDY
-- 操作指南
-  - 从github上clone下来HH_STUDY的项目
-        git clone https://github.com/wenrenjie1994/HH_STUDY.git
-  - 然后在本地新建一个branch，分支命名为自己的名字拼音+电话号码后4位（有重名现象）例如：wenrenjie8897
-        git checkout -b wenrenjie8897
-  - 在自己的分支下去维护自己的学习反馈
-  - 每一个知识点新建一个文件夹，然后提交到自己的分支上
-        //第一次push的时候可能需要以下命令
-        git push --set-upstream origin wenrenjie8897
-。
-    
 
 
