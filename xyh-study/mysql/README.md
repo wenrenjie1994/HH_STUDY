@@ -325,6 +325,59 @@ insert into person values(null,"小美");<br>
 > );
 
 ### 表设计类型（重点）
+#### 一对多的表设计
+1. 一对多的场景
+* 部门表（一） 员工表（多）：一个部门有多个员工，一个员工只能属于一个部门
+* 用户表（一） 订单表（多）：一个用户可以有多个订单，一个订单又能由一个用户产生
+2. 一对多表设计有两张表
+* 主表（一）和从表（多）
+2. 建表原则：在从表中添加字段，把该字段作为外键，指向一方表的主键
+#### 多对多的表设计
+1. 多对多的场景
+* 订单表 商品表 多对多的关系：一张订单可以包含多个商品，一个商品可以被多个订单订购
+* 用户表 角色表  多对多的关系：一个用户可以有多种角色，一种角色可以由多个用户担任
+2. 建表原则：以用户表和角色表为例，其实有三张表，需要创建一个中间表，存储数据关系
+3. 多对多可以拆分为2个一对多的场景
+
+#### 多表查询
+1. 内连接
+* 前提条件：两个表有联系，通过外键关联
+> 普通的的内连接
+> * 语法：关键字 ....inner join ...on 条件
+> * 注意：
+> * 在inner join 关键字之前写表1
+> * 在inner join 关键字之后写表2
+> * on的后面写条件（表1是dept ，表2是emp）dept.did=emp.dno
+> * 语句 :select * from dept inner join emp on dept.did=emp.dno;
+2. 隐式内链接
+* 语法：select ....from 表1，表2 where 表1.字段=表2.字段;
+* 语句：select * from dept,emp where dept.did=emp.dno;
+* 别名：select * from dept d,emp e where d.did=e.dno;
+* 指定字段：select d.dname,e.ename,e.sal from dept d,emp e where d.did=e.dno;
+3. 外连接
+> * 左外链接
+>  使用关键字select* from 表1 left outer join 表2 on 条件
+>  outer关键字省略不写
+>  select * from dept left outer join emp on dept.did=emp.dno;
+>  select * from dept left join emp on dept.did=emp.dno;
+>  * 右外链接
+>  使用关键字 select * from 表1 right outer join 表2 on 条件
+>  outer关键字省略不写
+>  select * from dept right outer join emp on dept.did=emp.dno;
+4. 总结
+> * 内连接和外连接数据的区别
+> * 如果数据正常的话，不管是内连接还是外连接，查询结果一样的
+> * 内连接查询的是两张表交集的数据即主外键关联的数据。
+> * **左外连**接查询的是**左表中**所有的数据和2张表主外键关联的数据
+> * **右外连**接查询的是**右表中**所有的数据和2张表主外键关联的数据
+
+#### 子查询
+1. 子查询，嵌套查询，一个select语句不能查询出结果的，可以通过多个select语句来查询结果
+2. 例子（查询出英语成绩大于英语平均分的同学）
+* 先计算出英语平均分（select avg(english) from stu;）
+* 再编写select语句
+* select username,english from stu where english>(select avg(english) from stu);
+
 
 
 
