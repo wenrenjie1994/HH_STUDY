@@ -373,7 +373,7 @@ insert into person values(null,"小美");<br>
 > * **左外连**接查询的是**左表中**所有的数据和2张表主外键关联的数据
 > * **右外连**接查询的是**右表中**所有的数据和2张表主外键关联的数据
 5. 例子
-* [dept表](https://github.com/wenrenjie1994/HH_STUDY/tree/xianyuhong59017/xyh-study/mysql/img/4.png)
+* ![dept表](https://github.com/wenrenjie1994/HH_STUDY/tree/xianyuhong59017/xyh-study/mysql/img/4.png)
 * [emp表] (https://github.com/wenrenjie1994/HH_STUDY/tree/xianyuhong59017/xyh-study/mysql/img/3.png)
 * [内连接 select * from dept d,emp e where d.did=e.dno;](https://github.com/wenrenjie1994/HH_STUDY/tree/xianyuhong59017/xyh-study/mysql/img/5.png)
 * [左外连接 select * from dept left outer join emp on dept.did=emp.dno;](https://github.com/wenrenjie1994/HH_STUDY/tree/xianyuhong59017/xyh-study/mysql/img/2.png)
