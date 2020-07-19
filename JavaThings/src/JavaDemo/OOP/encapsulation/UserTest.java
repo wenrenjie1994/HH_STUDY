@@ -1,4 +1,4 @@
-package JavaDemo.OOP;
+package JavaDemo.OOP.encapsulation;
 
 public class UserTest {
     public static void main(String[] args) {

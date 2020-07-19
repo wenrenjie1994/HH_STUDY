@@ -1,4 +1,4 @@
-package JavaDemo.OOP;
+package JavaDemo.OOP.encapsulation;
 
 public class CustomerTest {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ class Customer {
     //filed
     String name;
     String nation;
-    int age;
+    public int age;
     boolean isStudent;
     double cost;
 

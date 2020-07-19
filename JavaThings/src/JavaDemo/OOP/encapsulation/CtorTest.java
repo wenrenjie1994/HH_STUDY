@@ -1,6 +1,4 @@
-package JavaDemo.OOP;
-
-import java.security.PublicKey;
+package JavaDemo.OOP.encapsulation;
 
 public class CtorTest {
     public static void main(String[] args) {
@@ -30,6 +28,7 @@ class Student {
         System.out.println("Student(*)...");
     }
     public Student(String school) {
+        this();         //call constructor
         System.out.println("Student(&)...");
         this.school = school;
     }

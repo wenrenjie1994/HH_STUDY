@@ -1,4 +1,4 @@
-package JavaDemo.OOP;
+package JavaDemo.OOP.encapsulation;
 
 //test class
 public class PersonTest {
