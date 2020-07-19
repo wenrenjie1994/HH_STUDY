@@ -63,6 +63,7 @@ public class DBResumeMapper extends AbstractResumeMapper {
     return Result.successResult();
   }
 
+  // 要不要把删除的数据封装返回回去呢？
   @Override
   public synchronized Result removeResume(AbstractResume resume) {
     String sql = "update resume set deleteStatus = true where id = '" + resume.getId() + "';";
@@ -79,7 +80,7 @@ public class DBResumeMapper extends AbstractResumeMapper {
       DBConnection.closeConnection(null, statement, conn);
     }
     if (rs > 0) {
-      return Result.successResult(resume);
+      return Result.successResult();
     } else {
       return Result.errorNotFoundResult();
     }
@@ -121,7 +122,12 @@ public class DBResumeMapper extends AbstractResumeMapper {
     } finally {
       DBConnection.closeConnection(null, statement, conn);
     }
-    return Result.successResult();
+    if (rs > 0) {
+      return Result.successResult();
+    } else {
+      return Result.errorNotFoundResult();
+    }
+
   }
 
   @Override

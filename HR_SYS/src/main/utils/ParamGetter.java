@@ -1,4 +1,4 @@
-package main.sys.client.request.utils;
+package main.utils;
 
 import main.entity.Resume;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * @author: hqweay
- * @description: TODO
+ * @description: 从终端获取数据转换为 Resume 对象
  * Created on 7/15/20 5:21 PM
  */
 public class ParamGetter {

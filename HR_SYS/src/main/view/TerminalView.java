@@ -4,9 +4,6 @@ import main.dto.Result;
 import main.dto.ResumeList;
 import main.entity.AbstractResume;
 import main.entity.Resume;
-import main.mapper.AbstractResumeMapper;
-import main.service.ResumeServiceImpl;
-import main.service.interfaces.ResumeService;
 import main.view.interfaces.View;
 
 /**
@@ -16,13 +13,13 @@ import main.view.interfaces.View;
  */
 public class TerminalView implements View {
   // 由 ResumeServiceImpl 传入
-  private AbstractResumeMapper resumeMapper;
-  private ResumeService resumeService;
-
-  public TerminalView(AbstractResumeMapper resumeMapper) {
-    this.resumeMapper = resumeMapper;
-    resumeService = new ResumeServiceImpl(resumeMapper);
-  }
+  // private AbstractResumeMapper resumeMapper;
+  // private ResumeService resumeService;
+  //
+  // public TerminalView(AbstractResumeMapper resumeMapper) {
+  //   this.resumeMapper = resumeMapper;
+  //   resumeService = new ResumeServiceImpl(resumeMapper);
+  // }
 
   @Override
   public void saveResume(Result result) {

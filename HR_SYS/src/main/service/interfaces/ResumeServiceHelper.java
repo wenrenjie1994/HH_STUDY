@@ -7,6 +7,7 @@ import main.entity.Resume;
  * @description: 通过 ResumeServiceHelper 操作 Mapper
  * Created on 7/15/20 11:40 AM
  */
+@Deprecated
 public interface ResumeServiceHelper {
   void saveResume(Resume resume);
 

@@ -10,6 +10,7 @@ import main.service.interfaces.ResumeService;
  * @description: 这个类的效果似乎直接通过 ResumeMapper 就可以达到
  * Created on 7/15/20 12:05 PM
  */
+// 没做逻辑处理，在 Request 层处理了
 public class ResumeServiceImpl implements ResumeService {
   // 由 ResumeServiceHelperImpl 传入
   private AbstractResumeMapper resumeMapper;

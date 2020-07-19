@@ -4,9 +4,9 @@ import main.dto.RequestDTO;
 import main.dto.Result;
 import main.entity.Resume;
 import main.enums.RequestEnum;
+import main.enums.ResultCode;
 import main.mapper.AbstractResumeMapper;
-import main.mapper.DBResumeMapper;
-import main.sys.client.request.utils.ParamGetter;
+import main.utils.ParamGetter;
 import main.view.TerminalView;
 import main.view.interfaces.View;
 
@@ -27,7 +27,8 @@ public class RequestImpl extends AbstractRequest {
 
   // resumeService
   public RequestImpl(AbstractResumeMapper resumeMapper, Scanner scanner) {
-    TerminalView = new TerminalView(new DBResumeMapper());
+    // TerminalView = new TerminalView(new DBResumeMapper());
+    TerminalView = new TerminalView();
     paramGetter = new ParamGetter(scanner);
   }
 
@@ -80,11 +81,13 @@ public class RequestImpl extends AbstractRequest {
       result = (Result) in.readObject();
       Resume oldResume = (Resume) result.getData();
 
-      Resume newResume = paramGetter.updateResume(oldResume);
+      if (result.getResultCode() != ResultCode.ERROR_NOT_FOUND) {
+        Resume newResume = paramGetter.updateResume(oldResume);
+        requestDTO = new RequestDTO(RequestEnum.UPDATE_RESUME, new Resume[]{oldResume, newResume});
+        out.writeObject(requestDTO);
+        result = (Result) in.readObject();
+      }
 
-      requestDTO = new RequestDTO(RequestEnum.UPDATE_RESUME, new Resume[]{oldResume, newResume});
-      out.writeObject(requestDTO);
-      result = (Result) in.readObject();
     } catch (IOException e) {
       e.printStackTrace();
     } catch (ClassNotFoundException e) {

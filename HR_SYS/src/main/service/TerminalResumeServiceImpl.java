@@ -5,6 +5,8 @@ import main.entity.Resume;
 import main.mapper.AbstractResumeMapper;
 import main.mapper.MemoryResumeMapper;
 import main.sys.client.request.interfaces.Request;
+import main.utils.ParamGetter;
+import main.view.TerminalView;
 
 import java.util.Scanner;
 
@@ -17,12 +19,14 @@ public class TerminalResumeServiceImpl implements Request {
   // 都得从上层传入
   private Scanner scanner;
   private AbstractResumeMapper resumeMapper;
-  private TerminalResumeServiceHelperImpl resumeServiceHelper;
+  private ParamGetter paramGetter;
+  // private TerminalResumeServiceHelperImpl resumeServiceHelper;
+
+  private TerminalView terminalView = new TerminalView();
 
   public TerminalResumeServiceImpl(AbstractResumeMapper resumeMapper) {
     this.resumeMapper = resumeMapper;
-    // 引入 ResumeServiceHelper
-    resumeServiceHelper = new TerminalResumeServiceHelperImpl(resumeMapper);
+    paramGetter = new ParamGetter(scanner);
   }
 
   public MemoryResumeMapper getResumeMapper() {
@@ -36,121 +40,42 @@ public class TerminalResumeServiceImpl implements Request {
 
   @Override
   public void saveResume() {
-    System.out.println("====输入姓名");
-    String name = scanner.nextLine();
-
-    System.out.println("====输入身份证号");
-    String id = scanner.nextLine();
-
-    System.out.println("====输如学校名");
-    String school = scanner.nextLine();
-
-    Resume resume = new Resume();
-    resume.setName(name);
-    resume.setId(id);
-    resume.setSchool(school);
-
-    // if (resumeMapper.saveResume(resume).getResultCode().getCode() == 200) {
-    //   System.out.println("success====添加成功");
-    // } else if (resumeMapper.saveResume(resume).getResultCode().getCode() == 501) {
-    //   System.out.println("error====添加失败，确保每项信息都不为空～");
-    // } else if (resumeMapper.saveResume(resume).getResultCode().getCode() == 502) {
-    //   System.out.println("error====数据已经存在");
-    // }
-    resumeServiceHelper.saveResume(resume);
+    Resume resume = paramGetter.saveResume();
+    Result result = resumeMapper.saveResume(resume);
+    terminalView.saveResume(result);
   }
 
   @Override
   public void removeResume() {
-    System.out.println("====输入需要删除的简历的身份证号");
-    String id = scanner.nextLine();
-    Resume resume = new Resume();
-    resume.setId(id);
-    // Result result = resumeMapper.getResumeByID(resume);
-    // // if (result.getResultCode().getCode() == 503) {
-    // //   System.out.println("warn:====没有该用户的简历");
-    // //   return;
-    // // }
-    // if (resumeMapper.removeResume((Resume) result.getData()).getResultCode().getCode() == 200) {
-    //   System.out.println("info:====删除 " + ((Resume) result.getData()).getName() + " " + ((Resume) result.getData()
-    //   ).getId() + " 成功！");
-    // } else {
-    //   System.out.println("warn:====没有该用户的简历");
-    // }
-    resumeServiceHelper.removeResume(resume);
+    Resume resume = paramGetter.removeResume();
+    Result result = resumeMapper.getResumeByID(resume);
+    terminalView.removeResume(result);
   }
 
   @Override
   public void updateResume() {
-    System.out.println("====输入需要修改的简历的身份证号");
-    String id = scanner.nextLine();
-    Resume resume = new Resume();
-    resume.setId(id);
-
+    Resume resume = paramGetter.getResumeByID();
     Result result = resumeMapper.getResumeByID(resume);
     Resume oldResume = (Resume) result.getData();
     if (oldResume == null) {
       System.out.println("====没有该用户的简历");
       return;
     }
-
-    System.out.println("====输入姓名，留空则不变。");
-    String newName = scanner.nextLine();
-    newName = newName.equals("") ? oldResume.getName() : newName;
-
-    System.out.println("====输入身份证号，留空则不变。");
-    String newId = scanner.nextLine();
-    newId = newId.equals("") ? oldResume.getId() : newId;
-
-    System.out.println("====输如学校名，留空则不变。");
-    String newSchool = scanner.nextLine();
-    newSchool = newSchool.equals("") ? oldResume.getSchool() : newSchool;
-
-    Resume newResume = new Resume();
-    newResume.setName(newName);
-    newResume.setId(newId);
-    newResume.setSchool(newSchool);
-    resumeServiceHelper.updateResume(oldResume, newResume);
-
-    //
-    // Integer code = resumeMapper.updateResume(oldResume, newResume).getResultCode().getCode();
-    // if (code == 200) {
-    //   System.out.println("====修改成功");
-    // } else if (code == 502) {
-    //   System.out.println("====修改后的数据与已有数据重复");
-    // } else if (code == 503) {
-    //   System.out.println("====没找到该用户");
-    // }
+    Resume newResume = paramGetter.updateResume(oldResume);
+    result = resumeMapper.updateResume(oldResume, newResume);
+    terminalView.updateResume(result);
   }
 
   @Override
   public void getResumeByID() {
-    System.out.println("====输入身份证号");
-    String id = scanner.nextLine();
-    Resume resume = new Resume();
-    resume.setId(id);
-    resumeServiceHelper.getResumeByID(resume);
-    // Result result = resumeMapper.getResumeByID(resume);
-    // Integer code = result.getResultCode().getCode();
-    // Resume newResume = (Resume) result.getData();
-    //
-    // if (code == 503) {
-    //   System.out.println("====没查到");
-    // } else {
-    //   System.out.println(newResume.toString());
-    // }
+    Resume resume = paramGetter.getResumeByID();
+    Result result = resumeMapper.getResumeByID(resume);
+    terminalView.getResumeByID(result);
   }
 
   @Override
   public void listResume() {
-    // if (resumeMapper.listResume().getResultCode().getCode() == 503) {
-    //   System.out.println("error====还没有数据");
-    //   return;
-    // }
-    // System.out.println("====姓名====身份证号====学校====应聘流程");
-    // for (AbstractResume resume : (ResumeList) resumeMapper.listResume().getData()) {
-    //   System.out.println(resume.toString());
-    // }
-    resumeServiceHelper.listResume();
+    Result result = resumeMapper.listResume();
+    terminalView.listResume(result);
   }
 }
