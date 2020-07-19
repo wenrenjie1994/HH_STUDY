@@ -23,7 +23,7 @@ public class DBResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public Result saveResume(AbstractResume resume) {
+  public synchronized Result saveResume(AbstractResume resume) {
     if (!Validator.validResumeAllFields(resume)) {
       return Result.errorParamValidResult();
     }
@@ -64,7 +64,7 @@ public class DBResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public Result removeResume(AbstractResume resume) {
+  public synchronized Result removeResume(AbstractResume resume) {
     String sql = "update resume set deleteStatus = true where id = '" + resume.getId() + "';";
     Connection conn = DBConnection.getConnection();
     int rs = 0;
@@ -87,7 +87,7 @@ public class DBResumeMapper extends AbstractResumeMapper {
   }
 
   @Override
-  public Result updateResume(AbstractResume oldResume, AbstractResume newResume) {
+  public synchronized Result updateResume(AbstractResume oldResume, AbstractResume newResume) {
     String sql = "update resume set name = '"
             + newResume.getName() + "', id = '"
             + newResume.getId() + "', school = '"

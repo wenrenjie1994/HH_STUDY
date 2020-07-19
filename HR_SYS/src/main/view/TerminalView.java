@@ -38,7 +38,6 @@ public class TerminalView implements View {
   @Override
   public void removeResume(Result result) {
     Resume resume = (Resume) result.getData();
-    System.out.println(resume);
     if (result.getResultCode().getCode() == 200) {
       System.out.println("info:====删除身份证号为 " + " " + resume.getId() + " 的用户简历成功！");
     } else {
