@@ -29,9 +29,9 @@ public class Book implements Serializable {
     @NotBlank(message = "作者不能为空")
     private String author;
 
-
     //@NumberFormat(pattern = "#.##")   //浮点数类型格式化无效
-    private Float price;
+    //使用String代替BigDecimal，解决序列化时小数末尾0丢失问题
+    private String price;
 
     private String bookDesc;
 
