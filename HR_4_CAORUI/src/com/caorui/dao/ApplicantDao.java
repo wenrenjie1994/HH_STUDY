@@ -1,6 +1,7 @@
 package com.caorui.dao;
 
 import com.caorui.bean.Applicant;
+import com.caorui.utils.ConnectionPool;
 import com.caorui.utils.JDBCUtils;
 
 import java.sql.Connection;
@@ -79,7 +80,9 @@ public class ApplicantDao {
         //4、定义sql
         String sql = "select  * from app where id='" + id + "'";
         // 5、获取执行sql语句的对象 statement
-        try (Connection conn = JDBCUtils.getConnection();Statement statement = conn.createStatement();) {
+        ConnectionPool pool=new ConnectionPool();
+        Connection conn = pool.getConnection();
+        try (Statement statement = conn.createStatement();) {
             //6、执行sql。接收返回结果
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
