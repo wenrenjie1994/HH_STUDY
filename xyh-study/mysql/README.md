@@ -218,14 +218,14 @@ like '%张%';    --结果：只要包含张就可以<br>
 2. 聚合函数操作的都是某一列的数据
 3. 聚合函数
 * count() --求数量
-> select count(*) | count(列名) from 表
-> 统计一个班级共有多少学生： select count(*) from students；
-> 统计学生数学成绩大于90的学生个数： select count(math) from students where math>90;
+> * select count(*) | count(列名) from 表
+> * 统计一个班级共有多少学生： select count(*) from students；
+> * 统计学生数学成绩大于90的学生个数： select count(math) from students where math>90;
 * sum() --求某一列数据的和
 * 注意： 没有sum(*),只有sum(列明),且只对数值类型起作用
-> select sum(math) from students; --查询班级的数学总成绩
-> select sum(math+english+chinese) from students; --查询班级所有成绩的总成绩
-> select sum(chinese)/cout(*) from students; --查询班级语文的平均分
+> * select sum(math) from students; --查询班级的数学总成绩
+> * select sum(math+english+chinese) from students; --查询班级所有成绩的总成绩
+> * select sum(chinese)/cout(*) from students; --查询班级语文的平均分
 
 * avg() --求平均值
 >select avg(chinese) from students; --查询班级语文的平均分
@@ -233,20 +233,20 @@ like '%张%';    --结果：只要包含张就可以<br>
 * 聚集函数，是函数，不要忘记写()
 * 计算都是某一列的数据
 * 聚集函数
-> count() --求数量
-> sum() --求和
-> avg() --求平均值
-> max() --求最大值
-> min() --最小值
+> * count() --求数量
+> * sum() --求和
+> * avg() --求平均值
+> * max() --求最大值
+> * min() --最小值
 
 #### 分组查询
 
 1. 分组的概念
 * select * from students --查询所有数据，默认为一组
 * 可以使用关键字 group by sex 根据字段进行分组
-> select count(*) from employees group by gender; --统计两个性别的人数
-> select product,sum(price) from orders group by product having sum(price)>100 ; --查询购买了几类商品，并且每类总价大于100的商品
-> select product ,sum(price) from orders where price>95 group by product having sum(price)>100;--查询购买几类商品，并且商品价格需要大于100，每类总价大于100的商品
+> * select count(*) from employees group by gender; --统计两个性别的人数<br>
+> * select product,sum(price) from orders group by product having sum(price)>100 ; --查询购买了几类商品，并且每类总价大于100的商品<br>
+> * select product ,sum(price) from orders where price>95 group by product having sum(price)>100;--查询购买几类商品，并且商品价格需要大于100，每类总价大于100的商品
 * 使用where的条件语句，若果有分组，是在分组之前的条件
 * having关键字是进行分组的条件过滤
 * where关键字后不能使用聚集函数，而having可以使用聚集函数
@@ -288,8 +288,7 @@ insert into person values(null,"小美");<br>
 > 创建表结构
 > create table dept(
 >    did int primary key auto_increment,
->	dname varchar(30)
-
+>	dname varchar(30)<br>
 > );
 
 > create table emp(
@@ -300,7 +299,7 @@ insert into person values(null,"小美");<br>
 > );
 
 * 向部门表中添加一些数据
-> insert into dept values(1,'研发部');
+> insert into dept values(1,'研发部);<br>
 > insert into dept values(2,'人事部');
 
 * 向员工表中添加一些数据
@@ -385,29 +384,3 @@ insert into person values(null,"小美");<br>
 * 先计算出英语平均分（select avg(english) from stu;）
 * 再编写select语句
 * select username,english from stu where english>(select avg(english) from stu);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
