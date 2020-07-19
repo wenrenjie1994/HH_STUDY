@@ -5,6 +5,7 @@ package main.service.interfaces;
  * @description: 通过 ResumeServie 获取参数
  * Created on 7/4/20 11:48 AM
  */
+@Deprecated
 public interface TerminalResumeService {
   void saveResume();
 

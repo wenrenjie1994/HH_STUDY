@@ -80,4 +80,9 @@ public class TerminalView implements View {
       System.out.println(resume.toString());
     }
   }
+
+  @Override
+  public void exitSystem() {
+    System.out.println("退出系统");
+  }
 }

@@ -15,7 +15,10 @@ public enum RequestEnum {
 
   GET_RESUME_BY_ID("getResumeByID/"),
 
-  LIST_RESUME("listResume/");
+  LIST_RESUME("listResume/"),
+
+  EXIT_SYSTEM("exitSystem/");
+
 
   private String root = "/api/";
   private String path;

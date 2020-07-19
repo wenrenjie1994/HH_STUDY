@@ -7,6 +7,7 @@ package main.enums;
  */
 public enum ResultCode {
   SUCCESS(200, "SUCESS"),
+  SUCCESS_EXIT(209, "SUCESS EXIT"),
   ERROR(500, "ERROR"),
   ERROR_PARAM_VALID(501, "参数验证出错"),
   ERROR_IS_EXIST(502, "数据重复"),

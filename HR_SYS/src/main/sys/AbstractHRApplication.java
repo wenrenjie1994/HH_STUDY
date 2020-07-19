@@ -5,7 +5,8 @@ import main.mapper.DBResumeMapper;
 import main.mapper.MemoryResumeMapper;
 import main.service.TerminalResumeServiceImpl;
 import main.sys.client.request.AbstractRequest;
-import main.sys.client.request.Request;
+import main.sys.client.request.RequestImpl;
+import main.sys.client.request.interfaces.Request;
 import main.sys.interfaces.HRApplication;
 import main.utils.LocalPersistence;
 
@@ -41,7 +42,7 @@ public abstract class AbstractHRApplication implements HRApplication {
   public void applicationInit() {
 
     if (config.isCS()) {
-      request = new Request(new DBResumeMapper(), scanner);
+      request = new RequestImpl(new DBResumeMapper(), scanner);
       return;
     }
 
@@ -53,9 +54,7 @@ public abstract class AbstractHRApplication implements HRApplication {
     } else {
       resumeService = new TerminalResumeServiceImpl(new MemoryResumeMapper());
     }
-
     resumeService.setScanner(this.scanner);
-
   }
 
   // 退出应用
@@ -100,54 +99,42 @@ public abstract class AbstractHRApplication implements HRApplication {
     int choice = scanner.nextInt();
     // 接受 nextInt 后的换行符
     scanner.nextLine();
+    chooseMode(choice);
+  }
 
-    // 模式的切换应该放在 request 的，暂且这样吧。
+  void chooseMode(int choice) {
+    if (config.isCS()) {
+      chooseMode(choice, request);
+    } else {
+      chooseMode(choice, resumeService);
+    }
+
+  }
+
+  void chooseMode(int choice, Request request) {
     switch (choice) {
       case 1:
-        if (config.isCS()) {
-          request.listResume();
-        } else {
-          resumeService.listResume();
-        }
+        request.listResume();
         break;
       case 2:
-        if (config.isCS()) {
-          request.getResumeByID();
-        } else {
-          resumeService.getResumeByID();
-        }
+        request.getResumeByID();
         break;
       case 3:
-        if (config.isCS()) {
-          request.saveResume();
-        } else {
-          resumeService.saveResume();
-        }
+        request.saveResume();
         break;
       case 4:
-        if (config.isCS()) {
-          request.updateResume();
-        } else {
-          resumeService.updateResume();
-        }
+        request.updateResume();
         break;
       case 5:
-        if (config.isCS()) {
-          request.removeResume();
-        } else {
-          resumeService.removeResume();
-        }
+        request.removeResume();
         break;
       case 0:
         exitFlag = true;
+        ((RequestImpl) request).exitSystem();
         break;
       default:
         System.out.println("warn:====请输入菜单对应的相应数字～");
         break;
     }
-  }
-
-  void chooseMode() {
-
   }
 }

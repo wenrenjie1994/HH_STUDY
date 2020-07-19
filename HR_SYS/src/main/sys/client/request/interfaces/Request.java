@@ -15,4 +15,5 @@ public interface Request {
   void getResumeByID();
 
   void listResume();
+
 }

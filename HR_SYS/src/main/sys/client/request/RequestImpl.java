@@ -18,7 +18,7 @@ import java.util.Scanner;
  * @description: 客户端与 Server 交互（算是代理类）
  * Created on 7/15/20 2:42 PM
  */
-public class Request extends AbstractRequest {
+public class RequestImpl extends AbstractRequest {
 
   // 通过 ResumeServiceHelper 实现数据的展示
   private View TerminalView;
@@ -26,12 +26,12 @@ public class Request extends AbstractRequest {
   private Scanner scanner;
 
   // resumeService
-  public Request(AbstractResumeMapper resumeMapper, Scanner scanner) {
+  public RequestImpl(AbstractResumeMapper resumeMapper, Scanner scanner) {
     TerminalView = new TerminalView(new DBResumeMapper());
     paramGetter = new ParamGetter(scanner);
   }
 
-  public Request() {
+  public RequestImpl() {
   }
 
   @Override
@@ -123,5 +123,19 @@ public class Request extends AbstractRequest {
       e.printStackTrace();
     }
     TerminalView.listResume(result);
+  }
+
+  public void exitSystem() {
+    Result result = null;
+    RequestDTO requestDTO = new RequestDTO(RequestEnum.EXIT_SYSTEM);
+    try {
+      out.writeObject(requestDTO);
+      result = (Result) in.readObject();
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+    TerminalView.exitSystem();
   }
 }

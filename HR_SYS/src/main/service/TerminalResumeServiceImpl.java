@@ -4,7 +4,7 @@ import main.dto.Result;
 import main.entity.Resume;
 import main.mapper.AbstractResumeMapper;
 import main.mapper.MemoryResumeMapper;
-import main.service.interfaces.TerminalResumeService;
+import main.sys.client.request.interfaces.Request;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @description: 实现 Resume 在 Service 的操作
  * Created on 7/4/20 11:49 AM
  */
-public class TerminalResumeServiceImpl implements TerminalResumeService {
+public class TerminalResumeServiceImpl implements Request {
   // 都得从上层传入
   private Scanner scanner;
   private AbstractResumeMapper resumeMapper;

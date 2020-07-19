@@ -17,4 +17,6 @@ public interface View {
   void getResumeByID(Result result);
 
   void listResume(Result result);
+
+  void exitSystem();
 }

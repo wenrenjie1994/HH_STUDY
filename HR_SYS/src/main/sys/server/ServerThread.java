@@ -2,6 +2,7 @@ package main.sys.server;
 
 import main.dto.RequestDTO;
 import main.dto.Result;
+import main.enums.ResultCode;
 import main.mapper.DBResumeMapper;
 import main.service.ResumeServiceImpl;
 import main.service.interfaces.ResumeService;
@@ -22,6 +23,8 @@ public class ServerThread implements Runnable {
   static ObjectInputStream in = null;
   static ObjectOutputStream out = null;
   static RequestDTO requestDTO;
+
+  private boolean exitFlag = false;
 
   public ServerThread(Socket tcpConnection) {
     this.tcpConnection = tcpConnection;
@@ -66,10 +69,14 @@ public class ServerThread implements Runnable {
         case UPDATE_RESUME:
           result = resumeService.updateResume(requestDTO.getParamsResume()[0], requestDTO.getParamsResume()[1]);
           break;
+        case EXIT_SYSTEM:
+          exitFlag = true;
+          result = new Result(ResultCode.SUCCESS_EXIT, null);
+          break;
         default:
           break;
       }
-      //
+      
       if (result != null) {
         try {
           out.writeUnshared(result);
@@ -79,6 +86,17 @@ public class ServerThread implements Runnable {
         }
       }
 
+      //退出系统
+      if (exitFlag) {
+        try {
+          out.close();
+          in.close();
+          tcpConnection.close();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+        break;
+      }
     }
   }
 
