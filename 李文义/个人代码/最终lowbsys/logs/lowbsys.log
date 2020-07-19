@@ -1,118 +1,25 @@
-2020-07-17 12:30:15 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 6892 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 12:30:15 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 12:30:16 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 12:30:16 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 12:30:16 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 12:30:16 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 12:30:16 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 911 ms
-2020-07-17 12:30:16 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 12:30:17 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 12:30:17 main com.spdb.ServerApplication Started ServerApplication in 1.855 seconds (JVM running for 2.843)
-2020-07-17 12:30:42 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 12:30:42 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 12:30:42 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 6 ms
-2020-07-17 12:30:42 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 12:30:42 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 15:10:50 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 32900 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 15:10:50 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 15:10:50 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 15:10:50 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 15:10:50 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 15:10:50 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 15:10:50 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 839 ms
-2020-07-17 15:10:51 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 15:10:51 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 15:10:51 main com.spdb.ServerApplication Started ServerApplication in 1.737 seconds (JVM running for 2.721)
-2020-07-17 15:11:01 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 15:11:01 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 15:11:01 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 4 ms
-2020-07-17 15:11:01 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 15:11:01 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 20:42:29 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 17064 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 20:42:29 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 20:42:30 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 20:42:30 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 20:42:30 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 20:42:30 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 20:42:30 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 912 ms
-2020-07-17 20:42:31 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:42:31 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 20:42:31 main com.spdb.ServerApplication Started ServerApplication in 1.883 seconds (JVM running for 2.901)
-2020-07-17 20:42:42 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 20:42:42 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 20:42:42 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 4 ms
-2020-07-17 20:42:42 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 20:42:42 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 20:47:25 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 20940 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 20:47:25 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 20:47:26 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 20:47:26 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 20:47:26 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 20:47:26 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 20:47:26 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 937 ms
-2020-07-17 20:47:27 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:47:27 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 20:47:27 main com.spdb.ServerApplication Started ServerApplication in 2.038 seconds (JVM running for 3.51)
-2020-07-17 20:47:30 http-nio-8081-exec-2 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 20:47:30 http-nio-8081-exec-2 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 20:47:30 http-nio-8081-exec-2 org.springframework.web.servlet.DispatcherServlet Completed initialization in 6 ms
-2020-07-17 20:47:30 http-nio-8081-exec-2 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 20:47:31 http-nio-8081-exec-2 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 20:50:06 Thread-6 o.s.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:50:06 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-2020-07-17 20:50:06 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
-2020-07-17 20:50:11 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 29632 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 20:50:11 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 20:50:12 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 20:50:12 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 20:50:12 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 20:50:12 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 20:50:12 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 946 ms
-2020-07-17 20:50:13 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:50:13 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 20:50:13 main com.spdb.ServerApplication Started ServerApplication in 2.055 seconds (JVM running for 3.135)
-2020-07-17 20:50:21 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 20:50:21 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 20:50:21 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 7 ms
-2020-07-17 20:50:21 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 20:50:21 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 20:51:19 HikariPool-1 housekeeper com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s971ms758µs400ns).
-2020-07-17 20:54:29 Thread-6 o.s.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:54:29 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-2020-07-17 20:54:29 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
-2020-07-17 20:54:34 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 9336 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 20:54:34 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 20:54:35 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 20:54:35 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 20:54:35 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 20:54:35 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 20:54:35 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1123 ms
-2020-07-17 20:54:36 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:54:36 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 20:54:36 main com.spdb.ServerApplication Started ServerApplication in 2.24 seconds (JVM running for 3.365)
-2020-07-17 20:54:42 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 20:54:42 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 20:54:42 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 4 ms
-2020-07-17 20:54:42 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 20:54:42 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 20:56:01 Thread-6 o.s.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:56:01 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-2020-07-17 20:56:01 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
-2020-07-17 20:56:05 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 23612 (started by liwenyi in E:\spdb\HH_STUDY)
-2020-07-17 20:56:05 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
-2020-07-17 20:56:06 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
-2020-07-17 20:56:06 main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-07-17 20:56:06 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-07-17 20:56:06 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-07-17 20:56:06 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 945 ms
-2020-07-17 20:56:07 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 20:56:07 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
-2020-07-17 20:56:07 main com.spdb.ServerApplication Started ServerApplication in 2.022 seconds (JVM running for 3.089)
-2020-07-17 20:56:10 http-nio-8081-exec-2 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-17 20:56:10 http-nio-8081-exec-2 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
-2020-07-17 20:56:10 http-nio-8081-exec-2 org.springframework.web.servlet.DispatcherServlet Completed initialization in 5 ms
-2020-07-17 20:56:10 http-nio-8081-exec-2 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-2020-07-17 20:56:10 http-nio-8081-exec-2 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-2020-07-17 23:11:15 Thread-6 o.s.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
-2020-07-17 23:11:15 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-2020-07-17 23:11:15 Thread-6 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+2020-07-19 13:20:29 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 19056 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-19 13:20:29 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-19 13:20:30 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-19 13:20:30 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-19 13:20:30 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-19 13:20:30 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-19 13:20:30 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1101 ms
+2020-07-19 13:20:30 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-19 13:20:30 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-19 13:20:30 main com.spdb.ServerApplication Started ServerApplication in 2.212 seconds (JVM running for 3.251)
+2020-07-19 13:20:41 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-19 13:20:41 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-07-19 13:20:41 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 9 ms
+2020-07-19 13:20:41 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2020-07-19 13:20:41 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2020-07-19 13:20:42 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-19 13:20:42 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-19 13:20:42 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-19 13:20:42 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
+2020-07-19 13:20:42 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-19 13:21:27 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-19 13:21:27 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-19 13:21:27 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-19 13:21:27 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 10(Long), 10(Long)
+2020-07-19 13:21:27 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage <==      Total: 10

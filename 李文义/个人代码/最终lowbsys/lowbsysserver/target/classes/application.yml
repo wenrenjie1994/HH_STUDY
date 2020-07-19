@@ -17,6 +17,10 @@ logging:
   file: E:/spdb/HH_STUDY/李文义/个人代码/最终lowbsys/logs/lowbsys.log
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} %thread %logger{50} %msg%n"
+  level:
+    com:
+      spdb:
+        mapper: debug
 
 mybatis-plus:
   global-config:
