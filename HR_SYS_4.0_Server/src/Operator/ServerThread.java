@@ -68,6 +68,26 @@ public class ServerThread extends Thread {
                     String message = protocol.AddResumeMessage(ar);
                     System.out.println("向客户端返回：   " + message);
                     out.println(message);
+                }else if(ss.head.equals("deletebyid"))
+                {
+                    Action a=new Action();
+                    ResumeList resumeList=(ResumeList)ss.resultData;
+                    Resume resume=resumeList.get(0);
+                    ar=a.deleteResumeById(resume);
+                    Protocol protocol=new Protocol();
+                    String message=protocol.DeleteResumeMessage(ar);
+                    System.out.println("向客户端返回：   "+message);
+                    out.println(message);
+                }else if(ss.head.equals("change")){
+                    Action a=new Action();
+                    ResumeList resumeList=(ResumeList) ss.resultData;
+                    Resume oldresume=resumeList.get(0);
+                    Resume resume=resumeList.get(1);
+                    ar=a.changeResume(resume, oldresume);
+                    Protocol protocol=new Protocol();
+                    String message=protocol.changeResumeMessage(ar);
+                    System.out.println("向客户端返回：   "+message);
+                    out.println(message);
                 }
 
             }

@@ -28,4 +28,32 @@ public class Protocol {
 		return str;
 	}
 
+	public String DeleteResumeMessage(ActionResult ar)
+	{
+		String str;
+		String isSuccess=ar.isSuccess;
+		if(isSuccess.equals("Success"))
+		{
+			str=isSuccess+"/n";
+		}
+		else
+		{
+			str=isSuccess+"/n"+ar.failReason;
+		}
+		return str;
+	}
+	public String changeResumeMessage(ActionResult ar)
+	{
+		String str;
+		String isSuccess=ar.isSuccess;
+		if(isSuccess.equals("Success"))
+		{
+			str=isSuccess+"/n";
+		}
+		else
+		{
+			str=isSuccess+"/n"+ar.failReason;
+		}
+		return str;
+	}
 }

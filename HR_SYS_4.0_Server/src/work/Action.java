@@ -51,4 +51,60 @@ public class Action
 		return ar;
 	}
 
+	public ActionResult deleteResumeById(Resume resume)
+	{
+		int line=0;
+		ActionResult ar=new ActionResult();
+		try
+		{
+			Connection conn = DBConnection.getConnection();
+			Statement statement =conn.createStatement();
+			String stringSql ="delete from employee where id = '"+resume.getId()+"'";
+			line=statement.executeUpdate(stringSql);
+			DBConnection.closeConnection(null,statement,conn);
+		}
+		catch(SQLException e)
+		{
+			System.out.println("SQL Exception:"+e.toString());
+		}
+		if(line>0)
+		{
+			ar.isSuccess="Success";
+		}
+		else
+		{
+			ar.isSuccess="false";
+			ar.failReason="没有找到应聘者的简历";
+		}
+		return ar;
+	}
+	//修改简历方法。
+	public ActionResult changeResume(Resume resume,Resume oldresume)
+	{
+		int line=0;
+		ActionResult ar=new ActionResult();
+		try
+		{
+			Connection conn = DBConnection.getConnection();
+			Statement statement =conn.createStatement();
+			String stringSql ="UPDATE employee SET name = '"+resume.getName()+"',id='"+resume.getId()+"', school='"+resume.getSchool()+"',process='"+resume.getProcess()+"',deletestatus='"+resume.getDeleteStatus()+"' WHERE  id= '"+oldresume.getId()+"'";
+			line=statement.executeUpdate(stringSql);
+			DBConnection.closeConnection(null,statement,conn);
+		}
+		catch(SQLException e)
+		{
+			System.out.println("SQL Exception:"+e.toString());
+		}
+		if(line>0)
+		{
+			ar.isSuccess="Success";
+		}
+		else
+		{
+			ar.isSuccess="false";
+			ar.failReason="没有需要更新的简历";
+		}
+		return ar;
+	}
+
 }
