@@ -59,10 +59,67 @@ public class sysmain {
 
 
     }
+    //按照id值删除简历
     private void deleteResume() {
-    }
 
+        System.out.println("************欢迎进入删除学生信息界面************");
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入需要删除学生信息的身份证号");
+        String id = input.nextLine();
+        Resume resume=new Resume(null,id,null);
+        Operator o =new Operator();
+        ReturnResult rr=o.deleteResumeById(resume);
+        if(rr.isSuccess)
+        {
+            JOptionPane.showMessageDialog(null, "删除成功");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "删除失败");
+        }
+
+    }
+    //按照id更新数据
     private void updateResume() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("************欢迎进入学生信息修改界面************");
+        System.out.println("请输入需要修改学生信息的身份证号");
+        String oldId = input.nextLine();
+        System.out.println("请依次输入该学生修改后的学生姓名、身份证号、毕业院校、简历进程状态、显示状态。");
+        System.out.println(
+                "其中简历进程有：" +
+                        " 0：已申请 " +
+                        " 1：简历通过 " +
+                        " 2：笔试通过 " +
+                        " 3：体检通过 " +
+                        " 4：背调通过 " +
+                        " 5：已签约 " +
+                        " 6：已入职");
+        System.out.println(
+                "显示状态有：" +
+                        "0 :不展示 " +
+                        "1 :展示");
+        String newname = input.nextLine();
+        String newid = input.nextLine();
+        String newschool = input.nextLine();
+        int newprocess = input.nextInt();
+        int newdeleteStatus = input.nextInt();
+        Resume resume=new Resume(newname,newid,newschool);
+        resume.setProcess(newprocess);
+        resume.setDeleteStatus(newdeleteStatus);
+        //把界面中得到的数据放在两个Resume里
+        Resume oldResume=new Resume(null,oldId,null);
+        Operator o =new Operator();
+        //把Resume传给Operator操作
+        ReturnResult rr=o.changeResume(resume,oldResume);
+        if(rr.isSuccess)
+        {
+            JOptionPane.showMessageDialog(null, "更新成功");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "更新失败");
+        }
 
     }
 
