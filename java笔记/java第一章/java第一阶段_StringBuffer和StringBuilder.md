@@ -2,7 +2,7 @@
 
 StringBuffer和StringBuilder非常类似，均代表可变的字符序列。 这两个类都是抽象类AbstractStringBuilder的子类，方法几乎一模一样。我们打开AbstractStringBuilder的源码，如示例所示：
 
-**【示例8-11】AbstractStringBuilder 部分源码**
+**【示例】AbstractStringBuilder 部分源码**
 
 ```java
 abstract class AbstractStringBuilder implements Appendable, CharSequence {
