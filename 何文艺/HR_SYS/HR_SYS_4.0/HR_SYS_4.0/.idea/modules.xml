@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hr_system_client/hr_system_client.iml" filepath="$PROJECT_DIR$/hr_system_client/hr_system_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hr_system_server/hr_system_server.iml" filepath="$PROJECT_DIR$/hr_system_server/hr_system_server.iml" />
+    </modules>
+  </component>
+</project>
