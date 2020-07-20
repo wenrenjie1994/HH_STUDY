@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../HR_SYS_2.0/HR_SYS_2.0.iml" filepath="$PROJECT_DIR$/../../HR_SYS_2.0/HR_SYS_2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../HR_SYS_3.0/HR_SYS_3.0.iml" filepath="$PROJECT_DIR$/../../HR_SYS_3.0/HR_SYS_3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../HR_SYS_4.0_Client/HR_SYS_4.0_Clinet.iml" filepath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/HR_SYS_4.0_Clinet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../HR_SYS_4.0_Server/HR_SYS_4.0_Server.iml" filepath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/HR_SYS_4.0_Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01-code/day01-code.iml" filepath="$PROJECT_DIR$/day01-code/day01-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/day02-code/day02-code.iml" filepath="$PROJECT_DIR$/day02-code/day02-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/day03-code/day03-code.iml" filepath="$PROJECT_DIR$/day03-code/day03-code.iml" />
@@ -17,6 +19,8 @@
       <module fileurl="file://$PROJECT_DIR$/day11-code/day11-code.iml" filepath="$PROJECT_DIR$/day11-code/day11-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/day12-code/day12-code.iml" filepath="$PROJECT_DIR$/day12-code/day12-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../HH_STUDY-master/lowbhrsys3/lowbhrsys3.iml" filepath="$PROJECT_DIR$/../../../HH_STUDY-master/lowbhrsys3/lowbhrsys3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../HH_STUDY-master (2)/HH_STUDY-master/lowbhrsys_client/lowbhrsys_client.iml" filepath="$PROJECT_DIR$/../../../HH_STUDY-master (2)/HH_STUDY-master/lowbhrsys_client/lowbhrsys_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../HH_STUDY-master (2)/HH_STUDY-master/lowbhrsys_server/lowbhrsys_server.iml" filepath="$PROJECT_DIR$/../../../HH_STUDY-master (2)/HH_STUDY-master/lowbhrsys_server/lowbhrsys_server.iml" />
     </modules>
   </component>
 </project>

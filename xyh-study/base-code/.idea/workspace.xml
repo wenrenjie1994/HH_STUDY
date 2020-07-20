@@ -20,37 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo01Interface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo02Default.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo03MyInterfaceStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo05InterfaceConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo06Interface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Demo07Relation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Fu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Interface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/InterfaceA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/InterfaceB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/InterfaceC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Jiekou.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceAbstract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceAbstractimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceDefault.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceDefaultA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceDefaultB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceStatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/MyInterfaceimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day11-code/src/demo04/Interface/Zi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12-code/day12-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/AnotherClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/Demo01Modifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/MyClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/sub/Myson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day12-code/src/demo01/sub/Stranger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_3.0/src/hrsys/HRMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/src/hrsys/HRMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Clinet/HR_SYS_4.0_Clinet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__2_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__2_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__3_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__3_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__4_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__4_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0/HR_SYS_4.0.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/HR_SYS_4.0_Clinet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/control/Operator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/main/sysmain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/model/Resume.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/model/ResumeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/model/ReturnResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/net/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/net/Clinet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/util/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/util/Protocol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/HR_SYS_4.0_Server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/lib/mysql-connector-java-5.1.47.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/Operator/ServerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/database/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/ActionResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/Resume.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/ResumeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/ReturnResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/net/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/util/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/util/Protocol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/work/Action.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1eRdBHOO8XzskkRqIBwT0OT03Eu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,28 +85,39 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HR_SYS_3.0/HR_SYS_3.0.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HR_SYS_4.0_Server/HR_SYS_4.0_Server.iml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="show.inlinked.gradle.project.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Server" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Operator" />
+      <recent name="net" />
+      <recent name="model" />
+      <recent name="control" />
       <recent name="demo04.Interface" />
-      <recent name="bean" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\day05-code\src\demo03\FileUpload" />
+      <recent name="E:\HH_STUDY-xianyuhong59017\HR_SYS_4.0_Clinet" />
+      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Server\src" />
+      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Clinet\src" />
+      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Server\src\model" />
+      <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Clinet\src\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo06Interface">
-    <configuration name="Demo01Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo01Interface" />
-      <module name="day11-code" />
+  <component name="RunManager" selected="Application.sysmain">
+    <configuration name="AddBookFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.AddBookFrame" />
+      <module name="lowbhrsys_client" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.Interface.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo02Default" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo02Default" />
-      <module name="day11-code" />
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.Client" />
+      <module name="lowbhrsys_client" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.Interface.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo03MyInterfaceStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo03MyInterfaceStatic" />
-      <module name="day11-code" />
+    <configuration name="Server (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.Server" />
+      <module name="HR_SYS_4.0_Server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.Interface.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo05InterfaceConst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo05InterfaceConst" />
-      <module name="day11-code" />
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.Server" />
+      <module name="lowbhrsys_server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.Interface.*" />
+          <option name="PATTERN" value="net.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,12 +164,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo06Interface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.Interface.Demo06Interface" />
-      <module name="day11-code" />
+    <configuration name="sysmain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.sysmain" />
+      <module name="HR_SYS_4.0_Clinet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.Interface.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,19 +178,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Demo01Interface" />
-      <item itemvalue="Application.Demo02Default" />
-      <item itemvalue="Application.Demo03MyInterfaceStatic" />
-      <item itemvalue="Application.Demo05InterfaceConst" />
-      <item itemvalue="Application.Demo06Interface" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.AddBookFrame" />
+      <item itemvalue="Application.Server (1)" />
+      <item itemvalue="Application.sysmain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo06Interface" />
-        <item itemvalue="Application.Demo05InterfaceConst" />
-        <item itemvalue="Application.Demo03MyInterfaceStatic" />
-        <item itemvalue="Application.Demo02Default" />
-        <item itemvalue="Application.Demo01Interface" />
+        <item itemvalue="Application.sysmain" />
+        <item itemvalue="Application.Server (1)" />
+        <item itemvalue="Application.AddBookFrame" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +214,10 @@
       <workItem from="1594548570461" duration="2465000" />
       <workItem from="1594564374375" duration="20838000" />
       <workItem from="1594713867237" duration="35218000" />
+      <workItem from="1595063343206" duration="583000" />
+      <workItem from="1595125129820" duration="12411000" />
+      <workItem from="1595169477055" duration="806000" />
+      <workItem from="1595170446599" duration="1507000" />
     </task>
     <servers />
   </component>
@@ -221,6 +241,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="540" y="199" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1594548024933" />
+    <state x="35" y="0" key="#Project_Structure" timestamp="1595165883736">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="35" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1595165883736" />
     <state x="0" y="171" key="#SQL_Dialects" timestamp="1594613533768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -229,6 +253,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548616289" />
+    <state x="401" y="148" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595129219809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="401" y="148" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1595129219809" />
     <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1594548458424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -237,38 +265,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594975536703" />
-    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1594607445901">
+    <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595167488495">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594607445901" />
-    <state width="1313" height="245" key="GridCell.Tab.0.bottom" timestamp="1594974488724">
+    <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1595167488495" />
+    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1595170570112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
-    <state width="1313" height="245" key="GridCell.Tab.0.center" timestamp="1594974488724">
+    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595170570112" />
+    <state width="1313" height="157" key="GridCell.Tab.0.bottom" timestamp="1595170692958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
-    <state width="1313" height="245" key="GridCell.Tab.0.left" timestamp="1594974488724">
+    <state width="1313" height="157" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
+    <state width="1313" height="157" key="GridCell.Tab.0.center" timestamp="1595170692958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
-    <state width="1313" height="245" key="GridCell.Tab.0.right" timestamp="1594974488724">
+    <state width="1313" height="157" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
+    <state width="1313" height="157" key="GridCell.Tab.0.left" timestamp="1595170692958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594974488724" />
-    <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1594288322774">
+    <state width="1313" height="157" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
+    <state width="1313" height="157" key="GridCell.Tab.0.right" timestamp="1595170692958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="252" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1594288322774" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1594975800759">
+    <state width="1313" height="157" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
+    <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1595169695900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594975800759" />
-    <state x="0" y="0" key="new project wizard" timestamp="1594975799096">
+    <state x="252" y="3" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1595169695900" />
+    <state x="262" y="0" key="RollbackChangesDialog" timestamp="1595169318013">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594975799096" />
+    <state x="262" y="0" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595169318013" />
+    <state x="35" y="0" key="SettingsEditor" timestamp="1595170571409">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595170571409" />
+    <state x="312" y="39" width="742" height="650" key="find.popup" timestamp="1595166126115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="312" y="39" width="742" height="650" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595166126115" />
+    <state x="0" y="0" key="new project wizard" timestamp="1595169840490">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1595169840490" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
