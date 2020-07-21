@@ -31,6 +31,9 @@ public class Resume {
      */
     private int flag;
 
+    public Resume(String name, String id, String school, int flag) {
+    }
+
     public String getName() {
         return name;
     }
