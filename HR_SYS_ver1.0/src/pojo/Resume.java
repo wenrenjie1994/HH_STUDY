@@ -32,6 +32,10 @@ public class Resume {
     private int flag;
 
     public Resume(String name, String id, String school, int flag) {
+        this.name = name;
+        this.id = id;
+        this.school = school;
+        this.flag = flag;
     }
 
     public String getName() {

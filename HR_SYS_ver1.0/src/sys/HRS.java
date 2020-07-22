@@ -33,19 +33,18 @@ public class HRS {
             System.out.println("查看已签约的简历请按------5");
             System.out.println("退出请按--------6");
 
-
             int choice = input.nextInt();
 
             if (choice == 1) {
-
+                select0();
             } else if (choice == 2) {
-
+                select1();
             } else if (choice == 3) {
-
+                select2();
             } else if (choice == 4) {
-
+                select3();
             } else if (choice == 5) {
-
+                select4();
             } else if (choice == 6) {
                 System.out.println("您已经退出HR_ver1.0系统");
                 input.close();
@@ -55,6 +54,109 @@ public class HRS {
             }
 
 
+        }
+
+    }
+
+    void select0(){
+
+        for (int i = 0; i < list.size() ; i++) {
+            int flag = 0;
+            if(list.get(i).getFlag() == 0){
+                System.out.println(list.get(i).getName());
+                System.out.println(list.get(i).getSchool());
+                System.out.println(list.get(i).getId());
+                flag = 1;
+                break;
+            }
+            if(flag == 0) {
+                System.out.println("sorry no Resume");
+            }
+        }
+
+    }
+
+    void select1(){
+        int flag = 0;
+        for (int i = 0; i < list.size() ; i++) {
+            if(list.get(i).getFlag() == 1){
+                System.out.println(list.get(i).getName());
+                System.out.println(list.get(i).getSchool());
+                System.out.println(list.get(i).getId());
+                flag = 1;
+                break;
+            }
+            if(flag == 0) {
+                System.out.println("sorry no Resume");
+            }
+        }
+
+    }
+
+    void select2(){
+        int flag = 0;
+        for (int i = 0; i < list.size() ; i++) {
+            if(list.get(i).getFlag() == 2){
+                System.out.println(list.get(i).getName());
+                System.out.println(list.get(i).getSchool());
+                System.out.println(list.get(i).getId());
+                flag = 1;
+                break;
+            }
+            if(flag == 0) {
+                System.out.println("sorry no Resume");
+            }
+        }
+
+    }
+
+    void select3(){
+        int flag = 0;
+        for (int i = 0; i < list.size() ; i++) {
+            if(list.get(i).getFlag() == 3){
+                System.out.println(list.get(i).getName());
+                System.out.println(list.get(i).getSchool());
+                System.out.println(list.get(i).getId());
+                flag = 1;
+                break;
+            }
+            if(flag == 0) {
+                System.out.println("sorry no Resume");
+            }
+        }
+
+    }
+
+    void select4(){
+        int flag = 0;
+        for (int i = 0; i < list.size() ; i++) {
+            if(list.get(i).getFlag() == 4){
+                System.out.println(list.get(i).getName());
+                System.out.println(list.get(i).getSchool());
+                System.out.println(list.get(i).getId());
+                flag = 1;
+                break;
+            }
+            if(flag == 0) {
+                System.out.println("sorry no Resume");
+            }
+        }
+
+    }
+
+    void select5(){
+        int flag = 0;
+        for (int i = 0; i < list.size() ; i++) {
+            if(list.get(i).getFlag() == 5){
+                System.out.println(list.get(i).getName());
+                System.out.println(list.get(i).getSchool());
+                System.out.println(list.get(i).getId());
+                flag = 1;
+                break;
+            }
+            if(flag == 0) {
+                System.out.println("sorry no Resume");
+            }
         }
 
     }
