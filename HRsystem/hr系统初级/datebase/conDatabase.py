@@ -94,11 +94,10 @@ class tomSql():
         :return: 数据库删除操作是否成功
         '''
         if factor == "null":
-            sql = "delete from " + tbName + " where " + factor + ";"
-        else:
             sql = "delete from " + tbName
+        else:
+            sql = "delete from " + tbName + " where " + factor + ";"
         return self.__edit(sql)
-
 
     def insert(self, tbname, content, tbFactor="null"):
         '''
@@ -111,7 +110,8 @@ class tomSql():
         if tbFactor == "null":
             sql = "insert into " + tbname + " values " + content + ";"
         else:
-            sql = "insert into " + tbname +" "+ tbFactor + " values " + content + ";"
+            sql = "insert into " + tbname + " " + tbFactor + " values " + content + ";"
+        # print(sql)
         return self.__edit(sql)
 
     def __edit(self, sql):
@@ -135,9 +135,8 @@ if __name__ == '__main__':
     db = tomSql('cdb-5buhylba.cd.tencentcdb.com', 10056, 'root', 'tangjiaxin19971218', 'hrSystem')
     # 查询列名
     # result = db.get_all("SELECT column_name FROM information_schema.columns WHERE  table_name='student';")
-    result = db.get_all(content="column_name",tbName="information_schema.columns",factor="table_name='student'")
+    result = db.get_all(content="column_name", tbName="information_schema.columns", factor="table_name='student'")
     print(result)
     print(db.get_all("student"))
     print(db.get_all("stuEducation"))
-    print(db.insert("student","('11', 11, 151, '男', '11', 11, '11', 11, 0),"))
-
+    print(db.insert("student", "('11', 11, 151, '男', '11', 11, '11', 11, 0),"))

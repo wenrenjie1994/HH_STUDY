@@ -34,7 +34,7 @@ class student():
         self.degree = {}
         self.dict = {True: 1, False: 0}
         self.setEvent()
-        self.situation = {0: "未通过", 1: "通过", 2: "进程中"}
+        self.situation = {"0": "未通过", "1": "通过", "2": "进程中"}
 
     def select(self):
         print(self.name, self.IDcard, self.phoneNumber, self.gender,
@@ -43,7 +43,7 @@ class student():
         print("应聘工作", self.job, "期望薪资", self.salary)
         self.getEvent()
 
-    def setEducation(self, id,degree, school, startTime, endTime):
+    def setEducation(self, degree, school, startTime, endTime):
         '''
         设置教育经历
         :param degree:学历如“本科”
@@ -52,13 +52,13 @@ class student():
         :param endTime: 结束时间
         :return:
         '''
-        self.degree[degree] = [id,degree, school, startTime, endTime]
+        self.degree[degree] = [degree, school, startTime, endTime]
 
     def getEducation(self):
         for k, v in self.degree.items():
-            print(self.name,v)
+            print(self.name, v)
 
-    def setEvent(self,isCVPass=2,isWriExamination=2,isInterview=2,isPhyExamination=2,isSign=2):
+    def setEvent(self, isCVPass="2", isWriExamination="2", isInterview="2", isPhyExamination="2", isSign="2"):
         '''
         设置学生应聘某一流程情况
         数字2表示进程中，1表示通过。0表示未通过
@@ -69,7 +69,7 @@ class student():
                       "isSign": isSign}
 
     def getEvent(self):
-        print(self.name,end=" ")
+        print(self.name, end=" ")
         for k, v in self.event.items():
             print(k + ": " + self.situation[v], end=" ")
         else:
@@ -88,26 +88,30 @@ class student():
         #         self.isDelete) + "\n"
 
         strStudent = \
-            "('" + self.name + "'," + str(self.IDcard) + "," + str(self.phoneNumber) + ",'" + self.gender + "','" \
-            + self.birthday + "'," + str(self.age) + ",'" + self.job + "'," + str(self.salary) + "," + str(self.isDelete) + ")"
-
+            "('" + self.name + "','" + str(self.IDcard) + "','" + str(self.phoneNumber) + "','" + self.gender + "','" \
+            + self.birthday + "','" + str(self.age) + "','" + str(self.job) + "','" + str(self.salary) + "'," + str(
+                self.dict[self.isDelete]) + ")"
+        # print(strStudent)
         strEducation = ""
-        j=0
+        j = 0
         for k, v in self.degree.items():
+            # print(1)
+            strEducation = strEducation + "('" + str(self.phoneNumber) + "','" + str(v[0]) + "','" + str(v[1]) + "','" \
+                           + str(v[2]) + "','" + str(v[3]) + "')"
+            j = j + 1
+            if len(self.degree) > j:
+                strEducation = strEducation + ","
 
-            strEducation=strEducation+"(" + str(v[0]) + "," + str( self.phoneNumber ) + ",'" + str( v[1] ) + "','" +  v[2]  + "','"
-            +  v[3]  + "','" + str( v[4] )+ "')"
-            if len(self.degree)>j:
-                strEducation = strEducation+ ","
+        # print(strEducation)
+        strEvent = "(" + str(self.phoneNumber) + ",'" + self.event["isCVPass"] + "','" + self.event[
+            "isWriExamination"] + "','" \
+                   + self.event["isInterview"] + "','" + self.event["isPhyExamination"] + "','" + self.event[
+                       "isSign"] + "')"
+        # for k, v in self.event.items():
+        #     strEvent = strEvent + str(v) + ","
+        # strEvent = strEvent + ")"
 
-
-        strEvent = "(" + self.phoneNumber + ","
-        for k, v in self.event.items():
-            strEvent = strEvent + str(v) + ","
-        strEvent = strEvent + ")"
-
-
-        print(strStudent)
-        print(strEducation)
-        print(strEvent)
-        return  strStudent, strEducation, strEvent
+        # print(strStudent)
+        # print(strEducation)
+        # print(strEvent)
+        return strStudent, strEducation, strEvent

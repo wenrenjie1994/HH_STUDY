@@ -7,20 +7,19 @@
 from HRsystem.hr系统初级.student.student import student
 from HRsystem.hr系统初级.datebase.conDatabase import tomSql
 
+
 class client():
-    def __init__(self, host,port,user,passwd,dbName,url='studentInfo.txt'):
+    def __init__(self, host, port, user, passwd, dbName, url='studentInfo.txt'):
         self.url = url
         self.student = {}
         self.info = {"姓名": "name", "身份证号": "IDcard", "手机号": "phoneNumber", "性别": "gender",
                      "出生日期": "birthday", "年龄": "age", "学历": "degree",
                      "学校": "school", "应聘岗位": "job", "期望薪资": "salary",
-                      "开始时间":"startTime","结束时间":"endTime" }
+                     "开始时间": "startTime", "结束时间": "endTime"}
         # self.readTxt()
         self.db = tomSql(host, port, user, passwd, dbName)
         self.EducationId = 0
         self.readDatabase()
-
-
 
     def add(self):
         try:
@@ -34,6 +33,7 @@ class client():
                     student(name, IDcard, phoneNumber, gender, birthday, age, job, salary)
                 print("添加成功!!!")
         except Exception as e:
+            # print(e)
             print("输入结构出错，请重新输入")
             self.add()
 
@@ -71,6 +71,7 @@ class client():
             print(e)
             print("输入结构出错，请重新输入")
             self.alter()
+
     def addEducation(self):
         '''
         增加学生的教育信息
@@ -89,41 +90,16 @@ class client():
             print("输入结构出错，请重新输入")
             self.addEducation()
 
-    def delete(self):
-        try:
-            phoneNumber = input("请输入要删除学生的手机号")
-            if self.student[phoneNumber].isDelete ==1:
-                print("输入结构或信息出错，请重新输入")
-                self.delete()
-            else:
-                self.student[phoneNumber].isDelete =1
-                print("删除成功")
-        except Exception as e:
-            print("输入结构或信息出错，请重新输入")
-            self.delete()
+    def deleteEducation(self):
+        # 简化流程
+        pass
 
-    def alter(self):
+    def alterEducation(self):
         '''
-        利用Python的反射方法更改类中的信息
+        简化流程
         :return:
         '''
-        try:
-            string = input("请输入要更正的信息类别")
-            if string == "手机号":
-                print("手机号为不可修改信息！请重新输入")
-                self.alter()
-            else:
-                phoneNumber, info = input("请按手机号、更正信息输入要更正的信息").split()
-                # setattr(obj, attr, val):
-                # 调用这个方法将给obj的名为attr的值的属性赋值为val。例如如果attr为’bar’，则相当于obj.bar = val。
-                # print(self.info[string])
-                setattr(self.student[phoneNumber], self.info[string], info)
-                print("更改成功")
-        except Exception as e:
-            print(e)
-            print("输入结构出错，请重新输入")
-            self.alter()
-
+        pass
 
     def selectBasic(self):
         '''
@@ -131,10 +107,11 @@ class client():
         :return:
         '''
         try:
-            for k,v in self.student.items():
-                print(v.select())
+            # for k,v in self.student.items():
+            #     print(v.select())
             phoneNumber = input("请输入要查询学生的手机号")
-            if self.student[phoneNumber].isDelete==1:
+            # print(self.student[phoneNumber])
+            if self.student[phoneNumber].isDelete == True:
                 print("输入结构或信息出错，请重新输入")
                 self.selectBasic()
             else:
@@ -151,7 +128,7 @@ class client():
         '''
         try:
             phoneNumber = input("请输入要查询学生的手机号")
-            if self.student[phoneNumber].isDelete==1:
+            if self.student[phoneNumber].isDelete == True:
                 print("输入结构或信息出错，请重新输入")
                 self.selectEducation()
             else:
@@ -169,7 +146,7 @@ class client():
         try:
             phoneNumber = input("请输入要查询学生的手机号")
 
-            if self.student[phoneNumber].isDelete==1:
+            if self.student[phoneNumber].isDelete == True:
                 print("输入结构或信息出错，请重新输入")
                 self.selectEducation()
             else:
@@ -178,7 +155,6 @@ class client():
         except Exception as e:
             print("输入结构或信息出错，请重新输入")
             self.selectEducation()
-
 
     def printWelcome(self):
         '''
@@ -199,7 +175,7 @@ class client():
         print("请按10退出程序")
         return 10
 
-    def choose(self, num,isStudent="True"):
+    def choose(self, num, isStudent="True"):
         '''
 
         :param num:
@@ -214,13 +190,13 @@ class client():
             self.alter()
         elif num == 4:
             # 增加学生教育信息
-            self.selectBasic()
+            self.addEducation()
         elif num == 5:
             # 删除学生教育信息
-            self.selectBasic()
+            self.deleteEducation()
         elif num == 6:
             # 更改学生教育信息
-            self.saveToDatabase()
+            self.alterEducation()
             print("程序结束！！！感谢使用。")
             return True
         elif num == 7:
@@ -230,7 +206,7 @@ class client():
             # 查询学生教育信息
             self.selectEducation()
         elif num == 9:
-            # 查询学生基本信息
+            # 查询学生招聘进程信息
             self.selectEvent()
         elif num == 10:
             # self.writeTxt()
@@ -266,51 +242,58 @@ class client():
                     # print(bool(isDelete))
                     # print(isDelete)
                     self.student[phoneNumber] = \
-                        student(name, IDcard, phoneNumber, gender, birthday, school, job, salary, "True" == isDelete)
+                        student(name, IDcard, phoneNumber, gender, birthday, school, job, salary, "1" == isDelete)
                     # print(self.student)
         except Exception as e:
             print(e)
 
-
-
     def readDatabase(self):
         try:
-            info=self.db.get_all("student")
+            info = self.db.get_all("student")
             for i in range(len(info)):
-                name, IDcard, phoneNumber, gender, birthday, age,  job, salary, isDelete = info[i]
+                # print(info)
+                name, IDcard, phoneNumber, gender, birthday, age, job, salary, isDelete = info[i]
                 self.student[phoneNumber] = \
-                    student(name, IDcard, phoneNumber, gender, birthday,  job, salary, 1 == isDelete)
+                    student(name, IDcard, phoneNumber, gender, birthday, age, job, salary, "1" == isDelete)
             # print(info)
-            info=self.db.get_all("stuEducation")
+            info = self.db.get_all("stuEducation")
             for i in range(len(info)):
-                self.EducationId,phoneNumber, degree, school, startTime, endTime = info[i]
-                self.student[phoneNumber].setEducation(self.EducationId,degree, school, startTime, endTime)
+                phoneNumber, degree, school, startTime, endTime = info[i]
+                self.student[phoneNumber].setEducation(degree, school, startTime, endTime)
             info = self.db.get_all("event")
             for i in range(len(info)):
-                phoneNumber, isCVPass,isWriExamination,isInterview,isPhyExamination,isSign = info[i]
-                self.student[phoneNumber].setEvent(isCVPass,isWriExamination,isInterview,isPhyExamination,isSign)
-            print(info)
+                phoneNumber, isCVPass, isWriExamination, isInterview, isPhyExamination, isSign = info[i]
+                self.student[phoneNumber].setEvent(isCVPass, isWriExamination, isInterview, isPhyExamination, isSign)
+            # print(info)
         except Exception as e:
             print(e)
+
     def saveToDatabase(self):
         try:
-            for k,v in self.student.items():
+            self.db.delete("stuEducation")
+            # 外键约束
+            # print(1)
+            self.db.delete("student")
+            for k, v in self.student.items():
                 # 先删除数据库的数据再把内存中的数据加入数据库
-                strStudent, strEducation, strEvent=v.writeInfo()
+                strStudent, strEducation, strEvent = v.writeInfo()
                 # 也可以采用封装每次操作的sql语句，最后整体进行执行，但这里太麻烦暂时放弃
 
-                self.db.delete("student")
-                self.db.delete("stuEducation")
-                self.db.delete("event")
-                self.db.insert("student",strStudent)
-                self.db.insert("stuEducation", strEducation)
-                self.db.insert("event", strEvent)
+                # 学生端只能对招聘进程信息做查询不能做任何的修改
+                # self.db.delete("event")
+                # print(1)
+                # print(self.db.get_all("student"))
+
+                self.db.insert("student", strStudent)
+                if strEducation:
+                    self.db.insert("stuEducation", strEducation)
+                # self.db.insert("event", strEvent)
         except Exception as e:
             print(e)
 
 
 if __name__ == '__main__':
-    client1 = client('cdb-5buhylba.cd.tencentcdb.com',10056,'root','tangjiaxin19971218','hrSystem')
+    client1 = client('cdb-5buhylba.cd.tencentcdb.com', 10056, 'root', 'tangjiaxin19971218', 'hrSystem')
     while True:
         max = client1.printWelcome()
         num = client1.inputNum(max)
