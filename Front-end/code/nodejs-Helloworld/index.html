@@ -1,0 +1,38 @@
+<head>
+</head>
+
+<body>
+    <div id="area">
+        <center><button type="button" onclick="sendAjax()">XMLHttpRequest</button></center><br>
+    </div>
+    </div>
+    <script>
+        function sendAjax() {
+            //构造表单数据
+            var formData = new FormData();
+            //创建xhr对象 
+            var xhr = new XMLHttpRequest();
+            //设置xhr请求的超时时间
+            xhr.timeout = 3000;
+            //设置响应返回的数据格式
+            xhr.responseType = "text";
+            xhr.open('GET', 'http://localhost:8000', true);
+            //注册相关事件回调处理函数
+            xhr.onload = function (e) {
+                if (this.status == 200) {
+                    // alert(this.responseText);
+                    var para = document.createElement("p");
+                    var node = document.createTextNode(this.responseText);
+                    para.appendChild(node);
+                    var element = document.getElementById("area");
+                    element.appendChild(para);
+                }
+            };
+            // xhr.ontimeout = function (e) { ... };
+            // xhr.onerror = function (e) { ... };
+            // xhr.upload.onprogress = function (e) { ... };
+            //发送数据
+            xhr.send(formData);
+        }
+    </script>
+</body>

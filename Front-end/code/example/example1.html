@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <div id="area" onclick="sendAjax()">
+        <center><button type="button">fetchAPI</button></center><br>
+    </div>
+</body>
+<script>
+    function sendAjax() {
+        fetch('http://localhost:8000/htmlElem').then(response => response.text()).then((dataStr) => {
+            console.log(dataStr)
+            var para = document.createElement("p");
+            para.innerHTML = dataStr;
+            var element = document.getElementById("area");
+            element.appendChild(para);
+        })
+    }
+</script>
+
+</html>
