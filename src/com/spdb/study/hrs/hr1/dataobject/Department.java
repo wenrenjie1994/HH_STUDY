@@ -13,8 +13,8 @@ import java.io.Serializable;
 public class Department implements Serializable {
     private static final long serialVersionUID = -7605999156709087747L;
 
-    private int deptId;
+    private int departmentId;
     private int pid;
-    private String deptName;
+    private String departmentName;
     private int leaf;
 }

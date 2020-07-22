@@ -1,4 +1,4 @@
-package com.spdb.study.hrs.hr1.dataobject;
+package com.spdb.study.hrs.hr2.dataobject;
 
 import lombok.Data;
 
@@ -22,11 +22,23 @@ public class Employee implements Serializable {
     private Date birthday;
     private String telephone;
     private String address;
-
     /**
-     * 所属部门
+     * 职位
      * @author Mr.Longyx
-     * @date 2020/7/20 22:26
+     * @date 2020/7/22 11:20
      */
-    private Department department;
+    private String position;
+    /**
+     * 所属分公司
+     * @author Mr.Longyx
+     * @date 2020/7/22 11:19
+     */
+    private String division;
+    /**
+     * 入职日期
+     * @author Mr.Longyx
+     * @date 2020/7/22 11:20
+     */
+    private Date dateJoined;
+
 }

@@ -1,7 +1,7 @@
-package com.spdb.study.hrs.hr1.manager;
+package com.spdb.study.hrs.hr2.manager;
 
-import com.spdb.study.hrs.hr1.dataobject.ExamineType;
-import com.spdb.study.hrs.hr1.util.DbUtil;
+import com.spdb.study.hrs.hr2.dataobject.ExamineType;
+import com.spdb.study.hrs.hr2.util.DbUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

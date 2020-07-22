@@ -83,9 +83,20 @@
 | IOC | 找人办事，增强职责。Inversion Of Controller(控制反转)将new对象的动作，交给Spring管理，并由Spring保存已创建的对象(IOC容器) | 转交控制权(即控制权反转) |
 | DI/DL | Dependency Injection(依赖注入)或者Dependency Lookup(依赖查找)依赖注入，依赖查找，Spring不仅保存自己创建的对象，而且保存对象与对象之间的关系。注入即赋值，主要有三种方式：构造方法、set方法、直接赋值。 | 赋值 |
                                                                         
-                        
-                        
-                           
+## HRS
+### Version 1.0 （7.21）- 已完成                        
+- 将实体模型转换成实体类
+- 初步封装数据库连接Connection
+- 建立ExamineTypeManager,实现添加考核类别方法
+- 采用饿汉式单例写法获取ExamineTypeManager对象
+- 建立ExamineTypeController，完成对课程的添加
+- 完成查询考核类别列表、添加考核类别、删除考核类别和修改考核类别方法 
+
+### Version 2.0 （7.22）- 已完成                       
+- 采用递归读取部门信息
+- 完成添加部门
+- 重构DbUtil
+- 实现了对部门的删除和修改逻辑                           
                                             
                             
                                              
