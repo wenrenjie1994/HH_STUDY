@@ -2116,3 +2116,167 @@ java.lang.NullPointerException: null
 2020-07-24 16:24:16 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
 2020-07-24 16:24:16 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
 2020-07-24 16:24:16 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-24 23:15:15 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 14868 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-24 23:15:15 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-24 23:15:16 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-24 23:15:16 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-24 23:15:16 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-24 23:15:16 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-24 23:15:16 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 984 ms
+2020-07-24 23:15:16 main o.s.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-24 23:15:17 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-24 23:15:17 main com.spdb.ServerApplication Started ServerApplication in 2.05 seconds (JVM running for 3.066)
+2020-07-24 23:18:40 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 15260 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-24 23:18:40 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-24 23:18:41 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-24 23:18:41 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-24 23:18:41 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-24 23:18:41 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-24 23:18:41 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 983 ms
+2020-07-24 23:18:41 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-24 23:18:41 main com.spdb.ServerApplication Started ServerApplication in 1.942 seconds (JVM running for 2.915)
+2020-07-24 23:19:06 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 23:19:06 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-07-24 23:19:06 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 6 ms
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
+2020-07-24 23:19:06 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-24 23:19:28 http-nio-8081-exec-2 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:19:28 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-24 23:19:28 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-24 23:19:28 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-24 23:19:28 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
+2020-07-24 23:19:28 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-24 23:25:52 http-nio-8081-exec-4 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:25:52 http-nio-8081-exec-4 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-24 23:25:52 http-nio-8081-exec-4 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-24 23:25:52 http-nio-8081-exec-4 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-24 23:25:52 http-nio-8081-exec-4 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
+2020-07-24 23:25:52 http-nio-8081-exec-4 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-24 23:26:01 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 10500 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-24 23:26:01 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-24 23:26:02 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-24 23:26:02 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-24 23:26:02 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-24 23:26:02 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-24 23:26:02 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1042 ms
+2020-07-24 23:26:03 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-24 23:26:03 main com.spdb.ServerApplication Started ServerApplication in 2.099 seconds (JVM running for 3.181)
+2020-07-24 23:26:05 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 23:26:05 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-07-24 23:26:05 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
+2020-07-24 23:26:05 http-nio-8081-exec-1 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-24 23:26:11 http-nio-8081-exec-2 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:26:11 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT COUNT(1) FROM book WHERE is_delete = 0 
+2020-07-24 23:26:11 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 
+2020-07-24 23:26:11 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==>  Preparing: SELECT id,modified_time,create_time,is_delete,price,author,book_name,book_desc FROM book WHERE is_delete=0 ORDER BY modified_time DESC LIMIT ?,? 
+2020-07-24 23:26:11 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage ==> Parameters: 0(Long), 10(Long)
+2020-07-24 23:26:11 http-nio-8081-exec-2 com.spdb.mapper.BookMapper.selectPage <==      Total: 10
+2020-07-24 23:26:59 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 32416 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-24 23:26:59 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-24 23:27:00 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-24 23:27:00 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-24 23:27:00 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-24 23:27:00 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-24 23:27:00 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 994 ms
+2020-07-24 23:27:01 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-24 23:27:01 main com.spdb.ServerApplication Started ServerApplication in 1.93 seconds (JVM running for 2.911)
+2020-07-24 23:27:06 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 23:27:06 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-07-24 23:27:06 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 5 ms
+2020-07-24 23:27:06 http-nio-8081-exec-1 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:27:06 http-nio-8081-exec-1 o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ArithmeticException: / by zero] with root cause
+java.lang.ArithmeticException: / by zero
+	at com.spdb.controller.BookController.getBooks(BookController.java:55)
+	at com.spdb.controller.BookController$$FastClassBySpringCGLIB$$e03ed591.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.spdb.controller.BookController$$EnhancerBySpringCGLIB$$bfb8e5be.getBooks(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-24 23:28:00 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 25388 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-24 23:28:00 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-24 23:28:01 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-24 23:28:01 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-24 23:28:01 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-24 23:28:01 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-24 23:28:01 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1034 ms
+2020-07-24 23:28:01 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-24 23:28:01 main com.spdb.ServerApplication Started ServerApplication in 2.038 seconds (JVM running for 3.051)
+2020-07-24 23:28:08 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 23:28:08 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-07-24 23:28:08 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 7 ms
+2020-07-24 23:28:08 http-nio-8081-exec-1 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:28:27 http-nio-8081-exec-4 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:28:29 http-nio-8081-exec-3 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
+2020-07-24 23:28:41 main com.spdb.ServerApplication Starting ServerApplication on DESKTOP-5ULK92N with PID 2792 (started by liwenyi in E:\spdb\HH_STUDY)
+2020-07-24 23:28:41 main com.spdb.ServerApplication No active profile set, falling back to default profiles: default
+2020-07-24 23:28:42 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8081 (http)
+2020-07-24 23:28:42 main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-07-24 23:28:42 main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-07-24 23:28:42 main o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-07-24 23:28:42 main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1041 ms
+2020-07-24 23:28:43 main o.s.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-24 23:28:43 main com.spdb.ServerApplication Started ServerApplication in 2.045 seconds (JVM running for 3.033)
+2020-07-24 23:28:56 http-nio-8081-exec-1 o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 23:28:56 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-07-24 23:28:56 http-nio-8081-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 5 ms
+2020-07-24 23:28:56 http-nio-8081-exec-1 com.spdb.aspect.LogAspect method:Response com.spdb.controller.BookController.getBooks(Integer,Integer,String)
