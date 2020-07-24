@@ -9,7 +9,7 @@ import com.spdb.study.reflect.TestCase;
  */
 public class TestApplicationContext {
     public static void main(String[] args){
-        XmlApplicationContext applicationContext = new XmlApplicationContext("main/resources/spring-context.xml");
+        XmlApplicationContext applicationContext = new XmlApplicationContext("main/resources/xml/spring-context.xml");
         BaseMethod baseMethod = (BaseMethod)applicationContext.getBean("baseMethod");
         TestCase testCase = applicationContext.getBean("testCase", TestCase.class);
 

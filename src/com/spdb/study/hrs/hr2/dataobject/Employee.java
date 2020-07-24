@@ -41,4 +41,5 @@ public class Employee implements Serializable {
      */
     private Date dateJoined;
 
+    private Department department;
 }
