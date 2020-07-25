@@ -1,21 +1,12 @@
 package sys;
 
-import bean.Book;
 import bean.ChoiceEnum;
-import service.BookService;
-import service.BookServiceImpl;
-import service.DataService;
-import service.DataServiceImpl;
-import java.util.List;
+import database.DBConnection;
+import service.*;
 import java.util.Scanner;
 
-public class HRS {
-    private static final String DATA_NAME = "books.txt";
+public class HRS_DB {
     public static void main(String[] args) {
-        BookService bookService = new BookServiceImpl();
-        DataService dataService = new DataServiceImpl();
-        List<Book> bookList;
-        bookList = dataService.loadData(DATA_NAME);
         boolean flag = true;
         while (flag) {
             System.out.println("-------欢迎进入GLB的图书管理系统-------");
@@ -32,21 +23,22 @@ public class HRS {
                 System.out.println("输入不合法，请重新输入");
                 continue;
             }
+            BookDBServiceImpl bookDBService = new BookDBServiceImpl();
             switch (choiceNEnum) {
                 case ADD:
-                    bookService.addBook(bookList);
+                    bookDBService.addBook();
                     break;
                 case REMOVE:
-                    bookService.removeBook(bookList);
+                    bookDBService.deleteBook();
                     break;
                 case UPDATE:
-                    bookService.updateBook(bookList);
+                    bookDBService.updateBook();
                     break;
                 case QUERY:
-                    bookService.queryBook(bookList);
+                    bookDBService.queryBook();
                     break;
                 case EXIT:
-                    dataService.saveData(bookList, DATA_NAME);
+                    DBConnection.closeConnection();
                     System.out.println("你已成功推出图书管理系统");
                     input.close();
                     flag = false;

@@ -1,8 +1,6 @@
 package service;
 
 import bean.Book;
-
-import java.io.IOException;
 import java.util.List;
 
 public interface DataService {
