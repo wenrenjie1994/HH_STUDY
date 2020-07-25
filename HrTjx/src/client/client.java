@@ -1,7 +1,7 @@
 package client;
 
-import student.student;
 import database.dbConnection;
+import student.student;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,7 +19,7 @@ public class client {
     Map<String, student> student = new HashMap<String, student>();
     Map<String, String> info = new HashMap<String, String>();
     String url;
-    dbConnection db =new dbConnection();
+    dbConnection db = new dbConnection();
 
     public client(String url) {
         this.info.put("姓名", "name");
@@ -37,6 +37,7 @@ public class client {
         this.readTxt();
         this.readDatabase();
     }
+
     public client() {
         this.info.put("姓名", "name");
         this.info.put("身份证号", "IDcard");
@@ -157,8 +158,7 @@ public class client {
                 this.student.get(phoneNumber).select();
                 System.out.println("查询完毕！！！");
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("输入结构或信息出错，请重新输入");
             this.selectStudent();
         }
@@ -232,8 +232,7 @@ public class client {
                 this.student.get(phoneNumber).getEvent();
                 System.out.println("查询完毕！！！");
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("输入结构或信息出错，请重新输入");
             this.selectEvent();
         }
@@ -251,8 +250,7 @@ public class client {
                 this.student.get(phoneNumber).getEducation();
                 System.out.println("查询完毕！！！");
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("输入结构或信息出错，请重新输入");
             this.selectEducation();
         }
@@ -274,7 +272,7 @@ public class client {
             String[] infoString = info.nextLine().split(" ");
 //            System.out.println(infoString);
 //            System.out.println(salary);
-            this.student.get(infoString[0]).setEducation(infoString[1],infoString[2],infoString[3],infoString[4]);
+            this.student.get(infoString[0]).setEducation(infoString[1], infoString[2], infoString[3], infoString[4]);
 
 
         } catch (Exception e) {
@@ -335,9 +333,9 @@ public class client {
 
     private void readDatabase() {
         try {
-            this.student=this.db.selectStudent("student",this.student);
-            this.student=this.db.selectEducation("stuEducation",this.student);
-            this.student=this.db.selectEvent("event",this.student);
+            this.student = this.db.selectStudent("student", this.student);
+            this.student = this.db.selectEducation("stuEducation", this.student);
+            this.student = this.db.selectEvent("event", this.student);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -349,16 +347,16 @@ public class client {
         try {
             this.db.connectDelete("stuEducation");
             this.db.connectDelete("student");
-            for (student value :this.student.values()) {
+            for (student value : this.student.values()) {
 
-                this.db.connectInsert("student",value.writeStudent());
-                if(!value.writeEducation().equals("")){
+                this.db.connectInsert("student", value.writeStudent());
+                if (!value.writeEducation().equals("")) {
 //                    System.out.println(value.writeEducation());
-                    this.db.connectInsert("stuEducation",value.writeEducation());
+                    this.db.connectInsert("stuEducation", value.writeEducation());
                 }
 
             }
-            } catch (SQLException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }

@@ -2,7 +2,7 @@ package system;
 
 import client.client;
 
-public class Main {
+public class MainStu {
 
     public static void main(String[] args) {
         // write your code here
