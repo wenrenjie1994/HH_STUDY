@@ -10,9 +10,7 @@ public class Student extends Person {
 
     }
     public Student(String name, int id, int age, String major, int idCard) {
-//        this.setName(name);
-        this.setIdCard(id);
-        this.setAge(age);
+        super(name, id, age);
         this.major = major;
         this.idCard = idCard;
     }

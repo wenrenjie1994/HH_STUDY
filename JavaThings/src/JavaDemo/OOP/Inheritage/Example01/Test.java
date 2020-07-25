@@ -15,5 +15,8 @@ public class Test {
         s1.work();
         s1.info();
         s1.show();
+
+        System.out.println("-------------");
+        Student s2 = new Student();
     }
 }

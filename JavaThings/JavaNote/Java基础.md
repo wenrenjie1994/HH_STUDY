@@ -691,12 +691,12 @@ public static void printMax(double... numbers) {
 
 #### 访问权限修饰符 
 
-| 修饰符    | 类内部 | 同一个包 | 不同包的子类 | 同一个工程 |
-| --------- | ------ | -------- | ------------ | ---------- |
-| private   | Yes    |          |              |            |
-| 缺省      | Yes    | Yes      |              |            |
-| protected | Yes    | Yes      | Yes          |            |
-| public    | Yes    | Yes      | Yes          | Yes        |
+| 修饰符    | 类内部 | 同一个包 | *不同包的子类* | 同一个工程 |
+| --------- | ------ | -------- | -------------- | ---------- |
+| private   | Yes    |          |                |            |
+| 缺省      | Yes    | Yes      |                |            |
+| protected | Yes    | Yes      | Yes            |            |
+| public    | Yes    | Yes      | Yes            | Yes        |
 
 > 可以修饰类
 >
@@ -741,14 +741,116 @@ public static void printMax(double... numbers) {
 
 ##### object类
 
+> 1. 所有Java的根父类
+>
+> 2. 类声明中未显示使用``extends``，则默认父类为``Object``类
+
 - ``toString()``：返回一个对象的字符串表达形式
+
+  ```java
+  Customer customer = new Customer();
+  
+  System.out.println(customer);			//JavaDemo.OOP.Polymorphic.Example03.Student@3ac61
+  System.out.println(customer.toString());		//JavaDemo.OOP.Polymorphic.Example03.Student@3ac61
+  ```
+
+  1. ``Object类``
+
+  ```java
+  public String toString() {
+      return getClass().getName() + "@" + 		Integer.toHexString(hashCode());
+  }
+  ```
+
+  2. ``String、Date、File、包装类``均重写了``Object类``中的``toString()方法``，返回实体信息
+  3. 
+
 - ``equals()``：判断这两个管理者管理的是否是同一个对象
+
+  - ``==``
+
+    > 1. 基本数据类型，比较两个变量中保存的数据(``boolean``型除外)
+    >
+    > 2. 引用数据类型，比较两个对象的地址，如``String Object``，即是否指向同一个对象实体
+
+  - ``equals()``
+
+    > 1. **方法**，not运算符
+    >
+    > 2. 基本数据类型不能使用
+    >
+    > 3. 只适用于**引用数据类型**
+    >
+    > ```java
+    > Customer customer1 = new Customer("Tom", 23);
+    > Customer customer2 = new Customer("Tom", 23);
+    > 
+    > String str1 = new String("PlusTorking");
+    > String str2 = new String("PlusTorking");
+    > 
+    > System.out.println(customer1.equals(customer2));
+    > //output: flase
+    > /*调用的Object类中的equals方法*/
+    > 
+    > System.out.println(str1.equals(str2));
+    > //output: true
+    > /*调用String类中重写过的equals方法*/
+    > ```
+    >
+    > 4. ``Object类源码``
+    >
+    > ```java
+    > public boolean equals(Object obj) {
+    >     return (this == obj);
+    > }
+    > //比较的地址
+    > ```
+    >
+    > 5. ``String、Date、File、包装类``
+    >
+    > ```java
+    > /*重写了equals方法
+    > 比较两个对象实体内容是否相同，而不是比较地址*/
+    > public boolean equals(Object anObject) {
+    >     if (this == anObject) {
+    >         return true;
+    >     }
+    >     if (anObject instanceof String) {
+    >         String anotherString = (String)anObject;
+    >         int n = value.length;
+    >         if (n == anotherString.value.length) {
+    >             char v1[] = value;
+    >             char v2[] = anotherString.value;
+    >             int i = 0;
+    >             while (n-- != 0) {
+    >                 if (v1[i] != v2[i])
+    >                     return false;
+    >                 i++;
+    >             }
+    >             return true;
+    >         }
+    >     }
+    >     return false;
+    > }
+    > ```
+    >
+    > 6. 自定义类重写``equals()``，一般也是比较对象实体内容
+    >
+    > ```java
+    > 
+    > ```
+    >
+    > 
 
 ##### **super**
 
-> 1. super调用父类的构造方法，在构造方法的第一个
-> 2. super只能出现在子类的方法或构造方法中
-> 3. super和this不能同时调用构造方法
+> 可以调用父类的属性、方法、构造器
+>
+> 1. "super.属性"、"super.方法"，显示声明调用父类的属性、方法。通常情况下，习惯省略"super."
+> 2. 子、父类存在**同名属性**，super.表明调用父类的属性
+> 3. super**调用父类的构造方法**，在构造方法的第一个
+> 4. super**只能**出现**在子类**的方法或构造方法中
+> 5. super和this不能同时调用构造方法
 
 ##### 子类和子类型
 
@@ -759,18 +861,61 @@ public static void printMax(double... numbers) {
   - 传递给需要父类对象的函数
   - 放进存放父类对象的容器里
 
+#### 重写(override)
+
+```java
+权限修饰符 返回值类型 方法名(形参列表) throws 异常的类型 {
+    //do something
+}
+```
+
++ 子类重写方法的权限修饰符不小于父类被重写方法的权限修饰符
++ 不能重写父类的``private``属性的``method``
++ 子类重写方法的返回值类型，是父类被重写方法的**返回值类型**或者**子类**
++ 子类重写的方法抛出的异常类型***不大于***父类被重写方法抛出的异常类型
+
 #### 多态
 
 + 动态编译
+
 + 同一方法根据发送对象的不同采取不同的行为方式
+
 + 一个对象的实际类型是确定的，但可以指向对象的引用类型有很多
-+ 存在条件
-  - 继承关系
-  - 子类重写父类
-  - 父类引用指向子类对象
+
++ **存在条件**
+  
+  - **继承**关系
+  - 子类**重写**父类
+  - **父类引用指向子类对象**
+  
++ 类型转换
+
+  ```java
+  class Person {
+      public void relax() {}
+  }
+  class Student extends Person {
+      public void code() {}
+      @override
+      public void relax() {}
+  }
+  
+  //下转
+  Person p1 = new Person();
+  p1.code();			//error
+  Student s1 = (Student)p1;
+  s1.code();			//ok
+  ((Student)p1).code();		//ok
+  
+  ```
+
+  
+
 + **instanceof**
 
-##### **多态变量**
+  > ``a instanceof A:``判断对象a是否是类A的实例，是则返回true
+
+##### 多态变量
 
 - Java的对象变量是多态的，它们能保存不止一种类型的对象
 
@@ -815,15 +960,237 @@ public static void printMax(double... numbers) {
 + 子类和父类中存在名称和参数表完全相同的函数
 + 通过父类的变量调用存在覆盖关系的函数时，会调用变量当时所管理的对象所属的类的函数
 
-#### 抽象类
 
-+ 只能靠子类实现
 
-#### 接口
+## Java基础05
 
-+ 普通类：只有具体实现
-+ 抽象类：具体实现和抽象方法
+### 包装类(Wrapper)
+
+> 针对八种基本数据类型定义相同的引用类型——包装类（封装类）
+>
+> 类——可以调用类中的方法
+
+| 基本数据类型 | 包装类    | 父类   |
+| ------------ | --------- | ------ |
+| byte         | Byte      | Number |
+| short        | Short     | Number |
+| int          | Integer   | Number |
+| long         | Long      | Number |
+| float        | Float     | Number |
+| double       | Double    | Number |
+| boolean      | Boolean   |        |
+| char         | Character |        |
+
+
+
+## Java基础06
+
+### ``static``
+
+> 静态的
+>
+> 可以修饰属性、方法、代码块、内部类
+
+1. 属性
+
+   > - 静态变量（static修饰）
+   >
+   >   非静态变量（实例变量）
+   >
+   > - 静态变量随类的加载而加载
+   > - 可以通过“类.属性”调用
+
+2. 方法
+
+   > - 静态方法
+   > - **静态**方法**只能**调用**静态**属性或静态方法，且不能使用``this``、``super``
+   > - **非静态方法**可以调用静态的or非静态的
+
+
+
+### 单例(Singleton)设计模式
+
+> + 某个类**只能存在一个对象实例**，将类的**构造器访问权限设置为``private``**，这样就不能在类外部``new``新的对象了，但在类内部 仍可产生该类的对象。**只能调用该类的某个静态方法**以返回类内部创建的对象，静态方法只能访问类中的静态成员变量，指向类内部产生的**该类对象的变量也必须定义为静态的**
+>
+> + 应用场景
+>
+> > 网站计数器
+> >
+> > 应用程序的日志应用
+> >
+> > 数据库连接池
+> >
+> > 读取配置文件的类
+>
+> - 饿汉式
+>
+>   > 对象加载时间过长
+>   >
+>   > 线程安全的
+>
+> - 懒汉式
+>
+>   > 延迟对象的创建
+>   >
+>   > 线程不安全的，可以改进
+
+
+
+### 代码块
+
+> 初始化类或者对象
+
++ 只能用``static``修饰
+
++ 分类
+
+  - 静态代码块
+
+    > 随类的加载而**执行**
+
+  - 非静态代码块
+
+    > 随**对象的创建**而执行
+
+
+
+### ``final``
+
+> 最终，修饰类的结构：类、方法、变量
+
++ 修饰一个类
+
+  > 此类不能被继承，如``String、System、StringBuffer``
+
++ 修饰一个方法
+
+  > 此方法不能被重写，如``Object类的getClass()``
+
++ 修饰一个变量
+
+  > 此变量称为一个**常量**，必须显示初始化，或者代码块中初始化，或者构造器中初始化
+  >
+  > ```java
+  > public class Test {
+  >     final int WIDTH = 18;
+  >     final int LONG;
+  >     final int HEIGHT;
+  >     
+  >     {
+  >         HEIGHT = 18;
+  >     }
+  > 
+  >     public Test() {
+  >         LONG = 18;
+  >     }
+  > }
+  > ```
+
++ ``static final``：修饰属性或者方法，全局常量
+
+
+
+## Java基础07
+
+### 抽象类
+
+#### ``abstract关键字 ``
+
+> 修饰类的结构：类、方法
+>
+> 不能修饰：属性、构造器、私有方法(无法被继承)、静态方法(不能重写)、final的方法和类
+
++ 抽象类
+
+  ```java
+  abstract class A {}
+  ```
+
+  - 此类不能实例化
+  - 抽象类中一定要有构造器，便于子类实例化时调用（子类对象实例化的全过程）
+
++ 抽象方法
+
+  ```java
+  abstract class A {
+      public abstract void function();
+  }
+  
+  class B extends A {
+      @override
+      public void function() {
+          System.out.println("Hello World!");
+      }
+  }
+  
+  abstract class C extends A {
+      
+  }
+  ```
+
+  - 只有方法的声明，没有方法体
+  - 有抽象方法的类一定是抽象类
+  - 子类重写父类的**所有抽象方法**后，即可实例化。否则也是抽象类，需要abstract修饰
+
+
+
+### 模板方法设计模式(TemplateMethod)
+
+> 在软件开发中，整体步骤固定、通用；但某些部分易变，将这些易变部分抽象出来，提供不同子类实现
+
+
+
+### 接口
+
+> 继承：is-a 的关系
+>
+> 接口：非 is-a，是能不能的关系
+
++ 类
+
+  - 普通类：只有具体实现
+
+  - 抽象类：具体实现和抽象方法
+
 + 接口：只有规范
+
+> 1. 不能定义构造器！！也就是**接口不可实例化**
+>
+> 2. 类去**实现**接口，**实现了所有的抽象方法**后便可实例化
+> 3. 接口可以多继承接口
+> 4. Java类可以**实现多个**接口
+
++ JDK7及以前，只能定义全局常量和抽象方法
+
+  - 全局常量：``public static final``，可以省略不写
+  - 抽象方法：``public abstract``
+
++ JDK8：还可以定义静态方法、默认方法
+
+  > 1. 接口定义的静态方法，只能通过接口来调用
+  >
+  > 2. 通过实现类的对象，可以调用接口中的默认方法
+  >
+  > 3. 类优先原则：如果子类（实现类）继承的父类和实现的接口中声明了同名同参数的**默认方法**，那么子类在没有重写此方法的情况下，**默认调用父类的方法**
+  > 4. 接口冲突：如果类实现了多个接口，但多个接口有同名同参数的**默认方法**，如果类没有重写此方法，则报错
+  > 5. 在子类（实现类）中的方法调用父类、接口中被重写的方法
+  >
+  > ```java
+  > class SubClass extends SuperClass implements interfaceA {
+  >     public void methodA() {
+  >         System.out.println("Override!")
+  >     }
+  >     
+  >     public void myMythod() {
+  >         //调用接口的方法
+  >         interfaceA.super.methodA();
+  >         //调用父类的方法
+  >         super.methodA();
+  >     }
+  > }
+  > ```
+  >
+  > 
 
 ***接口 & 抽象类***
 
@@ -859,14 +1226,133 @@ public class UserServiceImpl implements UserService, TimeService {
 }
 ```
 
-#### 内部类
+#### 
 
-+ 在一个类的内部中定义一个类
+### 代理模式(Proxy)
 
-  > 1. 成员内部类
-  > 2. 静态内部类
-  > 3. 局部内部类
-  > 4. 匿名内部类
++ 安全代理：屏蔽对真实角色的直接访问
++ 远程代理：通过代理类处理远程方法调用
++ 延迟加载：先加载轻量级的代理对象，真正需要再加载真实对象
++ 静态代理
++ 动态代理
+
+
+
+### 工厂模式
+
+> 实现了创建者与调用者的分离，即创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的
+
+
+
+### 内部类
+
+> + 在Java中，允许一个类的定于位于另一个类的内部，前者称为**内部类**，后者称为**外部类**
+> + ``Inner class``一般用在定义它的类或语句块之内，在外部引用它时必须给出完整的名称
+> + ``Inner class``的名字不能与包含它的外部类类名相同
+> + 成员内部类：``static``成员内部类和``非static``成员内部类
+> + 局部内部类：方法内、代码块内、构造器内
+> + 匿名内部类
+
+#### 1. 成员内部类
+
++ 作为外部类的成员
+  - 方法可以调用外部类的属性、方法
+  - 可以用``static``修饰
+  - 可以用四种权限修饰符修饰
++ 作为一个类
+  - 类内部可以定义属性、方法、构造器
+  - 可以被``final``修饰（无法继承），也就是说原本可被继承
+  - 可以被``abstract``修饰（不能实例化）
+
+#### 2. 实例化成员内部类
+
+```java
+class Person {
+    static class Body {
+        public void show() {
+            //TODO
+        }
+    }
+    
+    class Brain {
+        public void think() {
+            //TODO
+        }
+    }
+}
+
+//创建Body实例（static）
+Person.Body body = new Person.Body();
+body.show();
+
+//创建Brain实例（非static）
+Person person = new Person();
+Person.Brain brain = person.new Brain();
+brain.think();
+```
+
+#### 3. 在成员内部类中区分调用外部类的结构
+
+```java
+class Person {
+    String feature;
+    int age;
+    
+    class Brain {
+        String feature;
+        
+        public void display(String feature) {
+            //重名
+            //形参
+            System.out.println(feature);
+            //Brain.feature
+            System.out.println(this.feature);
+            //Person.feature
+            System.out.println(Person.this.feature);
+            
+            //不重名
+            //Person.age
+            System.out.println(age);
+        }
+    }
+}
+```
+
+#### 4. 局部内部类
+
+```java
+class Person {
+    //返回一个实现了Comparable接口的类的对象
+    public Comparable getComparable() {
+
+        //创建一个实现了Comparable接口的类：局部内部类
+        class MyComparable implements Comparable {
+
+            @Override
+            public int compareTo(Object o) {
+                return 0;
+            }
+        }
+
+        return new MyComparable();
+
+        /*
+        return new Comparable() {
+            @Override
+            public int compareTo(Object o) {
+                return 0;
+            }
+        };
+         */
+    }
+}
+```
+
+
+
+
+
+## Java基础08
 
 ### 异常(exception)
 

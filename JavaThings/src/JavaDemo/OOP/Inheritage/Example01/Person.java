@@ -6,6 +6,7 @@ public class Person {
     private int age;
 
     public Person() {
+        System.out.println("test");
     }
 
     public Person(String name) {
