@@ -20,39 +20,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../HR_SYS_3.0/src/hrsys/HRMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_3.0/src/hrsys/HRMS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Clinet/HR_SYS_4.0_Clinet.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__2_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__2_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__3_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__3_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__4_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47__4_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/Demo01Final.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/Fu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/MyClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/MySubClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo01/Zi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo02/Body.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo02/Demo1InnerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo02/Demo2InnerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo02/Outer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo03/DemoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day13-code/src/demo03/Outer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/control/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/control/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/main/sysmain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/main/sysmain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/model/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/model/Resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/util/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/util/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/util/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/util/Protocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/Operator/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/Operator/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/model/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/model/Resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Protocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/work/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/work/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0/HR_SYS_4.0.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/HR_SYS_4.0_Clinet.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/control/Operator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/main/sysmain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/model/Resume.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/model/ResumeList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/model/ReturnResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/net/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/net/Clinet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/util/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Clinet/src/util/Protocol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/HR_SYS_4.0_Server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/lib/mysql-connector-java-5.1.47.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/Operator/ServerThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/database/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/ActionResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/Resume.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/ResumeList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/model/ReturnResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/net/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/util/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/util/Protocol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HR_SYS_4.0_Server/src/work/Action.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo02/DemoMulti.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo02/DemoMulti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo02/Fu.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo02/Fu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo02/Zi.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo02/Zi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo03/Demo2MultiField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo03/Demo2MultiMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo03/Demo2MultiMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo03/Fu.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo03/Fu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo03/Zi.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo03/Zi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo04/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo04/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo04/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo04/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo04/Demo02Instanceof.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo04/Demo02Instanceof.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo04/Demo1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo04/Demo1Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo04/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo04/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo05/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo05/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo05/Demo1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo05/Demo1Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo05/KeyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo05/KeyBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo05/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo05/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12-code/src/demo05/USB.java" beforeDir="false" afterPath="$PROJECT_DIR$/day12-code/src/demo05/USB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_3.0/hrsys/HRMS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_3.0/hrsys/HRMS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/control/Operator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/control/Operator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/main/sysmain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/main/sysmain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/model/Resume.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/model/Resume.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/util/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/util/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/util/Protocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Clinet/util/Protocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/Operator/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/Operator/ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/model/Resume.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/model/Resume.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/util/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/util/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/util/Protocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/util/Protocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/work/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HR_SYS_4.0_Server/work/Action.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +105,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HR_SYS_4.0_Server/HR_SYS_4.0_Server.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HR_SYS_4.0_Client/HR_SYS_4.0_Clinet.iml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -111,13 +131,13 @@
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Clinet\src\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.sysmain">
-    <configuration name="AddBookFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.AddBookFrame" />
-      <module name="lowbhrsys_client" />
+  <component name="RunManager" selected="Application.DemoMain">
+    <configuration name="Demo01Final" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.Demo01Final" />
+      <module name="day13-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.*" />
+          <option name="PATTERN" value="demo01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +145,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.Client" />
-      <module name="lowbhrsys_client" />
+    <configuration name="Demo1InnerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo1InnerClass" />
+      <module name="day13-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,12 +158,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.Server" />
-      <module name="HR_SYS_4.0_Server" />
+    <configuration name="Demo1Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo05.Demo1Main" />
+      <module name="day12-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.*" />
+          <option name="PATTERN" value="demo05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,12 +171,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.Server" />
-      <module name="lowbhrsys_server" />
+    <configuration name="Demo2InnerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo2InnerClass" />
+      <module name="day13-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,12 +184,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sysmain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.sysmain" />
-      <module name="HR_SYS_4.0_Clinet" />
+    <configuration name="DemoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo03.DemoMain" />
+      <module name="day13-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="demo03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -178,19 +198,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Client" />
-      <item itemvalue="Application.AddBookFrame" />
-      <item itemvalue="Application.Server (1)" />
-      <item itemvalue="Application.sysmain" />
+      <item itemvalue="Application.Demo1Main (1)" />
+      <item itemvalue="Application.Demo01Final" />
+      <item itemvalue="Application.Demo1InnerClass" />
+      <item itemvalue="Application.Demo2InnerClass" />
+      <item itemvalue="Application.DemoMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.sysmain" />
-        <item itemvalue="Application.Server (1)" />
-        <item itemvalue="Application.AddBookFrame" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.DemoMain" />
+        <item itemvalue="Application.Demo2InnerClass" />
+        <item itemvalue="Application.Demo1InnerClass" />
+        <item itemvalue="Application.Demo01Final" />
+        <item itemvalue="Application.Demo1Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +237,8 @@
       <workItem from="1595063343206" duration="583000" />
       <workItem from="1595125129820" duration="12411000" />
       <workItem from="1595169477055" duration="806000" />
-      <workItem from="1595170446599" duration="1507000" />
+      <workItem from="1595170446599" duration="16422000" />
+      <workItem from="1595727846341" duration="21674000" />
     </task>
     <servers />
   </component>
@@ -241,10 +262,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="540" y="199" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1594548024933" />
-    <state x="35" y="0" key="#Project_Structure" timestamp="1595165883736">
+    <state x="35" y="0" key="#Project_Structure" timestamp="1595212612839">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1595165883736" />
+    <state x="35" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1595212612839" />
     <state x="0" y="171" key="#SQL_Dialects" timestamp="1594613533768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -261,34 +282,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548458424" />
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594975536703">
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1595754615924">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594975536703" />
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595754615924" />
     <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595167488495">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1595167488495" />
-    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1595170570112">
+    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1595209767424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595170570112" />
-    <state width="1313" height="157" key="GridCell.Tab.0.bottom" timestamp="1595170692958">
+    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595209767424" />
+    <state width="1313" height="207" key="GridCell.Tab.0.bottom" timestamp="1595756471668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="157" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
-    <state width="1313" height="157" key="GridCell.Tab.0.center" timestamp="1595170692958">
+    <state width="1313" height="207" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595756471668" />
+    <state width="1313" height="207" key="GridCell.Tab.0.center" timestamp="1595756471668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="157" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
-    <state width="1313" height="157" key="GridCell.Tab.0.left" timestamp="1595170692958">
+    <state width="1313" height="207" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595756471668" />
+    <state width="1313" height="207" key="GridCell.Tab.0.left" timestamp="1595756471668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="157" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
-    <state width="1313" height="157" key="GridCell.Tab.0.right" timestamp="1595170692958">
+    <state width="1313" height="207" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595756471668" />
+    <state width="1313" height="207" key="GridCell.Tab.0.right" timestamp="1595756471668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="157" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595170692958" />
+    <state width="1313" height="207" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595756471668" />
+    <state width="1313" height="207" key="GridCell.Tab.1.bottom" timestamp="1595756471669">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="207" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595756471669" />
+    <state width="1313" height="207" key="GridCell.Tab.1.center" timestamp="1595756471668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="207" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595756471668" />
+    <state width="1313" height="207" key="GridCell.Tab.1.left" timestamp="1595756471668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="207" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595756471668" />
+    <state width="1313" height="207" key="GridCell.Tab.1.right" timestamp="1595756471669">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="207" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595756471669" />
     <state x="252" y="3" key="NewModule_or_Project.wizard" timestamp="1595169695900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -297,18 +334,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="262" y="0" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595169318013" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1595170571409">
+    <state x="35" y="0" key="SettingsEditor" timestamp="1595730780052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595170571409" />
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595730780052" />
     <state x="312" y="39" width="742" height="650" key="find.popup" timestamp="1595166126115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="312" y="39" width="742" height="650" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595166126115" />
-    <state x="0" y="0" key="new project wizard" timestamp="1595169840490">
+    <state x="0" y="0" key="new project wizard" timestamp="1595730777732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1595169840490" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1595730777732" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
