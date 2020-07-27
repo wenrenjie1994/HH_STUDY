@@ -35,7 +35,6 @@ public class DesignServiceController {
     public String showDesignPage(Model model) {
         List<ServiceItem> serviceItems = new ArrayList<>();
         serviceItemRepository.findAll().forEach(serviceItems::add);
-
         Type[] types = ServiceItem.Type.values();
         for (Type type : types) {
             model.addAttribute(type.toString().toLowerCase(), filterByType(serviceItems, type));
