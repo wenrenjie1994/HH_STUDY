@@ -140,4 +140,52 @@ public class MybatisPlusConfig {
     }
 }
 
+通用枚举：
+在配置文件resources/application.yml中加入配置扫描：
+type-enums-package: com.spdb.enums
+加入配置类（不加的化枚举值默认就是枚举名）
+@Configuration
+public class EnumConfig {
+    @Bean
+    public Jackson2ObjectMapperBuilderCustomizer customizer(){
+        return builder -> builder.featuresToEnable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
+    }
+}
+然后实体类中的枚举字段类型也要改成枚举类型
+写枚举类，如：
+public enum  SeasonEnum {
 
+    SPRING(1,"春天"),
+    SUMMER(2,"夏天"),
+    FALL(3,"秋天"),
+    WINTER(4,"冬天");
+
+    @EnumValue
+    @JsonValue
+    private final int code;
+
+    private final String desc;
+
+    SeasonEnum(int code, String desc) {
+        this.code = code;
+        this.desc = desc;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    @Override
+    public String toString() {
+        return "SeasonEnum{" +
+                "code=" + code +
+                ", desc='" + desc + '\'' +
+                '}';
+    }
+}
+@EnumValue 代表通枚举类注解
+@JsonValue 标记响应json值，序列化时只返回该枚举字段的枚举值，如果不加的化在序列化返回到前端时该枚举字段取出来的是一个对象（型如SeasonEnum{code=3, desc='秋天'}）
