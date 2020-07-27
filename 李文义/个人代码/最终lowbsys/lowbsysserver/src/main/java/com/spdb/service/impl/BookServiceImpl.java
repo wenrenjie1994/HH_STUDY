@@ -3,7 +3,7 @@ package com.spdb.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.spdb.mapper.BookMapper;
+import com.spdb.dao.BookMapper;
 import com.spdb.pojo.domain.Book;
 import com.spdb.response.Response;
 import com.spdb.service.BookService;
@@ -13,8 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import static com.spdb.emun.ResponseMessage.*;
 
