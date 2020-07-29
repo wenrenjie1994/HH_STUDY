@@ -5,5 +5,5 @@
 ## lowbhrsys
 - [x] 基于控制台版本
 - [x] 基于文本版本
-- [ ] 基于mysql版本
+- [x] 基于mysql版本
 - [ ] 基于socket、多线程版本
