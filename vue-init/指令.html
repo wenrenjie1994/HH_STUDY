@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>自定义指令-操作底层dom</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body id="body">
+        <div id="app">
+            <div v-color="'pink'">2222222</div>
+            <div v-color="'red'">333333</div>
+            <div v-color="mycolor">4444444</div>
+        </div>
+        <script type="text/javascript">
+        Vue.directive("color",{
+            //指令生命周期--创建阶段
+            inserted(el,bind){
+                //插入
+                console.log("当前节点插入到父节点",el,bind.value)
+                el.style.background=bind.value
+            },
+            //指令生命周期--更新阶段
+            updated(el,bind){
+                el.style.background=bind.value
+            }
+        })
+        var app = new Vue({
+            el: "#app",
+            data: {
+                mycolor: "pink"
+            }
+        })
+        </script>
+    </body>
+</html>

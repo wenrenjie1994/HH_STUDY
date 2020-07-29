@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>自定义局部组件</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <navbar></navbar>
+            <sidebar></sidebar>
+        </div>
+        <script>
+            //1.全局定义组件
+            Vue.component("navbar",{
+                template: `
+                    <div style="background:pink;">
+                        <button @click="handleClick">返回</button>
+                        navbar--{{ navbarName }}
+                        <button>主页</button>
+                        <child></child>
+                        <navbarChild></navbarChild>
+                    </div>
+                `,
+                methods: {
+                    handleClick(){
+                        alert("返回")
+                    }
+                },
+                //此处必须是函数式写法
+                data(){
+                    return {
+                        navbarName: "navbarName"
+                    }
+                },
+
+                //局部定义组件
+                components: {
+                    navbarChild: {
+                        template: `
+                            <div>
+                            navbarChild--局部组件
+                            </div>
+                        `
+                    }
+                }
+
+            })
+
+            Vue.component("child",{
+                template: `
+                 <div>child组件--全局定义</div>
+                `
+            })
+
+            Vue.component("sidebar",{
+                template: `
+                    <div style="background: red;"
+                     sidebar组件
+                     <child></child>
+                     /**
+                     * 此处不能访问局部组件
+                     */
+                     <navbarChild></navbarChild>
+                    </div>
+                `
+            })
+            var app = new Vue({
+                el: "#app"
+            }); //root components
+        </script>
+    </body>
+</html>

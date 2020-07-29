@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>购物车简易实现</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="checkbox" @change="handleChange" v-model="isAllChecked"/>
+            <ul>
+                <li v-for="item in datalist">
+                    <input type="checkbox" v-model="checkgroup" :value="item" @change="handleLiChange"/>
+                    {{ item }}
+                    <button @click="handleSubNumber(item)">Sub</button>
+                    {{ item.number }}
+                    <button @click="item.number++">Add</button>
+                </li>
+            </ul>
+            {{ checkgroup }}
+            <h2>结算总金额： {{ getSum() }}</h2>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    checkgroup: [],
+                    isAllChecked: false,
+                    datalist:[
+                        {
+                            name:"商品1",
+                            price:10,
+                            number:1,
+                            id:"1",
+                        },
+                        {
+                        name:"商品2",
+                        price:20,
+                        number:2,
+                        id:"2",
+                        },
+                        {
+                        name:"商品3",
+                        price:30,
+                        number:3,
+                        id:"3",
+                        }
+                    ]
+                },
+                methods: {
+                    getSum(){
+                        var sum = 0
+                        for(var i in this.checkgroup) {
+                            sum += this.checkgroup[i].number * this.checkgroup[i].price
+                        }
+                        return sum
+                    },
+                    handleLiChange(){
+                        if (this.checkgroup.length === this.datalist.length){
+                            this.isAllChecked = true
+                        }else{
+                            this.isAllChecked = false
+                        }
+                    },
+                    handleChange(){
+                        if (this.isAllChecked){
+                            this.checkgroup = this.datalist
+                        }else{
+                            this.checkgroup = []
+                        }
+                    },
+                    handleSubNumber(item){
+                        var number = item.number--
+                        if (number === 1){
+                            item.number = 1
+                        }
+                    }
+                }
+               
+            });
+        </script>
+    </body>
+</html>

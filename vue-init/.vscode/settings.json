@@ -1,0 +1,9 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.host": "127.0.0.1",
+    "liveServer.settings.port": 5501
+}

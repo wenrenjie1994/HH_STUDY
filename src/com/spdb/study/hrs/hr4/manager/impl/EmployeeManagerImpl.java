@@ -126,7 +126,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
                  * @date 2020/7/24 0:02
                  * @param pageNum
                  * @param pageSize
-                 * @return java.util.List<com.spdb.study.hrs.hr3.dataobject.Employee>
+                 * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Employee>
                  */
                 Employee employee = new Employee();
                 employee.setEmployeeId(rs.getInt("employee_id"));

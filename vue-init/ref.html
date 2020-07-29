@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>ref通信方式</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" ref="mydata"/>
+            <button @click="handleAdd">add</button>
+
+            <child ref="mychild"></child>
+        </div>
+        <script>
+            //子组件
+            Vue.component("child",{
+                template: `
+                    <div>
+                        child
+                        <button>子组件</button>
+                    </div>
+                `,
+                data() {
+                    return {
+                        childName: "子组件状态"
+                    }
+                },
+                methods: {
+                    myMethod(data){
+                        console.log("子组件的方法",data)
+                    }
+                }
+            })
+
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    
+                },
+                methods: {
+                    /**
+                    * ref放在标签上，拿到的是原生节点
+                    *  ref放在组件上，拿到的是组件对象(实现父子通信)
+                    */ 
+                    handleAdd(){
+                        console.log(this.$refs.mychild.childName)
+                        this.$refs.mychild.myMethod("孩子听话")
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

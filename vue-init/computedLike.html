@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>计算属性方式进行模糊匹配</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" placeholder="请输入要模糊匹配的字符串" v-model="strText">
+            <ul>
+                <li v-for="item in getMyDataList">
+                    {{ item }}
+                </li>
+            </ul>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    strText: "",
+                    dataList: ["aaa","bbb","ccc","ddd","eee","add","cee","dac","baa"]
+                },
+               computed: {
+                getMyDataList(){
+                    return this.dataList.filter(result=>result.indexOf(this.strText)>-1)
+                }
+               }
+            });
+        </script>
+    </body>
+</html>

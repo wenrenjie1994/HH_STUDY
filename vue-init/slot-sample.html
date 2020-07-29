@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>使用slot实现子传父效果</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+           <navbar>
+             <button @click="handleClick">navbar-button</button>
+           </navbar>
+           <sidebar v-show="isShow"></sidebar>
+           <child>
+               <div slot="a">好好学习</div>
+               <div slot="b">天天向上</div>
+           </child>
+        </div>
+        <script>
+            //定义全局组件
+            Vue.component("sidebar", {
+                template: `
+                    <div style="background-color:pink;width:300px;"">
+                        <ul>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>Php</li>
+                            <li>C</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                `
+            })
+
+           Vue.component("navbar", {
+                template: `
+                    <div>
+                        navbar
+                        <slot></slot>
+                    </div>
+                `
+           })
+
+           Vue.component("child",{
+               template: `<div>
+                    <!--具名插槽-->
+                    <slot name="a""></slot>
+                    child
+                    <slot name="b"></slot>
+               </div>`
+           })
+
+           var app = new Vue({
+               el: "#app",
+               data: {
+                    isShow: false
+               },
+               methods: {
+                handleClick(){
+                    this.isShow = !this.isShow
+                }
+               }
+           });
+        </script>
+    </body>
+</html>

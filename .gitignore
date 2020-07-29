@@ -11,3 +11,7 @@
 .idea/vcs.xml
 HH_STUDY.iml
 #src/
+
+# Compiled class file
+*.class
+

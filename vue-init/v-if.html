@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>v-if指令</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+           <input type="button" value="切换显示"  @click="changeIsShow">
+           <p v-if="isShow">Vue变换</p>
+           <p v-show="isShow">Vue变换-v-show</p>
+           <h2 v-if="temperature>=35">炎热的天气</h2>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    isShow: false,
+                    temperature:36
+                },
+                methods: {
+                    changeIsShow: function(){
+                        this.isShow = !this.isShow;
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

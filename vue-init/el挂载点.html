@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>el挂载点</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body id="body">
+        <div id="app">
+          {{ message }}
+        </div>
+        <script>
+            var app = new Vue({
+                el:"#app",
+                // e1:"#body",
+                data: {
+                    message:"Vue"
+                }
+            })
+        </script>
+    </body>
+</html>

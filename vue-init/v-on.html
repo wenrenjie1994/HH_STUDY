@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>v-on指令</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="button" value="点我哦" @click="doIt(666,'老铁')" >
+            <input type="text" @keyup.enter="sayHi" >
+            <input type="button" value="v-on指令" v-on:click="doIt">
+            <input type="button" value="v-on简写" @click="doIt">
+            <input type="button" value="双击事件" @dblclick="doIt">
+            <h2 @click="changeFood">{{ food }}</h2>
+        </div>
+        <script>
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    food:"西兰花炒蛋"
+                },
+                methods: {
+                    doIt: function(p,q) {
+                        alert("It真香");
+                        alert(p);
+                        alert(q);
+                    },
+                    changeFood:function() {
+                        console.log(this.food),
+                        this.food += "好美味!"
+                    },
+                    sayHi: function(){
+                        alert("吃了没")
+                    }
+                },
+            })
+        </script>
+    </body>
+</html>

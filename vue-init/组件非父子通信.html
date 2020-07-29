@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>组件非父子通信</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <wechatauthor></wechatauthor>
+            <wechatuser></wechatuser>
+        </div>
+        <script>
+            //中央事件总线
+            var bus = new Vue();
+
+            Vue.component("wechatauthor", {
+                template: `<div>
+                        我是微信公众号作者
+                        <br/>
+                        <input type="text" ref="mydata"/>
+                        <button @click="handleClick">发布</button>
+                    </div>`,
+                    methods: {
+                        handleClick(){
+                            bus.$emit("wechatmessage",this.$refs.mydata.value)
+                        }
+                    }
+            })
+
+            Vue.component("wechatuser", {
+                template: `<div style="background:pink;">
+                    我是公众号订阅者
+                </div>`,
+                mounted(){
+                    console.log("生命线周期函数-当前组件的dom创建完成后，就会调用")
+                    bus.$on("wechatmessage",(data)=>{
+                        console.log("收到推送",data)
+                    })
+                }
+            })
+
+            var app = new Vue({
+                el: "#app",
+                data: {
+
+                }
+            });
+        </script>
+    </body>
+</html>

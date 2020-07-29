@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>v-bind指令</title>
+
+        <style>
+            .active {
+                border: 1px solid red;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+           <img v-bind:src="imgSrc" alt="">
+           <img :src="imgSrc" alt="" :title="imgTitle+'!!!'"  v-bind:class="isActive?'active':''" @click="toggleActive">
+           <img :src="imgSrc" alt="" :title="imgTitle" :class="{active:isActive}" @click="toggleActive" >
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    imgSrc: "./counter/img/monkey.gif",
+                    imgTitle: "Vue真有趣",
+                    isActive: false
+                },
+                methods: {
+                    toggleActive: function(){
+                        this.isActive = !this.isActive
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

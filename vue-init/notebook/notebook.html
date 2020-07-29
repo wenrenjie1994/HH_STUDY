@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>在线笔记本实例</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+       <!--主体区域-->
+       <section id="todoapp">
+           <!--输入域-->
+           <header class="header">
+               <h1>在线笔记本</h1>
+               <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo" />
+           </header>
+           <!--列表区域-->
+           <section class="main">
+               <ul class="todo-list">
+                   <li class="todo" v-for="(item,index) in list">
+                       <div class="view">
+                           <span class="index">{{ index+1 }}.</span>
+                           <label>{{ item }}</label>
+                           <button class="destroy" @click="remove(index)"></button>
+                       </div>
+                   </li>
+               </ul>
+           </section>
+           <!--统计和清空-->
+           <footer class="footer" v-if="list.length!=0">
+                <span class="todo-count" v-show="list.length!=0">
+                    <strong>{{ list.length }}</strong>
+                    items left
+                </span>
+                <button class="clear-completed" @click="clear" v-if="list.length!=0">
+                    Clear
+                </button>
+           </footer>
+       </section>
+       <!--底部-->
+       <footer class="info">
+            <p>
+                <a href="https://github.com/wenrenjie1994/HH_STUDY/tree/longyuanxu0722">
+                    <img src="./img/monkey.gif" alt="" />
+                </a>
+            </p>
+       </footer>
+       <script>
+           var app = new Vue({
+               el: "#todoapp",
+               data: {
+                   list: [ "写代码","吃饭饭","睡觉觉","搓手手" ],
+                   inputValue: "只因在人群中多看了你一眼，便无法忘却你容颜"
+               },
+               methods: {
+                   add(){
+                       this.list.push(this.inputValue)
+                   },
+                   remove(index){
+                       this.list.splice(index,1)
+                   },
+                   clear(){
+                        this.list = []
+                   }
+               }
+           });
+       </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>v-model指令:常与表单一起使用</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+       <div id="app">
+            <input type="button" value="修改Message" @click="setMessage" >
+            <br>
+            <input type="text" v-model="message" @keyup.enter="getMessage" >
+            <h2>{{ message }}</h2>
+       </div>
+       <script>
+           var app = new Vue({
+               el: "#app",
+               data: {
+                   message: "Vue"
+               },
+               methods: {
+                   getMessage: function(){
+                       alert(this.message)
+                   },
+                   setMessage: function(){
+                        this.message = "Java"
+                   }
+               }
+           });
+       </script>
+    </body>
+</html>

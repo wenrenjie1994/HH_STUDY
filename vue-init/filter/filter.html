@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>数据过滤</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body id="body">
+        <div id="app">
+            <ul>
+                <li v-for="item in dataList":key="item.id">
+                    <h3>{{ item.nm }}</h3>
+                    <!-- <img :src="changePath(item.img)"> -->
+                    <img :src="item.img | komipath"/>
+                </li>
+            </ul>
+        </div>
+        <script>
+            Vue.filter("komipath",function(item){
+                return item.replace("w.h","256.360")
+            })
+            
+            var app = new Vue({
+                el:"#app",
+                data: {
+                    dataList: []
+                },
+                mounted(){
+                    axios.get("test.json").then((result) => {
+                        console.log(result.data)
+                        this.dataList = result.data.movieList
+                    }).catch((err) => {
+                        console.log(err)
+                    });
+                },
+                methods:{
+                    changePath(path){
+                        return path.replace("w.h","256.360")
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

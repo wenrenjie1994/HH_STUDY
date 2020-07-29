@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>图片轮播</title>
+        <link rel="stylesheet" href="./css/index.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="mask">
+           <div class="center">
+                <h2 class="title">
+                    <!-- <img src="./images/monkey.gif" alt=""> -->
+                    舒适宜人的校区环境
+                </h2>
+                <!-- <img v-bind:src="imgArr[index]" alt=""> -->
+                <img :src="imgArr[index]" alt="" >
+                <a href="javascript:void(0)" v-show="index!=0" @click="prev" class="left">
+                    <img src="./images/prev.png" alt="">
+                </a>
+                <a href="javascript:void(0)" v-show="index<imgArr.length-1" @click="next" class="right">
+                    <img src="./images/next.png" alt="">
+                </a>
+           </div>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#mask",
+                data: {
+                    imgArr: [
+                        "./images/00.jpg",
+                        "./images/01.jpg",
+                        "./images/02.jpg",
+                        "./images/03.jpg",
+                        "./images/04.jpg",
+                        "./images/05.jpg",
+                        "./images/06.jpg",
+                        "./images/07.jpg",
+                        "./images/08.jpg",
+                        "./images/09.jpg",
+                        "./images/10.jpg"
+                    ],
+                    index: 0
+                },
+                methods: {
+                    prev: function(){
+                        this.index--
+                    },
+                    next: function(){
+                        this.index++
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

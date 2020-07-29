@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>组件父传子</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <navbar myname="home" :myshow="false"></navbar>
+            <navbar myname="list" :myshow="true"></navbar>
+            <navbar :myname="parentName" :myshow="true"></navbar>
+        </div>
+        <script>
+            //1.全局定义组件
+            Vue.component("navbar",{
+                template: `
+                    <div>
+                        <button>返回</button>
+                        navbar--{{ myname }}
+                        <button v-show="myshow">首页</button>
+                    </div>
+                `,
+                //props: ["myname","myshow"] //接收父组件传来的属性
+                /**
+                * 此处属性验证
+                */ 
+                props: {
+                    myname: String,
+                    myshow: Boolean
+                }
+            })
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    parentName: "父组件状态"
+                }
+            });
+        </script>
+    </body>
+</html>

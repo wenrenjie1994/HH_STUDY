@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>vue结合swiper</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.css">
+        <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+        <style>
+            .swiper-container {
+                width: 600px;
+                height: 300px;
+            }  
+        </style>
+    </head>
+    <body id="body">
+        <div id="app">
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="item in dataList">
+                        {{ item }}
+                    </div>
+                </div>
+                <!--如果需要分页器-->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    dataList: []
+                },
+                mounted() {
+                    setTimeout(()=>{
+                        this.dataList = ["111","222","333","444"]
+                    }, 2000)
+                },
+                updated(){
+                    new Swiper(".swiper-container", {
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                        }
+                    })
+                }
+            });
+        </script>
+    </body>
+</html>

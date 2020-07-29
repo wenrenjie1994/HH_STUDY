@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>查询天气应用</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+       <div class="wrap" id="app">
+           <div class="search_form">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="logo" />
+                </div>
+                <div class="form_group">
+                    <input type="text" v-model="city" @keyup.enter="searchWeather" class="input_txt" placeholder="请输入要查询天气的城市" />
+                    <button class="input_sub">
+                        搜索
+                    </button>
+                </div>
+                <div class="hotkey">
+                    <a href="javascript:;" @click="changeCity('北京')">北京</a>
+                    <a href="javascript:;" @click="changeCity('上海')">上海</a>
+                    <a href="javascript:;" @click="changeCity('广东')">广东</a>
+                    <a href="javascript:;" @click="changeCity('深圳')">深圳</a>
+                    <a href="javascript:;" @click="changeCity('杭州')">杭州</a>
+                    <a href="javascript:;" @click="changeCity('成都')">成都</a>
+                </div>
+           </div>
+           <ul class="weather_list">
+               <li v-for="item in weatherList">
+                    <div class="info_type">
+                        <span class="iconfont">{{ item.type }}</span>
+                    </div>
+                    <div class="info_temp">
+                        <b>{{ item.low }}</b>
+                        ~
+                        <b>{{ item.high }}</b>
+                    </div>
+                    <div class="info_date">
+                        <span>{{ item.date }}</span>
+                    </div>
+               </li>
+           </ul>
+       </div>
+       <script src="./js/main.js"></script>
+       <script>
+           
+       </script>
+    </body>
+</html>

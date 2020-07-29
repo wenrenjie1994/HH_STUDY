@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>fetch使用</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="button" value="正在热映" @click="handleClick" >
+            <ul>
+                <li v-for="item in movieList">
+                    <h2>{{ item.name }}</h2>
+                    <img :src="item.poster" alt=""/>
+                </li>
+            </ul>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    movieList: []
+                },
+                methods: {
+                    handleClick(){
+                        fetch("./json/test.json").then(result=>result.json()).then(result=>{
+                            console.log(result.data.films)
+                            this.movieList = result.data.films
+                        })
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

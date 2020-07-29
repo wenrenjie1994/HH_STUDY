@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>swiper组件封装</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.css">
+        <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+        <style>
+            .swiper-container {
+                width: 600px;
+                height: 300px;
+            }  
+        </style>
+        </head>
+        <body>
+          <div id="app">
+                <swiper :key="dataList.length">
+                    <div class="swiper-slide" v-for="item in dataList">
+                        {{ item }}
+                    </div>
+                </swiper>
+          </div>
+          <script>
+              Vue.component("swiper",{
+                  template: `
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <slot></slot>
+                    </div>
+                     <!--如果需要分页器-->
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  `,
+                  mounted(){
+                      console.log("swiper-mounted")
+                      new Swiper(".swiper-container",{
+                          loop: true,
+                          pagination: {
+                              el: '.swiper-pagination',
+                          }
+                      })
+                  }
+              })
+              var app = new Vue({
+                  el: "#app",
+                  data: {
+                    dataList: []
+                  },
+                  mounted(){
+                      console.log("root-mounted")
+                      setTimeout(()=>{
+                        this.dataList = ["111","222","333","444"]
+                      }, 2000)
+                  },
+              });
+          </script>
+  </body>
+</html>

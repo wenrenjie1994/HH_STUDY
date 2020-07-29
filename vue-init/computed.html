@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>computed计算属性</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+          {{ myname.substring(0,1).toUpperCase() + myname.substring(1) }}
+          <p>方法调用: {{ getMyNameMethod() }}</p>
+          <p>计算属性调用：{{ getMyName }}</p>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    myname:"coco"
+                },
+                methods: {
+                    getMyNameMethod(){
+                        console.log(this.myname+"方法调用")
+                        return this.myname.substring(0,1).toUpperCase() + this.myname.substring(1)
+                    }
+                },
+                computed: {
+                    getMyName(){
+                        console.log(this.myname+"计算属性调用")
+                        return this.myname.substring(0,1).toUpperCase() + this.myname.substring(1)
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

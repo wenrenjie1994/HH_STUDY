@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>swiper</title>
+
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.css">
+        <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+        <style>
+            .swiper-container {
+                width: 600px;
+                height: 300px;
+            }  
+        </style>
+        </head>
+        <body>
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+
+              </div>
+              <!--如果需要分页器-->
+              <div class="swiper-pagination"></div>
+          </div>
+      
+          <script type="text/javascript">
+              setTimeout(function() {
+                  var dataList = ["111","222","333"]
+
+                  var newList = dataList.map(item=>`<div class="swiper-slide">${item}</div>`)
+                  document.querySelector(".swiper-wrapper").innerHTML = newList.join('')
+
+                  new Swiper(".swiper-container", {
+                      loop: true,
+                      pagination: {
+                          el: '.swiper-pagination',
+                      }
+                  })
+              }, 2000)
+          </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>v-model实现单选多选绑定</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+          <input type="checkbox" v-model="isChecked" />记录用户名
+          <br/>
+          <p>
+            <input type="checkbox" v-model="checkgroup" value="游泳"/>游泳
+            <input type="checkbox" v-model="checkgroup" value="滑冰"/>滑冰
+            <input type="checkbox" v-model="checkgroup" value="跑步"/>跑步
+          </p>
+          {{ checkgroup }}
+          <br/>
+          <p>
+              请选择一门你最喜欢的开发语言
+              <input type="radio" v-model="picked" value="Java"/>Java
+              <input type="radio" v-model="picked" value="Python"/>Python
+              <input type="radio" v-model="picked" value="Php"/>Php
+              <input type="radio" v-model="picked" value="C"/>C
+          </p>
+          {{ picked }}
+        </div>
+        <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isChecked: true,
+                checkgroup: [],
+                picked: ""
+            }
+        });
+        </script>
+    </body>
+</html>

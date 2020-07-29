@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>列表的过渡</title>
+        <style>
+            .bounce-enter-active {
+              animation: bounce-in .5s;
+            }
+            .bounce-leave-active {
+              animation: bounce-in .5s reverse;
+            }
+            @keyframes bounce-in {
+              0% {
+                transform: translateX(100px);
+                opacity: 0;
+              }
+              
+              100% {
+                transform: translateX(0px);
+                opacity: 1;
+              }
+            }
+         </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model="mydata"/>
+            <button @click="handleAddClick">add</button>
+
+            <!--删除列表元素，元素会增加或变少，引入列表过度效果-->
+            <transition-group tag="ul" name="bounce">
+                    <li v-for="(item,index) in dataList" :key="item">
+                        {{ item }}--{{ index }}
+                        <button @click="handleDelClick(index)">del</button>
+                    </li>
+            </transition-group>
+        </div>
+        <script>
+           var app = new Vue({
+                el: "#app",
+                data: {
+                    mydata: "111111",
+                    dataList: []
+                },
+                methods: {
+                    handleAddClick(){
+                        this.dataList.push(this.mydata)
+                    },
+                    handleDelClick(index){
+                        this.dataList.splice(index,1)
+                    }
+                }
+           });
+        </script>
+    </body>
+</html>

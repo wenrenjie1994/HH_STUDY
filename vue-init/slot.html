@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>slot应用</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <child>
+                <div>Vue</div>
+            </child>
+            <swaper>
+                <li v-for="data in dataList">
+                    {{ data }}
+                </li>
+            </swaper>
+        </div>
+        <script type="text/javascript">
+            Vue.component("child",{
+                template: `<div>
+                    child
+                    <slot></slot>
+                </div>`
+            })
+
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    dataList: ["Java","Python","Php","C语言"]
+                },
+                components:{
+                    swaper:{
+                        template: `<div>
+                            <ul>
+                                <slot></slot>
+                            </ul>
+                        </div>`
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

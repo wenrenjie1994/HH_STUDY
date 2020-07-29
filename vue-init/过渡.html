@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>组件非父子通信</title>
+
+        <style>
+
+        .longyxfade-enter-active, .longyxfade-leave-active {
+            transition: all 1.5s;
+        }
+        .longyxfade-enter, .longyxfade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        
+        
+        .longyxbounce-enter-active {
+            animation: bounce-in .5s;
+        }
+        .longyxbounce-leave-active {
+            animation: bounce-in .5s reverse;
+        }
+        @keyframes bounce-in {
+            0% {
+            opacity: 0;
+            transform: translateX(100px);
+            }
+        
+            100% {
+            opacity: 1;
+            transform: translateX(0px);
+            }
+        }
+        
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button @click="isShow=!isShow">点我</button>
+            <transition name="longyxfade">
+                <div v-if="isShow">66666666</div>
+            </transition>
+
+            <transition name="longyxbounce">
+                <div v-if="isShow">99999999</div>
+            </transition>
+        </div>
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    isShow: false
+                }
+            });
+        </script>
+    </body>
+</html>

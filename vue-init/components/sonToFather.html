@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>组件子传父--事件向上传</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            父组件
+            <child v-on:myevent="handleEvent($event)"></child>
+        </div>
+        <script>
+            //定义全局组件
+            Vue.component("child", {
+                template: `
+                    <div>
+                        child组件
+                        <button @click="payMoney">点我传状态</button>
+                    </div>
+                `,
+                data() {
+                    return {
+                        childName: "子组件状态"
+                    }
+                },
+                methods: {
+                    payMoney(){
+                        this.$emit("myevent", this.childName) //分发事件
+                    }
+                }
+            })
+
+            var app = new Vue({
+                el: "#app",
+                methods: {
+                    handleEvent(eve){
+                        console.log("父组件成功接收子组件状态",eve)
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
