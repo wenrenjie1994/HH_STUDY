@@ -20,21 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo03/MyOuter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo04/DemoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo04/MyInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo04/MyInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo05/DemoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo05/Hero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo05/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo06/DemoGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo06/Hero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo06/Skill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo06/Skillimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo07/DemoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo07/DemoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo07/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day13-code/src/demo07/Usb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/day14-code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo01/Demo01ToString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo01/Demo02Equals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo01/Demo03Objects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo01/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo02/Demo01Date.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo02/Demo02Date.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo02/Demo03DateFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14-code/src/demo02/Demo04Ecercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/control/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/control/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/main/sysmain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/main/sysmain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/model/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/model/Resume.java" afterDir="false" />
@@ -45,10 +39,8 @@
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Protocol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/work/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/work/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day13-code/src/demo03/Outer.java" beforeDir="false" afterPath="$PROJECT_DIR$/day13-code/src/demo03/Outer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day13-code/demo03/Outer$1Inner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day13-code/demo03/Outer$1Inner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day13-code/demo03/Outer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day13-code/demo03/Outer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,13 +99,13 @@
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Clinet\src\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DemoMain (3)">
-    <configuration name="DemoGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo06.DemoGame" />
-      <module name="day13-code" />
+  <component name="RunManager" selected="Application.Demo04Ecercise">
+    <configuration name="Demo02Date" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo02Date" />
+      <module name="day14-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo06.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo07.DemoInterface" />
-      <module name="day13-code" />
+    <configuration name="Demo02Equals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.Demo02Equals" />
+      <module name="day14-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo07.*" />
+          <option name="PATTERN" value="demo01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.DemoMain" />
-      <module name="day13-code" />
+    <configuration name="Demo03DateFormat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo03DateFormat" />
+      <module name="day14-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoMain (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo05.DemoMain" />
-      <module name="day13-code" />
+    <configuration name="Demo03Objects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.Demo03Objects" />
+      <module name="day14-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo05.*" />
+          <option name="PATTERN" value="demo01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,12 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoMain (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo07.DemoMain" />
-      <module name="day13-code" />
+    <configuration name="Demo04Ecercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo04Ecercise" />
+      <module name="day14-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo07.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,19 +166,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DemoMain (1)" />
-      <item itemvalue="Application.DemoMain (2)" />
-      <item itemvalue="Application.DemoGame" />
-      <item itemvalue="Application.DemoInterface" />
-      <item itemvalue="Application.DemoMain (3)" />
+      <item itemvalue="Application.Demo02Equals" />
+      <item itemvalue="Application.Demo03Objects" />
+      <item itemvalue="Application.Demo02Date" />
+      <item itemvalue="Application.Demo03DateFormat" />
+      <item itemvalue="Application.Demo04Ecercise" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DemoMain (3)" />
-        <item itemvalue="Application.DemoInterface" />
-        <item itemvalue="Application.DemoGame" />
-        <item itemvalue="Application.DemoMain (2)" />
-        <item itemvalue="Application.DemoMain (1)" />
+        <item itemvalue="Application.Demo04Ecercise" />
+        <item itemvalue="Application.Demo03DateFormat" />
+        <item itemvalue="Application.Demo02Date" />
+        <item itemvalue="Application.Demo03Objects" />
+        <item itemvalue="Application.Demo02Equals" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +206,7 @@
       <workItem from="1595125129820" duration="12411000" />
       <workItem from="1595169477055" duration="806000" />
       <workItem from="1595170446599" duration="16422000" />
-      <workItem from="1595727846341" duration="33151000" />
+      <workItem from="1595727846341" duration="42760000" />
     </task>
     <servers />
   </component>
@@ -258,10 +250,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548458424" />
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1596008453518">
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1596108986342">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596008453518" />
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596108986342" />
     <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595167488495">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -270,22 +262,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595209767424" />
-    <state width="1313" height="146" key="GridCell.Tab.0.bottom" timestamp="1596010542362">
+    <state width="1313" height="84" key="GridCell.Tab.0.bottom" timestamp="1596115696631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="146" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596010542362" />
-    <state width="1313" height="146" key="GridCell.Tab.0.center" timestamp="1596010542362">
+    <state width="1313" height="84" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596115696631" />
+    <state width="1313" height="84" key="GridCell.Tab.0.center" timestamp="1596115696630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="146" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596010542362" />
-    <state width="1313" height="146" key="GridCell.Tab.0.left" timestamp="1596010542362">
+    <state width="1313" height="84" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596115696630" />
+    <state width="1313" height="84" key="GridCell.Tab.0.left" timestamp="1596115696629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="146" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596010542362" />
-    <state width="1313" height="146" key="GridCell.Tab.0.right" timestamp="1596010542362">
+    <state width="1313" height="84" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596115696629" />
+    <state width="1313" height="84" key="GridCell.Tab.0.right" timestamp="1596115696631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="146" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596010542362" />
+    <state width="1313" height="84" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596115696631" />
     <state width="1313" height="207" key="GridCell.Tab.1.bottom" timestamp="1595756471669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -310,18 +302,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="262" y="0" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595169318013" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1595730780052">
+    <state x="35" y="0" key="SettingsEditor" timestamp="1596095794271">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595730780052" />
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596095794271" />
     <state x="312" y="39" width="742" height="650" key="find.popup" timestamp="1595166126115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="312" y="39" width="742" height="650" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595166126115" />
-    <state x="0" y="0" key="new project wizard" timestamp="1595730777732">
+    <state x="0" y="0" key="new project wizard" timestamp="1596095792446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1595730777732" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1596095792446" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -349,6 +341,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day14-code/src/demo01/Demo02Equals.java</url>
+          <line>13</line>
+          <properties class="demo01.Demo02Equals" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
