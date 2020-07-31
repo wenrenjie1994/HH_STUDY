@@ -1356,14 +1356,33 @@ class Person {
 
 ### 异常(exception)
 
++ 有不寻常的事情发生了
++ 当这个事情发生时，原本打算要做的事情不能再继续了，必须停下来，让其他地方的某段短发来处理
+
+> 异常机制的最大好处就是清晰地分开了正常的业务逻辑代码和遇到情况时的处理代码
+
+> + ``Error``：Java虚拟机无法解决的严重问题。比如``StackOverflowError``、``OutOfMemoryError``
+>+ ``Exception``：其他编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理
+>   - 空指针访问
+>   - 试图读取不存在的文件
+>   - 网络连接中断
+>   - 数组角标越界
+
 #### 异常处理机制
+
+> 过多的``if-else``分支会导致程序的代码加长、臃肿、可读性差。于是采用异常处理机制
+>
+> + ``try-catch-finally``
+> + ``throws + 异常类型``
 
 - 抛出异常
 - 捕获异常
 - 异常处理五个关键字
   - try、catch、finally、throw、throws 
+  - ``finally``：声明的语句一定会执行，在数据库连接、输入输出流、网络编程中，JVM不会自动回收资源，此时资源释放显示声明在finally中
 
 ```java
+//method 1. try-catch-finally
 public static void main(String[] args) {
     try {
         new Test().test(a:1, b:0);
@@ -1374,17 +1393,38 @@ public static void main(String[] args) {
     }
 }
 
-//方法中处理不了这个异常，则由方法上抛出
+//method 2. 方法中处理不了这个异常，则由方法上抛出
 public void test(int a, int b) throws ArithmeticException {
     if (b == 0) {
-        throw new ArithmeticException();	//主动抛出异常
+        //主动抛出异常
+        throw new ArithmeticException();	
     }
+}
+```
+
+```java
+try {
+    open the file;
+    determine its size;
+    allocate that such memory;
+    read the file into memory;
+    close the file;
+} catch (fileOPenFailed) {
+    do somethings;
+} catch (sizeDeterminationFailed) {
+    do somethings;
+} catch (memoryAllocationFailed) {
+    do somethings;
+} catch (readFailed) {
+    do somethings;
+} catch (closeFailed) {
+    do somethings;
 }
 ```
 
 #### 自定义异常
 
-+ 用户自定义异常，**只需继承Exception类**即可
++ 用户自定义异常类，**只需继承Exception类**即可
 + 使用自定义异常类
   1. 创建自定义异常类
   2. 在方法中通过``throw``关键字抛出异常对象
@@ -1434,6 +1474,78 @@ public class Test {
     }
 }
 ```
+
+
+
+### 捕捉异常
+
+```java
+try {
+    //可能产生异常的代码
+} catch (Typel id1) {
+    //处理Type1异常的代码
+} catch (Typle id2) {
+    //处理Type2异常的代码
+} catch (Type3 id3) {
+    //处理Type3异常的代码
+}
+```
+
+####  捕捉异常做什么
+
+> 拿到异常对象之后
+
+- ``String getMessage();``
+- ``String toString();``
+- ``void printStackTrace();``
+
+#### 异常声明
+
++ 如果你的函数可能抛出异常，就必须在函数头部加以声明
+
+  ```java
+  void f() throws Toobig, Toosmall, DivZero {	//...
+  void f() {...
+  ```
+
++ 你可以声明并不会真的抛出的异常
+
++ 如果你调用一个声明会抛出异常的函数，那么你必须：
+
+  - 把函数的调用放在try块中，并设置catch来捕捉所有可能抛出的异常；或
+  - 声明自己会抛出无法处理的异常
+
+#### 异常声明遇到继承关系
+
++ 当覆盖一个函数的时候，子类不能声明抛出比父类的版本更多的异常
++ 在子类的构造函数中，必须声明父类可能抛出的全部异常
+
+
+
+### 什么能扔
+
++ 任何继承了``Throwable``类的对象
++ ``Exception``类继承了``Throwable``
+  - ``throw new Exception();``
+  - ``throw new Exception("HELP");``
+
+#### catch怎么匹配异常的
+
++ is-a的关系
++ 就是说，抛出子类异常会被捕捉父类异常的catch给捉住
+
+#### 捕捉任何异常
+
+```java
+catch (Exception e) {
+    System.out.println("Caught an exception");
+}
+```
+
+#### 运行时刻异常
+
++ 像``ArrayIndexOutOfBoundsException``这样的异常是不需要声明的
++ 但是没有适当的机制来捕捉，就会最终导致程序终止
 
 
 
@@ -1571,105 +1683,7 @@ public class Test {
 
 
 
-### 捕捉异常
-
-```java
-try {
-    //可能产生异常的代码
-} catch (Typel id1) {
-    //处理Type1异常的代码
-} catch (Typle id2) {
-    //处理Type2异常的代码
-} catch (Type3 id3) {
-    //处理Type3异常的代码
-}
-```
-
-#### 异常机制
-
-####  捕捉异常做什么
-
-+ 拿到异常对象之后
-  - ``String getMessage();``
-  - ``String toString();``
-  - ``void printStackTrace();``
-
-#### 用上异常机制
-
-```java
-try {
-    open the file;
-    determine its size;
-    allocate that such memory;
-    read the file into memory;
-    close the file;
-} catch (fileOPenFailed) {
-    do somethings;
-} catch (sizeDeterminationFailed) {
-    do somethings;
-} catch (memoryAllocationFailed) {
-    do somethings;
-} catch (readFailed) {
-    do somethings;
-} catch (closeFailed) {
-    do somethings;
-}
-```
-
-#### 异常
-
-+ 有不寻常的事情发生了
-+ 当这个事情发生时，原本打算要做的事情不能再继续了，必须停下来，让其他地方的某段短发来处理
-
-> 异常机制的最大好处就是清晰地分开了正常的业务逻辑代码和遇到情况时的处理代码
-
-#### 异常声明
-
-+ 如果你的函数可能抛出异常，就必须在函数头部加以声明
-
-  ```java
-  void f() throws Toobig, Toosmall, DivZero {	//...
-  void f() {...
-  ```
-
-+ 你可以声明并不会真的抛出的异常
-+ 如果你调用一个声明会抛出异常的函数，那么你必须：
-  - 把函数的调用放在try块中，并设置catch来捕捉所有可能抛出的异常；或
-  - 声明自己会抛出无法处理的异常
-
-#### 异常声明遇到继承关系
-
-+ 当覆盖一个函数的时候，子类不能声明抛出比父类的版本更多的异常
-+ 在子类的构造函数中，必须声明父类可能抛出的全部异常
-
-
-
-### 什么能扔
-
-+ 任何继承了``Throwable``类的对象
-+ ``Exception``类继承了``Throwable``
-  - ``throw new Exception();``
-  - ``throw new Exception("HELP");``
-
-
-
-#### catch怎么匹配异常的
-
-+ Is-A的关系
-+ 就是说，抛出子类异常会被捕捉父类异常的catch给捉住
-
-#### 捕捉任何异常
-
-```java
-catch (Exception e) {
-    System.out.println("Caught an exception");
-}
-```
-
-#### 运行时刻异常
-
-+ 像``ArrayIndexOutOfBoundsException``这样的异常是不需要声明的
-+ 但是没有适当的机制来捕捉，就会最终导致程序终止
++ 
 
 
 

@@ -1,4 +1,4 @@
-package JavaDemo.OOP.Example01;
+package Example01;
 
 public class BankTest {
     public static void main(String[] args) {
