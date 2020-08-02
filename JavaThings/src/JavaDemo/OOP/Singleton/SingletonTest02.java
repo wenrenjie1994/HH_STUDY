@@ -1,5 +1,11 @@
 package JavaDemo.OOP.Singleton;
 
+/**
+ * @Description 懒汉式的线程安全问题
+ * @author liuclo
+ * @date 2020/8/2 15:40
+ */
+
 public class SingletonTest02 {
     public static void main(String[] args) {
         Customer customer = Customer.getInstance();
