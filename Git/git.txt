@@ -14,3 +14,5 @@
                   $ git clone http://github.com/target.git --depth 1  # target.git 为目标地址
                   $ cd target  #先进入库路径下
                   $ git fetch --unshallow # 获取完整库
+【4】将本地仓库更新为主分支/某分支的最新版本：
+        $ git pull origin master/分支名
