@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.5.0",
+    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/proxy": "^2.0.1",
+    "element-ui": "^2.13.2",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.0",
+    "sass-loader": "^9.0.2"
+  },
+  "devDependencies": {}
+}
