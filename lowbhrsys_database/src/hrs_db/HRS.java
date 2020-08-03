@@ -179,7 +179,7 @@ public class HRS{
 				searchResumeBySchool();
 			}
 			else if(choice==4){
-				searchBookByPointWord();
+				searchResumeByPointWord();
 			}
 			else if(choice==5){
 				break;
@@ -251,7 +251,7 @@ public class HRS{
 		}
 	}
 
-	void searchBookByPointWord(){
+	void searchResumeByPointWord(){
 		Scanner input = new Scanner(System.in);
 		System.out.println("请输入关键字");
 		String keyWord = input.nextLine();
