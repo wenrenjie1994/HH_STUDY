@@ -1,7 +1,7 @@
 package demo05;
 /*jva.lang.StringBuilder类
 * 字符串是常量，它们的值在创建之后不能更改
-* 底层是一个数据，被final修饰
+* 底层是一个数组，被final修饰
 * private final byte[] value;
 * 进行字符串的相加，内存中就会有多个字符串，效率低下
 * String s= "a"+"b"+"c"="abc"
