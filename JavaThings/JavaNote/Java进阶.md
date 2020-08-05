@@ -389,5 +389,481 @@ public class ThreadTest {
 
 ##### 2）方式四：使用线程池
 
+> **线程池相关API：``ExecuotorService``和``Executors``**
 
++ ``ExecutorService``：真正的线程池接口，常见子类``ThreadPoolExecutor``
+  - ``void execute(Runnable command)``：执行任务/命令，没有返回值，一般用来执行Runnable
+  - ``<T>Future<T>submit(Callable<T>task)``：执行任务，有返回值，一般用来执行Callable
+  - ``void shutdown()``：关闭连接池
++ ``Executors``：工具类、线程池的工厂类，用于创建并返回不同类型的线程池
+  - ``Executors.newCachedThreadPool()``：创建一个可根据需要创建新线程得线程池
+  - ``Executors.newFixedThradPool(n)``：创建一个可重用固定线程数的线程池
+  - ``Executors.newSingleThreadExecutor()``：创建一个只有一个线程的线程池
+  - ``Executors.newScheduledThreadPool(n)``：创建一个线程池，它可安排在给定延迟后运行命令或定期地执行
+
+```java
+//1. 提供指定线程数的线程池
+ExecutorService service = Executors.newFixedThreadPool(10);
+
+//设置线程池的属性
+ThreadPoolExecutor ser = (ThreadPoolExecutor)service;
+ser.setCorePoolSize(15);
+ser.setKeepAliveTime(10);
+
+//2. 执行指定的线程的操作，需要提供一个实现Runnable或Callable接口的实现类的对象
+service.execute(Runnable runnable);          //适用于Runnable
+//        service.submit(Callable callable);           //适用于Callable
+
+//3. 关闭连接池
+service.shutdown();
+```
+
+
+
+## Java基础10
+
+### String类
+
+#### 1. 特性
+
++ 字符串
++ ``String``是一个``final类``，代表**不可变**的字符序列，不能被继承
+  - 当对字符串重新赋值时，需重写指定内存区域赋值，不能在原有的value数组进行赋值
+  - 进行拼接操作时，也需重新指定内存区域赋值
+  - 调用``replace()``方法时，也要重新指定内存区域赋值赋给新变量
++ ``String``对象的字符内容是存储在一个字符数组``value[]``中的
++ 实现了``Serializable接口``和``Comparable接口``，表示支持序列化和可比较大小
+
+
+
+#### 2. 创建
+
+> ``String``的实例化方式
+
+```java
+//字面量赋值，str1和str2的数据javaEE声明在方法区的字符串常量池中
+String s1 = "javaEE";
+String s2 = "javaEE";
+
+//new + 构造器，str3和str4保存的地址值，在堆空间保存数据的地址值
+//创建了两个对象，一个是堆空间new的结构，另一个是char[]数组对应的常量池中的数据"javaEE"
+String s3 = new String("javaEE");
+String s4 = new String("javaEE");
+
+String s5 = s3.intren();			//intern()的返回值在常量池中
+
+System.out.println(s1 == s2);		//true
+System.out.println(s1 == s3);		//false
+System.out.println(s3 == s4);		//false
+System.out.println(s2 == s5);   	//true
+```
+
+
+
+#### 3. 方法
+
+##### 1）String--->包装类
+
+```java
+int num = Integer.parseInt(str);
+String str = String.valueOf(num);
+```
+
+##### 2）String--->char[]
+
+```java
+char[] charArray = str.toCharArray();
+String str = new String(charArray);
+```
+
+##### 3）String--->byte[]
+
+```java
+//默认编码方式
+byte[] bytes = str.getBytes();
+//默认解码方式
+String str = new String(bytes);
+```
+
+```java
+//指定gbk字符集进行编码
+byte[] gbks = str.getBytes("gbk");
+//乱码，编码和解码方式不一致
+String str = new String(gbks);
+//指定gbk字符集进行解码
+String str = new String(gbks, "gbk");
+```
+
+
+
+### ``StringBuffer类``和``StringBulider类``
+
+> 均是可变的字符序列
+
+#### 1. StringBuffer
+
+> 线程安全的，效率较低
+
+#### 2. StringBuilder
+
+> 线程不安全，效率高
+
+
+
+### 日期时间API
+
+#### 1. JDK8之前
+
+##### 1）时间戳
+
+> 返回当前时间与1970年1月1日0时0分0秒以毫秒记的时间差
+
+``long time = System.currentTimeMillis()``
+
+
+
+##### 2）Date类
+
+> ``java.util.Date``
+
++ 构造器的使用
+
+  ```java
+  import java.util.Date;
+  
+  //创建当前时间的Date对象
+  Date date1 = new Date();
+  //显示当前的年、月、日、时、分、秒
+  System.out.println(date1.toString());
+  //时间戳
+  System.out.println(date.getTime());
+  
+  //创建指定毫秒数的Date对象
+  Date date2 = new Date(1550306204104L);
+  
+  //java.util.Date的子类java.sql.Date
+  java.sql.Date date3 = new java.sql.Date(550306204104L);
+  
+  //java.util.Date--->java.sql.Date
+  Date date3 = new Date();
+  java.sql.Date date4 = new java.sql.Date(date6.getTime());
+  ```
+
+
+
+##### 3）``java.text.SimpleDateFormat类``
+
+> 对日期Date类的格式化和解析
+
+```java
+//实例化，默认构造器
+SimpleDateFormat sdf = new SimpleDateFormat();
+
+//格式化：日期--->字符串
+Date date = new Date();
+String format = sdf.format(date);
+
+//解析：字符串--->日期
+String str = "19-2-18 上午9:00";
+Date date = sdf.parse(str);			//会抛异常
+
+//实例化，指定格式
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+System.out.println(sdf.format(date));
+```
+
+
+
+##### 4）java.util.Calendar
+
+> 抽象类
+
+```java
+//实例化，1. 创建子类对象GregorianCalendar的对象
+//实例化，2. 调用其静态方法getInstance()
+Calendar calendar = Calendar.getInstance();
+System.out.println(calendar.getClass());			//GregorianCalendar
+
+//常用方法
+//get()
+int days = calendar.get(Calendar.DAY_OF_MONTH);
+
+//set()
+calendar.set(Calendar.DAY_OF_MONTH, 22);
+
+//add()
+calendar.add(Calendar.DAY_OF_MONTH, 3);
+
+//getTime()：日历类--->Date
+Date date = calendar.getTime();
+
+//setTime()：Date--->日历类
+Date date = new Date();
+//具有可变性
+calendar.setTime(date);
+```
+
+
+
+#### 2. JDK8的新日期API
+
+##### 1）LocalDate、LocalTime、LocalDateTime
+
+```java
+//实例化：now()：获取当前的日期、时间、日期时间
+LocalDate localDate = LocalDate.now();
+LocalTime localTime = LocalTime.now();
+LocalDateTime localDateTime = LocalDateTime.now();
+
+//of()：设置指定的年月、日、时、分、秒
+LocalDateTime localDateTime1 = LocalDateTime.of(2019, 10, 1, 9, 40, 0);
+
+//getXxx()
+System.out.println(localDateTime.getDayOfMonth());
+
+//withXxx()：设置相关属性
+//不可变性
+```
+
+
+
+##### 2）Instant：瞬时
+
+```java
+//实例化：now()：本初子午线标准时间
+Instant instant = Instant.now();
+//添加时间的偏移量
+OffsetDateTime offsetDateTime = instant.atOffset(ZoneOffset.ofHours(8));
+System.out.println(offsetDateTime);
+
+//获取时间戳
+long milli = instant.toEpochMilli();
+//通过给定的毫秒数获取Instant实例
+Instant instant1 = Instant.ofEpochMilli(159653513587L);
+```
+
+
+
+##### 3）``java.time.format.DateTimeFormatter``
+
+> 格式化或者解析时间
+
+```java
+//预定义
+DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+//格式化：日期--->字符串
+LocalDateTime localDateTime = LocalDateTime.now();
+String str1 = formatter.format(localDateTime);
+
+//解析：字符串-->日期
+TemporalAccessor parse = formatter.parse("2019-10-01T9:40:20.797");
+```
+
+```java
+//本地化相关的格式
+DateTimeFormatter formatter = DateTimeFormatter.ofLocalizeDateTime(FormatStyle.SHORT);
+//格式化
+String str2 = formatter.format(localDateTime);
+```
+
+```java
+//自定义格式：如ofPatten("yyyy-MM-dd hh:mm:ss")
+DateTimeFormatter formatter = DateTimeFormatter.ofPatten("yyyy-MM-dd hh:mm:ss");
+//格式化
+String str3 = formatter.format(LocalDateTime.now());
+//解析
+TemporalAccessor accessor = formatter.parse("2019-10-01");
+```
+
+
+
+### Java比较器
+
+> 正常情况下，Java中只能比较``==`` 或`` !=``，不能使用``>`` 、``< ``；如何比较两个对象的大小，使用两个接口：``Comparable``或``Comparator``
+
+#### 1. Comparable
+
+> 自然排序
+
++ String、包装类实现了Comparable接口，重写了compareTo()方法，比较两个对象大小
+
++ 重写``compareTo()``的规则
+  - 当前对象this大于形参对象obj，返回正整数
+  - 当前对象this小于形参对象obj，返回负整数
+  - 当前对象this等于形参对象obj，返回零
+
++ 自定义类实现Comparable接口，重写``compareTo(obj)``，在``compareTo(obj)``方法中指明如何排序
+
+```java
+class Goods implements Comparable {
+    private int value;
+    private String str;
+    
+    @Override
+    public int compareTo(Objcet o) {
+        if (o instanceof Object) {
+            if (this.getName().equals(o.getName())) {
+                if (this.getValue() > o.getVaule()) {
+                    return 1;
+                } else if (this.getValue() < o.getValue()) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            } else {
+                return this.getStr().compareTo(o.getStr());
+            }
+        }
+        throw new RuntimeException("...");
+    }
+}
+```
+
+
+
+#### 2. Comparator
+
+> 定制排序
+
+```java
+class Goods {
+    private int value;
+    private String str;
+}
+
+Goods[] arr = new Goods[5];
+Arrays.sort(arr, new Comparator() {
+   @Override
+    public int compare(Object o1, Object o2) {
+        if (o1 instanceof Goods && o2 instanceof Goods) {
+            Goods g1 = (Goods)o1;
+            Goods g2 = (Goods)o2;
+            if (g1.getValue() == g2.getValue()) {
+                return g1.getStr().compareTo(g2.getStr());
+            } else {
+                return -Integer.compare(g1.getValue(), g2.getValue());
+            }
+        }
+        throw new RuntimeException("...");
+    } 
+});
+
+System.out.println(Arrays.toString(arr));
+```
+
+
+
+### System类
+
+> + java.lang包
+> + 构造器是private的，无法实例化，成员变量和成员方法都是static的
+> + 成员变量
+>   - in
+>   - out
+>   - err
+> + 成员方法
+>   - ``native long currentTimeMillis()``
+>   - ``void exit(int status)``
+>   - ``void gc()``：请求系统进行垃圾回收
+>   - ``String getProperty(String key)``：获取系统中属性名为key的属性对应的值
+
+
+
+### Math类
+
+
+
+### ``BigInteger``与``BigDecimal``
+
+
+
+## Java基础11
+
+### 枚举类
+
+#### 1. JDK5.0以前
+
+> + 类的对象是有限个的，确定的
+> + 需要定义一组常量时，建议使用枚举类
+> + 如果枚举类只有一个对象，则作为单例模式的实现方式
+
+```java
+class Season {
+    //1. 声明属性是private final
+    private final String Name;
+    private final String Desc;
+    //2. 私有化构造器，并给属性赋值
+    private Season(String Name, String Desc) {
+        this.Name = Name;
+        this.Desc = Desc;
+    }
+    //3. 提供枚举类对象，声明为public static final
+    public static final Season SPRING = new Season("春天", "百花齐放");
+    public static final Season SUMMER = new Season("夏天", "映日荷花");
+    public static final Season AUTUMN = new Season("秋天", "金色大地");
+    public static final Season WINTER = new Season("冬天", "白雪皑皑");
+    //4. 其他诉求，获取枚举类对象的属性
+    public String getName() {
+        return Name;
+    }
+    public String getDesc() {
+        return Desc;
+    }
+    @Override
+    public String toString() {
+        return "Season{Name: " + Name + ", Desc: " + Desc + "}";
+    }
+}
+```
+
+
+
+#### 2. 枚举类的实现
+
+> + 用enum关键字定义枚举类
+>
+> + 默认继承于``java.lang.Enum``类
+
+```java
+enum Season {
+    //1. 一开始就需要提供枚举类对象，每个对象之间用逗号隔开
+    SPRING("春天", "百花齐放");
+    SUMMER("夏天", "映日荷花"),
+    AUTUMN("秋天", "金色大地"),
+    Season("冬天", "白雪皑皑");
+    
+    //2. 声明属性是private final
+    private final String Name;
+    private final String Desc;
+
+    //3. 私有化构造器，并给属性赋值
+    private Season(String Name, String Desc) {
+        this.Name = Name;
+        this.Desc = Desc;
+    }
+
+    //4. 其他诉求，获取枚举类对象的属性，不必重写toString()
+    public String getName() {
+        return Name;
+    }
+    public String getDesc() {
+        return Desc;
+    }
+}
+
+System.out.println(Season.AUTUMN);			//output: AUTUMN
+```
+
+
+
+#### 3. Enum的主要方法
+
++ ``values()``
++ ``valueOf(String str)``
++ ``toString()``
++ 
+
+
+
+### 注解
 
