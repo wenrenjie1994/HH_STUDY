@@ -14,6 +14,7 @@ import java.util.Map;
 public class client extends Thread {
 
 
+
     Map<String, student> student = new HashMap<String, student>();
     Map<String, String> info = new HashMap<String, String>();
     String url;
@@ -21,7 +22,7 @@ public class client extends Thread {
     int max = 10;
     char[] cbuf= new char[1024];
     Socket conn = new Socket();
-
+    BufferedReader socketIn;
     public client(String url) {
         this.info.put("姓名", "name");
         this.info.put("身份证号", "IDcard");
@@ -72,6 +73,11 @@ public class client extends Thread {
 //        this.readTxt();
         this.readDatabase();
         this.conn = conn;
+        try {
+            this.socketIn=new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addStudent() {
@@ -81,8 +87,8 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请按照姓名、身份证号、手机号，性别、出生日期、年龄、应聘岗位、期望薪资顺序输入").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
-            String[] infoString = info.toString().split(" ");
+
+            String[] infoString = socketInput().split(" ");
             String name = infoString[0];
 
             String IDcard = infoString[1];
@@ -108,7 +114,7 @@ public class client extends Thread {
                 conn.getOutputStream().write(
                         ("-添加成功!!!").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
-                info.close();
+
 //                System.out.println("添加成功!!!");
             }
 
@@ -132,9 +138,9 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请输入要删除学生的手机号").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
 
-            String phoneNumber = info.toString();
+
+            String phoneNumber = socketInput();
             if (this.student.get(phoneNumber).isDelete) {
                 conn.getOutputStream().write(
                         ("-输入结构出错，请重新输入").getBytes(StandardCharsets.UTF_8));
@@ -146,7 +152,7 @@ public class client extends Thread {
                 conn.getOutputStream().write(
                         ("-删除成功").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
-                info.close();
+
 //                System.out.println("删除成功");
             }
         } catch (Exception e) {
@@ -168,9 +174,9 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请输入要更正的信息类别").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
 
-            String infoString = info.toString();
+
+            String infoString =socketInput();
             if (infoString.equals("手机号")) {
                 conn.getOutputStream().write(
                         ("-手机号为不可修改信息！请重新输入").getBytes(StandardCharsets.UTF_8));
@@ -182,9 +188,9 @@ public class client extends Thread {
                         ("-请按手机号、更正信息输入要更正的信息").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
 //                System.out.println("请按手机号、更正信息输入要更正的信息");
-                info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
 
-                String[] infoInput = info.toString().split(" ");
+
+                String[] infoInput = socketInput().split(" ");
 //                获取学生
 //                通过反射,找到对应的属性，给属性赋值
 //                System.out.println(this.student.get(infoInput[0]));
@@ -196,7 +202,7 @@ public class client extends Thread {
                 conn.getOutputStream().write(
                         ("-更改成功").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
-                info.close();
+
 //              System.out.println("更改成功");
 
             }
@@ -220,8 +226,8 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请输入要查询学生的手机号").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
-            String phoneNumber = info.toString();
+
+            String phoneNumber = socketInput();
             if (this.student.get(phoneNumber).isDelete) {
                 conn.getOutputStream().write(
                         ("-输入结构或信息出错，请重新输入").getBytes(StandardCharsets.UTF_8));
@@ -236,7 +242,7 @@ public class client extends Thread {
                 conn.getOutputStream().write(
                         ("-查询完毕！！！").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
-                info.close();
+
 //              System.out.println("查询完毕！！！");
             }
         } catch (Exception e) {
@@ -309,8 +315,10 @@ public class client extends Thread {
                 this.saveToDatabase();
 //                System.out.println("程序结束！！！感谢使用。");
                 try {
+
                     conn.getOutputStream().write(("程序结束！！！感谢使用。").getBytes(StandardCharsets.UTF_8));
                     conn.getOutputStream().flush();
+//                    conn.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -325,9 +333,8 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请输入要查询学生的手机号").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
 
-            String phoneNumber = info.toString();
+            String phoneNumber = socketInput();
             if (this.student.get(phoneNumber).isDelete) {
                 conn.getOutputStream().write(
                         ("-输入结构或信息出错，请重新输入").getBytes(StandardCharsets.UTF_8));
@@ -341,7 +348,7 @@ public class client extends Thread {
                 conn.getOutputStream().write(
                         ("-查询完毕！！！").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
-                info.close();
+
             }
         } catch (Exception e) {
             try {
@@ -361,9 +368,9 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请输入要查询学生的手机号").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
 
-            String phoneNumber = info.toString();
+
+            String phoneNumber = socketInput();
             if (this.student.get(phoneNumber).isDelete) {
                 conn.getOutputStream().write(
                         ("-输入结构或信息出错，请重新输入").getBytes(StandardCharsets.UTF_8));
@@ -377,7 +384,7 @@ public class client extends Thread {
                 conn.getOutputStream().write(
                         ("-查询完毕！！！").getBytes(StandardCharsets.UTF_8));
                 conn.getOutputStream().flush();
-                info.close();
+
             }
         } catch (Exception e) {
             try {
@@ -404,15 +411,15 @@ public class client extends Thread {
             conn.getOutputStream().write(
                     ("请按照手机号、学历、毕业学校、开始时间，结束时间顺序输入").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            InputStreamReader info = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8);
-            String[] infoString = info.toString().split(" ");
+
+            String[] infoString = socketInput().split(" ");
 //            System.out.println(infoString);
 //            System.out.println(salary);
             this.student.get(infoString[0]).setEducation(infoString[1], infoString[2], infoString[3], infoString[4]);
             conn.getOutputStream().write(
                     ("-添加成功").getBytes(StandardCharsets.UTF_8));
             conn.getOutputStream().flush();
-            info.close();
+
 
         } catch (Exception e) {
             System.out.println(e);
@@ -431,17 +438,8 @@ public class client extends Thread {
     public int inputNum() {
         int num;
         try {
-            System.out.println(111);
-            int data;
-            int data1;
-            while ((data=new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8)).read(cbuf, 0, cbuf.length))!=-1){
-                System.out.println(data);
-                System.out.println(new String(cbuf,0,data));
-            }
-            System.out.println(new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8)).readLine());
-            System.out.println(555);
-            num = Integer.parseInt(new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8)).readLine());
-            System.out.println(222);
+
+            num = Integer.parseInt(socketInput());
         } catch (Exception e) {
             System.out.println(e);
             try {
@@ -540,7 +538,10 @@ public class client extends Thread {
 //                System.out.println(printWelcome());
 
                 int result = this.inputNum();
-                this.choose(result);
+                if (this.choose(result)){
+                    System.out.println(Thread.currentThread().getName());
+                    break;
+                }
             }
         } catch (Exception e) {
             try {
@@ -551,5 +552,18 @@ public class client extends Thread {
                 ioException.printStackTrace();
             }
         }
+    }
+    public String socketInput(){
+        int data;
+        try {
+            while ((data=this.socketIn.read(cbuf, 0, cbuf.length))!=-1){
+                System.out.println(new String(cbuf,0,data));
+                return new String(cbuf,0,data);
+            }
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        return null;
     }
 }
