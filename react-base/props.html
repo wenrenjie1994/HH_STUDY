@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件和props</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type='text/babel'>
+        function SayHi(props) {
+            return <div>
+                <h1>Hello komi</h1>
+                <p>姓名：{ props.name }</p>
+                <p>年龄：{ props.age }</p>
+                <p>擅长：{ props.goodat }</p>
+             </div>
+        }
+
+        // 与状态的组件
+        class HelloKomi extends React.Component {
+            render () {
+                return <div>
+                        <h1>Hello Komi</h1>
+                        <p>姓名：{ this.props.name }</p>
+                        <p>年龄：{ this.props.age }</p>
+                        <p>擅长：{ this.props.better }</p>
+                    </div>
+            }
+        }
+        // ReactDOM.render(
+        //     <SayHi name='komi' age='18' goodat='Java'/>, document.getElementById('app')
+        // )
+        ReactDOM.render(
+            <HelloKomi name='komi' age='18' better='Java'/>, document.getElementById('app')
+        )
+    </script>
+</body>
+</html>

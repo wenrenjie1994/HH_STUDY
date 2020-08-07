@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习虚拟DOM的构建过程</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="btn-change">点我</button>
+
+    <script src="https://cdn.bootcss.com/snabbdom/0.7.4/snabbdom.js"></script>
+	<script src="https://cdn.bootcss.com/snabbdom/0.7.4/snabbdom-class.js"></script>
+	<script src="https://cdn.bootcss.com/snabbdom/0.7.4/snabbdom-props.js"></script>
+	<script src="https://cdn.bootcss.com/snabbdom/0.7.4/snabbdom-style.js"></script>
+	<script src="https://cdn.bootcss.com/snabbdom/0.7.4/snabbdom-eventlisteners.js"></script>
+    <script src="https://cdn.bootcss.com/snabbdom/0.7.4/h.js"></script>
+    
+    <script type='text/javascript'>
+        var snabbdom = window.snabbdom
+
+        // 定义patch 函数
+        var patch = snabbdom.init([
+            snabbdom_class,
+            snabbdom_props,
+            snabbdom_style,
+            snabbdom_eventlisteners
+        ])
+
+        // 定义 h 标签
+        var h = snabbdom.h
+
+        var container = document.getElementById('container')
+
+        // 生成 vnode
+        var vnode = h('ul#list', {}, [
+            h('li.item', {}, 'item 1'),
+            h('li.item', {}, 'item 2')
+        ])
+        patch(container, vnode)
+
+        document.getElementById('btn-change').addEventListener('click', function() {
+            // 生成 newVnode
+            var newVnode = h('ul.item', {}, [
+                h('li.item', {}, 'item 1'),
+				h('li.item', {}, 'item C'),
+				h('li.item', {}, 'item 3')
+            ])
+            patch(vnode, newVnode)
+        })
+    </script>
+</body>
+</html>

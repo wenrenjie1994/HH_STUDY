@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React中条件处理</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        .pink {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type='text/babel'>
+        function Login(props){
+            return <button onClick={ props.updateUser }>Login</button>
+        }
+
+        function Logout(props) {
+            return <button onClick={ props.updateUser }>Logout</button>
+        }
+
+        class App extends React.Component {
+            state = {
+                name: 'Komi',
+                age: 18,
+                isLogin: false
+            }
+
+            updateUser = () => {
+                console.log(this)
+                this.setState({
+                    name: 'Merry',
+                    age: 19,
+                    isLogin: !this.state.isLogin
+                })
+            }
+            // <button onClick={ () => this.updateUser() }>更新数据</button> 3.将作用域指向当前组件的实例
+            // <button onClick={ this.updateUser.bind(this) }>更新数据</button> 4.将作用域指向当前组件的实例
+            render () {
+                const { isLogin } = this.state
+                let button;
+                if (isLogin) {
+                    button = <Login/>
+                } else {
+                    button = <Logout/>
+                }
+
+                return <div>
+                        <h1 className='pink'>Hello { this.state.name }</h1>
+                        <p>年龄：{ this.state.age }</p>
+                        <p>擅长：{ this.props.better }</p>
+                         { button }
+                         {isLogin?<Login updateUser={ this.updateUser }/>:<Logout updateUser={ this.uodateUser }/>}
+                        <button onClick={ this.updateUser }>更新数据</button>
+                    </div>
+            }
+            
+        }
+        ReactDOM.render(
+            <App better='Java'/>, document.getElementById('app')
+        )
+    </script>
+</body>
+</html>

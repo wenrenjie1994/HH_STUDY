@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React中事件处理</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        .pink {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type='text/babel'>
+        class Hello extends React.Component {
+            constructor(props) {
+                super(props)
+                // 初始化状态
+                this.state = {
+                    name: 'komi',
+                    age: 18
+                }
+                // React内置函数默认没有挂载this
+                // this.updateUser = this.updateUser.bind(this) 2.将作用域指向当前组件的实例
+            }
+            // 1.将作用域指向当前组件的实例
+            // updateUser = () => {
+            //     console.log(this)
+            //     this.setState({
+            //             name: 'michael',
+            //             age: 20
+            //         })
+            // }
+
+            updateUser() {
+                console.log(this)
+                this.setState({
+                    name: 'Merry',
+                    age: 19
+                })
+            }
+            // <button onClick={ () => this.updateUser() }>更新数据</button> 3.将作用域指向当前组件的实例
+            // <button onClick={ this.updateUser.bind(this) }>更新数据</button> 4.将作用域指向当前组件的实例
+            render () {
+                return <div>
+                        <h1 className='pink'>Hello { this.state.name }</h1>
+                        <p>年龄：{ this.state.age }</p>
+                        <p>擅长：{ this.props.better }</p>
+                        <button onClick={ this.updateUser.bind(this) }>更新数据</button>
+                    </div>
+            }
+            
+        }
+        ReactDOM.render(
+            <Hello better='Java'/>, document.getElementById('app')
+        )
+    </script>
+</body>
+</html>

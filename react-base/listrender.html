@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React中列表渲染</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type='text/babel'>
+        class List extends React.Component {
+            state = {
+                list: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                contents: [
+                    {id: 1, text: 'Java'},
+                    {id: 2, text: 'Python'},
+                    {id: 3, text: 'Js'},
+                    {id: 4, text: 'C'},
+                    {id: 5, text: 'C++'},
+                    {id: 6, text: 'Node'}
+                ]
+            }
+
+            render () {
+                const arr = this.state.list
+                const list = this.state.contents
+                const listItem = []
+                // arr.map((item) => {
+                //     let lis = <li>{ item }</li>
+                //     listItem.push(lis)
+                // })
+                for (var i=0;i<arr.length;i++){
+                    let li = <li>{ arr[i] }</li>
+                    listItem.push(li)
+                }
+
+                for (var i=0;i<list.length;i++){
+                    let li = <li key={ list[i].id }>{ list[i].text }</li>
+                    listItem.push(li)
+                }
+
+                return <div>
+                        <ul>
+                            { listItem }
+                        </ul>
+                    </div>
+            }
+        }
+        ReactDOM.render(
+            <List/>, document.getElementById('app')
+        )
+    </script>
+</body>
+</html>

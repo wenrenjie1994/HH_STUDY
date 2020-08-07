@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对JS中原型链的学习</title>
+</head>
+<body>
+    <script type='text/javascript'>
+        // 创建实例对象的三种方式
+        // 方式1： 字面量
+        var myname = { name: 'Michael' }
+        var objname = new Object({ name: '小明'})
+        console.log(myname)
+        console.log(objname)
+
+        // 方式2：通过构造函数
+        var username = function(name) {
+            this.name = name
+        }
+        var user1 = new username('Turbo')
+        console.log(user1)
+
+        // 方式3：通过Object.create
+        var uname = { 
+            name: '布布',
+            isHuman: true,
+            printIntroduction: function() {
+                console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+            }
+        }
+        var user2 = Object.create(uname)
+        console.log(user2)
+
+        user2.printIntroduction()
+
+        username.prototype.sayHi = function() {
+            console.log('Hello nice to meet you!')
+        }
+
+        var user3 = new username('Coco')
+        console.log(user3)
+
+        var newName = function(func) {
+            var cc = Object.create(func.prototype)
+            var k = func.call(cc)
+            if (typeof k === 'object') {
+                return k
+            } else {
+                return cc
+            }
+        }
+    </script>
+</body>
+</html>
