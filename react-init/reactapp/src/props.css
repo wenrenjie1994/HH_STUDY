@@ -1,0 +1,10 @@
+.content {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
