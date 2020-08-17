@@ -20,10 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a9f793-99b8-48a2-adbe-7c4aa570b375" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day14-code/src/demo06/Demo1Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14-code/src/demo06/Demo2Integer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14-code/src/demo06/Demo3Integer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day15-code/day15-code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo01/Demo01Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo01/Demo02Iteration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo01/Demo03Foreach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/Demo01Fanxing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/Demo02Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/Demo03GenericMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/Demo04GenericInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/Demo05Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/Demo06Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/GenericClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/GenericInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/GenericInterfaceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/GenericInterfaceImpl2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day15-code/src/demo02/GenericMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/control/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/control/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/main/sysmain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/main/sysmain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/model/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Client/src/model/Resume.java" afterDir="false" />
@@ -34,9 +44,7 @@
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/util/Protocol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/work/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HR_SYS_4.0_Server/src/work/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day14-code/src/demo05/Demo01StringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/day14-code/src/demo05/Demo01StringBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +63,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="F:\IDEA\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1eRdBHOO8XzskkRqIBwT0OT03Eu" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -69,11 +84,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HR_SYS_4.0_Client/HR_SYS_4.0_Clinet.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="show.inlinked.gradle.project.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -95,13 +110,13 @@
       <recent name="E:\HH_STUDY-xianyuhong59017\xyh-study\base-code\HR_SYS_4.0_Clinet\src\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo3Integer">
-    <configuration name="Demo01StringBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo05.Demo01StringBuilder" />
-      <module name="day14-code" />
+  <component name="RunManager" selected="Application.Demo04GenericInterface">
+    <configuration name="Demo01Fanxing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo01Fanxing" />
+      <module name="day15-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo05.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +124,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo01System" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo04.Demo01System" />
-      <module name="day14-code" />
+    <configuration name="Demo02Generic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo02Generic" />
+      <module name="day15-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo04.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +137,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo1Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo06.Demo1Main" />
-      <module name="day14-code" />
+    <configuration name="Demo03Foreach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo01.Demo03Foreach" />
+      <module name="day15-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo06.*" />
+          <option name="PATTERN" value="demo01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,12 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo2Integer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo06.Demo2Integer" />
-      <module name="day14-code" />
+    <configuration name="Demo03GenericMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo03GenericMethod" />
+      <module name="day15-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo06.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,33 +163,159 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo3Integer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="demo06.Demo3Integer" />
-      <module name="day14-code" />
+    <configuration name="Demo04GenericInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo02.Demo04GenericInterface" />
+      <module name="day15-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="demo06.*" />
+          <option name="PATTERN" value="demo02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat7.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.54" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_base-code" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56400" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_base-code" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56400" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Demo01System" />
-      <item itemvalue="Application.Demo01StringBuilder" />
-      <item itemvalue="Application.Demo1Main" />
-      <item itemvalue="Application.Demo2Integer" />
-      <item itemvalue="Application.Demo3Integer" />
+      <item itemvalue="Application.Demo03Foreach" />
+      <item itemvalue="Application.Demo01Fanxing" />
+      <item itemvalue="Application.Demo02Generic" />
+      <item itemvalue="Application.Demo03GenericMethod" />
+      <item itemvalue="Application.Demo04GenericInterface" />
+      <item itemvalue="Tomcat Server.Tomcat7.0.54" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo3Integer" />
-        <item itemvalue="Application.Demo2Integer" />
-        <item itemvalue="Application.Demo1Main" />
-        <item itemvalue="Application.Demo01StringBuilder" />
-        <item itemvalue="Application.Demo01System" />
+        <item itemvalue="Application.Demo04GenericInterface" />
+        <item itemvalue="Application.Demo03GenericMethod" />
+        <item itemvalue="Application.Demo02Generic" />
+        <item itemvalue="Application.Demo01Fanxing" />
+        <item itemvalue="Application.Demo03Foreach" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +354,15 @@
       <workItem from="1596442648832" duration="46000" />
       <workItem from="1596442833422" duration="18000" />
       <workItem from="1596442897453" duration="111000" />
-      <workItem from="1596443283702" duration="4646000" />
+      <workItem from="1596443283702" duration="5468000" />
+      <workItem from="1597196040094" duration="242000" />
+      <workItem from="1597197414343" duration="44000" />
+      <workItem from="1597197602965" duration="174000" />
+      <workItem from="1597197799118" duration="1058000" />
+      <workItem from="1597211127672" duration="14520000" />
+      <workItem from="1597235437209" duration="2603000" />
+      <workItem from="1597319797715" duration="8775000" />
+      <workItem from="1597633512625" duration="3007000" />
     </task>
     <servers />
   </component>
@@ -245,10 +394,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="171" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1594613533768" />
-    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594548616289">
+    <state x="474" y="225" key="#Tomcat_Server" timestamp="1597234772751">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="133" y="10" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548616289" />
+    <state x="474" y="225" key="#Tomcat_Server/0.0.1366.728@0.0.1366.728" timestamp="1597234772751" />
+    <state x="478" y="110" key="#Web_Browsers" timestamp="1597234755661">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="478" y="110" key="#Web_Browsers/0.0.1366.728@0.0.1366.728" timestamp="1597234755661" />
+    <state x="142" y="18" width="1146" height="707" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597234818476">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="142" y="18" width="1146" height="707" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1597234818476" />
     <state x="401" y="148" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595129219809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -257,34 +414,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="409" y="0" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1594548458424" />
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1596108986342">
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1597320567324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596108986342" />
+    <state x="441" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597320567324" />
     <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595167488495">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="323" y="210" width="719" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1595167488495" />
-    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1595209767424">
+    <state x="410" y="0" key="FileChooserDialogImpl" timestamp="1597234767353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595209767424" />
-    <state width="1313" height="99" key="GridCell.Tab.0.bottom" timestamp="1596445948576">
+    <state x="410" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597234767353" />
+    <state width="627" height="142" key="GridCell.Tab.0.bottom" timestamp="1597392837792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="99" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596445948576" />
-    <state width="1313" height="99" key="GridCell.Tab.0.center" timestamp="1596445948575">
+    <state width="627" height="142" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597392837792" />
+    <state width="627" height="142" key="GridCell.Tab.0.center" timestamp="1597392837791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="99" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596445948575" />
-    <state width="1313" height="99" key="GridCell.Tab.0.left" timestamp="1596445948575">
+    <state width="627" height="142" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597392837791" />
+    <state width="627" height="142" key="GridCell.Tab.0.left" timestamp="1597392837791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="99" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596445948575" />
-    <state width="1313" height="99" key="GridCell.Tab.0.right" timestamp="1596445948576">
+    <state width="627" height="142" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597392837791" />
+    <state width="627" height="142" key="GridCell.Tab.0.right" timestamp="1597392837792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1313" height="99" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596445948576" />
+    <state width="627" height="142" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597392837792" />
     <state width="1313" height="207" key="GridCell.Tab.1.bottom" timestamp="1595756471669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -309,26 +466,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="262" y="0" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595169318013" />
-    <state x="35" y="0" key="SettingsEditor" timestamp="1596446089495">
+    <state x="48" y="0" key="SettingsEditor" timestamp="1597234834742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596446089495" />
+    <state x="48" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597234834742" />
+    <state x="426" y="0" width="956" height="490" maximized="true" key="dock-window-1" timestamp="1597230952144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="426" y="0" width="956" height="490" maximized="true" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1597230952144" />
     <state x="312" y="39" width="742" height="650" key="find.popup" timestamp="1595166126115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="312" y="39" width="742" height="650" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595166126115" />
-    <state x="0" y="0" key="new project wizard" timestamp="1596446086524">
+    <state x="0" y="0" key="new project wizard" timestamp="1597278509145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1596446086524" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1597278509145" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1594539911419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594539911419" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1596192530670">
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1597220790465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596192530670" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597220790465" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
