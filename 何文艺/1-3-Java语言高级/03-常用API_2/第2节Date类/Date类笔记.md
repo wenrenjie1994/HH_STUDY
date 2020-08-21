@@ -69,7 +69,7 @@ public class DateDemo {
 
 2.parse方法：把文本解析为Date日期  
 注意：public Date parse(String source) throws ParseException  
-parse方法声明了一个异常交ParseException，如果字符串和构造方法的模式不一样，那么程序就会抛出此异常
+parse方法声明了一个异常叫ParseException，如果字符串和构造方法的模式不一样，那么程序就会抛出此异常
 调用一个抛出了异常的方法时，我们就必须处理这个异常，要么throws继续抛出这个异常，要么try...catch自己处理  
 
 ```java

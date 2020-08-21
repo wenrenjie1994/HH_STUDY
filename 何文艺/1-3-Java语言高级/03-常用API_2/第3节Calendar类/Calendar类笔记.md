@@ -7,7 +7,7 @@
 java.util.Calendar类：日历类  
 Calendar类是一个抽象类，里面提供了很多操作日历字段的方法（YEAR、MONTH、DAY_OF_MONTH、HOUR等等）  
 Calendar类无法直接创建对象使用，里面有一个静态方法叫Calendar.getInstance()，该方法返回了Calendar类的子类对象  
-static Calendar	getInstance()：使用默认时区和语言环境设获取日历  
+static Calendar getInstance()：使用默认时区和语言环境设获取日历  
 
 **二、Calendar类的常用成员方法**  
 1.public int get(int field)：返回给定日历字段的值  

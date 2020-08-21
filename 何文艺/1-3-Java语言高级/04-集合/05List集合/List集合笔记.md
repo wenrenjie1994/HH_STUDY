@@ -33,8 +33,8 @@ c.增强for循环
 **三、LinkedList集合**  
 java.util.LinkedList集合 implements List接口  
 LinkedList集合的特点：  
-1.底层是链表结构：查询慢，增删慢  
-2.该集合包含了大量操作收尾元素的方法  
+1.底层是链表结构：查询慢，增删快  
+2.该集合包含了大量操作首尾元素的方法  
 
 注意：使用LinkedList特有的方法，不能使用多态  
 
