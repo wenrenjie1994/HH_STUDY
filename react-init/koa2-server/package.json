@@ -1,0 +1,19 @@
+{
+  "name": "koa2-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "description": "",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-better-body": "^3.3.9",
+    "koa-convert": "^1.2.0",
+    "koa-router": "^9.1.0"
+  }
+}

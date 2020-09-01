@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React中使用ref实现父组件访问子组件中的状态</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class ParentComponent extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    domInputValue: 'Hello komi'
+                }
+            }
+
+            /**
+             *  受控表单元素(这些元素表单状态的变化是由React控制的)
+             *  如input中的value checkbox、radio中的selected
+             *  select.option中的selected
+             *  转为非受控表单元素，将value换成defaultValue
+             */
+
+            // 1、初始化一个状态
+            // 2、绑定 3、onChange事件
+            componentDidMount () {
+                console.log(this.refs.reactChild.state.key)
+                console.log(this.refs.domInput.value)
+            }
+
+            handleChange(e) {
+                console.log(e.target.value)
+                console.log(this.refs.domInput.value)
+                console.log(this.state.domInputValue)
+
+                this.setState({
+                    domInputValue: this.refs.domInput.value
+                })
+            }
+            render () {
+                return (
+                    <div>
+                        <ChildComponent ref='reactChild' />
+                        <input ref="domInput" type='text' value={ this.state.domInputValue } onChange={ this.handleChange.bind(this) }/>
+                    </div>
+                );
+            }
+           
+        }
+
+        class ChildComponent extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    key: 100
+                }
+            }
+
+            render () {
+                return (
+                    <div>
+                        <input type="button" value="我是子组件"/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<ParentComponent/>, document.querySelector('#app'))
+    </script>
+</body>
+</html>

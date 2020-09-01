@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React中ref的三种使用方式</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        /**
+         * React中ref的三种使用方式：
+         * 1、字符串的方式
+         * 2、回调函数(推荐)
+         * 3、React.createRef()：使用ref的current属性拿到这个节点
+         */
+        class StringComponent extends React.Component {
+
+            handleClick = () => {
+                console.log(this.refs.stringInput.value)
+            }
+            render () {
+                return (
+                    <div>
+                        <h1>我是字符串方式使用ref</h1>
+                        <input type="text" placeholder="请输入" ref="stringInput" />
+                        <button onClick= { this.handleClick } >点我获取输入框的值</button>
+                    </div>
+                );
+            }
+        }
+
+        class CallbackComponent extends React.Component {
+            fn = () => {
+                console.log(this.txtInput.value)
+            }
+
+            render () {
+                return (
+                    <div>
+                        <h1>我是使用回调函数的方式使用ref</h1>
+                        <input type="text" placeholder="请输入" ref={ (input) => {this.txtInput = input}} />
+                        <button onClick= { this.fn } >点我获取输入框的值</button>
+                    </div>
+                );
+            }
+        }
+
+        class CreateRefComponent extends React.Component {
+            constructor(props) {
+                super(props)
+                this.myref = React.createRef()
+            }
+            click = () => {
+                console.log(this.myref.current.value)
+            }
+            render (){
+                return (
+                    <div>
+                        <h1>我是使用React.createRef的方式使用ref</h1>
+                        <input type="text" placeholder="请输入" ref={ this.myref } />
+                        <button onClick= { this.click } >点我获取输入框的值</button>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<CreateRefComponent />, document.getElementById('app'))
+    </script>
+</body>
+</html>
