@@ -58,7 +58,7 @@ public class CodeGenerator {
 
         //包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.spdb");
+        pc.setParent("com.cuit");
         pc.setMapper("dao");
         pc.setEntity("pojo.domain");
         mpg.setPackageInfo(pc);
@@ -142,7 +142,7 @@ public class MybatisPlusConfig {
 
 通用枚举：
 在配置文件resources/application.yml中加入配置扫描：
-type-enums-package: com.spdb.enums
+type-enums-package: com.cuit.enums
 加入配置类（不加的化枚举值默认就是枚举名）
 @Configuration
 public class EnumConfig {

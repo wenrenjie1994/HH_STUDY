@@ -17,7 +17,7 @@ public class LogAspect {
      *
      * @author: liwenyi
      */
-    @Pointcut("execution(* com.spdb.controller.*.*(..))")
+    @Pointcut("execution(* com.cuit.controller.*.*(..))")
     public void controllerLog(){}   //签名，可以理解成这个切入点的一个名称
 
     /**

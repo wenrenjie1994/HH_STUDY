@@ -14,13 +14,13 @@ spring:
     time-zone: GMT+8
 
 logging:
-  file: E:/spdb/HH_STUDY/李文义/个人代码/最终lowbsys/logs/lowbsys.log
+  #file: E:/cuit/HH_STUDY/李文义/个人代码/最终lowbsys/logs/lowbsys.log
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} %thread %logger{50} %msg%n"
   level:
     com:
-      spdb:
-        mapper: debug  #只打印sql语句和入参数据的配置,com.spdb.mapper为MyBatis接口interface包的路径
+      cuit:
+        mapper: debug  #只打印sql语句和入参数据的配置,com.cuit.mapper为MyBatis接口interface包的路径
 
 mybatis-plus:
   global-config:

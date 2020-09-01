@@ -10,7 +10,7 @@
         <version>2.1.12.RELEASE</version>
     </parent>
 
-    <groupId>com.spdb</groupId>
+    <groupId>com.cuit</groupId>
     <artifactId>lowbsysweb</artifactId>
     <version>1.0-SNAPSHOT</version>
 
