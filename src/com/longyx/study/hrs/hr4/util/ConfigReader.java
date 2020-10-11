@@ -1,4 +1,4 @@
-package com.spdb.study.hrs.hr4.util;
+package com.longyx.study.hrs.hr4.util;
 
 import java.io.InputStream;
 import java.util.Properties;

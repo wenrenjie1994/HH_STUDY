@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v1.service;
+package com.longyx.study.design.pattern.adapter.loginadapter.v1.service;
 
 /**
  * @author Mr.Longyx

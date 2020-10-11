@@ -1,4 +1,4 @@
-package com.spdb.study.java8.future;
+package com.longyx.study.java8.future;
 
 /**
  * 一旦你有值，就调用此方法通知到我

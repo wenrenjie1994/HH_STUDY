@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.memento.general;
+package com.longyx.study.design.pattern.memento.general;
 
 /**
  * 备忘录模式的适用场景：

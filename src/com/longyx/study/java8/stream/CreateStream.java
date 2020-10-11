@@ -1,4 +1,4 @@
-package com.spdb.study.java8.stream;
+package com.longyx.study.java8.stream;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -51,7 +51,7 @@ public class CreateStream {
 
     private static Stream<String> createStreamFromFile(){
         //此处需要文件路径
-        Path path = Paths.get("E:/github/HH_STUDY/src/com/spdb/study/design/pattern/proxy/dynamicproxy/spdbproxy/$Proxy0.java");
+        Path path = Paths.get("E:/github/HH_STUDY/src/com/longyx/study/design/pattern/proxy/dynamicproxy/longyxproxy/$Proxy0.java");
         try(Stream<String> lines = Files.lines(path)) {
             lines.forEach(System.out::println);
             return lines;

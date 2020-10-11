@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.proxy.dynamicproxy.jdkproxy;
+package com.longyx.study.design.pattern.proxy.dynamicproxy.jdkproxy;
 
-import com.spdb.study.design.pattern.proxy.staticproxy.Person;
+import com.longyx.study.design.pattern.proxy.staticproxy.Person;
 
 /**
  *

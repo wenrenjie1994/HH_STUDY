@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.course.safe;
+package com.longyx.study.design.pattern.composite.course.safe;
 
 /**
  * 顶层设计 抽象类 组合模式强调的是整体-部分的关系

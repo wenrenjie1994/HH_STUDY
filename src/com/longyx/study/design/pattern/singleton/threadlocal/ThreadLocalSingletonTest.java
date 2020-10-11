@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.singleton.threadlocal;
+package com.longyx.study.design.pattern.singleton.threadlocal;
 
-import com.spdb.study.thread.ExecutorThread;
+import com.longyx.study.thread.ExecutorThread;
 
 /**
  * @author Mr.Longyx

@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v2.adapters;
+package com.longyx.study.design.pattern.adapter.loginadapter.v2.adapters;
 
-import com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg;
+import com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg;
 
 /**
  * 在适配器里面，这个接口可有可无

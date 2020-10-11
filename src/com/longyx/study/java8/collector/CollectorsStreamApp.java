@@ -1,12 +1,12 @@
-package com.spdb.study.java8.collector;
+package com.longyx.study.java8.collector;
 
-import com.spdb.study.java8.stream.Dish;
+import com.longyx.study.java8.stream.Dish;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
-import static com.spdb.study.java8.collector.CollectorsAction.menu;
+import static com.longyx.study.java8.collector.CollectorsAction.menu;
 /**
  * @author Mr.Longyx
  * @date 2020年07月08日 13:13

@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.liskosubstitution.methodparam;
+package com.longyx.study.design.principle.liskosubstitution.methodparam;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.spdb.study.reflect;
+package com.longyx.study.reflect;
 
 /**
  * 执行一个类中全部以@Test标注的方法

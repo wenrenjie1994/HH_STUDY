@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v2;
+package com.longyx.study.design.pattern.adapter.loginadapter.v2;
 
-import com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg;
+import com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg;
 
 /**
  * 仅进行扩展的接口
@@ -38,7 +38,7 @@ public interface PassportForThird {
      * @author Mr.Longyx
      * @date 2020/7/2 20:38
      * @param id
-     * @return com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg
+     * @return com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg
      */
     ResultMsg loginForSina(String id);
 

@@ -1,13 +1,13 @@
-package com.spdb.study.java8.collector;
+package com.longyx.study.java8.collector;
 
-import com.spdb.study.java8.stream.Dish;
+import com.longyx.study.java8.stream.Dish;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
-import static com.spdb.study.java8.collector.CollectorsAction.menu;
+import static com.longyx.study.java8.collector.CollectorsAction.menu;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 

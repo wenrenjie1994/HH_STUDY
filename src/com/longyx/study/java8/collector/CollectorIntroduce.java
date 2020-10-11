@@ -1,6 +1,6 @@
-package com.spdb.study.java8.collector;
+package com.longyx.study.java8.collector;
 
-import com.spdb.study.java8.lambda.Apple;
+import com.longyx.study.java8.lambda.Apple;
 
 import java.util.*;
 import java.util.stream.Collectors;

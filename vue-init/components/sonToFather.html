@@ -11,7 +11,7 @@
     <body>
         <div id="app">
             父组件
-            <child v-on:myevent="handleEvent($event)"></child>
+            <child v-on:myevent="handleEvent($event)"4></child>
         </div>
         <script>
             //定义全局组件
@@ -35,7 +35,7 @@
             })
 
             var app = new Vue({
-                el: "#app",
+                el: "#app", 
                 methods: {
                     handleEvent(eve){
                         console.log("父组件成功接收子组件状态",eve)

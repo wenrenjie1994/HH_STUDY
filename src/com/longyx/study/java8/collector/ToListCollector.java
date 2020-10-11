@@ -1,4 +1,4 @@
-package com.spdb.study.java8.collector;
+package com.longyx.study.java8.collector;
 
 import java.util.*;
 import java.util.function.BiConsumer;

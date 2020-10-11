@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.openclose;
+package com.longyx.study.design.principle.openclose;
 
 import java.math.BigDecimal;
 

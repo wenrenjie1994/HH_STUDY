@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.responsibility.interfaced;
+package com.longyx.study.design.principle.responsibility.interfaced;
 
 /**
  * 展示职能

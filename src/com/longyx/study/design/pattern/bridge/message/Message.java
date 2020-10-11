@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.bridge.message;
+package com.longyx.study.design.pattern.bridge.message;
 
 /**
  * @author Mr.Longyx

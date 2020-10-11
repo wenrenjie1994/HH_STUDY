@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.general.safe;
+package com.longyx.study.design.pattern.composite.general.safe;
 
 import java.util.ArrayList;
 import java.util.List;

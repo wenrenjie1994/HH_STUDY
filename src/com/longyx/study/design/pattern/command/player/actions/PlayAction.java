@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.command.player.actions;
+package com.longyx.study.design.pattern.command.player.actions;
 
-import com.spdb.study.design.pattern.command.player.Action;
-import com.spdb.study.design.pattern.command.player.Player;
+import com.longyx.study.design.pattern.command.player.Action;
+import com.longyx.study.design.pattern.command.player.Player;
 
 /**
  * @author Mr.Longyx

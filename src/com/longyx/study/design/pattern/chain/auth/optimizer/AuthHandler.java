@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.chain.auth.optimizer;
+package com.longyx.study.design.pattern.chain.auth.optimizer;
 
-import com.spdb.study.design.pattern.chain.auth.old.User;
+import com.longyx.study.design.pattern.chain.auth.old.User;
 
 /**
  * @author Mr.Longyx

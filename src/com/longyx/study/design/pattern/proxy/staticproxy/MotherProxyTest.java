@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.proxy.staticproxy;
+package com.longyx.study.design.pattern.proxy.staticproxy;
 
 /**
  * @author Mr.Longyx

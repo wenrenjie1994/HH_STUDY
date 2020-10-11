@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.iterator.book;
+package com.longyx.study.design.pattern.iterator.book;
 
-import com.spdb.study.design.pattern.bridge.course.Course;
+import com.longyx.study.design.pattern.bridge.course.Course;
 
 /**
  * @author Mr.Longyx

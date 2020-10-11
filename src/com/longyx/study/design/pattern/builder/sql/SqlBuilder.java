@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.builder.sql;
+package com.longyx.study.design.pattern.builder.sql;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;

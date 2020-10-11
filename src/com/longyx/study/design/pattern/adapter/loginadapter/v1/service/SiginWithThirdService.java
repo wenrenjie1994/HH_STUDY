@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v1.service;
+package com.longyx.study.design.pattern.adapter.loginadapter.v1.service;
 
-import com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg;
+import com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg;
 
 /**
  * 第三方形式

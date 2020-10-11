@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.register;
+package com.longyx.study.design.pattern.singleton.register;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package com.spdb.study.java8.future;
+package com.longyx.study.java8.future;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
@@ -57,7 +57,7 @@ public class FutureTask {
      * @author Mr.Longyx
      * @date 2020/7/9 14:04
      * @param callable
-     * @return com.spdb.study.java8.future.FutureTask.Future<T>
+     * @return com.longyx.study.java8.future.FutureTask.Future<T>
      */
     private static <T> Future<T> invoke(Callable<T> callable){
         AtomicReference<T> result = new AtomicReference<>();

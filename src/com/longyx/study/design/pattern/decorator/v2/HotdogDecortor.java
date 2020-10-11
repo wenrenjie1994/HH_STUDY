@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.decorator.v2;
+package com.longyx.study.design.pattern.decorator.v2;
 
 /**
  * @author Mr.Longyx

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.command.player;
+package com.longyx.study.design.pattern.command.player;
 
 /**
  * @author Mr.Longyx

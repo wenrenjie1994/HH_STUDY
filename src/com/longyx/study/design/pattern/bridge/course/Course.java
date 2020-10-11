@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.bridge.course;
+package com.longyx.study.design.pattern.bridge.course;
 
 /**
  * @author Mr.Longyx

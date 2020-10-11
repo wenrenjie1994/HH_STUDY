@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.state.general.apply;
+package com.longyx.study.design.pattern.state.general.apply;
 
 /**
  * 抽象状态类 持有公共的行为

@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.delegate.mvc;
+package com.longyx.study.design.pattern.delegate.mvc;
 
-import com.spdb.study.design.pattern.delegate.mvc.controllers.MemberController;
+import com.longyx.study.design.pattern.delegate.mvc.controllers.MemberController;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

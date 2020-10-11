@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.builder.general;
+package com.longyx.study.design.pattern.builder.general;
 
 /**
  * 具体建造者

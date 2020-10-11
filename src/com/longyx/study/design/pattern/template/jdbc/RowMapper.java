@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.template.jdbc;
+package com.longyx.study.design.pattern.template.jdbc;
 
 import java.sql.ResultSet;
 

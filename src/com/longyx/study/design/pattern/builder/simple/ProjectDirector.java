@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.builder.simple;
+package com.longyx.study.design.pattern.builder.simple;
 
 /**
  * 将建房交给工程队去指导完成
@@ -28,21 +28,21 @@ public class ProjectDirector {
          * 1、打好地基
          * @author Mr.Longyx
          * @date 2020/7/5 10:44
-         * @return com.spdb.study.design.pattern.builder.simple.Building
+         * @return com.longyx.study.design.pattern.builder.simple.Building
          */
         builder.buildBasement();
         /**
          * 2、建造墙体
          * @author Mr.Longyx
          * @date 2020/7/5 10:45
-         * @return com.spdb.study.design.pattern.builder.simple.Building
+         * @return com.longyx.study.design.pattern.builder.simple.Building
          */
         builder.buildWall();
         /**
          * 封顶
          * @author Mr.Longyx
          * @date 2020/7/5 10:46
-         * @return com.spdb.study.design.pattern.builder.simple.Building
+         * @return com.longyx.study.design.pattern.builder.simple.Building
          */
         builder.buildRoof();
 

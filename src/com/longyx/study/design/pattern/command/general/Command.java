@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.command.general;
+package com.longyx.study.design.pattern.command.general;
 
 /**
  *抽象命令接口

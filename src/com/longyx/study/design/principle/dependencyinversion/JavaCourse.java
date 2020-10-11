@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.dependencyinversion;
+package com.longyx.study.design.principle.dependencyinversion;
 
 /**
  * @author Mr.Longyx

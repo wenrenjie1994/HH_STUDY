@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v2.adapters;
+package com.longyx.study.design.pattern.adapter.loginadapter.v2.adapters;
 
-import com.spdb.study.design.pattern.adapter.loginadapter.v2.PassportForThird;
-import com.spdb.study.design.pattern.adapter.loginadapter.v2.PassportForThirdAdapter;
+import com.longyx.study.design.pattern.adapter.loginadapter.v2.PassportForThird;
+import com.longyx.study.design.pattern.adapter.loginadapter.v2.PassportForThirdAdapter;
 
 /**
  * @author Mr.Longyx

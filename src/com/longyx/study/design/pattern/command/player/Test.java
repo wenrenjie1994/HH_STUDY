@@ -1,9 +1,9 @@
-package com.spdb.study.design.pattern.command.player;
+package com.longyx.study.design.pattern.command.player;
 
-import com.spdb.study.design.pattern.command.player.actions.PauseAction;
-import com.spdb.study.design.pattern.command.player.actions.PlayAction;
-import com.spdb.study.design.pattern.command.player.actions.SpeedAction;
-import com.spdb.study.design.pattern.command.player.actions.StopAction;
+import com.longyx.study.design.pattern.command.player.actions.PauseAction;
+import com.longyx.study.design.pattern.command.player.actions.PlayAction;
+import com.longyx.study.design.pattern.command.player.actions.SpeedAction;
+import com.longyx.study.design.pattern.command.player.actions.StopAction;
 
 /**
  * @author Mr.Longyx

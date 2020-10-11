@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.liskosubstitution.simple;
+package com.longyx.study.design.principle.liskosubstitution.simple;
 
 /**
  * 里氏替换原则：父类完全可以用子类来替换，结果不应该受到影响

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.file;
+package com.longyx.study.design.pattern.visitor.file;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -18,7 +18,7 @@ public class FileVisitorTest {
              * @author Mr.Longyx
              * @date 2020/7/12 23:15
              */
-            Files.walkFileTree(Paths.get("E:","github/HH_STUDY/src/com/spdb/study/design/pattern/visitor"), new SimpleFileVisitor<Path>(){
+            Files.walkFileTree(Paths.get("E:","github/HH_STUDY/src/com/longyx/study/design/pattern/visitor"), new SimpleFileVisitor<Path>(){
                 /**
                  * 访问子目录前触发该方法
                  * @author Mr.Longyx

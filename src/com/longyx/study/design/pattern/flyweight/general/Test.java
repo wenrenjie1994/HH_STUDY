@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.flyweight.general;
+package com.longyx.study.design.pattern.flyweight.general;
 
 /**
  * @author Mr.Longyx

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.adapter.loginadapter;
+package com.longyx.study.design.pattern.adapter.loginadapter;
 
 /**
  * 构建统一返回结果

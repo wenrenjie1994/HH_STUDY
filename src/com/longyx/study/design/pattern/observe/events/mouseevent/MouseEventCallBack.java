@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.observe.events.mouseevent;
+package com.longyx.study.design.pattern.observe.events.mouseevent;
 
-import com.spdb.study.design.pattern.observe.events.core.Event;
+import com.longyx.study.design.pattern.observe.events.core.Event;
 
 /**
  * 鼠标点击事件回调处理

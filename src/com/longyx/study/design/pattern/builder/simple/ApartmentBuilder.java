@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.builder.simple;
+package com.longyx.study.design.pattern.builder.simple;
 
 /**
  * 建造公寓

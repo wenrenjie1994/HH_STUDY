@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.interpreter.calculate;
+package com.longyx.study.design.pattern.interpreter.calculate;
 
 /**
  * @author Mr.Longyx
@@ -6,8 +6,8 @@ package com.spdb.study.design.pattern.interpreter.calculate;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("result: "+ new SpdbCalculator("10 + 50").calculate());
+        System.out.println("result: "+ new LongyxCalculator("10 + 50").calculate());
 
-        System.out.println("result: "+new SpdbCalculator("100 * 2 + 400 * 1 + 66").calculate());
+        System.out.println("result: "+new LongyxCalculator("100 * 2 + 400 * 1 + 66").calculate());
     }
 }

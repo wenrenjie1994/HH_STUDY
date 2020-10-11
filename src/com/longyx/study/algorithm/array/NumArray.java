@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.array;
+package com.longyx.study.algorithm.array;
 
 /**
  * 给定一个数组，返回该数组任意i到j之间数的和

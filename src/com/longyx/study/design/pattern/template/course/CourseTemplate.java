@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.template.course;
+package com.longyx.study.design.pattern.template.course;
 
 /**
  * 模板模式适用场景：

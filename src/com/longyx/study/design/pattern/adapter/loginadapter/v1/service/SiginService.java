@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v1.service;
+package com.longyx.study.design.pattern.adapter.loginadapter.v1.service;
 
-import com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg;
-import com.spdb.study.design.pattern.adapter.loginadapter.User;
+import com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg;
+import com.longyx.study.design.pattern.adapter.loginadapter.User;
 
 /**
  * @author Mr.Longyx
@@ -14,7 +14,7 @@ public class SiginService {
      * @date 2020/7/2 16:31
      * @param username
      * @param password
-     * @return com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg
+     * @return com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg
      */
     public ResultMsg regist(String username,String password){
         return new ResultMsg(200,"注册成功",new User());
@@ -26,7 +26,7 @@ public class SiginService {
      * @date 2020/7/2 16:32
      * @param username
      * @param password
-     * @return com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg
+     * @return com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg
      */
     public ResultMsg login(String username, String password){
         return new ResultMsg(200,"登录成功",new User());

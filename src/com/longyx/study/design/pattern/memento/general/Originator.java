@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.memento.general;
+package com.longyx.study.design.pattern.memento.general;
 
 /**
  * @author Mr.Longyx

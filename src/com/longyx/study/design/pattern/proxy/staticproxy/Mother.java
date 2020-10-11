@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.proxy.staticproxy;
+package com.longyx.study.design.pattern.proxy.staticproxy;
 
 /**
  * 静态代理的方式(不符合开闭原则)

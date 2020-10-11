@@ -1,6 +1,6 @@
-package com.spdb.study.hrs.hr4.manager;
+package com.longyx.study.hrs.hr4.manager;
 
-import com.spdb.study.hrs.hr4.dataobject.Performance;
+import com.longyx.study.hrs.hr4.dataobject.Performance;
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public interface PerformanceManager {
      * @author Mr.Longyx
      * @date 2020/7/25 13:23
      * @param employeeId 
-     * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+     * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
      */
     List<Performance> findPerformanceListByEmployeeId(int employeeId);
     
@@ -47,14 +47,14 @@ public interface PerformanceManager {
      * 查询每个考核类别下的最高绩效
      * @author Mr.Longyx
      * @date 2020/7/25 13:24 
-     * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+     * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
      */
     List<Performance> findHigherPerformanceList();
     /**
      * 查询前三名
      * @author Mr.Longyx
      * @date 2020/7/25 13:25 
-     * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+     * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
      */
     List<Performance> findPerformanceListTop3();
     /**
@@ -63,7 +63,7 @@ public interface PerformanceManager {
      * @date 2020/7/25 13:27
      * @param pageNum
      * @param pageSize
-     * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+     * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
      */
     List<Performance> findPerformanceList(int pageNum, int pageSize);
 }

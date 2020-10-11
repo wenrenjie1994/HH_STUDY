@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.mediator.general;
+package com.longyx.study.design.pattern.mediator.general;
 
 /**
  * 具体的中介处理类

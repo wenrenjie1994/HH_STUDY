@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.observe.events.core;
+package com.longyx.study.design.pattern.observe.events.core;
 
 import java.lang.reflect.Method;
 

@@ -1,7 +1,7 @@
-package com.spdb.study.hrs.hr3.manager;
+package com.longyx.study.hrs.hr3.manager;
 
-import com.spdb.study.hrs.hr3.dataobject.Department;
-import com.spdb.study.hrs.hr3.util.DbUtil;
+import com.longyx.study.hrs.hr3.dataobject.Department;
+import com.longyx.study.hrs.hr3.util.DbUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -190,7 +190,7 @@ public class DepartmentManager {
      * @author Mr.Longyx
      * @date 2020/7/21 22:28
      * @param departmentId
-     * @return com.spdb.study.hrs.hr2.dataobject.Department
+     * @return com.longyx.study.hrs.hr2.dataobject.Department
      */
     public Department findDepartmentById(int departmentId) {
         String sql = "select * from department where department_id=?";

@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.liskosubstitution.methodreturn;
+package com.longyx.study.design.principle.liskosubstitution.methodreturn;
 
 /**
  * @author Mr.Longyx

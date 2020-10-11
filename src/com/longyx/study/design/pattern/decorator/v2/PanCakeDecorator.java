@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.decorator.v2;
+package com.longyx.study.design.pattern.decorator.v2;
 
 /**
  * 后续用于扩展的装饰类

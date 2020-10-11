@@ -1,4 +1,4 @@
-package com.spdb.study.hrs.hr1.util;
+package com.longyx.study.hrs.hr1.util;
 
 import java.sql.*;
 

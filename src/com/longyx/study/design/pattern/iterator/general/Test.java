@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.iterator.general;
+package com.longyx.study.design.pattern.iterator.general;
 
 /**
  * @author Mr.Longyx

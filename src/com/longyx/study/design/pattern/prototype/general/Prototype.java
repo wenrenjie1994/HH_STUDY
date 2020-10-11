@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.prototype.general;
+package com.longyx.study.design.pattern.prototype.general;
 
 /**
  * 原型模式的适用场景：

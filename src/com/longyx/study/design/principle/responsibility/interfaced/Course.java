@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.responsibility.interfaced;
+package com.longyx.study.design.principle.responsibility.interfaced;
 
 /**
  * 此接口不符合单一职责原则

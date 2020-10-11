@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.general;
+package com.longyx.study.design.pattern.visitor.general;
 
 /**
  * @author Mr.Longyx

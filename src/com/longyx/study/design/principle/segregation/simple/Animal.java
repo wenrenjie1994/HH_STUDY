@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.segregation.simple;
+package com.longyx.study.design.principle.segregation.simple;
 
 /**
  * 接口隔离原则：用多个专门的接口，而不是使用单一的总接口

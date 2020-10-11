@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.interpreter.calculate;
+package com.longyx.study.design.pattern.interpreter.calculate;
 
-import com.spdb.study.design.pattern.interpreter.calculate.interpreters.*;
+import com.longyx.study.design.pattern.interpreter.calculate.interpreters.*;
 
 /**
  * @author Mr.Longyx

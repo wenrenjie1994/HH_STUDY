@@ -1,4 +1,4 @@
-package com.spdb.study.java8.stream;
+package com.longyx.study.java8.stream;
 
 import java.util.Arrays;
 import java.util.stream.Stream;

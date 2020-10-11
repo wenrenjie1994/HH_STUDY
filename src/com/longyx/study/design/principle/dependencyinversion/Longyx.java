@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.dependencyinversion;
+package com.longyx.study.design.principle.dependencyinversion;
 
 /**
  *依赖倒置原则：高层模块不应该依赖于低层模块，二者都应该依赖其抽象

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.command.saler;
+package com.longyx.study.design.pattern.command.saler;
 
 import java.util.ArrayList;
 import java.util.List;

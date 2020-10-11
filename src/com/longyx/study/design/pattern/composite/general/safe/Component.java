@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.general.safe;
+package com.longyx.study.design.pattern.composite.general.safe;
 
 // 抽象根节点
 public abstract class Component {

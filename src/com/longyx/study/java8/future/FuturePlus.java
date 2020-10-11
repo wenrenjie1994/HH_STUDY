@@ -1,4 +1,4 @@
-package com.spdb.study.java8.future;
+package com.longyx.study.java8.future;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
@@ -44,7 +44,7 @@ public class FuturePlus {
          * @author Mr.Longyx
          * @date 2020/7/9 14:34
          * @param callable
-         * @return com.spdb.study.java8.future.FuturePlus.Future<T>
+         * @return com.longyx.study.java8.future.FuturePlus.Future<T>
          */
         Future<T> future = new Future<T>() {
             private Completable<T> completable;

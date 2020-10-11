@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.flyweight.general;
+package com.longyx.study.design.pattern.flyweight.general;
 
 /**
  * 享元模式适用场景：

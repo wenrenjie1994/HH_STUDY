@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.simplefactory.fruit;
+package com.longyx.study.design.pattern.factory.simplefactory.fruit;
 
 /**
  * 采集水果接口类·

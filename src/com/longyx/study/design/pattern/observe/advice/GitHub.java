@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.observe.advice;
+package com.longyx.study.design.pattern.observe.advice;
 
 import java.util.Observable;
 

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.simplefactory.course;
+package com.longyx.study.design.pattern.factory.simplefactory.course;
 
 /**
  * 简单工厂

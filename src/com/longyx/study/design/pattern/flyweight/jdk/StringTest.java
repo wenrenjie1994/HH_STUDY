@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.flyweight.jdk;
+package com.longyx.study.design.pattern.flyweight.jdk;
 
 /**
  * JDK中String就应用了享元模式(共享常量池)

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.strategy.pay.payport;
+package com.longyx.study.design.pattern.strategy.pay.payport;
 
 /**
  * 支付宝支付

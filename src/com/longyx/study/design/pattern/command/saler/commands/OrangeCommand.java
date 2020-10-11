@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.command.saler.commands;
+package com.longyx.study.design.pattern.command.saler.commands;
 
-import com.spdb.study.design.pattern.command.saler.Command;
-import com.spdb.study.design.pattern.command.saler.Saler;
+import com.longyx.study.design.pattern.command.saler.Command;
+import com.longyx.study.design.pattern.command.saler.Saler;
 
 /**
  * @author Mr.Longyx

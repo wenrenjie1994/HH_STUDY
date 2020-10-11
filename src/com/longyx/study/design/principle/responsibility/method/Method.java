@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.responsibility.method;
+package com.longyx.study.design.principle.responsibility.method;
 
 /**
  * @author Mr.Longyx

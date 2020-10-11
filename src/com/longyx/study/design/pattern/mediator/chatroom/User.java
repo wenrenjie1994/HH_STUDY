@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.mediator.chatroom;
+package com.longyx.study.design.pattern.mediator.chatroom;
 
 import java.io.Serializable;
 

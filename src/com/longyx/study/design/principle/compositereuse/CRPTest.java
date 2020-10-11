@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.compositereuse;
+package com.longyx.study.design.principle.compositereuse;
 
 /**
  * 组合复用原则测试类

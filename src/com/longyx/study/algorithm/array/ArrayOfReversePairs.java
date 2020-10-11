@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.array;
+package com.longyx.study.algorithm.array;
 
 /**
  * 数组中的逆序对

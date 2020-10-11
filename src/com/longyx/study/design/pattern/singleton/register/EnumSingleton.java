@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.register;
+package com.longyx.study.design.pattern.singleton.register;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -24,7 +24,7 @@ public enum  EnumSingleton {
      * 访问点
      * @author Mr.Longyx
      * @date 2020/6/23 0:12
-     * @return com.spdb.study.design.pattern.singleton.register.EnumSingleton
+     * @return com.longyx.study.design.pattern.singleton.register.EnumSingleton
      */
     public static EnumSingleton getInstance(){
         return INSTANCE;

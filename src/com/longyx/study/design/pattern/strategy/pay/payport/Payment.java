@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.strategy.pay.payport;
+package com.longyx.study.design.pattern.strategy.pay.payport;
 
-import com.spdb.study.design.pattern.strategy.pay.MsgResult;
+import com.longyx.study.design.pattern.strategy.pay.MsgResult;
 
 /**
  * 支付的抽象

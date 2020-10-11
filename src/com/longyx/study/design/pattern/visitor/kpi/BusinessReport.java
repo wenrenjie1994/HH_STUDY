@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.kpi;
+package com.longyx.study.design.pattern.visitor.kpi;
 
 import com.sun.xml.internal.ws.api.pipe.Engine;
 

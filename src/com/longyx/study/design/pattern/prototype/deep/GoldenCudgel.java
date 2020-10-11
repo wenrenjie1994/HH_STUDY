@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.prototype.deep;
+package com.longyx.study.design.pattern.prototype.deep;
 
 import java.io.Serializable;
 

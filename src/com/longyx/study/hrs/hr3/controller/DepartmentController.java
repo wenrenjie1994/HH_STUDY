@@ -1,6 +1,6 @@
-package com.spdb.study.hrs.hr3.controller;
+package com.longyx.study.hrs.hr3.controller;
 
-import com.spdb.study.hrs.hr3.manager.DepartmentManager;
+import com.longyx.study.hrs.hr3.manager.DepartmentManager;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.proxy.dbroute;
+package com.longyx.study.design.pattern.proxy.dbroute;
 
 /**
  * @author Mr.Longyx

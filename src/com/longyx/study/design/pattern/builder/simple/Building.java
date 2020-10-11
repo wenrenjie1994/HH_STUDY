@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.builder.simple;
+package com.longyx.study.design.pattern.builder.simple;
 
 import java.io.Serializable;
 import java.util.ArrayList;

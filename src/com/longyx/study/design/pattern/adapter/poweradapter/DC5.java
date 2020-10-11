@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.adapter.poweradapter;
+package com.longyx.study.design.pattern.adapter.poweradapter;
 
 /**
  * 直流5V(新标准)

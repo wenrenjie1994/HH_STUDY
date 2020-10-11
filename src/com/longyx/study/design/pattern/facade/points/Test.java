@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.facade.points;
+package com.longyx.study.design.pattern.facade.points;
 
-import com.spdb.study.design.pattern.facade.general.Facade;
+import com.longyx.study.design.pattern.facade.general.Facade;
 
 /**
  * @author Mr.Longyx

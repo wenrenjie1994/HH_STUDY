@@ -1,8 +1,8 @@
-package com.spdb.study.thread;
+package com.longyx.study.thread;
 
-import com.spdb.study.design.pattern.singleton.lazy.LazyDoubleCheckSingleton;
-import com.spdb.study.design.pattern.singleton.lazy.LazySingleton;
-import com.spdb.study.design.pattern.singleton.threadlocal.ThreadLocalSingleton;
+import com.longyx.study.design.pattern.singleton.lazy.LazyDoubleCheckSingleton;
+import com.longyx.study.design.pattern.singleton.lazy.LazySingleton;
+import com.longyx.study.design.pattern.singleton.threadlocal.ThreadLocalSingleton;
 
 /**
  * 用两个线程来模拟线程安全问题

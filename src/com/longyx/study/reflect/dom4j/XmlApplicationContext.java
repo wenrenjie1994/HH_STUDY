@@ -1,4 +1,4 @@
-package com.spdb.study.reflect.dom4j;
+package com.longyx.study.reflect.dom4j;
 
 import org.dom4j.Document;
 import org.dom4j.Element;

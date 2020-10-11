@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.park;
+package com.longyx.study.design.pattern.visitor.park;
 
 /**
  * 管理员 负责查看整片公园卫生情况

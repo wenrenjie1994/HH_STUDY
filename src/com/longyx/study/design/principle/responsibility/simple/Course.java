@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.responsibility.simple;
+package com.longyx.study.design.principle.responsibility.simple;
 
 /**
  * 单一职责原则：不要存在多于一个导致类变更的原因

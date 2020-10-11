@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.chain.auth.builderchain;
+package com.longyx.study.design.pattern.chain.auth.builderchain;
 
-import com.spdb.study.design.pattern.chain.auth.old.User;
+import com.longyx.study.design.pattern.chain.auth.old.User;
 
 /**
  * 责任链模式(权限验证框架中广泛使用，如Spring Security,Oauth2,Apache Shiro)

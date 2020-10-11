@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.chain.auth.builderchain;
+package com.longyx.study.design.pattern.chain.auth.builderchain;
 
 /**
  * @author Mr.Longyx

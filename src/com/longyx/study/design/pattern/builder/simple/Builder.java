@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.builder.simple;
+package com.longyx.study.design.pattern.builder.simple;
 
 /**
  * 顶层设计  建造者模式

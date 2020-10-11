@@ -1,7 +1,7 @@
-package com.spdb.study.hrs.hr4.controller;
+package com.longyx.study.hrs.hr4.controller;
 
-import com.spdb.study.hrs.hr4.dataobject.Performance;
-import com.spdb.study.hrs.hr4.manager.PerformanceManager;
+import com.longyx.study.hrs.hr4.dataobject.Performance;
+import com.longyx.study.hrs.hr4.manager.PerformanceManager;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class PerformanceController {
      */
     static {
         try {
-            Class<?> clazz = Class.forName("com.spdb.study.hrs.hr4.manager.impl.PerformanceManagerImpl");
+            Class<?> clazz = Class.forName("com.longyx.study.hrs.hr4.manager.impl.PerformanceManagerImpl");
             Object obj = clazz.newInstance();
             performanceManager = (PerformanceManager) obj;
         }catch (Exception e) {

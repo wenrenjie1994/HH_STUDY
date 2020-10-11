@@ -1,7 +1,7 @@
-package com.spdb.study.reflect.dom4j;
+package com.longyx.study.reflect.dom4j;
 
-import com.spdb.study.reflect.BaseMethod;
-import com.spdb.study.reflect.TestCase;
+import com.longyx.study.reflect.BaseMethod;
+import com.longyx.study.reflect.TestCase;
 
 /**
  * @author Mr.Longyx

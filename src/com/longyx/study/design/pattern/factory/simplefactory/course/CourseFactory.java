@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.simplefactory.course;
+package com.longyx.study.design.pattern.factory.simplefactory.course;
 
 /**
  * @author Mr.Longyx
@@ -10,7 +10,7 @@ public class CourseFactory {
      * @author Mr.Longyx
      * @date 2020/6/21 13:58
      * @param className
-     * @return com.spdb.study.design.pattern.factory.simpleFasctory.ICourse
+     * @return com.longyx.study.design.pattern.factory.simpleFasctory.ICourse
      */
 //    public ICourse choice(String name) {
 //        if ("java".equals(name)){
@@ -24,7 +24,7 @@ public class CourseFactory {
      * @author Mr.Longyx
      * @date 2020/6/21 14:02
      * @param className
-     * @return com.spdb.study.design.pattern.factory.simpleFasctory.ICourse
+     * @return com.longyx.study.design.pattern.factory.simpleFasctory.ICourse
      */
 
 //    public ICourse choice(String className){

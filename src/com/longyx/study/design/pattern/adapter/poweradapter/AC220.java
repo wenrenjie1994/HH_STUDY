@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.adapter.poweradapter;
+package com.longyx.study.design.pattern.adapter.poweradapter;
 
 /**
  * 交流220V

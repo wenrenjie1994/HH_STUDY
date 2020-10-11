@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.observe.events.mouseevent;
+package com.longyx.study.design.pattern.observe.events.mouseevent;
 
-import com.spdb.study.design.pattern.observe.events.core.EventListener;
+import com.longyx.study.design.pattern.observe.events.core.EventListener;
 
 /**
  * @author Mr.Longyx

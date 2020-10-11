@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.state.zhihu;
+package com.longyx.study.design.pattern.state.zhihu;
 
 /**
  * @author Mr.Longyx

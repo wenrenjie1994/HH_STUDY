@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.demeter;
+package com.longyx.study.design.principle.demeter;
 
 /**
  * @author Mr.Longyx

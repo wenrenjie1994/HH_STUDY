@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.queue;
+package com.longyx.study.algorithm.queue;
 
 import java.util.Stack;
 

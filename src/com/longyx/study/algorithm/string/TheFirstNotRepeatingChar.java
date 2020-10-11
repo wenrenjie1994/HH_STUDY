@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.string;
+package com.longyx.study.algorithm.string;
 
 /**
  *  查找第一个只出现一次的字符(数组)

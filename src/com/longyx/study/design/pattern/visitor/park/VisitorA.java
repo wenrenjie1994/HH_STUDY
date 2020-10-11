@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.park;
+package com.longyx.study.design.pattern.visitor.park;
 
 /**
  * 清洁工A 负责parkA的卫生情况

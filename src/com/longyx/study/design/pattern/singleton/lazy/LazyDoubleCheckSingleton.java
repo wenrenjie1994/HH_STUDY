@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.lazy;
+package com.longyx.study.design.pattern.singleton.lazy;
 
 /**
  * 懒汉式单例(双重检查方式)

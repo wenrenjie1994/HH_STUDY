@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.chain.auth.optimizer;
+package com.longyx.study.design.pattern.chain.auth.optimizer;
 
 /**
  * @author Mr.Longyx

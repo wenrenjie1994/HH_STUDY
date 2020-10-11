@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.strategy.pay;
-import com.spdb.study.design.pattern.strategy.pay.payport.Payment;
-import com.spdb.study.design.pattern.strategy.pay.payport.PayStrategy;
+package com.longyx.study.design.pattern.strategy.pay;
+import com.longyx.study.design.pattern.strategy.pay.payport.Payment;
+import com.longyx.study.design.pattern.strategy.pay.payport.PayStrategy;
 
 import java.io.Serializable;
 
@@ -28,7 +28,7 @@ public class Order implements Serializable {
      * @author Mr.Longyx
      * @date 2020/6/28 23:21
      * @param payKey
-     * @return com.spdb.study.design.pattern.strategy.pay.MsgResult
+     * @return com.longyx.study.design.pattern.strategy.pay.MsgResult
      */
     public MsgResult pay(String payKey){
         Payment pay = PayStrategy.get(payKey);

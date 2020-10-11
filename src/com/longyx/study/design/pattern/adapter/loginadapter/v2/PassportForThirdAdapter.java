@@ -1,8 +1,8 @@
-package com.spdb.study.design.pattern.adapter.loginadapter.v2;
+package com.longyx.study.design.pattern.adapter.loginadapter.v2;
 
-import com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg;
-import com.spdb.study.design.pattern.adapter.loginadapter.v1.service.SiginService;
-import com.spdb.study.design.pattern.adapter.loginadapter.v2.adapters.*;
+import com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg;
+import com.longyx.study.design.pattern.adapter.loginadapter.v1.service.SiginService;
+import com.longyx.study.design.pattern.adapter.loginadapter.v2.adapters.*;
 
 /**
  * 结合策略模式+工厂模式+适配器模式实现可以兼容多平台登陆的业务场景
@@ -48,7 +48,7 @@ public class PassportForThirdAdapter extends SiginService implements PassportFor
      * @date 2020/7/2 17:33
      * @param key
      * @param clazz
-     * @return com.spdb.study.design.pattern.adapter.loginadapter.ResultMsg
+     * @return com.longyx.study.design.pattern.adapter.loginadapter.ResultMsg
      */
     private ResultMsg processLogin(String key, Class<? extends LoginAdapter> clazz){
         try {

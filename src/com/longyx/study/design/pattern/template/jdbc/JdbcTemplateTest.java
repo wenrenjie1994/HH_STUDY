@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.template.jdbc;
+package com.longyx.study.design.pattern.template.jdbc;
 
-import com.spdb.study.design.pattern.template.jdbc.dao.UserDao;
+import com.longyx.study.design.pattern.template.jdbc.dao.UserDao;
 
 import java.util.List;
 

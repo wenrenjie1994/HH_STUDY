@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.dispatch.staticdispatch;
+package com.longyx.study.design.pattern.visitor.dispatch.staticdispatch;
 
 /**
  * 静态分派(编译期间便确定了元素类型)

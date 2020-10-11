@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.adapter.loginadapter;
+package com.longyx.study.design.pattern.adapter.loginadapter;
 
 import java.io.Serializable;
 

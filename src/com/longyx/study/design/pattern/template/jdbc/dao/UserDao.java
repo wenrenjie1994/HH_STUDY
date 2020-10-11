@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.template.jdbc.dao;
+package com.longyx.study.design.pattern.template.jdbc.dao;
 
-import com.spdb.study.design.pattern.template.jdbc.JdbcTemplate;
-import com.spdb.study.design.pattern.template.jdbc.RowMapper;
+import com.longyx.study.design.pattern.template.jdbc.JdbcTemplate;
+import com.longyx.study.design.pattern.template.jdbc.RowMapper;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;

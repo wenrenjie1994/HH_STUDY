@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.factory.factorymethod.course;
+package com.longyx.study.design.pattern.factory.factorymethod.course;
 
-import com.spdb.study.design.pattern.factory.simplefactory.course.Course;
+import com.longyx.study.design.pattern.factory.simplefactory.course.Course;
 
 /**
  * 工厂方法模式：不同的产品用不同的工厂去创建，不同的工厂负责差异化的创建逻辑

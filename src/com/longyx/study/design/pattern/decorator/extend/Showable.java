@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.decorator.extend;
+package com.longyx.study.design.pattern.decorator.extend;
 
 /**
  * 顶层设计 引入装饰者模式(接口)

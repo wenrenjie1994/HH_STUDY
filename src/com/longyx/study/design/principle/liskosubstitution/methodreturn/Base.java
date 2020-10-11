@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.liskosubstitution.methodreturn;
+package com.longyx.study.design.principle.liskosubstitution.methodreturn;
 
 import java.util.Map;
 

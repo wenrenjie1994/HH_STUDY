@@ -1,13 +1,11 @@
-package com.spdb.study.design.pattern.proxy.dbroute.proxy;
+package com.longyx.study.design.pattern.proxy.dbroute.proxy;
 
-import com.spdb.study.design.pattern.proxy.dbroute.db.DynamicDataSource;
-import com.spdb.study.design.pattern.proxy.dynamicproxy.spdbproxy.SpdbClassLoader;
-import com.spdb.study.design.pattern.proxy.dynamicproxy.spdbproxy.SpdbInvocationHandler;
-import com.spdb.study.design.pattern.proxy.dynamicproxy.spdbproxy.SpdbProxy;
+import com.longyx.study.design.pattern.proxy.dbroute.db.DynamicDataSource;
+import com.longyx.study.design.pattern.proxy.dynamicproxy.longyxproxy.LongyxClassLoader;
+import com.longyx.study.design.pattern.proxy.dynamicproxy.longyxproxy.LongyxInvocationHandler;
+import com.longyx.study.design.pattern.proxy.dynamicproxy.longyxproxy.LongyxProxy;
 
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -16,14 +14,14 @@ import java.util.Date;
  * @author Mr.Longyx
  * @date 2020年06月26日 21:05
  */
-public class OrderServiceDynamicProxy implements SpdbInvocationHandler {
+public class OrderServiceDynamicProxy implements LongyxInvocationHandler {
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
     Object proxyObj;
 
     public Object getInstance(Object proxyObj){
         this.proxyObj = proxyObj;
         Class<?> clazz = proxyObj.getClass();
-        return SpdbProxy.newProxyInstance(new SpdbClassLoader(), clazz.getInterfaces(),this);
+        return LongyxProxy.newProxyInstance(new LongyxClassLoader(), clazz.getInterfaces(),this);
     }
 
     @Override

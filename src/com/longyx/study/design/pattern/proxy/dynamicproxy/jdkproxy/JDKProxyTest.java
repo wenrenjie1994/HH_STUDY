@@ -1,8 +1,8 @@
-package com.spdb.study.design.pattern.proxy.dynamicproxy.jdkproxy;
+package com.longyx.study.design.pattern.proxy.dynamicproxy.jdkproxy;
 import	java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.spdb.study.design.pattern.proxy.staticproxy.Person;
+import com.longyx.study.design.pattern.proxy.staticproxy.Person;
 import sun.misc.ProxyGenerator;
 
 /**

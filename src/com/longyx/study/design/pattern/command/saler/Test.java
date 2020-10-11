@@ -1,9 +1,9 @@
-package com.spdb.study.design.pattern.command.saler;
+package com.longyx.study.design.pattern.command.saler;
 
-import com.spdb.study.design.pattern.command.saler.commands.AppleCommand;
-import com.spdb.study.design.pattern.command.saler.commands.BananaCommand;
-import com.spdb.study.design.pattern.command.saler.commands.GrapeCommand;
-import com.spdb.study.design.pattern.command.saler.commands.OrangeCommand;
+import com.longyx.study.design.pattern.command.saler.commands.AppleCommand;
+import com.longyx.study.design.pattern.command.saler.commands.BananaCommand;
+import com.longyx.study.design.pattern.command.saler.commands.GrapeCommand;
+import com.longyx.study.design.pattern.command.saler.commands.OrangeCommand;
 
 /**
  * @author Mr.Longyx

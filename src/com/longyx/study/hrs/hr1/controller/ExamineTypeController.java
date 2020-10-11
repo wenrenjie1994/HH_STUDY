@@ -1,7 +1,7 @@
-package com.spdb.study.hrs.hr1.controller;
+package com.longyx.study.hrs.hr1.controller;
 
-import com.spdb.study.hrs.hr1.dataobject.ExamineType;
-import com.spdb.study.hrs.hr1.manager.ExamineTypeManager;
+import com.longyx.study.hrs.hr1.dataobject.ExamineType;
+import com.longyx.study.hrs.hr1.manager.ExamineTypeManager;
 
 import java.io.BufferedReader;
 import java.io.IOException;

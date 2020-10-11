@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.threadlocal;
+package com.longyx.study.design.pattern.singleton.threadlocal;
 
 /**
  * 注册式单例(容器式)

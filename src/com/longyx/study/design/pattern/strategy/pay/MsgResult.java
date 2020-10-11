@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.strategy.pay;
+package com.longyx.study.design.pattern.strategy.pay;
 
 /**
  * @author Mr.Longyx

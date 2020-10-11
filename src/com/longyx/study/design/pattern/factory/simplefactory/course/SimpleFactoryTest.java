@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.simplefactory.course;
+package com.longyx.study.design.pattern.factory.simplefactory.course;
 
 /**
  * 简单工厂测试类
@@ -33,7 +33,7 @@ public class SimpleFactoryTest {
          */
 
 //        CourseFactory factory = new CourseFactory();
-//        ICourse course = factory.choice("com.spdb.study.design.pattern.factory.simplefactory.JavaCourse");
+//        ICourse course = factory.choice("com.longyx.study.design.pattern.factory.simplefactory.JavaCourse");
 //        course.getCourse();
 
         /**

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.abstractfactory.fruit;
+package com.longyx.study.design.pattern.factory.abstractfactory.fruit;
 
 /**
  * @author Mr.Longyx

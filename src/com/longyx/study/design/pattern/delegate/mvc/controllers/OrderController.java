@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.delegate.mvc.controllers;
+package com.longyx.study.design.pattern.delegate.mvc.controllers;
 
 /**
  * @author Mr.Longyx

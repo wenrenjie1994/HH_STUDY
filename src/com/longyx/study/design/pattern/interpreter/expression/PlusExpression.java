@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.interpreter.expression;
+package com.longyx.study.design.pattern.interpreter.expression;
 
 /**
  * 自加操作

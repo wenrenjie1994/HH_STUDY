@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.math;
+package com.longyx.study.algorithm.math;
 
 /**
  * 使用数学方式解决裁剪绳子问题

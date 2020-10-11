@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.general.safe;
+package com.longyx.study.design.pattern.composite.general.safe;
 
 //叶子节点
 public class Leaf extends Component {

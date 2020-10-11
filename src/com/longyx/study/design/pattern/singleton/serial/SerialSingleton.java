@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.serial;
+package com.longyx.study.design.pattern.singleton.serial;
 
 import java.io.*;
 

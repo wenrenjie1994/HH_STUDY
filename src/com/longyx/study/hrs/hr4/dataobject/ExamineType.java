@@ -1,4 +1,4 @@
-package com.spdb.study.hrs.hr4.dataobject;
+package com.longyx.study.hrs.hr4.dataobject;
 
 import java.io.Serializable;
 

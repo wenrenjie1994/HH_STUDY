@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.iterator.book;
+package com.longyx.study.design.pattern.iterator.book;
 
 import java.io.Serializable;
 

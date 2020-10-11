@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.proxy.dynamicproxy.cglibproxy;
+package com.longyx.study.design.pattern.proxy.dynamicproxy.cglibproxy;
 
 import net.sf.cglib.core.DebuggingClassWriter;
 

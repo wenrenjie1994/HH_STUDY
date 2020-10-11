@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.dispatch.dynamicdispatch;
+package com.longyx.study.design.pattern.visitor.dispatch.dynamicdispatch;
 
 /**
  * 动态分派(在编译期间无法确定其类型，需要在运行期间才能确定调用哪个方法)

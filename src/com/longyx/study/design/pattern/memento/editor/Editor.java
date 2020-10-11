@@ -1,6 +1,4 @@
-package com.spdb.study.design.pattern.memento.editor;
-
-import com.spdb.study.design.pattern.memento.general.CareTaker;
+package com.longyx.study.design.pattern.memento.editor;
 
 import java.io.Serializable;
 

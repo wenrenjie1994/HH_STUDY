@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.strategy.promotion;
+package com.longyx.study.design.pattern.strategy.promotion;
 
 import org.apache.commons.lang3.StringUtils;
 

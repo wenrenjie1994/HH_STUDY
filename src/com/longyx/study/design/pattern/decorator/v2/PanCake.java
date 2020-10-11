@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.decorator.v2;
+package com.longyx.study.design.pattern.decorator.v2;
 
 /**
  * 顶层设计 引入装饰者模式(抽象类)

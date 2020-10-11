@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.abstractfactory.course;
+package com.longyx.study.design.pattern.factory.abstractfactory.course;
 
 /**
  * 解决产品链、产品族、产品等级结构非常复杂的情况 以及每一个产品的创建逻辑差异化程度非常高的情况

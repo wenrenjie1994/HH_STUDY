@@ -1,4 +1,4 @@
-package com.spdb.study.java8.parallel;
+package com.longyx.study.java8.parallel;
 
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.atomic.AtomicInteger;

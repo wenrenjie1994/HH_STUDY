@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.decorator.extend;
+package com.longyx.study.design.pattern.decorator.extend;
 
 /**
  * 女孩涂口红

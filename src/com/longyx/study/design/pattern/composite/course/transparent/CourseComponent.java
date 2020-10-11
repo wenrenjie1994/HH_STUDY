@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.course.transparent;
+package com.longyx.study.design.pattern.composite.course.transparent;
 
 /**
  * 所有方法都是空实现

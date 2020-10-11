@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.mediator.match;
+package com.longyx.study.design.pattern.mediator.match;
 
 /**
  * 同事类

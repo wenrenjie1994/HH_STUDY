@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.chain.auth.old;
+package com.longyx.study.design.pattern.chain.auth.old;
 
 import org.apache.commons.lang3.StringUtils;
 

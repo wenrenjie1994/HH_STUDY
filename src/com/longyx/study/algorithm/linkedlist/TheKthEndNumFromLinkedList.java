@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.linkedlist;
+package com.longyx.study.algorithm.linkedlist;
 
 /**
  * 输入一个链表，返回链表中倒数第k个节点
@@ -46,7 +46,7 @@ public class TheKthEndNumFromLinkedList {
          * @date 2020/7/10 9:02
          * @param head
          * @param k
-         * @return com.spdb.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
+         * @return com.longyx.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
          */
         public static ListNode getKthFromEnd(ListNode head, int k){
             if (null == head || k < 0) {
@@ -59,7 +59,7 @@ public class TheKthEndNumFromLinkedList {
              * @date 2020/7/10 8:41
              * @param head
              * @param k
-             * @return com.spdb.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
+             * @return com.longyx.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
              */
             ListNode slow = head;
             ListNode fast = head;
@@ -69,7 +69,7 @@ public class TheKthEndNumFromLinkedList {
              * @date 2020/7/10 8:43
              * @param head
              * @param k
-             * @return com.spdb.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
+             * @return com.longyx.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
              */
             for(int i=0;i<k;i++){
                 /**
@@ -78,7 +78,7 @@ public class TheKthEndNumFromLinkedList {
                  * @date 2020/7/10 8:44
                  * @param head
                  * @param k
-                 * @return com.spdb.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
+                 * @return com.longyx.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
                  */
                 if (null == fast && i < k){
                     return null;
@@ -92,7 +92,7 @@ public class TheKthEndNumFromLinkedList {
              * @date 2020/7/10 8:46
              * @param head
              * @param k
-             * @return com.spdb.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
+             * @return com.longyx.study.algorithm.linkedlist.TheKthEndNumFromLinkedList.ListNode
              */
             while (fast != null){
                 slow = slow.next;

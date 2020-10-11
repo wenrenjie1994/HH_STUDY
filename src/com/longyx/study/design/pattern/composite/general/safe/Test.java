@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.general.safe;
+package com.longyx.study.design.pattern.composite.general.safe;
 
 /**
  * @author Mr.Longyx

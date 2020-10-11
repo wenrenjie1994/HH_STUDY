@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.prototype.shallow;
+package com.longyx.study.design.pattern.prototype.shallow;
 
 /**
  * 完成原型的接收工作

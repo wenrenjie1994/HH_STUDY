@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.decorator.v1;
+package com.longyx.study.design.pattern.decorator.v1;
 
 /**
  * 未引入装饰器模式的粗糙版本(不符合开闭原则)

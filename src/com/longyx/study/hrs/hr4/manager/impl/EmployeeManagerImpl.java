@@ -1,9 +1,9 @@
-package com.spdb.study.hrs.hr4.manager.impl;
+package com.longyx.study.hrs.hr4.manager.impl;
 
-import com.spdb.study.hrs.hr4.dataobject.Department;
-import com.spdb.study.hrs.hr4.dataobject.Employee;
-import com.spdb.study.hrs.hr4.manager.EmployeeManager;
-import com.spdb.study.hrs.hr4.util.DbUtil;
+import com.longyx.study.hrs.hr4.dataobject.Department;
+import com.longyx.study.hrs.hr4.dataobject.Employee;
+import com.longyx.study.hrs.hr4.manager.EmployeeManager;
+import com.longyx.study.hrs.hr4.util.DbUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -126,7 +126,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
                  * @date 2020/7/24 0:02
                  * @param pageNum
                  * @param pageSize
-                 * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Employee>
+                 * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Employee>
                  */
                 Employee employee = new Employee();
                 employee.setEmployeeId(rs.getInt("employee_id"));

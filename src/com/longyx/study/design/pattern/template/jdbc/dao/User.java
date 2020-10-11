@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.template.jdbc.dao;
+package com.longyx.study.design.pattern.template.jdbc.dao;
 
 import java.io.Serializable;
 

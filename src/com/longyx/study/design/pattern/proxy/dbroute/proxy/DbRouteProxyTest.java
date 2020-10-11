@@ -1,10 +1,10 @@
-package com.spdb.study.design.pattern.proxy.dbroute.proxy;
+package com.longyx.study.design.pattern.proxy.dbroute.proxy;
 import	java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.spdb.study.design.pattern.proxy.dbroute.Order;
-import com.spdb.study.design.pattern.proxy.dbroute.OrderService;
-import com.spdb.study.design.pattern.proxy.dbroute.OrderServiceImpl;
+import com.longyx.study.design.pattern.proxy.dbroute.Order;
+import com.longyx.study.design.pattern.proxy.dbroute.OrderService;
+import com.longyx.study.design.pattern.proxy.dbroute.OrderServiceImpl;
 
 /**
  * 演示通过静态(动态)代理实现动态数据源的切换

@@ -1,6 +1,6 @@
-package com.spdb.study.hrs.hr3.manager;
+package com.longyx.study.hrs.hr3.manager;
 
-import com.spdb.study.hrs.hr3.dataobject.Employee;
+import com.longyx.study.hrs.hr3.dataobject.Employee;
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public interface EmployeeManager {
      * @date 2020/7/23 12:14
      * @param pageNum 第几页(当前页码)
      * @param pageSize 每页显示条数
-     * @return java.util.List<com.spdb.study.hrs.hr3.dataobject.Employee>
+     * @return java.util.List<com.longyx.study.hrs.hr3.dataobject.Employee>
      */
     List<Employee> findEmployeeList(int pageNum, int pageSize);
 

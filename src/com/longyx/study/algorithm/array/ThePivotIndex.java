@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.array;
+package com.longyx.study.algorithm.array;
 
 /**
  * 对于一个数组中的元素x,若x左侧的所有元素之和等于右侧所有元素之和，则返回x的下标

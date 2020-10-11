@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.facade.points;
+package com.longyx.study.design.pattern.facade.points;
 
 /**
  * 模拟通过积分抵扣礼品

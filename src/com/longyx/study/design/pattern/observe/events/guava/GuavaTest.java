@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.observe.events.guava;
+package com.longyx.study.design.pattern.observe.events.guava;
 
 import com.google.common.eventbus.EventBus;
 

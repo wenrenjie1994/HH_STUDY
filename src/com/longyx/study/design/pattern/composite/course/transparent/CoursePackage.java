@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.composite.course.transparent;
+package com.longyx.study.design.pattern.composite.course.transparent;
 
 import java.util.ArrayList;
 import java.util.List;

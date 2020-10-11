@@ -1,11 +1,11 @@
-package com.spdb.study.hrs.hr4.manager.impl;
+package com.longyx.study.hrs.hr4.manager.impl;
 
-import com.spdb.study.hrs.hr3.util.DbUtil;
-import com.spdb.study.hrs.hr4.dataobject.Department;
-import com.spdb.study.hrs.hr4.dataobject.Employee;
-import com.spdb.study.hrs.hr4.dataobject.ExamineType;
-import com.spdb.study.hrs.hr4.dataobject.Performance;
-import com.spdb.study.hrs.hr4.manager.PerformanceManager;
+import com.longyx.study.hrs.hr3.util.DbUtil;
+import com.longyx.study.hrs.hr4.dataobject.Department;
+import com.longyx.study.hrs.hr4.dataobject.Employee;
+import com.longyx.study.hrs.hr4.dataobject.ExamineType;
+import com.longyx.study.hrs.hr4.dataobject.Performance;
+import com.longyx.study.hrs.hr4.manager.PerformanceManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -92,7 +92,7 @@ public class PerformanceManagerImpl implements PerformanceManager {
      * @author Mr.Longyx
      * @date 2020/7/25 18:59
      * @param employeeId
-     * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+     * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
      */
     @Override
     public List<Performance> findPerformanceListByEmployeeId(int employeeId) {
@@ -193,7 +193,7 @@ public class PerformanceManagerImpl implements PerformanceManager {
                  * @author Mr.Longyx
                  * @date 2020/7/25 19:09
                  * @param employeeId
-                 * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+                 * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
                  */
                 employee.setDepartment(department);
 
@@ -268,7 +268,7 @@ public class PerformanceManagerImpl implements PerformanceManager {
              * @author Mr.Longyx
              * @date 2020/7/25 19:09
              * @param employeeId
-             * @return java.util.List<com.spdb.study.hrs.hr4.dataobject.Performance>
+             * @return java.util.List<com.longyx.study.hrs.hr4.dataobject.Performance>
              */
             employee.setDepartment(department);
 

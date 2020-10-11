@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.factory.factorymethod.animal;
+package com.longyx.study.design.pattern.factory.factorymethod.animal;
 
 /**
  * 动物类的顶层接口

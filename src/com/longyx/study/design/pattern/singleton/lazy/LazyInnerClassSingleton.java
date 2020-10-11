@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.lazy;
+package com.longyx.study.design.pattern.singleton.lazy;
 
 import java.lang.reflect.Constructor;
 

@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.singleton.lazy;
+package com.longyx.study.design.pattern.singleton.lazy;
 
-import com.spdb.study.thread.ExecutorThread;
+import com.longyx.study.thread.ExecutorThread;
 
 /**
  * 懒汉式单例(首次加载时不初始化，而是使用的时候才初始化)

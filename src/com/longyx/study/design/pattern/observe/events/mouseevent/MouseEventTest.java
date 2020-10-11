@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.observe.events.mouseevent;
+package com.longyx.study.design.pattern.observe.events.mouseevent;
 
 /**
  * @author Mr.Longyx

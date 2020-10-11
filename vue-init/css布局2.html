@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试</title>
+  <style>
+    .container {
+      position: relative;
+      justify-content: space-around;
+    }
+    
+    .left {
+      position: absolute;
+      border: 1px solid rgb(12, 10, 10);
+      left: 10px;
+      height: 300px;
+      width: 200px;
+    }
+    .right {
+      position: absolute;
+      right: 16px;
+      border: 1px solid rgb(12, 10, 10);
+      margin-left: 12px;
+      height:300px;
+      width: 400px;
+    }
+    .main {
+      position: absolute;
+      left: 226px;
+      right: 200px;
+      border: 1px solid rgb(12, 10, 10);
+      height: 300px;
+      width: 640px;
+      margin-left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="main">main</div>
+  </div>
+  <script>
+    function compareNumbers(a, b) {
+      return a - b;
+    }
+
+    function combine() {
+      let arr = [].concat.apply([], arguments);
+      let data = arr.sort(compareNumbers);
+      return Array.from(new Set(data));
+    }
+
+    var m = [40, 1, 5, 200], n = [4, 9, 6];
+    console.log(combine(m, n));
+  </script>
+</body>
+</html>

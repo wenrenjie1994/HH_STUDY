@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.chain.general;
+package com.longyx.study.design.pattern.chain.general;
 
 /**
  * @author Mr.Longyx

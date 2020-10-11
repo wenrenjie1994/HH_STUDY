@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.strategy.pay.payport;
+package com.longyx.study.design.pattern.strategy.pay.payport;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class PayStrategy {
      * @author Mr.Longyx
      * @date 2020/6/28 23:59
      * @param payKey
-     * @return com.spdb.study.design.pattern.strategy.pay.payport.PayMent
+     * @return com.longyx.study.design.pattern.strategy.pay.payport.PayMent
      */
     public static Payment get(String payKey){
         if (!payStrategyMap.containsKey(payKey)){

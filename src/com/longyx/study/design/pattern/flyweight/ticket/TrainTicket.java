@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.flyweight.ticket;
+package com.longyx.study.design.pattern.flyweight.ticket;
 import	java.util.Random;
 
 /**

@@ -1,10 +1,10 @@
-package com.spdb.study.design.pattern.proxy.dbroute.proxy;
+package com.longyx.study.design.pattern.proxy.dbroute.proxy;
 import	java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.spdb.study.design.pattern.proxy.dbroute.Order;
-import com.spdb.study.design.pattern.proxy.dbroute.OrderService;
-import com.spdb.study.design.pattern.proxy.dbroute.db.DynamicDataSource;
+import com.longyx.study.design.pattern.proxy.dbroute.Order;
+import com.longyx.study.design.pattern.proxy.dbroute.OrderService;
+import com.longyx.study.design.pattern.proxy.dbroute.db.DynamicDataSource;
 
 /**
  * 代理数据源切换的逻辑

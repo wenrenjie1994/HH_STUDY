@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.facade.general;
+package com.longyx.study.design.pattern.facade.general;
 
 /**
  * 子系统A

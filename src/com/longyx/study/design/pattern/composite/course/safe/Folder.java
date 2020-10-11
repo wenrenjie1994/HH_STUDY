@@ -1,6 +1,6 @@
-package com.spdb.study.design.pattern.composite.course.safe;
+package com.longyx.study.design.pattern.composite.course.safe;
 
-import com.spdb.study.design.pattern.composite.course.transparent.CourseComponent;
+import com.longyx.study.design.pattern.composite.course.transparent.CourseComponent;
 
 import java.util.ArrayList;
 import java.util.List;

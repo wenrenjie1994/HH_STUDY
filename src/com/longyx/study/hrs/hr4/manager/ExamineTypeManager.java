@@ -1,7 +1,7 @@
-package com.spdb.study.hrs.hr4.manager;
+package com.longyx.study.hrs.hr4.manager;
 
-import com.spdb.study.hrs.hr4.dataobject.ExamineType;
-import com.spdb.study.hrs.hr4.util.DbUtil;
+import com.longyx.study.hrs.hr4.dataobject.ExamineType;
+import com.longyx.study.hrs.hr4.util.DbUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -70,7 +70,7 @@ public class ExamineTypeManager {
     /**
      * @author Mr.Longyx
      * @date 2020/7/21 16:48
-     * @return java.util.List<com.spdb.study.hrs.hr1.dataobject.ExamineType>
+     * @return java.util.List<com.longyx.study.hrs.hr1.dataobject.ExamineType>
      */
     public List<ExamineType> findExamineTypes(){
         String sql = "select * from examine_type order by examine_type_id";

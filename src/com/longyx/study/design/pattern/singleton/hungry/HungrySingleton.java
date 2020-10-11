@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.singleton.hungry;
+package com.longyx.study.design.pattern.singleton.hungry;
 
 /**
  *  饿汉式单例

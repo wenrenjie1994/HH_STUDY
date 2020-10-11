@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.liskosubstitution.abstracted;
+package com.longyx.study.design.principle.liskosubstitution.abstracted;
 
 /**
  * 四边形接口

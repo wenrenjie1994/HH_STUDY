@@ -1,4 +1,4 @@
-package com.spdb.study.hrs.hr2.dataobject;
+package com.longyx.study.hrs.hr2.dataobject;
 
 import lombok.Data;
 

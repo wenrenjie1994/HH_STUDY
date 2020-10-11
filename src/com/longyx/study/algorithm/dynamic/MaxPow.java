@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.dynamic;
+package com.longyx.study.algorithm.dynamic;
 
 /**
  * 动态规划方式解决裁剪绳子问题

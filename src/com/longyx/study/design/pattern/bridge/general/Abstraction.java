@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.bridge.general;
+package com.longyx.study.design.pattern.bridge.general;
 
 /**
  * 桥接模式（JDBC中DriverManager使用桥接模式连接了java.sql维度和各大数据库维度(如MySQL))

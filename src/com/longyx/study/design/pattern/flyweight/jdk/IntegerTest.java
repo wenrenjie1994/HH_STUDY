@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.flyweight.jdk;
+package com.longyx.study.design.pattern.flyweight.jdk;
 
 /**
  * JDK中Integer也应用到了享元模式

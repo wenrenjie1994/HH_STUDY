@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.visitor.dispatch.dynamicdispatch;
+package com.longyx.study.design.pattern.visitor.dispatch.dynamicdispatch;
 
 
 /**

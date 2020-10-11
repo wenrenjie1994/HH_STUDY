@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.flyweight.pool;
+package com.longyx.study.design.pattern.flyweight.pool;
 import	java.sql.Connection;
 
 /**

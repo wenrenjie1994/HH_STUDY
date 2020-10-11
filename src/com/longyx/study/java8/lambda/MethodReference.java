@@ -1,4 +1,4 @@
-package com.spdb.study.java8.lambda;
+package com.longyx.study.java8.lambda;
 
 import java.util.Arrays;
 import java.util.Comparator;

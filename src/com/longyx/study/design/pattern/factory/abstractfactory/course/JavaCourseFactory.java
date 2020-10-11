@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.factory.abstractfactory.course;
+package com.longyx.study.design.pattern.factory.abstractfactory.course;
 
-import com.spdb.study.design.pattern.factory.simplefactory.course.Course;
-import com.spdb.study.design.pattern.factory.simplefactory.course.JavaCourse;
+import com.longyx.study.design.pattern.factory.simplefactory.course.Course;
+import com.longyx.study.design.pattern.factory.simplefactory.course.JavaCourse;
 
 /**
  * @author Mr.Longyx

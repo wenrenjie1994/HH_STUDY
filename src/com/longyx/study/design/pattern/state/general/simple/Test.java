@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.state.general.simple;
+package com.longyx.study.design.pattern.state.general.simple;
 
 /**
  * @author Mr.Longyx

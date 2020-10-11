@@ -1,4 +1,4 @@
-package com.spdb.study.design.principle.segregation.simple;
+package com.longyx.study.design.principle.segregation.simple;
 
 /**
  * @author Mr.Longyx

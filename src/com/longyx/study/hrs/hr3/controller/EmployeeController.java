@@ -1,9 +1,9 @@
-package com.spdb.study.hrs.hr3.controller;
+package com.longyx.study.hrs.hr3.controller;
 
-import com.spdb.study.hrs.hr3.dataobject.Department;
-import com.spdb.study.hrs.hr3.dataobject.Employee;
-import com.spdb.study.hrs.hr3.manager.EmployeeManager;
-import com.spdb.study.hrs.hr3.manager.impl.EmployeeManagerImpl;
+import com.longyx.study.hrs.hr3.dataobject.Department;
+import com.longyx.study.hrs.hr3.dataobject.Employee;
+import com.longyx.study.hrs.hr3.manager.EmployeeManager;
+import com.longyx.study.hrs.hr3.manager.impl.EmployeeManagerImpl;
 
 import java.io.*;
 import java.text.ParseException;
@@ -40,7 +40,7 @@ public class EmployeeController {
      */
     static {
         try {
-            Class<?> clazz = Class.forName("com.spdb.study.hrs.hr3.manager.impl.EmployeeManagerImpl");
+            Class<?> clazz = Class.forName("com.longyx.study.hrs.hr3.manager.impl.EmployeeManagerImpl");
             Object obj = clazz.newInstance();
             employeeManager = (EmployeeManager)obj;
         }catch (Exception e) {

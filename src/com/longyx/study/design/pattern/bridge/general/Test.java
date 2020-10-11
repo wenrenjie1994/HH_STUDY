@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.bridge.general;
+package com.longyx.study.design.pattern.bridge.general;
 
 /**
  * @author Mr.Longyx

@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.memento.editor;
+package com.longyx.study.design.pattern.memento.editor;
 
 import java.util.Stack;
 

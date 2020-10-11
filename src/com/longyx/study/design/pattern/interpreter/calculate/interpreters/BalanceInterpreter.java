@@ -1,7 +1,7 @@
-package com.spdb.study.design.pattern.interpreter.calculate.interpreters;
+package com.longyx.study.design.pattern.interpreter.calculate.interpreters;
 
-import com.spdb.study.design.pattern.interpreter.calculate.ArithmeticInterpreter;
-import com.spdb.study.design.pattern.interpreter.calculate.Interpreter;
+import com.longyx.study.design.pattern.interpreter.calculate.ArithmeticInterpreter;
+import com.longyx.study.design.pattern.interpreter.calculate.Interpreter;
 
 /**
  * @author Mr.Longyx

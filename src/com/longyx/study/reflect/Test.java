@@ -1,4 +1,4 @@
-package com.spdb.study.reflect;
+package com.longyx.study.reflect;
 import	java.lang.annotation.RetentionPolicy;
 import	java.lang.annotation.Retention;
 /**

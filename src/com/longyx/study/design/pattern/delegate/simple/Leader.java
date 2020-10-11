@@ -1,4 +1,4 @@
-package com.spdb.study.design.pattern.delegate.simple;
+package com.longyx.study.design.pattern.delegate.simple;
 
 import java.util.HashMap;
 import java.util.Map;

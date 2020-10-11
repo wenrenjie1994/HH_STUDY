@@ -1,4 +1,4 @@
-package com.spdb.study.java8.future;
+package com.longyx.study.java8.future;
 
 /**
  * @author Mr.Longyx

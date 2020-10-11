@@ -1,4 +1,4 @@
-package com.spdb.study.algorithm.tree;
+package com.longyx.study.algorithm.tree;
 
 import java.util.HashMap;
 import java.util.Map;
