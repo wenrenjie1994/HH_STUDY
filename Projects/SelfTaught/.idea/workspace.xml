@@ -2,28 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b671485a-edd7-42cb-9b4e-60112030fb42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_37_bin__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/HR_SYS_IV_CLIENT.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/bean/Resume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Protocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/net/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/utils/ResumeOperate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/HR_SYS_IV_SERVER.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/lib/mysql-connector-java-5.1.37-bin.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/bean/Resume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/interaction/Protocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/utils/ResumeOperate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/SPDB_VJ.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/Atoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/SubString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_0810.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_0817.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_0824.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_0831.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_0907.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_0926.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPDB_VJ/src/VJ_1011.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/bean/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/bean/Resume.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/interaction/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/interaction/Protocol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/net/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/sys/HRS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_CLIENT/utils/ResumeOperate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/bean/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/bean/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/bean/Resume.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/interaction/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/interaction/Protocol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/net/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/net/ServerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/utils/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HR_SYS_IV_SERVER/utils/ResumeOperate.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,13 +38,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SelfTaught$VJ_0810.ic" NAME="VJ_0810 Coverage Results" MODIFIED="1597209268146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="109" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java">
+        <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0926.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="26">
+              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,25 +59,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java">
+        <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_1011.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state relative-caret-position="754">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/Atoi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+              <folding>
+                <element signature="e#1194#1195#0" expanded="true" />
+                <element signature="e#1254#1255#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java">
+        <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/SubString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="78">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -115,6 +137,17 @@
         <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/utils/ResumeOperate.java" />
         <option value="$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/interaction/Parser.java" />
         <option value="$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/ServerThread.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/Solution.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_0810.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_0817.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_0824.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_0831.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_0907.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_0926.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/VJ_1011.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/atoi.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/Atoi.java" />
+        <option value="$PROJECT_DIR$/SPDB_VJ/src/SubString.java" />
       </list>
     </option>
   </component>
@@ -125,10 +158,29 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="165" />
-    <option name="y" value="105" />
-    <option name="width" value="1534" />
-    <option name="height" value="881" />
+    <option name="x" value="139" />
+    <option name="width" value="1550" />
+    <option name="height" value="1046" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>FuseStreamOperations</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -138,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,181 +200,35 @@
             <path>
               <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
               <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
+              <item name="SPDB_VJ" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
               <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
+              <item name="SPDB_VJ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_III" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_III" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_III" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_III" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_III" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_III" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_CLIENT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SelfTaught" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SelfTaught" type="462c0819:PsiDirectoryNode" />
-              <item name="HR_SYS_IV_SERVER" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595104885882" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603174118773" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../3860Java代碼-肖久夕" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -343,71 +248,56 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HRS (2)">
-    <configuration name="HRS (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sys.HRS" />
-      <module name="HR_SYS_III" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sys.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="Application.SubString">
+    <configuration name="Atoi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Atoi" />
+      <module name="SPDB_VJ" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HRS (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sys.HRS" />
-      <module name="HR_SYS_IV_CLIENT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sys.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="SubString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SubString" />
+      <module name="SPDB_VJ" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HRS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sys.HRS" />
-      <module name="HR_SYS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sys.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="VJ_0926" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VJ_0926" />
+      <module name="SPDB_VJ" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.Server" />
-      <module name="HR_SYS_IV_SERVER" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="VJ_1011" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VJ_1011" />
+      <module name="SPDB_VJ" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="atoi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="atoi" />
+      <module name="SPDB_VJ" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HRS" />
-      <item itemvalue="Application.HRS (1)" />
-      <item itemvalue="Application.HRS (2)" />
-      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.VJ_0926" />
+      <item itemvalue="Application.VJ_1011" />
+      <item itemvalue="Application.atoi" />
+      <item itemvalue="Application.Atoi" />
+      <item itemvalue="Application.SubString" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HRS (2)" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.HRS (1)" />
-        <item itemvalue="Application.HRS" />
+        <item itemvalue="Application.SubString" />
+        <item itemvalue="Application.Atoi" />
+        <item itemvalue="Application.atoi" />
+        <item itemvalue="Application.VJ_1011" />
+        <item itemvalue="Application.VJ_0926" />
       </list>
     </recent_temporary>
   </component>
@@ -425,6 +315,25 @@
       <workItem from="1594034723858" duration="6814000" />
       <workItem from="1594448555403" duration="10315000" />
       <workItem from="1595069999956" duration="25208000" />
+      <workItem from="1597132964690" duration="20209000" />
+      <workItem from="1597394351484" duration="181000" />
+      <workItem from="1597561110340" duration="1300000" />
+      <workItem from="1597717311244" duration="6304000" />
+      <workItem from="1597735430671" duration="115000" />
+      <workItem from="1598336289643" duration="2226000" />
+      <workItem from="1598860257479" duration="1318000" />
+      <workItem from="1599442345684" duration="15740000" />
+      <workItem from="1600095313520" duration="984000" />
+      <workItem from="1600738865797" duration="598000" />
+      <workItem from="1601173177443" duration="7462000" />
+      <workItem from="1601344573707" duration="3603000" />
+      <workItem from="1601655188116" duration="38000" />
+      <workItem from="1602320037361" duration="639000" />
+      <workItem from="1602408868757" duration="8534000" />
+      <workItem from="1602417550562" duration="1567000" />
+      <workItem from="1602687515746" duration="1086000" />
+      <workItem from="1603023668064" duration="859000" />
+      <workItem from="1603173395940" duration="703000" />
     </task>
     <task id="LOCAL-00001" summary="SelfTaught I Finished !">
       <created>1593745711522</created>
@@ -451,13 +360,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48203000" />
+    <option name="totallyTimeSpent" value="121669000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="105" width="1534" height="881" extended-state="0" />
+    <frame x="139" y="0" width="1550" height="1046" extended-state="0" />
     <layout>
-      <window_info anchor="top" x="2354" y="271" width="1048" height="673" id="Run" order="0" type="WINDOWED" weight="0.21562156" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25915876" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,7 +374,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32975295" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.36842105" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
@@ -474,7 +382,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32893288" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.14607948" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3104189" />
+      <window_info anchor="bottom" x="1110" y="302" width="402" height="297" id="Run" order="11" weight="0.22063667" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -484,6 +393,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" visible="true" weight="0.14712153" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,9 +420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -520,27 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1222">
           <caret line="47" column="31" lean-forward="true" selection-end-line="82" />
-          <folding>
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -555,9 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,28 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="24" lean-forward="true" selection-end-line="82" />
-          <folding>
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,28 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="853">
           <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
-          <folding>
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,9 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,28 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-832">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,20 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding>
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,9 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="109" column="56" lean-forward="true" selection-start-line="109" selection-start-column="56" selection-end-line="110" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,12 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,9 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1611">
           <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,9 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,12 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,10 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
           <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#duplicateCodeDealing#0;class#ResumeOperate#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,9 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,9 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1456">
           <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,29 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,9 +574,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/src/net/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/src/sys/HRS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0810.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="32" column="45" selection-start-line="3" selection-start-column="44" selection-end-line="32" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0817.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0824.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="5" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0831.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0907.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_0926.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/VJ_1011.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/Atoi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding>
+            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPDB_VJ/src/SubString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/HR_SYS_III/HR_SYS_III.iml" filepath="$PROJECT_DIR$/HR_SYS_III/HR_SYS_III.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR_SYS_IV_CLIENT/HR_SYS_IV_CLIENT.iml" filepath="$PROJECT_DIR$/HR_SYS_IV_CLIENT/HR_SYS_IV_CLIENT.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR_SYS_IV_SERVER/HR_SYS_IV_SERVER.iml" filepath="$PROJECT_DIR$/HR_SYS_IV_SERVER/HR_SYS_IV_SERVER.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SPDB_VJ/SPDB_VJ.iml" filepath="$PROJECT_DIR$/SPDB_VJ/SPDB_VJ.iml" />
       <module fileurl="file://$PROJECT_DIR$/SelfTaught.iml" filepath="$PROJECT_DIR$/SelfTaught.iml" />
     </modules>
   </component>
